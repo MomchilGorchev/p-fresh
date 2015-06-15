@@ -1,0 +1,39 @@
+// --------------------------------
+// - MAIN
+// --------------------------------
+// File where you should import all your SASS files / modules
+
+// You can comment out stuff to include / exclude code
+
+// /!\ WARNING: DELETE EVERYTHING BELOW TO DO A FRESH START
+
+@import "layout/layout";
+@import "variables";
+
+@import "components/fonts";
+
+
+// Styling example - why not?
+body {
+  background: $bg-color;
+  color: $font-color;
+}
+
+// Magnificent dog image styling
+img {
+  max-width: 650px;
+  width: 100%;
+}
+
+// Awesome navigation bar
+nav {
+  height: 60px;
+  line-height: 60px;
+  box-shadow: 0 0 1px rgba(0,0,0,0.15);
+}
+
+// There's a link on the page? Let it be red!
+a {
+  color: $link-color;
+  text-decoration: none;
+}
