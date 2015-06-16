@@ -3,10 +3,11 @@
 <head lang="en">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Static Dev Kit</title>
+    <meta name="description" content="">
+    <title>Momchil Gorchev</title>
 
+    <link href='http://fonts.googleapis.com/css?family=Arimo|Didact+Gothic' rel='stylesheet' type='text/css'>
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
     <!-- /Stylesheets -->
@@ -19,18 +20,17 @@
 </head>
 <body id="page-top">
     <!-- Example navigation bar -->
-    <nav>
-        <div class="container">
-            <div class="col-xs-12 text-center">- Static Web Development Kit -</div>
-        </div>
+    <nav class="floating">
+        Logo
     </nav>
 
     <!-- Example header -->
-    <header>
+    <header class="floating main__title">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <h1 class="text-center">Oh hai! Welcome to the Static Web Development Kit</h1>
+                    <h1 class="text-center">Momchil Gorchev</h1>
+                    <h2 class="text-center">Frontend Engineer</h2>
                 </div>
             </div>
         </div>
@@ -38,17 +38,42 @@
 
     <!-- Example main section with obligatory random meme -->
     <main>
-        <section class="container">
-            <article class="row text-center">
-                <div class="col-xs-12">
-                    <img src="img/dog.jpg">
-                </div>
-                <div class="col-xs-12">
-                    <h2>I have no idea what I'm doing</h2>
-                </div>
-            </article>
+        <section class="container-fluid">
+            <canvas id="welcome" class="main__scene"></canvas>
         </section>
     </main>
+
+    <section class="container-fluid about__section">
+        <div class="container about__section-inner">
+            <h2 class="text-center">About</h2>
+            <img class="about__photo" src="img/personal.JPG" alt="Momchil Gorchev" />
+            <p class="about__text">Hello there, my name is Momchil Gorchev, im a bulgarian web developer living currently in London.
+                <br />
+                I am working in a technology company as a frontend developer and my daily routine includes dealing with all kind of development
+                and design work (I love that!). <br />
+                Sometimes im making websites, sometimes im enhancing user experiences and sometimes i do other stuff.
+                <br /><br />
+                Since i was a kid i loved to play with all forms of technologies and computers. Couple of years ago i have finished
+                some free computer science educational programs, (edX) offered by the biggest US Universities and that absolutely blow my mind
+                and made me live and breath programming and solving problems the computational way.
+                <br /><br />
+                I love to write quality, abstracted and reusable code and get inspired by other people who are doing that. My weapons of choice are
+                JavaScript and jQuery, PHP and MySQL and of course HTML5 + CSS3 in form of SASS or LESS.
+                <br /> <br />
+                Im my spare time im trying to be a good father and husband, having a drink with my friends and play some video games.
+                I'm enjoying long walks, sunny weather, BBQs and superhero movies.
+            </p>
+        </div>
+
+    </section>
+
+    <section class="container-fluid">
+        <h2 class="text-center">Projects</h2>
+    </section>
+
+    <section class="container-fluid">
+        <h2 class="text-center">Contact me</h2>
+    </section>
 
     <!-- Example footer -->
     <footer>

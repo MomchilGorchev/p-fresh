@@ -18,3 +18,29 @@
   -moz-box-sizing: border-box;    /* Firefox 1 - 28 */
   box-sizing: border-box;         /* Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any */
 }
+.container-fluid{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#welcome{
+  width: 100%;
+  height: 100vh;
+  background: black;
+}
+.main{
+  &__title{
+    top:10%;
+  }
+  &__scene{
+
+  }
+}
+
+.floating{
+  position: absolute;
+  width: 100%;
+}
+nav{
+  background-color: silver;
+}

@@ -11,11 +11,12 @@
 @import "variables";
 
 @import "components/fonts";
+@import "components/about";
 
 
 // Styling example - why not?
 body {
-  background: $bg-color;
+  background-color: $bg-color;
   color: $font-color;
 }
 

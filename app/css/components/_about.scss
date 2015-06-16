@@ -1,0 +1,28 @@
+.about{
+
+  &__section{
+
+    &-inner{
+
+
+    }
+
+  }
+
+  &__photo{
+    width: 250px;
+    border-radius: 50%;
+    border: 2px double $font-color;
+    float:left;
+    padding:3px;
+    margin:10px;
+
+  }
+
+  &__text{
+    text-align: justify;
+    text-shadow: 1px 1px 1px darken($bg-color, 15%);
+    font-size:1.334em;
+  }
+
+}

@@ -19,6 +19,16 @@ h2 {
   text-align: center;
 }
 
+@for $i from 1 through 6 {
+  h#{$i}{
+    font-family: $header-font;
+  }
+}
+
+p, label, article, aside{
+  font-family: $content-font;
+}
+
 // Resize on mobile
 @media (max-width: 767px){
   h1 {
@@ -29,3 +39,4 @@ h2 {
     font-size: 25px;
   }
 }
+
