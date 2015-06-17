@@ -1,3 +1,8 @@
+/* Vendor prefixes for transition */
+/* Customise animation apperance - works perfectly with Animate.css for example */
+/* Easely center an element */
+/* Cross browser scale */
+/* Apply filter to an element. Filters are one of the following: */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -660,6 +665,9 @@ td, th {
   .col-lg-offset-12 {
     margin-left: 100%; } }
 
+.hidden {
+  display: none !important; }
+
 *, *:after, *:before {
   /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
   /* Firefox 1 - 28 */
@@ -676,7 +684,8 @@ td, th {
   background: black; }
 
 .main__title {
-  top: 10%; }
+  top: 10%;
+  opacity: 0; }
 
 .floating {
   position: absolute;
@@ -684,6 +693,60 @@ td, th {
 
 nav {
   background-color: silver; }
+
+.row.absolute {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  margin-top: -157px;
+  margin-left: -78px;
+  transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out; }
+  .row.absolute:hover {
+    transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    -webkit-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1); }
+  .row.absolute svg {
+    width: 150px;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  .row.absolute img {
+    opacity: 0;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    width: 136px;
+    position: absolute;
+    top: 7px;
+    left: 7px; }
+
+@-webkit-keyframes draw {
+  0% {
+    stroke-dashoffset: 550; }
+
+  100% {
+    stroke-dashoffset: 50; } }
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 550;
+    fill: none; }
+
+  100% {
+    stroke-dashoffset: 50;
+    fill: #627582; } }
+
+path {
+  -webkit-animation: draw 5s;
+  animation: draw 5s;
+  stroke-dasharray: 550; }
 
 h1 {
   font-size: 60px; }
