@@ -57,19 +57,20 @@ function draw() {
 function animate(dot){
     var current = dot;
     var nSize = Math.random() * 2;
-    var nColor = nSize >= 1.5 ? '255, 0, 0, 1' : '0, 255, 0, 1';
+    //var nColor = nSize >= 1.5 ? '255, 0, 0, 1' : '0, 255, 0, 1';
     /* TweenMax.to(current, 1, {
      x: Math.random(),
      ease: Linear.noEase
      });*/
     //dot.newColor = ncolor;
     TweenMax.to(current, 3, {
-        colorProps: {
-            color: 'rgba('+ nColor + ')'
-        },
+
         radius: nSize,
         delay: Math.random() * 3,
-        ease: Linear.easeInOut
+        ease: Linear.easeInOut,
+        onComplete: function(){
+            current.color = nSize >= 1.5 ? '255, 0, 0, 1' : '0, 255, 0, 1';
+        }
     });
 }
 
