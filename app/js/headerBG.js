@@ -5,7 +5,8 @@ var canvas = document.getElementById('welcome'),
     ctx = canvas.getContext('2d'),
     WIDTH = canvas.width = window.innerWidth,
     HEIGHT = canvas.height = window.innerHeight,
-    bubbles = [];
+    bubbles = [],
+    colors = ['204, 196, 123', '0, 214, 255', '179, 243, 255', '7, 108, 127', '143, 194, 204'];
 
 
 function Bubble(x, y, radius, color) {
@@ -22,7 +23,7 @@ function Bubble(x, y, radius, color) {
         ctx.beginPath();
         ctx.arc(_this.x, _this.y, _this.radius, 0, Math.PI * 2, true);
         ctx.closePath();
-        ctx.fillStyle = 'rgba('+ _this.color +')';
+        ctx.fillStyle = 'rgba('+ _this.color +', 1)';
         //ctx.strokeStyle = 'rgba('+_this.color+', '+_this.alpha+')';
         //ctx.stroke();
         ctx.fill();
@@ -36,7 +37,7 @@ function generate(){
         var x = Math.random() * WIDTH,
             y = Math.random() * HEIGHT,
             radius = 0.01,
-            color = '255, 255, 255, 1';
+            color = colors[Math.floor(i%colors.length)];
 //         alpha = 1;
         var dot = new Bubble(x, y, radius, color);
 
@@ -56,7 +57,7 @@ function draw() {
 
 function animate(dot){
     var current = dot;
-    var nSize = Math.random() * 2;
+    var nSize = Math.random() * 1.5;
     //var nColor = nSize >= 1.5 ? '255, 0, 0, 1' : '0, 255, 0, 1';
     /* TweenMax.to(current, 1, {
      x: Math.random(),
@@ -67,10 +68,7 @@ function animate(dot){
 
         radius: nSize,
         delay: Math.random() * 3,
-        ease: Linear.easeInOut,
-        onComplete: function(){
-            current.color = nSize >= 1.5 ? '255, 0, 0, 1' : '0, 255, 0, 1';
-        }
+        ease: Linear.easeInOut
     });
 }
 
