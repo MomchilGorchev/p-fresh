@@ -14,6 +14,7 @@ function Bubble(x, y, radius, color) {
     _this.y = y || canvas.height / 2;
     _this.radius = radius || 2;
     _this.color = color;
+    _this.newColor = null;
 //   _this.alpha = 1;
 
     this.draw = function(ctx){
@@ -31,11 +32,11 @@ function Bubble(x, y, radius, color) {
 }
 
 function generate(){
-    for(var i = 0; i < 100; i++){
+    for(var i = 0; i < 1000; i++){
         var x = Math.random() * WIDTH,
             y = Math.random() * HEIGHT,
-            radius = Math.random() * 3,
-            color = '255, 255, 255, 0';
+            radius = 0.01,
+            color = '255, 255, 255, 1';
 //         alpha = 1;
         var dot = new Bubble(x, y, radius, color);
 
@@ -54,27 +55,25 @@ function draw() {
 }
 
 function animate(dot){
-
     var current = dot;
-    var ncolor = '145, 56, 108, 1';
+    var nSize = Math.random() * 2;
+    var nColor = nSize >= 1.5 ? '255, 0, 0, 1' : '0, 255, 0, 1';
     /* TweenMax.to(current, 1, {
      x: Math.random(),
      ease: Linear.noEase
      });*/
-    TweenMax.to(current, Math.random() * 3, {
-        colorProps:{
-            color: 'rgba('+ ncolor +')'
+    //dot.newColor = ncolor;
+    TweenMax.to(current, 3, {
+        colorProps: {
+            color: 'rgba('+ nColor + ')'
         },
-        delay: Math.random(),
-        ease: Linear.easeInOut,
-        onComplete: function(){
-
-            current.color = ncolor;
-
-        }
-    })
-
+        radius: nSize,
+        delay: Math.random() * 3,
+        ease: Linear.easeInOut
+    });
 }
+
+
 
 function loop(){
     ctx.clearRect(0, 0, WIDTH, HEIGHT);
