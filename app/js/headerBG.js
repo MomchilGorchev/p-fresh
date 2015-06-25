@@ -12,6 +12,14 @@ function Space(){
     function initSpace(){
         generate();
         loop();
+
+        setTimeout(function(){
+            TweenMax.to(canvas, 25, {
+                css: {
+                    rotation: 80
+                }
+            });
+        }, 2000);
     }
 
     function Bubble(x, y, radius, color) {

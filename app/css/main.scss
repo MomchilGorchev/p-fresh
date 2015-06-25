@@ -16,7 +16,7 @@
 
 // Styling example - why not?
 body {
-  background-color: $bg-color;
+  background-color: black;
   color: $font-color;
 }
 
@@ -37,4 +37,8 @@ nav {
 a {
   color: $link-color;
   text-decoration: none;
+}
+
+canvas{
+  overflow: hidden;
 }

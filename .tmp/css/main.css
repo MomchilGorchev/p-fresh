@@ -798,7 +798,7 @@ p, label, article, aside {
   font-size: 1.334em; }
 
 body {
-  background-color: #0D85A1;
+  background-color: black;
   color: #ccc; }
 
 img {
@@ -813,3 +813,6 @@ nav {
 a {
   color: #302C5B;
   text-decoration: none; }
+
+canvas {
+  overflow: hidden; }
