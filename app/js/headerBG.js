@@ -47,7 +47,7 @@ function Space(){
     }
 
     function generate(){
-        for(var i = 0; i < 1000; i++){
+        for(var i = 0; i < 2000; i++){
             var x = Math.random() * WIDTH,
                 y = Math.random() * HEIGHT,
                 radius = 0.01,
