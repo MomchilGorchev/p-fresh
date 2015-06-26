@@ -5,9 +5,9 @@ window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequest
 //    return ((Math.floor(Math.random() * 1000) + 1) < percents * 10);
 //}
 //
-//function getRandInterval(min, max) {
-//    return (Math.random() * (max - min) + min);
-//}
+function getRandInterval(min, max) {
+    return (Math.random() * (max - min) + min);
+}
 
 function Space(){
     var canvas = document.getElementById('welcome'),
@@ -20,6 +20,9 @@ function Space(){
     function initSpace(){
         generate();
         loop();
+        setTimeout(function(){
+            path();
+        }, 3000);
     }
 
     function Bubble(x, y, radius, color) {
@@ -49,11 +52,62 @@ function Space(){
             //    }
             //
             //}
+
+            //if(_this.radius > 1.48){
+            //    //var next = bubbles[1];
+            //    var index = bubbles.map(function(obj, index) {
+            //        if((obj.x - _this.x < 10 || obj.y - _this.y < 10) && (obj.x + _this.x < 10 || obj.y + _this.y < 10)) {
+            //            return index;
+            //        }
+            //    }).filter(isFinite);
+            //
+            //    var next = bubbles[index] || bubbles[0];
+            //
+            //
+            //    ctx.beginPath();
+            //    ctx.moveTo(_this.x, _this.y);
+            //    ctx.lineTo(next.x, next.y);
+            //    ctx.strokeStyle = 'rgba('+ colors[1] +', 0.3)';
+            //    ctx.stroke();
+            //    //console.log('Line!');
+            //}
+
+
             ctx.closePath();
             ctx.fill();
         };
 
         return this;
+    }
+
+    function path(){
+        var mousePos= { x: window.innerWidth >> 1, y: window.innerHeight >> 1 },
+            polygonRadius = 40,
+            radius= parseInt(polygonRadius, 10);
+
+        for(var j = 0; j < 6; j++){
+            ctx.beginPath();
+            ctx.moveTo(WIDTH /2 , HEIGHT / 2);
+            ctx.lineTo(bubbles[10 + j].x, bubbles[10 + j].y);
+            ctx.moveTo(WIDTH /2 , HEIGHT / 2);
+            ctx.lineTo(bubbles[100 + j].x, bubbles[100 + j].y);
+            ctx.moveTo(WIDTH /2 , HEIGHT / 2);
+            ctx.lineTo(bubbles[820 + j].x, bubbles[820 + j].y);
+            ctx.strokeStyle = 'rgba('+ colors[1] +', 0.3)';
+            ctx.stroke();
+
+            //ctx.beginPath();
+            //ctx.moveTo(mousePos.x, mousePos.y);
+            //ctx.lineTo(mousePos.x - (Math.round(Math.random() * radius - radius * 0.5)), mousePos.y - (Math.round(Math.random() * radius - radius * 0.5)));
+            //ctx.lineTo(mousePos.x - (Math.round(Math.random() * radius - radius * 0.5)), mousePos.y - (Math.round(Math.random() * radius - radius * 0.5)));
+            //ctx.lineTo(mousePos.x - (Math.round(Math.random() * radius - radius * 0.5)), mousePos.y - (Math.round(Math.random() * radius - radius * 0.5)));
+            //ctx.strokeStyle = 'rgba('+ colors[1] +', 0.3)';
+            //ctx.stroke();
+            //ctx.closePath();
+        }
+
+        //console.log('Line!');
+
     }
 
 
@@ -115,6 +169,7 @@ function Space(){
         for (var i = 0; i < bubbles.length; i++) {
             bubbles[i].draw(ctx);
         }
+        path();
         requestAnimationFrame(loop);
     }
 
