@@ -144,7 +144,7 @@ function Space(){
             delay: Math.random() * 3,
             ease: Linear.easeInOut,
             onComplete: function(){
-                //moveStar(dot);
+                moveStar(dot);
             }
         });
     }
@@ -156,11 +156,33 @@ function Space(){
             y: Math.random() * (star.y + star.dy)
         };
 
-        TweenMax.to(star, 2, {
-            x: newPos.x,
-            y: newPos.y,
-            ease: Power4.easeInOut
-        });
+       var distance = HEIGHT / 2;
+
+       TweenMax.to(star, 5, {
+           bezier:{
+               type:"cubic",
+               values:[
+                   {
+                       x: star.x,
+                       y: star.y
+                   },
+                   {
+                       x: star.x + 20,
+                       y: star.y + 20
+                   },
+                   {
+                       x: star.x - 40,
+                       y: star.y + 20
+                   },
+                   {
+                       x: star.x - 20,
+                       y: star.y + 40
+                   }
+               ],
+               autoRotate:["x","y","rotation", 0, true]
+           },
+           ease:Power1.easeInOut
+       });
 
     }
 
