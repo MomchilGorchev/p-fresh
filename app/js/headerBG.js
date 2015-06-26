@@ -1,6 +1,14 @@
 window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
     window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
+//function getProbability(percents) {
+//    return ((Math.floor(Math.random() * 1000) + 1) < percents * 10);
+//}
+//
+//function getRandInterval(min, max) {
+//    return (Math.random() * (max - min) + min);
+//}
+
 function Space(){
     var canvas = document.getElementById('welcome'),
         ctx = canvas.getContext('2d'),
@@ -18,6 +26,8 @@ function Space(){
         var _this = this;
         _this.x = x || canvas.width / 2;
         _this.y = y || canvas.height / 2;
+        _this.dx = Math.random() * 2;
+        _this.dy = Math.random() * 2;
         _this.radius = radius || 2;
         _this.color = color;
         _this.newColor = null;
@@ -34,7 +44,7 @@ function Space(){
             //    for(var i = 0; i < 30; i++){
             //
             //        ctx.fillStyle = 'rgba('+ _this.color +', '+ (1 - (1 / 20) * i)+')';
-            //        ctx.rect(_this.x - 2 / 4 * i, this.y - 2 / 4 * i - 2, 2, 2);
+            //        ctx.rect(_this.x - _this.dx / 4 * i, _this.y - _this.dy / 4 * i - 2, 2, 2);
             //        ctx.fill();
             //    }
             //
@@ -80,16 +90,21 @@ function Space(){
             delay: Math.random() * 3,
             ease: Linear.easeInOut,
             onComplete: function(){
-                moveStar(dot);
+                //moveStar(dot);
             }
         });
     }
 
    function moveStar(star){
 
+        var newPos = {
+            x: Math.random() * (star.x - star.dx),
+            y: Math.random() * (star.y + star.dy)
+        };
 
         TweenMax.to(star, 2, {
-            y: HEIGHT + 10,
+            x: newPos.x,
+            y: newPos.y,
             ease: Power4.easeInOut
         });
 

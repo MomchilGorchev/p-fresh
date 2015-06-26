@@ -11,7 +11,7 @@ function Scene(){
                 ease: Circ.easeInOut,
                 onComplete: function(){
                     rocket.setAttribute('fill', '#3b4a49');
-                    self.initTitle();
+                    //self.initTitle();
                 }
             });
         }, 1.5);
