@@ -12,14 +12,6 @@ function Space(){
     function initSpace(){
         generate();
         loop();
-
-        setTimeout(function(){
-            TweenMax.to(canvas, 25, {
-                css: {
-                    rotation: 80
-                }
-            });
-        }, 2000);
     }
 
     function Bubble(x, y, radius, color) {
@@ -30,14 +22,14 @@ function Space(){
         _this.color = color;
         _this.newColor = null;
         _this.comet = null;
-//   _this.alpha = 1;
+    //  _this.alpha = 1;
 
         this.draw = function(ctx){
             ctx.beginPath();
             ctx.fillStyle = 'rgba('+ _this.color +', 1)';
             ctx.arc(_this.x, _this.y, _this.radius, 0, Math.PI * 2, true);
 
-            // Enable just for some comets after figure out the movement
+             //Enable just for some comets after figure out the movement
             //if(_this.comet){
             //    for(var i = 0; i < 30; i++){
             //
@@ -53,6 +45,8 @@ function Space(){
 
         return this;
     }
+
+
 
     function generate(){
         for(var i = 0; i < 2000; i++){
@@ -80,12 +74,25 @@ function Space(){
     function animate(dot){
         var current = dot;
         var nSize = Math.random() * 1.5;
-        dot.comet = nSize > 1.4;
+        dot.comet = nSize > 1.45;
         TweenMax.to(current, 3, {
             radius: nSize,
             delay: Math.random() * 3,
-            ease: Linear.easeInOut
+            ease: Linear.easeInOut,
+            onComplete: function(){
+                moveStar(dot);
+            }
         });
+    }
+
+   function moveStar(star){
+
+
+        TweenMax.to(star, 2, {
+            y: HEIGHT + 10,
+            ease: Power4.easeInOut
+        });
+
     }
 
     function loop(){
