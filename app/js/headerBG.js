@@ -94,29 +94,31 @@ function Space(){
 
    function moveStar(star){
 
-       TweenMax.to(star, 5, {
-           bezier:{
-               type:"cubic",
-               values:[
-                   {
-                       x: star.x,
-                       y: star.y
-                   },
-                   {
-                       x: star.x + 20,
-                       y: star.y + 20
-                   },
-                   {
-                       x: star.x - 40,
-                       y: star.y + 20
-                   },
-                   {
-                       x: star.x - 20,
-                       y: star.y + 40
-                   }
-               ],
-               autoRotate:["x","y","rotation", 0, true]
-           },
+       TweenMax.to(star, 2, {
+           //bezier:{
+           //    type:"cubic",
+           //    values:[
+           //        {
+           //            x: star.x,
+           //            y: star.y
+           //        },
+           //        {
+           //            x: star.x + 20,
+           //            y: star.y + 20
+           //        },
+           //        {
+           //            x: star.x - 40,
+           //            y: star.y + 20
+           //        },
+           //        {
+           //            x: star.x,
+           //            y: star.y + 40
+           //        }
+           //    ],
+           //    autoRotate:["x","y","rotation", 0, true]
+           //},
+           x: Math.random() * WIDTH,
+           y: Math.random() * HEIGHT,
            ease:Power1.easeInOut
        });
 
