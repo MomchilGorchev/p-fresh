@@ -6,7 +6,7 @@ function Space(){
         ctx = canvas.getContext('2d'),
         WIDTH = canvas.width = window.innerWidth,
         HEIGHT = canvas.height = window.innerHeight,
-        bubbles = [],
+        bubbles = [], lines = [],
         colors = ['204, 196, 123', '0, 214, 255', '179, 243, 255', '7, 108, 127', '143, 194, 204'];
 
     function initSpace(){
@@ -39,17 +39,38 @@ function Space(){
         return this;
     }
 
-    function path(){
-        for(var j = 0; j < 6; j++){
+    function findNearPoint(x, y){
+        for(var i = 0; i < bubbles.length; i ++){
+            var current = bubbles[i];
+            if((Math.abs(current.x - x) < 10) && (Math.abs(current.y - y) < 10)){
+                return current;
+            }
+        }
+    }
+
+    function Line(startingX, startingY){
+        console.log('line called');
+        var _this = this;
+        _this.x = startingX;
+        _this.y = startingY;
+        //var nextPoint = findNearPoint(_this.x, _this.y);
+        _this.draw = function(ctx){
             ctx.beginPath();
-            ctx.moveTo(WIDTH /2 , HEIGHT / 2);
-            ctx.lineTo(bubbles[10 + j].x, bubbles[10 + j].y);
-            ctx.moveTo(WIDTH /2 , HEIGHT / 2);
-            ctx.lineTo(bubbles[100 + j].x, bubbles[100 + j].y);
-            ctx.moveTo(WIDTH /2 , HEIGHT / 2);
-            ctx.lineTo(bubbles[820 + j].x, bubbles[820 + j].y);
+            ctx.moveTo(_this.x, _this.y);
+            ctx.lineTo(_this.x - Math.random() * 50, _this.y + Math.random() * 50);
+            ctx.moveTo(_this.x, _this.y);
+            ctx.lineTo(_this.x + Math.random() *  150, _this.y + Math.random() * 150);
+            //ctx.lineTo(nextPoint.x, nextPoint.y);
+            //ctx.lineTo(bubbles[30].x, bubbles[30].y);
             ctx.strokeStyle = 'rgba('+ colors[1] +', 0.3)';
             ctx.stroke();
+        }
+    }
+
+    function path(){
+        for(var j = 0; j < 6; j++){
+            var line = new Line(bubbles[Math.floor(Math.random() * bubbles.length)].x, bubbles[Math.floor(Math.random() * bubbles.length)].y);
+            lines.push(line);
         }
     }
 
@@ -94,33 +115,33 @@ function Space(){
 
    function moveStar(star){
 
-       TweenMax.to(star, 2, {
-           //bezier:{
-           //    type:"cubic",
-           //    values:[
-           //        {
-           //            x: star.x,
-           //            y: star.y
-           //        },
-           //        {
-           //            x: star.x + 20,
-           //            y: star.y + 20
-           //        },
-           //        {
-           //            x: star.x - 40,
-           //            y: star.y + 20
-           //        },
-           //        {
-           //            x: star.x,
-           //            y: star.y + 40
-           //        }
-           //    ],
-           //    autoRotate:["x","y","rotation", 0, true]
-           //},
-           x: Math.random() * WIDTH,
-           y: Math.random() * HEIGHT,
-           ease:Power1.easeInOut
-       });
+       //TweenMax.to(star, 2, {
+       //    //bezier:{
+       //    //    type:"cubic",
+       //    //    values:[
+       //    //        {
+       //    //            x: star.x,
+       //    //            y: star.y
+       //    //        },
+       //    //        {
+       //    //            x: star.x + 20,
+       //    //            y: star.y + 20
+       //    //        },
+       //    //        {
+       //    //            x: star.x - 40,
+       //    //            y: star.y + 20
+       //    //        },
+       //    //        {
+       //    //            x: star.x,
+       //    //            y: star.y + 40
+       //    //        }
+       //    //    ],
+       //    //    autoRotate:["x","y","rotation", 0, true]
+       //    //},
+       //    x: Math.random() * WIDTH,
+       //    y: Math.random() * HEIGHT,
+       //    ease:Power1.easeInOut
+       //});
 
     }
 
@@ -129,7 +150,9 @@ function Space(){
         for (var i = 0; i < bubbles.length; i++) {
             bubbles[i].draw(ctx);
         }
-        path();
+        for (var j = 0; j < lines.length; j++){
+            lines[j].draw(ctx);
+        }
         requestAnimationFrame(loop);
     }
 
