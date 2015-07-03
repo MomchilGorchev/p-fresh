@@ -65,12 +65,46 @@ function Space(){
 
 
     function generate(){
-        for (var i = 0, n; i < 1500; i++){
+        for (var i = 0, n; i < 500; i++){
             n = {};
             resetBubble(n);
             stars.push(n);
         }
     }
+
+    // mouse events
+    function addCanvasEventListener(name, fn)
+    {
+        canvas.addEventListener(name, fn, false);
+    }
+    addCanvasEventListener("mousemove", function(e) {
+        mousex = e.clientX;
+        mousey = e.clientY;
+    });
+    function wheel (e) {
+        var delta = 0;
+        if (e.detail)
+        {
+            delta = -e.detail / 3;
+        }
+        else
+        {
+            delta = e.wheelDelta / 120;
+        }
+        if (delta > 0 && Z < 1 || delta < 0 && Z > 0.1)
+        {
+            Z += (delta/25);
+        }
+    }
+    //addCanvasEventListener("DOMMouseScroll", wheel);
+    //addCanvasEventListener("mousewheel", wheel);
+    //function draw() {
+    //    for (var i = 0; i < stars.length; i++) {
+    //        stars[i].draw(ctx);
+    //        animate(stars[i]);
+    //    }
+    //
+    //}
 
     //function animate(dot){
     //    var current = dot;
@@ -127,8 +161,10 @@ function Space(){
                 resetBubble(n);
             }
         }
+        cycle += 0.1;
         requestAnimationFrame(loop);
     }
+
 
     initSpace();
     console.log(stars);
