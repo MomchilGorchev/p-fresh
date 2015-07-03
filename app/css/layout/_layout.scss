@@ -62,15 +62,24 @@ nav{
   }
   svg{
     width:150px;
-    transform: rotate(-45deg);
+    transform: rotate3d(1, 0, 0, 48deg) rotate3d(0, 1, 0, -7deg) rotate3d(0, 0, 1, -44deg);
   }
-  img{
-    opacity: 0;
-    transform: rotate(-45deg);
-    width: 136px;
-    position: absolute;
-    top: 7px;
-    left: 7px;
+  img {
+    &.rocket-fill {
+      opacity: 0;
+      transform: rotate3d(1, 0, 0, 48deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+      width: 136px;
+      position: absolute;
+      top: 7px;
+      left: 7px;
+    }
+    &.rocket-fill2{
+      transform: rotate3d(1, 0, 0, 28deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+      width: 136px;
+      position: absolute;
+      top: 7px;
+      left: 7px;
+    }
   }
 }
 
@@ -94,8 +103,10 @@ nav{
     fill: #627582;
   }
 }
-path{
-  -webkit-animation: draw 5s;
-  animation: draw 5s;
-  stroke-dasharray: 550;
+#rocket__layer{
+  path{
+    -webkit-animation: draw 5s;
+    animation: draw 5s;
+    stroke-dasharray: 550;
+  }
 }

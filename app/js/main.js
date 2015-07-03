@@ -21,7 +21,7 @@ function Scene(){
     self.initTitle = function(){
         var header = document.querySelector('header');
         TweenMax.to(header, 1.8, {
-            y: window.innerHeight / 3,
+            //y: window.innerHeight / 3,
             opacity: 1,
             ease: Circ.easeOut
         });

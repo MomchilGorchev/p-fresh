@@ -714,14 +714,19 @@ nav {
     transform: scale(1.1, 1.1); }
   .row.absolute svg {
     width: 150px;
-    -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg); }
-  .row.absolute img {
+    -webkit-transform: rotate3d(1, 0, 0, 48deg) rotate3d(0, 1, 0, -7deg) rotate3d(0, 0, 1, -44deg);
+            transform: rotate3d(1, 0, 0, 48deg) rotate3d(0, 1, 0, -7deg) rotate3d(0, 0, 1, -44deg); }
+  .row.absolute img.rocket-fill {
     opacity: 0;
-    -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    -webkit-transform: rotate3d(1, 0, 0, 48deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+            transform: rotate3d(1, 0, 0, 48deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+    width: 136px;
+    position: absolute;
+    top: 7px;
+    left: 7px; }
+  .row.absolute img.rocket-fill2 {
+    -webkit-transform: rotate3d(1, 0, 0, 28deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+            transform: rotate3d(1, 0, 0, 28deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
     width: 136px;
     position: absolute;
     top: 7px;
@@ -743,7 +748,7 @@ nav {
     stroke-dashoffset: 50;
     fill: #627582; } }
 
-path {
+#rocket__layer path {
   -webkit-animation: draw 5s;
   animation: draw 5s;
   stroke-dasharray: 550; }
@@ -785,6 +790,8 @@ p, label, article, aside {
   h2 {
     font-size: 25px; } }
 
+.about__section {
+  background-color: #49007E; }
 .about__photo {
   width: 250px;
   border-radius: 50%;
