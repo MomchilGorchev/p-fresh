@@ -11,7 +11,7 @@ function Scene(){
                 ease: Circ.easeInOut,
                 onComplete: function(){
                     rocket.setAttribute('fill', '#3b4a49');
-                    //self.initTitle();
+                    self.initTitle();
                 }
             });
         }, 1.5);
@@ -21,6 +21,7 @@ function Scene(){
     self.initTitle = function(){
         var header = document.querySelector('header');
         TweenMax.to(header, 1.8, {
+            y: window.innerHeight / 3,
             opacity: 1,
             ease: Circ.easeOut
         });
