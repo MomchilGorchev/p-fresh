@@ -1,0 +1,19 @@
+
+.main{
+  &__trigger{
+    width: 180px;
+    height: 50px;
+    border: 2px solid $bg-color;
+    background-color: transparent;
+  }
+
+  &__title{
+    top:10%;
+    opacity:0;
+  }
+
+  &__scene{
+
+  }
+
+}

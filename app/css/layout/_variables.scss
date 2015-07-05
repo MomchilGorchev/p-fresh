@@ -2,6 +2,17 @@
 //
 //## Define the breakpoints at which your layout will change, adapting to different screen sizes.
 
+
+// --- COLORS --- //
+$bg-color: #0D85A1;
+$font-color: #ccc;
+$link-color: #302C5B;
+
+
+// --- FONTS --- //
+$header-font: 'Didact Gothic', sans-serif;
+$content-font: 'Arimo', sans-serif;
+
 // Extra small screen / phone
 //** Deprecated `$screen-xs` as of v3.0.1
 $screen-xs:                  480px !default;

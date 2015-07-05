@@ -1,17 +1,4 @@
-// --------------------------------
-// - GRID
-// --------------------------------
-// Minimal version of Bootstrap's grid system
 
-// Grid variables and mixins
-@import "variables";
-@import "mixins";
-
-// Reset and dependencies
-@import "normalize";
-
-// Core CSS
-@import "grid";
 .hidden{
   display: none!important;
 }
@@ -30,15 +17,7 @@
   height: 100vh;
   background: black;
 }
-.main{
-  &__title{
-    top:10%;
-    opacity:0;
-  }
-  &__scene{
 
-  }
-}
 
 .floating{
   position: absolute;
