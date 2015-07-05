@@ -24,6 +24,11 @@
   }
 }
 
+@mixin cta-text(){
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
 // Framework grid generation
 //
 // Used only by Bootstrap to generate the correct number of grid classes given
