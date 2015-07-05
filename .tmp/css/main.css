@@ -715,6 +715,36 @@ nav {
   animation: draw 5s;
   stroke-dasharray: 550; }
 
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+
+  to {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@-webkit-keyframes fadeInTop {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+@keyframes fadeInTop {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
 h1 {
   font-size: 60px; }
 
@@ -840,21 +870,80 @@ canvas {
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
-    background-color: transparent; }
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 300ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-name: spin;
+            animation-name: spin;
+    -webkit-animation-duration: 300ms;
+            animation-duration: 300ms;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out; }
   .menu__trigger-icon img {
     width: 30px;
     margin: 5px; }
 .menu__content {
+  position: absolute;
   opacity: 0;
   visibility: hidden;
   background-color: #0D85A1;
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  z-index: 100; }
+  width: 1px;
+  height: 1px;
+  top: 50%;
+  right: 50%;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease; }
+  .menu__content .menu__list {
+    opacity: 0;
+    text-align: center;
+    margin-top: 15%;
+    font-size: 3em;
+    text-transform: uppercase;
+    list-style-type: none; }
+    .menu__content .menu__list-item {
+      margin: 4%; }
+      .menu__content .menu__list-item a {
+        text-decoration: none;
+        font-family: 'Arimo', sans-serif;
+        color: #ccc; }
   .menu__content.open {
     opacity: 1;
-    visibility: visible; }
+    visibility: visible;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+    top: 50%;
+    right: 50%;
+    margin-top: -50vh;
+    margin-right: -50vw;
+    border-radius: 0;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease; }
+    .menu__content.open .menu__list {
+      opacity: 1;
+      -webkit-animation-name: fadeInTop;
+      -webkit-animation-delay: 500ms;
+      -webkit-animation-duration: 300ms;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-timing-function: ease-out;
+      -webkit-animation-name: fadeInTop;
+              animation-name: fadeInTop;
+      -webkit-animation-delay: 500ms;
+              animation-delay: 500ms;
+      -webkit-animation-duration: 300ms;
+              animation-duration: 300ms;
+      -webkit-animation-iteration-count: 1;
+              animation-iteration-count: 1;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out; }
 
 .about__section {
   background-color: #49007E; }

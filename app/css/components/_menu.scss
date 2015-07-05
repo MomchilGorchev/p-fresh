@@ -14,7 +14,15 @@
     z-index:105;
     &:hover{
       @include vendor-transition();
-      background-color: transparent;
+      -webkit-animation-name: spin;
+      -webkit-animation-duration: 300ms;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-timing-function: ease-out;
+
+      animation-name: spin;
+      animation-duration: 300ms;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-out;
 
     }
 
@@ -29,27 +37,61 @@
   }
 
   &__content{
+    position: absolute;
     opacity: 0;
     visibility: hidden;
     background-color: $bg-color;
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    z-index: 100;
+    width:1px;
+    height: 1px;
+    top: 50%;
+    right:50%;
+    border-radius: 50%;
+    @include vendor-transition();
+    .menu__list{
+      opacity:0;
+      text-align: center;
+      margin-top: 15%;
+      font-size: 3em;
+      text-transform: uppercase;
+      list-style-type: none;
+      &-item{
+        margin: 4%;
+        a{
+          text-decoration: none;
+          font-family: $content-font;
+          color:$font-color;
+        }
+
+      }
+
+    }
     &.open {
       opacity: 1;
       visibility: visible;
+      height: 100vh;
+      width: 100vw;
+      z-index: 100;
+      top: 50%;
+      right:50%;
+      margin-top: -50vh;
+      margin-right: -50vw;
+      border-radius: 0;
+      @include vendor-transition();
+      .menu__list{
+        opacity: 1;
+        -webkit-animation-name: fadeInTop;
+        -webkit-animation-delay: 500ms;
+        -webkit-animation-duration: 300ms;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-timing-function: ease-out;
+
+        animation-name: fadeInTop;
+        animation-delay: 500ms;
+        animation-duration: 300ms;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-out;
+      }
     }
-  }
-
-  &__list{
-
-    &-item{
-
-
-
-    }
-
   }
 
 }

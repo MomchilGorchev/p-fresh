@@ -1,4 +1,18 @@
+function toggleClass(el, className){
+    if (el.classList) {
+        el.classList.toggle(className);
+    } else {
+        var classes = el.className.split(' ');
+        var existingIndex = classes.indexOf(className);
 
+        if (existingIndex >= 0)
+            classes.splice(existingIndex, 1);
+        else
+            classes.push(className);
+
+        el.className = classes.join(' ');
+    }
+}
 function Scene(){
     var self = this;
 
@@ -43,18 +57,6 @@ document.addEventListener('DOMContentLoaded', function(){
         var container = menuTrigger.parentNode,
             menuContent = container.querySelector('.menu__content'),
             className = 'open';
-        if (menuContent.classList) {
-            menuContent.classList.toggle(className);
-        } else {
-            var classes = menuContent.className.split(' ');
-            var existingIndex = classes.indexOf(className);
-
-            if (existingIndex >= 0)
-                classes.splice(existingIndex, 1);
-            else
-                classes.push(className);
-
-            menuContent.className = classes.join(' ');
-        }
+        toggleClass(menuContent, className);
     });
 });
