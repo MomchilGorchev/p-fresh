@@ -13,6 +13,13 @@ function toggleClass(el, className){
         el.className = classes.join(' ');
     }
 }
+
+function hasClass(el, className){
+    if (el.classList)
+        return el.classList.contains(className);
+    else
+        return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
+}
 function Scene(){
     var self = this;
 
@@ -56,7 +63,19 @@ document.addEventListener('DOMContentLoaded', function(){
         e.preventDefault();
         var container = menuTrigger.parentNode,
             menuContent = container.querySelector('.menu__content'),
+            menuList = menuContent.querySelector('.menu__list'),
             className = 'open';
-        toggleClass(menuContent, className);
+        if(!hasClass(menuContent, className)){
+            toggleClass(menuContent, className);
+            setTimeout(function(){
+                toggleClass(menuList, className);
+            }, 300);
+        } else {
+            toggleClass(menuList, className);
+            setTimeout(function(){
+                toggleClass(menuContent, className);
+            }, 300);
+        }
+
     });
 });
