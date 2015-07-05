@@ -665,6 +665,10 @@ td, th {
   .col-lg-offset-12 {
     margin-left: 100%; } }
 
+body {
+  background-color: black;
+  color: #ccc; }
+
 .hidden {
   display: none !important; }
 
@@ -689,44 +693,6 @@ td, th {
 
 nav {
   background-color: silver; }
-
-.row.absolute {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  margin-top: -157px;
-  margin-left: -78px;
-  transition: all 0.35s ease-in-out;
-  -webkit-transition: all 0.35s ease-in-out;
-  -moz-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out; }
-  .row.absolute:hover {
-    transition: all 0.35s ease-in-out;
-    -webkit-transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out;
-    -webkit-transform: scale(1.1, 1.1);
-    -ms-transform: scale(1.1, 1.1);
-    transform: scale(1.1, 1.1); }
-  .row.absolute svg {
-    width: 150px;
-    -webkit-transform: rotate3d(1, 0, 0, 48deg) rotate3d(0, 1, 0, -7deg) rotate3d(0, 0, 1, -44deg);
-            transform: rotate3d(1, 0, 0, 48deg) rotate3d(0, 1, 0, -7deg) rotate3d(0, 0, 1, -44deg); }
-  .row.absolute img.rocket-fill {
-    opacity: 0;
-    -webkit-transform: rotate3d(1, 0, 0, 48deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
-            transform: rotate3d(1, 0, 0, 48deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
-    width: 136px;
-    position: absolute;
-    top: 7px;
-    left: 7px; }
-  .row.absolute img.rocket-fill2 {
-    -webkit-transform: rotate3d(1, 0, 0, 28deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
-            transform: rotate3d(1, 0, 0, 28deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
-    width: 136px;
-    position: absolute;
-    top: 7px;
-    left: 7px; }
 
 @-webkit-keyframes draw {
   0% {
@@ -786,14 +752,69 @@ p, label, article, aside {
   h2 {
     font-size: 25px; } }
 
-.main__trigger {
-  width: 180px;
-  height: 50px;
-  border: 2px solid #0D85A1;
-  background-color: transparent; }
-.main__title {
-  top: 10%;
-  opacity: 0; }
+.row.absolute {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  margin-top: -157px;
+  margin-left: -100px;
+  transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out; }
+  .row.absolute .main__trigger {
+    width: 200px;
+    height: 50px;
+    border: 4px double #0D85A1;
+    background-color: transparent;
+    color: #ccc;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Arimo', sans-serif;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease; }
+    .row.absolute .main__trigger:hover {
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      color: #000;
+      background-color: #0D85A1; }
+  .row.absolute .main__title {
+    top: 10%;
+    opacity: 0; }
+  .row.absolute:hover {
+    transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    -webkit-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1); }
+  .row.absolute svg {
+    width: 150px;
+    -webkit-transform: rotate3d(1, 0, 0, 48deg) rotate3d(0, 1, 0, -7deg) rotate3d(0, 0, 1, -44deg);
+            transform: rotate3d(1, 0, 0, 48deg) rotate3d(0, 1, 0, -7deg) rotate3d(0, 0, 1, -44deg); }
+  .row.absolute img.rocket-fill {
+    opacity: 0;
+    -webkit-transform: rotate3d(1, 0, 0, 48deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+            transform: rotate3d(1, 0, 0, 48deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+    width: 136px;
+    position: absolute;
+    top: 7px;
+    left: 7px; }
+  .row.absolute img.rocket-fill2 {
+    -webkit-transform: rotate3d(1, 0, 0, 28deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+            transform: rotate3d(1, 0, 0, 28deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+    width: 136px;
+    position: absolute;
+    top: 7px;
+    left: 7px; }
+
+canvas {
+  overflow: hidden; }
 
 .about__section {
   background-color: #49007E; }
@@ -808,23 +829,3 @@ p, label, article, aside {
   text-align: justify;
   text-shadow: 1px 1px 1px #074b5a;
   font-size: 1.334em; }
-
-body {
-  background-color: black;
-  color: #ccc; }
-
-img {
-  max-width: 650px;
-  width: 100%; }
-
-nav {
-  height: 60px;
-  line-height: 60px;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15); }
-
-a {
-  color: #302C5B;
-  text-decoration: none; }
-
-canvas {
-  overflow: hidden; }

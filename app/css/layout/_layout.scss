@@ -1,4 +1,8 @@
 
+body {
+  background-color: black;
+  color: $font-color;
+}
 .hidden{
   display: none!important;
 }
@@ -28,39 +32,7 @@ nav{
 }
 
 
-.row.absolute{
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  margin-top: -157px;
-  margin-left: -78px;
-  @include vendor-transition(all, 0.35s, ease-in-out);
-  &:hover{
-    @include vendor-transition(all, 0.35s, ease-in-out);
-    @include scale-element(1.10, 1.10);
-  }
-  svg{
-    width:150px;
-    transform: rotate3d(1, 0, 0, 48deg) rotate3d(0, 1, 0, -7deg) rotate3d(0, 0, 1, -44deg);
-  }
-  img {
-    &.rocket-fill {
-      opacity: 0;
-      transform: rotate3d(1, 0, 0, 48deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
-      width: 136px;
-      position: absolute;
-      top: 7px;
-      left: 7px;
-    }
-    &.rocket-fill2{
-      transform: rotate3d(1, 0, 0, 28deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
-      width: 136px;
-      position: absolute;
-      top: 7px;
-      left: 7px;
-    }
-  }
-}
+
 
 @-webkit-keyframes draw {
   0%{

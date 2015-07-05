@@ -1,19 +1,65 @@
+.row.absolute{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  margin-top: -157px;
+  margin-left: -100px;
+  .main{
+    &__trigger{
+      width: 200px;
+      height: 50px;
+      border: 4px double $bg-color;
+      background-color: transparent;
+      color:$font-color;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-family: $content-font;
+      @include vendor-transition();
+      &:hover{
+        @include vendor-transition();
+        color: #000;
+        background-color: $bg-color;
+      }
+    }
 
-.main{
-  &__trigger{
-    width: 180px;
-    height: 50px;
-    border: 2px solid $bg-color;
-    background-color: transparent;
+    &__title{
+      top:10%;
+      opacity:0;
+    }
+
+    &__scene{
+
+    }
+
   }
-
-  &__title{
-    top:10%;
-    opacity:0;
+  @include vendor-transition(all, 0.35s, ease-in-out);
+  &:hover{
+    @include vendor-transition(all, 0.35s, ease-in-out);
+    @include scale-element(1.10, 1.10);
   }
-
-  &__scene{
-
+  svg{
+    width:150px;
+    transform: rotate3d(1, 0, 0, 48deg) rotate3d(0, 1, 0, -7deg) rotate3d(0, 0, 1, -44deg);
   }
+  img {
+    &.rocket-fill {
+      opacity: 0;
+      transform: rotate3d(1, 0, 0, 48deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+      width: 136px;
+      position: absolute;
+      top: 7px;
+      left: 7px;
+    }
+    &.rocket-fill2{
+      transform: rotate3d(1, 0, 0, 28deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+      width: 136px;
+      position: absolute;
+      top: 7px;
+      left: 7px;
+    }
+  }
+}
 
+canvas{
+  overflow: hidden;
 }

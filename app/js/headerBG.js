@@ -18,7 +18,7 @@ function Space(){
         Z = 0.1,
         M = Math,
         Rnd = M.random;
-    ctx.globalAlpha = 0.3;
+    ctx.globalAlpha = 0.5;
 
     function randomIndex(array){
         return array[Math.floor(Math.random() * array.length)];
@@ -65,6 +65,7 @@ function Space(){
                 ctx.beginPath();
                 ctx.arc(xx + cx, yy + cy, radius, 0, Math.PI * 2, true);
                 ctx.arc(n.px + cx, n.py + cy, radius, 0, Math.PI * 2, true);
+                //ctx.arc(n.px - xx, n.py - yy, radius, 0, Math.PI * 2, true);
                 ctx.closePath();
                 ctx.fill();
             }
