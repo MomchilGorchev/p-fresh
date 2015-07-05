@@ -812,12 +812,49 @@ canvas {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     color: #000;
-    background-color: #0D85A1; }
+    background-color: #0D85A1;
+    border: 4px double #000; }
   .main__trigger:focus {
     outline: none; }
 .main__title {
   top: 10%;
   opacity: 0; }
+
+.menu__trigger {
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  width: 45px;
+  height: 45px;
+  background: #0D85A1;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-radius: 50%;
+  border: 2px double white;
+  cursor: pointer;
+  z-index: 105; }
+  .menu__trigger:hover {
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    background-color: transparent; }
+  .menu__trigger-icon img {
+    width: 30px;
+    margin: 5px; }
+.menu__content {
+  opacity: 0;
+  visibility: hidden;
+  background-color: #0D85A1;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 100; }
+  .menu__content.open {
+    opacity: 1;
+    visibility: visible; }
 
 .about__section {
   background-color: #49007E; }

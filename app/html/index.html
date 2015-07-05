@@ -19,10 +19,7 @@
     <![endif]-->
 </head>
 <body id="page-top">
-    <!-- Example navigation bar -->
-    <!--<nav class="floating">-->
-        <!--Logo-->
-    <!--</nav>-->
+    <section class="container-fluid">
 
     <!-- Example header -->
     <header class="floating main__title ">
@@ -35,6 +32,20 @@
             </div>
         </div>
     </header>
+
+    <div class="menu">
+        <div id="menu__trigger" class="menu__trigger">
+            <a class="menu__trigger-icon" href="#"><img src="img/icons/menu-rocket-white.png" /></a>
+        </div>
+        <div class="menu__content">
+            <ul class="menu__list">
+                <li class="menu__list-item"><a href="#">Start</a></li>
+                <li class="menu__list-item"><a href="#">About</a></li>
+                <li class="menu__list-item"><a href="#">Projects</a></li>
+                <li class="menu__list-item"><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
 
     <div class="row absolute">
         <div class="text-center">
@@ -63,12 +74,10 @@
 
         </div>
     </div>
-    <!-- Example main section with obligatory random meme -->
-    <main>
-        <section class="container-fluid">
-            <canvas id="welcome" class="main__scene"></canvas>
-        </section>
-    </main>
+
+        <canvas id="welcome" class="main__scene"></canvas>
+    </section>
+
 
     <section class="container-fluid about__section">
         <div class="container about__section-inner">

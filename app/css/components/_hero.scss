@@ -51,6 +51,7 @@ canvas{
       @include vendor-transition();
       color: #000;
       background-color: $bg-color;
+      border: 4px double $black;
     }
     &:focus{
       outline: none;
