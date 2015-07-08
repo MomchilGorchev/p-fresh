@@ -41,12 +41,12 @@
     opacity: 0;
     visibility: hidden;
     background-color: $bg-color;
-    width:800px;
-    height: 600px;
-    top: 50%;
-    right:50%;
-    margin-top: -300px;
-    margin-right: -400px;
+    width: 80%;
+    height: 80%;
+    top: 70%;
+    right: 50%;
+    margin-top: -40%;
+    margin-right: -40%;
     //border-radius: 50%;
     @include vendor-transition();
 

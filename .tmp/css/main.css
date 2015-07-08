@@ -890,28 +890,16 @@ canvas {
   opacity: 0;
   visibility: hidden;
   background-color: #0D85A1;
-  width: 1px;
-  height: 1px;
-  top: 50%;
+  width: 80%;
+  height: 80%;
+  top: 70%;
   right: 50%;
-  border-radius: 50%;
+  margin-top: -40%;
+  margin-right: -40%;
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease; }
-  .menu__content .menu__list {
-    opacity: 0;
-    text-align: center;
-    margin-top: 15%;
-    font-size: 3em;
-    text-transform: uppercase;
-    list-style-type: none; }
-    .menu__content .menu__list-item {
-      margin: 4%; }
-      .menu__content .menu__list-item a {
-        text-decoration: none;
-        font-family: 'Arimo', sans-serif;
-        color: #ccc; }
   .menu__content.open {
     opacity: 1;
     visibility: visible;
@@ -927,23 +915,29 @@ canvas {
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease; }
-    .menu__content.open .menu__list {
-      opacity: 1;
-      -webkit-animation-name: fadeInTop;
-      -webkit-animation-delay: 500ms;
-      -webkit-animation-duration: 300ms;
-      -webkit-animation-iteration-count: 1;
-      -webkit-animation-timing-function: ease-out;
-      -webkit-animation-name: fadeInTop;
-              animation-name: fadeInTop;
-      -webkit-animation-delay: 500ms;
-              animation-delay: 500ms;
-      -webkit-animation-duration: 300ms;
-              animation-duration: 300ms;
-      -webkit-animation-iteration-count: 1;
-              animation-iteration-count: 1;
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out; }
+.menu__list {
+  opacity: 0;
+  text-align: center;
+  margin-top: 15%;
+  font-size: 3em;
+  text-transform: uppercase;
+  list-style-type: none;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease; }
+  .menu__list-item {
+    margin: 4%; }
+    .menu__list-item a {
+      text-decoration: none;
+      font-family: 'Arimo', sans-serif;
+      color: #ccc; }
+  .menu__list.open {
+    opacity: 1;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease; }
 
 .about__section {
   background-color: #49007E; }
