@@ -1,0 +1,42 @@
+.projects{
+
+  &__section{
+
+
+  }
+
+  &__wrapper{
+
+
+  }
+
+  &__thumb{
+    &-wrapper{
+
+    }
+    &-content{
+      height:200px; //TEMP
+      //@include apply-filter(blur, 5px);
+      background: url(http://lorempixel.com/400/200/) no-repeat center center black;
+      background-size: cover;
+      margin: 10px;
+
+    }
+    &-title{
+
+
+    }
+
+    &-info{
+
+
+    }
+
+    &-expand{
+
+
+    }
+
+  }
+
+}

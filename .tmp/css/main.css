@@ -952,3 +952,9 @@ canvas {
   text-align: justify;
   text-shadow: 1px 1px 1px #074b5a;
   font-size: 1.334em; }
+
+.projects__thumb-content {
+  height: 200px;
+  background: url(http://lorempixel.com/400/200/) no-repeat center center black;
+  background-size: cover;
+  margin: 10px; }
