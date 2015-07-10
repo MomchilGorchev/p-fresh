@@ -29,6 +29,7 @@
   font-weight: 500;
 }
 
+
 // Framework grid generation
 //
 // Used only by Bootstrap to generate the correct number of grid classes given
@@ -339,4 +340,13 @@
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0);
+}
+
+@mixin link(){
+  color: $font-color;
+  @include vendor-transition(all, 0.2s, ease-in);
+  &:hover{
+    @include vendor-transition(all, 0.2s, ease-in);
+    color: darken($font-color, 10%);
+  }
 }

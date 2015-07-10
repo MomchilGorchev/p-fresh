@@ -1,0 +1,48 @@
+.footer{
+
+  &__section{
+
+    background: $footer-bg;
+
+  }
+
+  &__wrapper{
+
+
+
+  }
+
+  &__social{
+
+    float:left;
+
+    &-list{
+
+      list-style-type: none;
+
+    }
+
+    &-item{
+
+      display: inline-block;
+      margin-left:15px;
+      a{
+
+       @include link();
+
+
+      }
+
+    }
+
+  }
+
+  &__info{
+
+    float:right;
+    margin-right:15px;
+
+  }
+
+
+}

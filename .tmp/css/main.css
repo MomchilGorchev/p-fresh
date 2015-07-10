@@ -1015,6 +1015,8 @@ canvas {
   width: 100%;
   border-radius: 5px;
   padding: 4px; }
+.contact__form-submit {
+  width: 100%; }
 .contact__info {
   font-size: 1.3rem; }
   .contact__info-inner {
@@ -1024,3 +1026,35 @@ canvas {
     margin-top: 20px;
     font-weight: 400;
     height: 200px; }
+  .contact__info-triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 80px 0 0 80px;
+    border-color: #2D2D2D transparent transparent transparent;
+    margin-top: 63px; }
+
+.footer__section {
+  background: #7C7B7B; }
+.footer__social {
+  float: left; }
+  .footer__social-list {
+    list-style-type: none; }
+  .footer__social-item {
+    display: inline-block;
+    margin-left: 15px; }
+    .footer__social-item a {
+      color: #ccc;
+      transition: all 0.2s ease-in;
+      -webkit-transition: all 0.2s ease-in;
+      -moz-transition: all 0.2s ease-in;
+      -o-transition: all 0.2s ease-in; }
+      .footer__social-item a:hover {
+        transition: all 0.2s ease-in;
+        -webkit-transition: all 0.2s ease-in;
+        -moz-transition: all 0.2s ease-in;
+        -o-transition: all 0.2s ease-in;
+        color: #b3b3b3; }
+.footer__info {
+  float: right;
+  margin-right: 15px; }

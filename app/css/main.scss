@@ -3,10 +3,6 @@
 // --------------------------------
 // File where you should import all your SASS files / modules
 
-// You can comment out stuff to include / exclude code
-
-// /!\ WARNING: DELETE EVERYTHING BELOW TO DO A FRESH START
-
 @import "layout/normalize";
 @import "layout/variables";
 @import "layout/mixins";
@@ -21,6 +17,7 @@
 @import "components/about";
 @import "components/projects";
 @import "components/contact";
+@import "components/footer";
 
 
 
