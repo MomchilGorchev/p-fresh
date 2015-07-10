@@ -5,7 +5,7 @@
     width: 45px;
     height:45px;
     background: $bg-color;
-    position: absolute;
+    position: fixed;
     top: 20px;
     right:20px;
     border-radius: 50%;
@@ -37,7 +37,7 @@
   }
 
   &__content{
-    position: absolute;
+    position: fixed;
     opacity: 0;
     visibility: hidden;
     background-color: $bg-color;

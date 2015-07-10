@@ -20,6 +20,8 @@ function hasClass(el, className){
     else
         return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
 }
+
+
 function Scene(){
     var self = this;
 
@@ -54,28 +56,59 @@ function Scene(){
 
 var scene = new Scene();
 
+function clickHandle(menuTrigger){
+    var container = menuTrigger.parentNode,
+        menuContent = container.querySelector('.menu__content'),
+        menuList = menuContent.querySelector('.menu__list'),
+        className = 'open';
+    if(!hasClass(menuContent, className)){
+        toggleClass(menuContent, className);
+        setTimeout(function(){
+            toggleClass(menuList, className);
+        }, 300);
+    } else {
+        toggleClass(menuList, className);
+        setTimeout(function(){
+            toggleClass(menuContent, className);
+        }, 300);
+    }
+}
+
+function menuHandler(){
+    var menuTrigger = document.getElementById('menu__trigger');
+
+    menuTrigger.addEventListener('click', function(e){
+        e.preventDefault();
+        clickHandle(this);
+    });
+}
+
+function menuClick(){
+    var menuItems = document.querySelectorAll('.menu__list-item');
+    var menuTrigger = document.getElementById('menu__trigger');
+    for(var i = 0; i < menuItems.length; i++){
+        var item = menuItems[i];
+        item.addEventListener('click', function(e){
+            e.preventDefault();
+            var href = this.querySelector('a').getAttribute('href');
+            var DOMElement = document.querySelector(href);
+            clickHandle(menuTrigger);
+            TweenMax.to(window, 1,{
+                delay:1,
+                scrollTo: {
+                    y: DOMElement.offsetTop
+                }
+            });
+
+        });
+    }
+}
+
 /*
     Document ready
  */
 document.addEventListener('DOMContentLoaded', function(){
-    var menuTrigger = document.getElementById('menu__trigger');
-    menuTrigger.addEventListener('click', function(e){
-        e.preventDefault();
-        var container = menuTrigger.parentNode,
-            menuContent = container.querySelector('.menu__content'),
-            menuList = menuContent.querySelector('.menu__list'),
-            className = 'open';
-        if(!hasClass(menuContent, className)){
-            toggleClass(menuContent, className);
-            setTimeout(function(){
-                toggleClass(menuList, className);
-            }, 300);
-        } else {
-            toggleClass(menuList, className);
-            setTimeout(function(){
-                toggleClass(menuContent, className);
-            }, 300);
-        }
+    menuHandler();
+    menuClick();
 
-    });
 });

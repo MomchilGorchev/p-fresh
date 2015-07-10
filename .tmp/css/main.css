@@ -882,7 +882,7 @@ canvas {
   width: 45px;
   height: 45px;
   background: #0D85A1;
-  position: absolute;
+  position: fixed;
   top: 20px;
   right: 20px;
   border-radius: 50%;
@@ -910,7 +910,7 @@ canvas {
     width: 30px;
     margin: 5px; }
 .menu__content {
-  position: absolute;
+  position: fixed;
   opacity: 0;
   visibility: hidden;
   background-color: #0D85A1;
@@ -996,10 +996,10 @@ canvas {
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
-    box-shadow: 0px 3px 0px 0px #f0f2f4;
+    box-shadow: 0 3px 0 0 #f0f2f4;
     margin-top: -10px; }
     .projects__thumb-content:hover:hover, .projects__thumb-content:hover:focus {
-      box-shadow: 0px 5px 0px 0px #0D85A1; }
+      box-shadow: 0 5px 0 0 #0D85A1; }
 
 .contact__section {
   height: 600px;
@@ -1035,7 +1035,8 @@ canvas {
     margin-top: 63px; }
 
 .footer__section {
-  background: #7C7B7B; }
+  background: #7C7B7B;
+  height: 100px; }
 .footer__social {
   float: left; }
   .footer__social-list {
