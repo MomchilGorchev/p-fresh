@@ -1,26 +1,34 @@
 .projects{
 
   &__section{
-
+    background: $project-bg;
 
   }
 
   &__wrapper{
 
+    margin-bottom: 20px;
 
   }
 
   &__thumb{
+
     &-wrapper{
 
     }
     &-content{
-      height:200px; //TEMP
-      //@include apply-filter(blur, 5px);
-      background: url(http://lorempixel.com/400/200/) no-repeat center center black;
+      @include vendor-transition(all, 0.3s, ease-in-out);
+      height:400px;
+      background: url(http://lorempixel.com/400/400/) no-repeat center center black;
       background-size: cover;
-      margin: 10px;
+      margin: 5px;
+      cursor: pointer;
+      &:hover{
+        @include vendor-transition(all, 0.3s, ease-in-out);
+        @include box-shadow();
+        margin-top: -10px;
 
+      }
     }
     &-title{
 

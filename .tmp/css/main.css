@@ -940,7 +940,7 @@ canvas {
     -o-transition: all 0.5s ease; }
 
 .about__section {
-  background-color: #49007E; }
+  background-color: #363636; }
 .about__photo {
   width: 250px;
   border-radius: 50%;
@@ -953,8 +953,29 @@ canvas {
   text-shadow: 1px 1px 1px #074b5a;
   font-size: 1.334em; }
 
+.projects__section {
+  background: #474747; }
+.projects__wrapper {
+  margin-bottom: 20px; }
 .projects__thumb-content {
-  height: 200px;
-  background: url(http://lorempixel.com/400/200/) no-repeat center center black;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  height: 400px;
+  background: url(http://lorempixel.com/400/400/) no-repeat center center black;
   background-size: cover;
-  margin: 10px; }
+  margin: 5px;
+  cursor: pointer; }
+  .projects__thumb-content:hover {
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    box-shadow: 0px 3px 0px 0px #f0f2f4;
+    margin-top: -10px; }
+    .projects__thumb-content:hover:hover, .projects__thumb-content:hover:focus {
+      box-shadow: 0px 5px 0px 0px #0D85A1; }
+
+.contact__section {
+  height: 600px; }

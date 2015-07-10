@@ -313,9 +313,9 @@
   -moz-box-shadow: 0px 3px 0px 0px #f0f2f4;
   box-shadow: 0px 3px 0px 0px #f0f2f4;
   &:hover, &:focus{
-    -webkit-box-shadow: 0px 3px 0px 0px #3dc9b3;
-    -moz-box-shadow: 0px 3px 0px 0px #3dc9b3;
-    box-shadow: 0px 3px 0px 0px #3dc9b3;
+    -webkit-box-shadow: 0px 5px 0px 0px $bg-color;
+    -moz-box-shadow: 0px 5px 0px 0px $bg-color;
+    box-shadow: 0px 5px 0px 0px $bg-color;
   }
 }
 
