@@ -666,7 +666,7 @@ td, th {
     margin-left: 100%; } }
 
 body {
-  background-color: black;
+  background: url(../img/deepspace.jpg);
   color: #ccc; }
 
 .hidden {
@@ -685,7 +685,8 @@ body {
 #welcome {
   width: 100%;
   height: 100vh;
-  background: black; }
+  background: rgba(0, 0, 0, 0.66);
+  opacity: 0.7; }
 
 .floating {
   position: absolute;
@@ -815,6 +816,7 @@ p, label, article, aside {
   left: 50%;
   margin-top: -157px;
   margin-left: -100px;
+  z-index: 50;
   transition: all 0.35s ease-in-out;
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
@@ -875,7 +877,8 @@ canvas {
     outline: none; }
 .main__title {
   top: 10%;
-  opacity: 0; }
+  opacity: 0;
+  z-index: 50; }
 
 .menu__trigger {
   transition: all 0.5s ease;

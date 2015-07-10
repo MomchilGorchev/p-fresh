@@ -4,7 +4,7 @@
   left: 50%;
   margin-top: -157px;
   margin-left: -100px;
-
+  z-index: 50;
   @include vendor-transition(all, 0.35s, ease-in-out);
   &:hover{
     @include vendor-transition(all, 0.35s, ease-in-out);
@@ -61,6 +61,7 @@ canvas{
   &__title{
     top:10%;
     opacity:0;
+    z-index: 50;
   }
 
   &__scene{

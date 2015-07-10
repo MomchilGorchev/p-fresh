@@ -47,7 +47,7 @@ function Space(){
     }
 
     function loop(){
-        ctx.fillStyle = "#000";
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.66)';
         ctx.fillRect(0, 0, WIDTH, HEIGHT);
         //// mouse position to head towards
         var cx = (centerX - WIDTH / 2) + (WIDTH / 2),
