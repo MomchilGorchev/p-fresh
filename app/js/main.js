@@ -94,7 +94,7 @@ function menuClick(){
             var DOMElement = document.querySelector(href);
             clickHandle(menuTrigger);
             TweenMax.to(window, 1,{
-                delay:1,
+                delay:0.6,
                 scrollTo: {
                     y: DOMElement.offsetTop
                 }
