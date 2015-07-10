@@ -8,6 +8,7 @@
     <title>Momchil Gorchev</title>
 
     <link href='http://fonts.googleapis.com/css?family=Arimo|Didact+Gothic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
     <!-- /Stylesheets -->
@@ -607,10 +608,31 @@
 
         <div class="section-content container">
             <div class="contact__wrapper row">
-                <h4 class="contact__inner-title">Get in touch</h4>
 
-                <form class="contact__form">
+                <div class="contact__info col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="contact__info-inner">
+                        <p>Have a job or an interesting open-source project?
+                            <br />
+                            <br />
+                            I'd love to be part of any bleeding-edge projects.<br />
+                            Just send me an email and we can discuss it!
+                        </p>
+                    </div>
+                </div>
 
+                <form id="contact__me" class="contact__form col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="contact__form-holder">
+                        <input class="contact__form-input" type="text" placeholder="Your name" name="name"/>
+                    </div>
+                    <div class="contact__form-holder">
+                        <input class="contact__form-input" type="email" placeholder="Your email" name="name"/>
+                    </div>
+                    <div class="contact__form-holder">
+                        <textarea class="contact__form-textarea" placeholder="Hi!" rows="5"></textarea>
+                    </div>
+                    <div class="contact__form-holder">
+                        <button class="contact__form-submit special__button" type="submit">Send</button>
+                    </div>
                 </form>
 
             </div>
@@ -624,10 +646,10 @@
             <div class="footer__wrapper">
                 <div class="footer__social">
                     <ul class="footer__social-list">
-                        <li class="footer__social-item github"><a href="#"></a></li>
-                        <li class="footer__social-item twitter"><a href="#"></a></li>
-                        <li class="footer__social-item gplus"><a href="#"></a></li>
-                        <li class="footer__social-item email"><a href="#"></a></li>
+                        <li class="footer__social-item github"><a href="#"><i class="fa fa-github fa-2x"></i></a></li>
+                        <li class="footer__social-item twitter"><a href="#"><i class="fa fa-twitter fa-2x"></i></a></li>
+                        <li class="footer__social-item gplus"><a href="#"><i class="fa fa-google-plus fa-2x"></i></a></li>
+                        <li class="footer__social-item email"><a href="#"><i class="fa fa-envelope fa-2x"></i></a></li>
                     </ul>
                 </div>
             </div>

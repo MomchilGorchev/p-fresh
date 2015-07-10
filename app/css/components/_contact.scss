@@ -3,6 +3,53 @@
   &__section{
 
     height: 600px;
+    background: $contact-bg;
+
+  }
+
+  &__form{
+
+    &-holder{
+      margin:20px;
+
+    }
+
+    &-input{
+
+      height:40px;
+      width: 100%;
+      border-radius:5px;
+      padding:4px;
+    }
+
+    &-textarea{
+      width: 100%;
+      border-radius:5px;
+      padding:4px;
+
+    }
+
+    &-submit{
+
+
+    }
+
+
+  }
+
+  &__info{
+
+    font-size: 1.3rem;
+
+    &-inner{
+
+      background: $about-bg;
+      padding: 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+      font-weight:400;
+      height:200px; //TEMP
+    }
 
   }
 

@@ -694,6 +694,30 @@ body {
 nav {
   background-color: silver; }
 
+.special__button {
+  width: 200px;
+  height: 50px;
+  border: 4px double #0D85A1;
+  background-color: transparent;
+  color: #ccc;
+  font-family: 'Arimo', sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease; }
+  .special__button:hover {
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    color: #000;
+    background-color: #0D85A1;
+    border: 4px double #000; }
+  .special__button:focus {
+    outline: none; }
+
 @-webkit-keyframes draw {
   0% {
     stroke-dashoffset: 550; }
@@ -978,4 +1002,25 @@ canvas {
       box-shadow: 0px 5px 0px 0px #0D85A1; }
 
 .contact__section {
-  height: 600px; }
+  height: 600px;
+  background: #5C5C5C; }
+.contact__form-holder {
+  margin: 20px; }
+.contact__form-input {
+  height: 40px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 4px; }
+.contact__form-textarea {
+  width: 100%;
+  border-radius: 5px;
+  padding: 4px; }
+.contact__info {
+  font-size: 1.3rem; }
+  .contact__info-inner {
+    background: #363636;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 400;
+    height: 200px; }
