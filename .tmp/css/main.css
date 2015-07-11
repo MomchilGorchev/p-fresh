@@ -667,7 +667,7 @@ td, th {
 
 body {
   background: url(../img/deepspace.jpg);
-  background-size: cover;
+  background-size: contain;
   color: #ccc;
   width: 100vw;
   height: 100vh; }
@@ -999,27 +999,56 @@ canvas {
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     box-shadow: 0 5px 0 0 #0D85A1;
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+    z-index: 25;
     margin-top: -10px; }
     .projects__thumb-wrapper:hover .projects__thumb-content:hover, .projects__thumb-wrapper:hover .projects__thumb-content:focus {
       box-shadow: 0 5px 0 0 #0D85A1; }
   .projects__thumb-wrapper:hover .projects__thumb-overlay {
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
     transition: opacity 0.2s ease-out;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
+    z-index: 45;
     opacity: 1; }
+    .projects__thumb-wrapper:hover .projects__thumb-overlay p {
+      -webkit-transform: rotate(-135deg);
+          -ms-transform: rotate(-135deg);
+              transform: rotate(-135deg);
+      opacity: 1; }
 .projects__thumb-overlay {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transition: opacity 0.1s ease-out;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   opacity: 0;
   position: absolute;
-  width: 250px;
-  height: 250px;
-  top: 38px;
-  left: 36px;
-  background: #0D85A1; }
+  width: 230px;
+  height: 230px;
+  top: 50%;
+  left: 50%;
+  margin-top: -115px;
+  margin-left: -115px;
+  background: #ccc;
+  border-radius: 20%;
+  box-shadow: 1px 0 14px 0 black; }
+  .projects__thumb-overlay p {
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 0; }
 .projects__thumb-content {
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
