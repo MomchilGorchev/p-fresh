@@ -310,9 +310,9 @@
 }
 
 @mixin box-shadow{
-  -webkit-box-shadow: 0 3px 0 0 #f0f2f4;
-  -moz-box-shadow: 0 3px 0 0 #f0f2f4;
-  box-shadow: 0 3px 0 0 #f0f2f4;
+  -webkit-box-shadow: 0 5px 0 0 $bg-color;
+  -moz-box-shadow: 0 5px 0 0 $bg-color;
+  box-shadow: 0 5px 0 0 $bg-color;
   &:hover, &:focus{
     -webkit-box-shadow: 0 5px 0 0 $bg-color;
     -moz-box-shadow: 0 5px 0 0 $bg-color;
@@ -340,6 +340,14 @@
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0);
+}
+
+@mixin rotateElement($amount){
+  -webkit-transform: rotate($amount);
+  -moz-transform: rotate($amount);
+  -ms-transform: rotate($amount);
+  -o-transform: rotate($amount);
+  transform: rotate($amount);
 }
 
 @mixin link(){

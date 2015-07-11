@@ -1,7 +1,10 @@
 
 body {
- background: url(../img/deepspace.jpg); //TEMP - not free
+  background: url(../img/deepspace.jpg); //TEMP - not free
+  background-size: cover;
   color: $font-color;
+  width: 100vw;
+  height: 100vh;
 }
 .hidden{
   display: none!important;

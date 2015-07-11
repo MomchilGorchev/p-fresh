@@ -7,28 +7,53 @@
 
   &__wrapper{
 
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
   }
 
   &__thumb{
 
     &-wrapper{
+      position:relative;
+      overflow: hidden;
+      &:hover{
 
+        .projects__thumb-content{
+          @include vendor-transition(all, 0.3s, ease-in-out);
+          @include box-shadow();
+          margin-top: -10px;
+
+        }
+
+        .projects__thumb-overlay{
+          @include rotateElement(45deg);
+          @include vendor-transition(opacity, 0.2s, ease-out);
+          @include vendor-transition();
+          opacity: 1;
+        }
+
+      }
     }
+
+    &-overlay{
+      opacity:0;
+      position:absolute;
+      width: 250px;
+      height: 250px;
+      top: 38px;
+      left: 36px;
+      background: $bg-color;
+      //@include rotateElement(45deg);
+    }
+
     &-content{
       @include vendor-transition(all, 0.3s, ease-in-out);
-      height:400px;
+      height:300px;
       background: url(http://lorempixel.com/400/400/) no-repeat center center black;
       background-size: cover;
       margin: 5px;
       cursor: pointer;
-      &:hover{
-        @include vendor-transition(all, 0.3s, ease-in-out);
-        @include box-shadow();
-        margin-top: -10px;
 
-      }
     }
     &-title{
 

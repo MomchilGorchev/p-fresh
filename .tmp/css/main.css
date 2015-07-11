@@ -667,7 +667,10 @@ td, th {
 
 body {
   background: url(../img/deepspace.jpg);
-  color: #ccc; }
+  background-size: cover;
+  color: #ccc;
+  width: 100vw;
+  height: 100vh; }
 
 .hidden {
   display: none !important; }
@@ -986,26 +989,47 @@ canvas {
 .projects__section {
   background: #474747; }
 .projects__wrapper {
-  margin-bottom: 20px; }
+  margin-bottom: 10px; }
+.projects__thumb-wrapper {
+  position: relative;
+  overflow: hidden; }
+  .projects__thumb-wrapper:hover .projects__thumb-content {
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 0 0 #0D85A1;
+    margin-top: -10px; }
+    .projects__thumb-wrapper:hover .projects__thumb-content:hover, .projects__thumb-wrapper:hover .projects__thumb-content:focus {
+      box-shadow: 0 5px 0 0 #0D85A1; }
+  .projects__thumb-wrapper:hover .projects__thumb-overlay {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transition: opacity 0.2s ease-out;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    opacity: 1; }
+.projects__thumb-overlay {
+  opacity: 0;
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  top: 38px;
+  left: 36px;
+  background: #0D85A1; }
 .projects__thumb-content {
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
-  height: 400px;
+  height: 300px;
   background: url(http://lorempixel.com/400/400/) no-repeat center center black;
   background-size: cover;
   margin: 5px;
   cursor: pointer; }
-  .projects__thumb-content:hover {
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    box-shadow: 0 3px 0 0 #f0f2f4;
-    margin-top: -10px; }
-    .projects__thumb-content:hover:hover, .projects__thumb-content:hover:focus {
-      box-shadow: 0 5px 0 0 #0D85A1; }
 
 .contact__section {
   height: 600px;
