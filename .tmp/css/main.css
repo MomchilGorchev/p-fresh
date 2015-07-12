@@ -998,7 +998,6 @@ canvas {
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
-    box-shadow: 0 5px 0 0 #0D85A1;
     -webkit-filter: blur(2px);
     -moz-filter: blur(2px);
     -o-filter: blur(2px);
@@ -1006,8 +1005,6 @@ canvas {
     filter: blur(2px);
     z-index: 25;
     margin-top: -10px; }
-    .projects__thumb-wrapper:hover .projects__thumb-content:hover, .projects__thumb-wrapper:hover .projects__thumb-content:focus {
-      box-shadow: 0 5px 0 0 #0D85A1; }
   .projects__thumb-wrapper:hover .projects__thumb-overlay {
     -webkit-transform: rotate(135deg);
     -ms-transform: rotate(135deg);
@@ -1019,6 +1016,15 @@ canvas {
     -o-transition: all 0.5s ease;
     z-index: 45;
     opacity: 1; }
+    .projects__thumb-wrapper:hover .projects__thumb-overlay img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -60px;
+      -webkit-transform: rotate(-135deg);
+          -ms-transform: rotate(-135deg);
+              transform: rotate(-135deg);
+      opacity: 1; }
     .projects__thumb-wrapper:hover .projects__thumb-overlay p {
       -webkit-transform: rotate(-135deg);
           -ms-transform: rotate(-135deg);
@@ -1044,6 +1050,12 @@ canvas {
   background: #ccc;
   border-radius: 20%;
   box-shadow: 1px 0 14px 0 black; }
+  .projects__thumb-overlay img {
+    width: 80px;
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 0; }
   .projects__thumb-overlay p {
     -webkit-transform: rotate(0deg);
         -ms-transform: rotate(0deg);

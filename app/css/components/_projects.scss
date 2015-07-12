@@ -20,7 +20,7 @@
 
         .projects__thumb-content{
           @include vendor-transition(all, 0.3s, ease-in-out);
-          @include box-shadow();
+          //@include box-shadow();
           @include apply-filter(blur, 2px);
           z-index:25;
           margin-top: -10px;
@@ -33,6 +33,18 @@
           @include vendor-transition();
           z-index: 45;
           opacity: 1;
+          img{
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -60px;
+            transform: rotate(-135deg);
+            //transform-origin: 30% 10%;
+            opacity:1;
+            margin-top:-5px;
+            @include vendor-transition(opacity, 0.5s, ease-out);
+            @include vendor-transition(margin, 0,4s, ease-in);
+          }
           p{
             transform: rotate(-135deg);
             opacity:1;
@@ -57,6 +69,13 @@
       background: $font-color;
       border-radius: 20%;
       box-shadow: 1px 0 14px 0 black;
+      img{
+        width:80px;
+        transform:rotate(0deg);
+        opacity:0;
+        @include vendor-transition(opacity, 0.1s, ease-out);
+        @include vendor-transition(margin, 0.4s, ease-in);
+      }
       p{
         transform:rotate(0deg);
         opacity:0;
