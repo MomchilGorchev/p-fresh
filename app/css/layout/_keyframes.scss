@@ -11,22 +11,32 @@
   }
 }
 
-@-webkit-keyframes fadeInTop {
-  from {
+@keyframes fadeInUp {
+  0% {
     opacity: 0;
+    transform: translate3d(0, 100%, 0);
   }
-  to {
+
+  100% {
     opacity: 1;
-    //margin-top: -10px;
+    transform: none;
   }
 }
-@keyframes fadeInTop {
-  from {
+@-webkit-keyframes fadeInUp {
+  0% {
     opacity: 0;
+    transform: translate3d(0, 100%, 0);
   }
-  to {
+
+  100% {
     opacity: 1;
-    //margin-top: -10px;
+    transform: none;
   }
 }
 
+.fadeInUp{
+  animation: fadeInTop;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+
+}

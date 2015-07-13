@@ -35,15 +35,11 @@
           opacity: 1;
           img{
             position:absolute;
-            top: 50%;
-            left: 50%;
-            margin-left: -60px;
-            transform: rotate(-135deg);
-            //transform-origin: 30% 10%;
+
             opacity:1;
-            margin-top:-5px;
             @include vendor-transition(opacity, 0.5s, ease-out);
-            @include vendor-transition(margin, 0,4s, ease-in);
+            @include vendor-transition(margin, 0.4s, ease-in);
+            @include rotateElement(-135deg);
           }
           p{
             transform: rotate(-135deg);
@@ -71,14 +67,26 @@
       box-shadow: 1px 0 14px 0 black;
       img{
         width:80px;
-        transform:rotate(0deg);
         opacity:0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -60px;
         @include vendor-transition(opacity, 0.1s, ease-out);
         @include vendor-transition(margin, 0.4s, ease-in);
       }
       p{
+        position: absolute;
         transform:rotate(0deg);
         opacity:0;
+        top: 27%;
+        left: 24%;
+        width: 70%;
+        margin-top:-5px;
+        color: black;
+        text-align: center;
+        border-top: 1px solid black;
+        padding-top: 8px;
       }
     }
 

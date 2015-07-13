@@ -104,11 +104,26 @@ function menuClick(){
     }
 }
 
+function thumbsHover(){
+    var thumbContainers = document.querySelectorAll('.projects__thumb-wrapper');
+    for(var i = 0; i < thumbContainers.length; i++){
+
+        var current = thumbContainers[i];
+        console.log(current);
+        current.addEventListener('mouseenter', function(){
+            console.log(this);
+            this.querySelector('.project__info').classList.toggle('fadeInUp');
+        });
+    }
+
+}
+
 /*
     Document ready
  */
 document.addEventListener('DOMContentLoaded', function(){
     menuHandler();
     menuClick();
+    //thumbsHover();
 
 });
