@@ -1086,7 +1086,10 @@ figure.project__thumb img {
   transition: opacity 0.35s; }
 
 figure.project__thumb:hover img {
-  opacity: 0.6; }
+  opacity: 0.8; }
+
+figure.project__thumb:hover img.project__logo {
+  opacity: 1; }
 
 figure.project__thumb figcaption::before {
   position: absolute;
@@ -1099,16 +1102,16 @@ figure.project__thumb figcaption::before {
   content: '';
   transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: scale3d(5, 2.5, 1);
-  transform: scale3d(5, 2.5, 1);
+  -webkit-transform: scale3d(5, 5, 1);
+  transform: scale3d(5, 5, 1);
   -webkit-transform-origin: 50% 40%;
   -ms-transform-origin: 50% 40%;
       transform-origin: 50% 40%; }
 
 figure.project__thumb:hover figcaption::before {
   opacity: 0.6;
-  -webkit-transform: scale3d(1.3, 1.4, 1);
-  transform: scale3d(1.3, 1.4, 1); }
+  -webkit-transform: scale3d(1.25, 1.25, 1);
+  transform: scale3d(1.25, 1.25, 1); }
 
 figure.project__thumb h2 {
   margin-top: 1em;
@@ -1118,6 +1121,7 @@ figure.project__thumb h2 {
   transform: translate3d(0, 40px, 0); }
 
 figure.project__thumb:hover h2 {
+  opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
 
@@ -1142,10 +1146,27 @@ figure.project__thumb p a:nth-child(3) {
   -webkit-transform: translate3d(60px, -60px, 0);
   transform: translate3d(60px, -60px, 0); }
 
+figure.project__thumb p span {
+  opacity: 0;
+  width: 50%;
+  left: 50%;
+  margin-left: -25%;
+  position: absolute;
+  display: inline-block;
+  transition: opacity 0.15s, -webkit-transform 0.35s;
+  transition: opacity 0.15s, transform 0.35s;
+  -webkit-transform: translate3d(0, 200%, 0);
+  transform: translate3d(0, 200%, 0); }
+
 figure.project__thumb:hover p a {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
+
+figure.project__thumb:hover p span {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 30px, 0);
+  transform: translate3d(0, 30px, 0); }
 
 .projects__section {
   background: #474747; }
