@@ -1,3 +1,24 @@
+@-webkit-keyframes draw {
+  0%{
+    stroke-dashoffset: 550;
+  }
+
+  100%{
+    stroke-dashoffset: 50;
+  }
+}
+@keyframes draw{
+  0%{
+    stroke-dashoffset: 550;
+    fill:none;
+  }
+
+  100%{
+    stroke-dashoffset: 50;
+    fill: #627582;
+  }
+}
+
 @-webkit-keyframes spin {
   from { -webkit-transform: rotate(0deg); }
   to { -webkit-transform: rotate(360deg); }
