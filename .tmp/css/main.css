@@ -1110,8 +1110,8 @@ figure.project__thumb:hover img {
     opacity: 1; }
 figure.project__thumb:hover p.project__content a {
   opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
+  -webkit-transform: translate3d(0, -25px, 0);
+  transform: translate3d(0, -25px, 0); }
 figure.project__thumb:hover p.project__content span {
   opacity: 1;
   -webkit-transform: translate3d(0, 30px, 0);
@@ -1124,22 +1124,27 @@ figure.project__thumb h2 {
   -webkit-transform: translate3d(0, 40px, 0);
   transform: translate3d(0, 40px, 0); }
 figure.project__thumb p a {
+  border: 1px solid;
+  padding: 10px;
+  border-radius: 50%;
   color: #fff;
   font-size: 140%;
   opacity: 0;
   position: relative;
   display: inline-block;
-  transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s; }
-  figure.project__thumb p a:first-child {
-    -webkit-transform: translate3d(-60px, -60px, 0);
-    transform: translate3d(-60px, -60px, 0); }
-  figure.project__thumb p a:nth-child(2) {
-    -webkit-transform: translate3d(0, 60px, 0);
-    transform: translate3d(0, 60px, 0); }
-  figure.project__thumb p a:nth-child(3) {
-    -webkit-transform: translate3d(60px, -60px, 0);
-    transform: translate3d(60px, -60px, 0); }
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0, 60px, 0);
+  transform: translate3d(0, 60px, 0);
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease; }
+  figure.project__thumb p a:hover {
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    background: #0D85A1; }
 figure.project__thumb p span {
   opacity: 0;
   width: 50%;
@@ -1151,6 +1156,26 @@ figure.project__thumb p span {
   transition: opacity 0.15s, transform 0.35s;
   -webkit-transform: translate3d(0, 200%, 0);
   transform: translate3d(0, 200%, 0); }
+
+.projects__overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: #0D85A1;
+  z-index: 500;
+  opacity: 0;
+  display: none;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease; }
+  .projects__overlay.open {
+    display: block;
+    opacity: 1;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease; }
 
 .contact__section {
   height: 600px;

@@ -139,8 +139,8 @@ figure.project__thumb:hover{
     p.project__content{
         a{
             opacity: 1;
-            -webkit-transform: translate3d(0,0,0);
-            transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,-25px,0);
+            transform: translate3d(0,-25px,0);
         }
         span{
             opacity: 1;
@@ -161,6 +161,9 @@ figure.project__thumb {
     }
     p{
         a{
+            border: 1px solid;
+            padding: 10px;
+            border-radius: 50%;
             color: #fff;
             font-size: 140%;
             opacity: 0;
@@ -168,17 +171,12 @@ figure.project__thumb {
             display: inline-block;
             -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
             transition: opacity 0.35s, transform 0.35s;
-            &:first-child{
-                -webkit-transform: translate3d(-60px,-60px,0);
-                transform: translate3d(-60px,-60px,0);
-            }
-            &:nth-child(2){
-                -webkit-transform: translate3d(0,60px,0);
-                transform: translate3d(0,60px,0);
-            }
-            &:nth-child(3){
-                -webkit-transform: translate3d(60px,-60px,0);
-                transform: translate3d(60px,-60px,0);
+            -webkit-transform: translate3d(0,60px,0);
+            transform: translate3d(0,60px,0);
+            @include vendor-transition();
+            &:hover{
+              @include vendor-transition();
+              background: $bg-color;
             }
         }
         span{
@@ -196,3 +194,18 @@ figure.project__thumb {
     }
 }
 
+.projects__overlay{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: $bg-color;
+    z-index: 500;
+    opacity:0;
+    display: none;
+    @include vendor-transition();
+    &.open{
+        display: block;
+        opacity:1;
+        @include vendor-transition();
+    }
+}
