@@ -914,7 +914,7 @@ canvas {
   border: 2px double white;
   cursor: pointer;
   z-index: 105; }
-  .menu__trigger:hover {
+  .menu__trigger:active {
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -937,14 +937,16 @@ canvas {
 .menu__content {
   position: fixed;
   opacity: 0;
+  -webkit-transform: translate3d(2%, 0, 0);
+  transform: translate3d(2%, 0, 0);
   visibility: hidden;
   background-color: #0D85A1;
-  width: 80%;
-  height: 80%;
-  top: 70%;
-  right: 50%;
-  margin-top: -40%;
-  margin-right: -40%;
+  width: 5px;
+  max-width: 450px;
+  height: 55px;
+  top: 15px;
+  right: 15px;
+  border-radius: 30px;
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -952,14 +954,10 @@ canvas {
   .menu__content.open {
     opacity: 1;
     visibility: visible;
-    height: 100vh;
-    width: 100vw;
+    width: 100%;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
     z-index: 100;
-    top: 50%;
-    right: 50%;
-    margin-top: -50vh;
-    margin-right: -50vw;
-    border-radius: 0;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -967,8 +965,9 @@ canvas {
 .menu__list {
   opacity: 0;
   text-align: center;
-  margin-top: 15%;
-  font-size: 3em;
+  margin-top: 0;
+  padding-left: 0;
+  font-size: 1em;
   text-transform: uppercase;
   list-style-type: none;
   transition: all 0.5s ease;
@@ -976,7 +975,8 @@ canvas {
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease; }
   .menu__list-item {
-    margin: 4%; }
+    display: inline-block;
+    margin: 20px 10px 20px 5px; }
     .menu__list-item a {
       text-decoration: none;
       font-family: 'Arimo', sans-serif;
@@ -1166,6 +1166,7 @@ figure.project__thumb p span {
   left: 0;
   position: fixed;
   background: #0D85A1;
+  z-index: 0;
   visibility: hidden;
   opacity: 0;
   -webkit-transform: scale(0.9);

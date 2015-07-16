@@ -12,7 +12,10 @@
     border: 2px double white;
     cursor: pointer;
     z-index:105;
-    &:hover{
+    // TEMP - needs to be added with JS because on closing
+    // the link is loosing the active status and the animation
+    // doesn't reach its end
+    &:active{
       @include vendor-transition();
       -webkit-animation-name: spin;
       -webkit-animation-duration: 300ms;
@@ -39,28 +42,25 @@
   &__content{
     position: fixed;
     opacity: 0;
+    -webkit-transform: translate3d(2%, 0, 0);
+    transform: translate3d(2%, 0, 0);
     visibility: hidden;
     background-color: $bg-color;
-    width: 80%;
-    height: 80%;
-    top: 70%;
-    right: 50%;
-    margin-top: -40%;
-    margin-right: -40%;
-    //border-radius: 50%;
+    width: 5px;
+    max-width:450px;
+    height: 55px;
+    top: 15px;
+    right: 15px;
+    border-radius: 30px;
     @include vendor-transition();
 
     &.open {
       opacity: 1;
       visibility: visible;
-      height: 100vh;
-      width: 100vw;
+      width:100%;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
       z-index: 100;
-      top: 50%;
-      right:50%;
-      margin-top: -50vh;
-      margin-right: -50vw;
-      border-radius: 0;
       @include vendor-transition();
     }
   }
@@ -68,13 +68,15 @@
   &__list{
     opacity:0;
     text-align: center;
-    margin-top: 15%;
-    font-size: 3em;
+    margin-top: 0;
+    padding-left:0;
+    font-size: 1em;
     text-transform: uppercase;
     list-style-type: none;
     @include vendor-transition();
     &-item{
-      margin: 4%;
+      display: inline-block;
+      margin: 20px 10px 20px 5px;
       a{
         text-decoration: none;
         font-family: $content-font;
