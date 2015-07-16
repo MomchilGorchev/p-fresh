@@ -13,6 +13,19 @@ function toggleClass(el, className){
         el.className = classes.join(' ');
     }
 }
+function closest(elem, selector) {
+
+    var matchesSelector = elem.matches || elem.webkitMatchesSelector || elem.mozMatchesSelector || elem.msMatchesSelector;
+
+    while (elem) {
+        if (matchesSelector.bind(elem)(selector)) {
+            return elem;
+        } else {
+            elem = elem.parentElement;
+        }
+    }
+    return false;
+}
 
 function hasClass(el, className){
     if (el.classList)
@@ -104,7 +117,31 @@ function menuClick(){
     }
 }
 
+function projectOverlay(){
+    var triggers = document.querySelectorAll('.open-overlay');
+    var overlay = document.querySelector('#projects__overlay');
+    var contentBox = overlay.querySelector('.projects__overlay-content');
+    var closeTrigger = overlay.querySelector('.close');
 
+    for(var i = 0; i < triggers.length; i ++){
+        var current = triggers[i];
+
+        current.addEventListener('click', function(e){
+            e.preventDefault();
+            var content = closest(this, 'figure').cloneNode(true).querySelector('.project__modal-details');
+            contentBox.appendChild(content);
+            toggleClass(overlay, 'open');
+        });
+    }
+
+    closeTrigger.addEventListener('click', function(e){
+        e.preventDefault();
+        var content = contentBox.querySelector('.project__modal-details');
+        content.parentNode.removeChild(content);
+        toggleClass(overlay, 'open');
+    });
+
+}
 
 /*
     Document ready
@@ -112,5 +149,5 @@ function menuClick(){
 document.addEventListener('DOMContentLoaded', function(){
     menuHandler();
     menuClick();
-
+    projectOverlay();
 });

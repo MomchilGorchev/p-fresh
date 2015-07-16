@@ -1059,6 +1059,8 @@ canvas {
         white-space: nowrap;
         font-size: 0;
         opacity: 0; }
+      .grid figure figcaption .project__modal-details {
+        display: none; }
 
 .grid figure {
   background: #0D85A1; }
