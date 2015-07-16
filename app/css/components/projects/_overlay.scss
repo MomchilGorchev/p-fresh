@@ -4,6 +4,7 @@
   top:0;
   left:0;
   position: fixed;
+  overflow: scroll;
   background: $bg-color;
   z-index:0;
   visibility: hidden;
@@ -38,4 +39,47 @@
     padding: 7px 4px 0 12px;
   }
 
+}
+
+.overlay{
+
+  &__hero{
+    width:100%;
+    height:500px;
+  }
+
+  &__slider{
+
+    max-width:670px;
+    width:100%;
+    height:500px;
+    margin: 30px auto;
+    position: relative;
+
+  }
+
+}
+
+.slider__desktop{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width:600px;
+  height:auto;
+  img{
+    max-height:100%;
+    width: 100%;
+  }
+}
+
+.slider__phone{
+  position: absolute;
+  right: 15px;
+  bottom: 5px;
+  width:90px;
+  height:auto;
+  img{
+    max-width:100%;
+    width:100%;
+  }
 }
