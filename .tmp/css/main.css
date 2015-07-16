@@ -1171,6 +1171,16 @@ figure.project__thumb p span {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease; }
+  .projects__overlay .close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border: 1px solid;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 7px 4px 0 12px; }
   .projects__overlay.open {
     display: block;
     opacity: 1;
