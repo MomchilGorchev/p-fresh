@@ -78,7 +78,7 @@ function clickHandle(menuTrigger){
         toggleClass(menuContent, className);
         setTimeout(function(){
             toggleClass(menuList, className);
-        }, 300);
+        }, 500);
     } else {
         toggleClass(menuList, className);
         setTimeout(function(){

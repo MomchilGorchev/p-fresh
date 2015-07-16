@@ -73,6 +73,8 @@
     font-size: 1em;
     text-transform: uppercase;
     list-style-type: none;
+    -webkit-transform: translate3d(4%, 0, 0);
+    transform: translate3d(4%, 0, 0);
     @include vendor-transition();
     &-item{
       display: inline-block;
@@ -86,6 +88,8 @@
     &.open{
       opacity:1;
       @include vendor-transition();
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
     }
   }
 }
