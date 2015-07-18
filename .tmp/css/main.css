@@ -666,11 +666,13 @@ td, th {
     margin-left: 100%; } }
 
 body {
-  background: url(../img/deepspace.jpg);
-  background-size: contain;
   color: #ccc;
   width: 100vw;
   height: 100vh; }
+
+.canvas__bg {
+  background: url(../img/deepspace.jpg);
+  background-size: cover; }
 
 .hidden {
   display: none !important; }
