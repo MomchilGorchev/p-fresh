@@ -15,7 +15,7 @@ function Space(){
         warpZ = 7,
         units = 300,
         stars = [],
-        Z = 0.1,
+        Z = 0.12,
         M = Math,
         Rnd = M.random;
     ctx.globalAlpha = 0.5;
