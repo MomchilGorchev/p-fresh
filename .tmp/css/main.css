@@ -916,10 +916,6 @@ canvas {
   z-index: 50; }
 
 .menu__trigger {
-  transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   width: 45px;
   height: 45px;
   background: #0D85A1;
@@ -935,34 +931,60 @@ canvas {
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -webkit-animation-name: spin-back;
-  -webkit-animation-duration: 300ms;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-out;
-  -webkit-animation-name: spin-back;
           animation-name: spin-back;
   -webkit-animation-duration: 300ms;
           animation-duration: 300ms;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out; }
+          animation-timing-function: ease-out;
+  -webkit-animation-name: spin-back;
+  -webkit-animation-duration: 300ms;
+  -webkit-animation-delay: 0;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-name: spin-back;
+  -moz-animation-duration: 300ms;
+  -moz-animation-delay: 0;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease-out;
+  -o-animation-name: spin-back;
+  -o-animation-duration: 300ms;
+  -o-animation-delay: 0;
+  -o-animation-iteration-count: 1;
+  -o-animation-timing-function: ease-out; }
   .menu__trigger.spin {
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     -webkit-animation-name: spin;
-    -webkit-animation-duration: 300ms;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease-out;
-    -webkit-animation-name: spin;
             animation-name: spin;
     -webkit-animation-duration: 300ms;
             animation-duration: 300ms;
+    -webkit-animation-delay: 0;
+            animation-delay: 0;
     -webkit-animation-iteration-count: 1;
             animation-iteration-count: 1;
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out; }
+            animation-timing-function: ease-out;
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 300ms;
+    -webkit-animation-delay: 0;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 300ms;
+    -moz-animation-delay: 0;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: ease-out;
+    -o-animation-name: spin;
+    -o-animation-duration: 300ms;
+    -o-animation-delay: 0;
+    -o-animation-iteration-count: 1;
+    -o-animation-timing-function: ease-out; }
   .menu__trigger-icon img {
     width: 30px;
     margin: 5px; }

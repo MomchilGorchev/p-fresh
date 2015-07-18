@@ -249,23 +249,31 @@
 }
 
 /* Customise animation apperance - works perfectly with Animate.css for example */
-@mixin customise-animation($duration: 2s, $delay: 1.5s, $iterations: infinite) {
+@mixin customise-animation($name: spin, $duration: 2s, $delay: 1.5s, $iterations: infinite, $easing: ease-out) {
 
+  animation-name: $name;
   animation-duration: $duration;
   animation-delay: $delay;
   animation-iteration-count: $iterations;
+  animation-timing-function: $easing;
 
+  -webkit-animation-name: $name;
   -webkit-animation-duration: $duration;
   -webkit-animation-delay: $delay;
   -webkit-animation-iteration-count: $iterations;
+  -webkit-animation-timing-function: $easing;
 
+  -moz-animation-name: $name;
   -moz-animation-duration: $duration;
   -moz-animation-delay: $delay;
   -moz-animation-iteration-count: $iterations;
+  -moz-animation-timing-function: $easing;
 
+  -o-animation-name: $name;
   -o-animation-duration: $duration;
   -o-animation-delay: $delay;
   -o-animation-iteration-count: $iterations;
+  -o-animation-timing-function: $easing;
 
 }
 

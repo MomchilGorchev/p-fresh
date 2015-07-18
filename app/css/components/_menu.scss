@@ -1,7 +1,6 @@
 .menu{
 
   &__trigger{
-    @include vendor-transition();
     width: 45px;
     height:45px;
     background: $bg-color;
@@ -13,28 +12,11 @@
     cursor: pointer;
     z-index:105;
     @include vendor-transition();
-    -webkit-animation-name: spin-back;
-    -webkit-animation-duration: 300ms;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease-out;
-
-    animation-name: spin-back;
-    animation-duration: 300ms;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-out;
+    @include customise-animation(spin-back, 300ms, 0, 1, ease-out);
 
     &.spin{
       @include vendor-transition();
-      -webkit-animation-name: spin;
-      -webkit-animation-duration: 300ms;
-      -webkit-animation-iteration-count: 1;
-      -webkit-animation-timing-function: ease-out;
-
-      animation-name: spin;
-      animation-duration: 300ms;
-      animation-iteration-count: 1;
-      animation-timing-function: ease-out;
-
+      @include customise-animation(spin, 300ms, 0, 1, ease-out);
     }
 
     &-icon{
