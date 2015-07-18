@@ -24,12 +24,16 @@
   to { -webkit-transform: rotate(360deg); }
 }
 @keyframes spin {
-  from {
-    transform:rotate(0deg);
-  }
-  to {
-    transform:rotate(360deg);
-  }
+  from { transform:rotate(0deg); }
+  to { transform:rotate(360deg); }
+}
+@-webkit-keyframes spin-back {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(-360deg); }
+}
+@keyframes spin-back {
+  from { transform:rotate(0deg); }
+  to { transform:rotate(-360deg); }
 }
 
 @keyframes fadeInUp {

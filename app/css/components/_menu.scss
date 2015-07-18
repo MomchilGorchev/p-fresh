@@ -12,10 +12,18 @@
     border: 2px double white;
     cursor: pointer;
     z-index:105;
-    // TEMP - needs to be added with JS because on closing
-    // the link is loosing the active status and the animation
-    // doesn't reach its end
-    &:active{
+    @include vendor-transition();
+    -webkit-animation-name: spin-back;
+    -webkit-animation-duration: 300ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-out;
+
+    animation-name: spin-back;
+    animation-duration: 300ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+
+    &.spin{
       @include vendor-transition();
       -webkit-animation-name: spin;
       -webkit-animation-duration: 300ms;

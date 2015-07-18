@@ -75,11 +75,13 @@ function clickHandle(menuTrigger){
         menuList = menuContent.querySelector('.menu__list'),
         className = 'open';
     if(!hasClass(menuContent, className)){
+        toggleClass(menuTrigger, 'spin');
         toggleClass(menuContent, className);
         setTimeout(function(){
             toggleClass(menuList, className);
         }, 500);
     } else {
+        toggleClass(menuTrigger, 'spin');
         toggleClass(menuList, className);
         setTimeout(function(){
             toggleClass(menuContent, className);
