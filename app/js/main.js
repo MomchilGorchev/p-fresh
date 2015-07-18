@@ -73,18 +73,18 @@ function clickHandle(menuTrigger){
     var container = menuTrigger.parentNode,
         menuContent = container.querySelector('.menu__content'),
         menuList = menuContent.querySelector('.menu__list'),
-        className = 'open';
-    if(!hasClass(menuContent, className)){
-        toggleClass(menuTrigger, 'spin');
-        toggleClass(menuContent, className);
+        openClassName = 'open', animClassName = 'spin';
+    if(!hasClass(menuContent, openClassName)){
+        toggleClass(menuTrigger, animClassName);
+        toggleClass(menuContent, openClassName);
         setTimeout(function(){
-            toggleClass(menuList, className);
+            toggleClass(menuList, openClassName);
         }, 500);
     } else {
-        toggleClass(menuTrigger, 'spin');
-        toggleClass(menuList, className);
+        toggleClass(menuTrigger, animClassName);
+        toggleClass(menuList, openClassName);
         setTimeout(function(){
-            toggleClass(menuContent, className);
+            toggleClass(menuContent, openClassName);
         }, 300);
     }
 }
@@ -138,9 +138,12 @@ function projectOverlay(){
 
     closeTrigger.addEventListener('click', function(e){
         e.preventDefault();
-        var content = contentBox.querySelector('.project__modal-details');
-        content.parentNode.removeChild(content);
-        toggleClass(overlay, 'open');
+        toggleClass(this, 'spin');
+        setTimeout(function(){
+            var content = contentBox.querySelector('.project__modal-details');
+            content.parentNode.removeChild(content);
+            toggleClass(overlay, 'open');
+        }, 300);
     });
 
 }

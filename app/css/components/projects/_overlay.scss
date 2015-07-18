@@ -37,20 +37,36 @@
     width: 50px;
     height: 50px;
     padding: 7px 4px 0 12px;
+    @include vendor-transition();
+    @include customise-animation(spin-back, 300ms, 0, 1, ease-out);
+    &.spin{
+      @include vendor-transition();
+      @include customise-animation(spin, 300ms, 0, 1, ease-out);
+    }
   }
 
 }
 
 .overlay{
 
+  &__title{
+
+    margin: 20px 40px;
+    font-weight: 100;
+
+  }
+
   &__hero{
+
     width:100%;
     height:500px;
+    margin-top:50px;
+
   }
 
   &__slider{
 
-    max-width:670px;
+    max-width:870px;
     width:100%;
     height:500px;
     margin: 30px auto;
@@ -64,7 +80,7 @@
   position: absolute;
   top: 20px;
   left: 20px;
-  width:600px;
+  width:630px;
   height:auto;
   img{
     max-height:100%;
@@ -76,7 +92,7 @@
   position: absolute;
   right: 15px;
   bottom: 5px;
-  width:90px;
+  width: 140px;
   height:auto;
   img{
     max-width:100%;
