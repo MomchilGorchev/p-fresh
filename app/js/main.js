@@ -78,10 +78,28 @@ function menuClick(){
                     y: DOMElement.offsetTop
                 }
             });
-
         });
     }
 }
+
+function launchSite(){
+    var launch = document.querySelector('.main__trigger');
+
+    launch.addEventListener('click', function(e){
+        e.preventDefault();
+        var target = document.querySelector('#about');
+
+        console.log(target);
+        TweenMax.to(window, 1,{
+            delay:0.6,
+            scrollTo: {
+                y: target.offsetTop
+            },
+            ease: Power4.easeInOut
+        });
+    })
+}
+
 
 function projectOverlay(){
     var triggers = document.querySelectorAll('.open-overlay');
@@ -116,6 +134,7 @@ function projectOverlay(){
     Document ready
  */
 document.addEventListener('DOMContentLoaded', function(){
+    launchSite();
     menuHandler();
     menuClick();
     projectOverlay();
