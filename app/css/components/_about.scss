@@ -10,19 +10,26 @@
   }
 
   &__photo{
-    width: 250px;
+    width:98%;
     border-radius: 50%;
     border: 2px double $font-color;
-    float:left;
     padding:3px;
     margin:10px;
-
+    &-holder{
+      float:left;
+      width: 30%;
+      margin: 20px 20px 20px 0;
+    }
   }
 
   &__text{
     text-align: justify;
     text-shadow: 1px 1px 1px darken($bg-color, 15%);
     font-size:1.334em;
+    &-holder{
+      width:67%;
+      float:left;
+    }
   }
 
 }

@@ -711,7 +711,7 @@ nav {
   border: 4px double #0D85A1;
   background-color: transparent;
   color: #ccc;
-  font-family: 'Arimo', sans-serif;
+  font-family: 'Droid Sans', sans-serif;
   text-transform: uppercase;
   font-weight: 500;
   transition: all 0.5s ease;
@@ -823,25 +823,25 @@ h2 {
   text-align: center; }
 
 h1 {
-  font-family: 'Didact Gothic', sans-serif; }
+  font-family: 'Unica One', sans-serif; }
 
 h2 {
-  font-family: 'Didact Gothic', sans-serif; }
+  font-family: 'Unica One', sans-serif; }
 
 h3 {
-  font-family: 'Didact Gothic', sans-serif; }
+  font-family: 'Unica One', sans-serif; }
 
 h4 {
-  font-family: 'Didact Gothic', sans-serif; }
+  font-family: 'Unica One', sans-serif; }
 
 h5 {
-  font-family: 'Didact Gothic', sans-serif; }
+  font-family: 'Unica One', sans-serif; }
 
 h6 {
-  font-family: 'Didact Gothic', sans-serif; }
+  font-family: 'Unica One', sans-serif; }
 
 p, label, article, aside {
-  font-family: 'Arimo', sans-serif; }
+  font-family: 'Droid Sans', sans-serif; }
 
 @media (max-width: 767px) {
   h1 {
@@ -897,7 +897,7 @@ canvas {
   border: 4px double #0D85A1;
   background-color: transparent;
   color: #ccc;
-  font-family: 'Arimo', sans-serif;
+  font-family: 'Droid Sans', sans-serif;
   text-transform: uppercase;
   font-weight: 500;
   transition: all 0.5s ease;
@@ -1039,7 +1039,7 @@ canvas {
     margin: 20px 10px 20px 5px; }
     .menu__list-item a {
       text-decoration: none;
-      font-family: 'Arimo', sans-serif;
+      font-family: 'Droid Sans', sans-serif;
       color: #ccc; }
   .menu__list.open {
     opacity: 1;
@@ -1053,16 +1053,22 @@ canvas {
 .about__section {
   background-color: #363636; }
 .about__photo {
-  width: 250px;
+  width: 98%;
   border-radius: 50%;
   border: 2px double #ccc;
-  float: left;
   padding: 3px;
   margin: 10px; }
+  .about__photo-holder {
+    float: left;
+    width: 30%;
+    margin: 20px 20px 20px 0; }
 .about__text {
   text-align: justify;
   text-shadow: 1px 1px 1px #074b5a;
   font-size: 1.334em; }
+  .about__text-holder {
+    width: 67%;
+    float: left; }
 
 .projects__section {
   background: #474747; }
