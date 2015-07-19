@@ -3,6 +3,9 @@ body {
   color: $font-color;
   width: 100vw;
   height: 100vh;
+  &.overlay-open{
+    overflow: hidden;
+  }
 }
 
 .canvas__bg{

@@ -39,6 +39,7 @@ function clickHandle(menuTrigger){
         menuList = menuContent.querySelector('.menu__list'),
         openClassName = 'open', animClassName = 'spin';
     if(!hasClass(menuContent, openClassName)){
+
         toggleClass(menuTrigger, animClassName);
         toggleClass(menuContent, openClassName);
         setTimeout(function(){
@@ -107,6 +108,7 @@ function projectOverlay(){
     var overlay = document.querySelector('#projects__overlay');
     var contentBox = overlay.querySelector('.projects__overlay-content');
     var closeTrigger = overlay.querySelector('.close');
+    var body = document.querySelector('body');
 
     for(var i = 0; i < triggers.length; i ++){
         var current = triggers[i];
@@ -116,6 +118,7 @@ function projectOverlay(){
             var content = closest(this, 'figure').cloneNode(true).querySelector('.project__modal-details');
             contentBox.appendChild(content);
             toggleClass(overlay, 'open');
+            toggleClass(body, 'overlay-open');
         });
     }
 
@@ -126,6 +129,7 @@ function projectOverlay(){
             var content = contentBox.querySelector('.project__modal-details');
             content.parentNode.removeChild(content);
             toggleClass(overlay, 'open');
+            toggleClass(body, 'overlay-open');
         }, 300);
     });
 

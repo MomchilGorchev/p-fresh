@@ -669,6 +669,8 @@ body {
   color: #ccc;
   width: 100vw;
   height: 100vh; }
+  body.overlay-open {
+    overflow: hidden; }
 
 .canvas__bg {
   background: url(../img/deepspace.jpg);
@@ -1321,17 +1323,24 @@ figure.project__thumb p span {
 
 .overlay__title {
   margin: 20px 40px;
-  font-weight: 100; }
+  font-weight: 100;
+  color: #B1CBCF; }
 .overlay__hero {
   width: 100%;
   height: 500px;
-  margin-top: 50px; }
+  margin-top: 50px;
+  background: darkgray; }
 .overlay__slider {
   max-width: 870px;
   width: 100%;
   height: 500px;
   margin: 30px auto;
   position: relative; }
+.overlay__show-more {
+  width: 100%;
+  margin: 50px auto 0;
+  text-align: center;
+  font-size: 100%; }
 
 .slider__desktop {
   position: absolute;
