@@ -76,7 +76,8 @@ function menuClick(){
                 delay:0.6,
                 scrollTo: {
                     y: DOMElement.offsetTop
-                }
+                },
+                ease: Power4.easeInOut
             });
         });
     }
