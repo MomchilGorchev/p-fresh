@@ -84,7 +84,8 @@
     text-align: center;
     font-size:100%;
     a{
-      
+      @include vendor-transition();
+      @include customise-animation(pulse, 2s, 0, infinite, ease-out);
       color: white;
       &:hover{
 

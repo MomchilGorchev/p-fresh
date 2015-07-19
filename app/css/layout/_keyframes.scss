@@ -58,6 +58,23 @@
     transform: none;
   }
 }
+@keyframes pulse {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.25, 1.25, 1.25);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse{
+  animation-name: pulse;
+}
 
 .fadeInUp{
   animation: fadeInTop;
