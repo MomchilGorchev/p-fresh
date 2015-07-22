@@ -89,7 +89,7 @@ function launchSite(){
 
     launch.addEventListener('click', function(e){
         e.preventDefault();
-        var target = document.querySelector('#about');
+        var target = document.querySelector('#projects');
 
         console.log(target);
         TweenMax.to(window, 1,{
@@ -124,7 +124,6 @@ function projectOverlay(){
 
     closeTrigger.addEventListener('click', function(e){
         e.preventDefault();
-        //toggleClass(this, 'spin');
         setTimeout(function(){
             var content = contentBox.querySelector('.project__modal-details');
             content.parentNode.removeChild(content);
