@@ -1421,7 +1421,6 @@ figure.project__thumb p span {
   .slider__desktop img {
     max-height: 100%;
     width: 100%; }
-
 .slider__phone {
   position: absolute;
   right: 15px;
@@ -1431,6 +1430,36 @@ figure.project__thumb p span {
   .slider__phone img {
     max-width: 100%;
     width: 100%; }
+
+.overlay__details h3 {
+  font-size: 1.745em;
+  border-bottom: 2px solid;
+  margin-top: 16vh; }
+.overlay__details .project__notes {
+  font-size: 20px;
+  text-align: justify;
+  margin-top: 50px;
+  font-weight: 200; }
+.overlay__details .project__hl {
+  list-style-type: hangul-consonant;
+  margin-top: 15%;
+  margin-left: 15%; }
+  .overlay__details .project__hl a, .overlay__details .project__hl p {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #ccc; }
+  .overlay__details .project__hl a {
+    text-decoration: none;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease; }
+    .overlay__details .project__hl a:hover {
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      color: #0d0d0d; }
 
 .contact__section {
   height: 600px;
