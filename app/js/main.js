@@ -124,7 +124,7 @@ function projectOverlay(){
 
     closeTrigger.addEventListener('click', function(e){
         e.preventDefault();
-        toggleClass(this, 'spin');
+        //toggleClass(this, 'spin');
         setTimeout(function(){
             var content = contentBox.querySelector('.project__modal-details');
             content.parentNode.removeChild(content);

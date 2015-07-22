@@ -1328,7 +1328,7 @@ figure.project__thumb p span {
     -o-animation-delay: 0;
     -o-animation-iteration-count: 1;
     -o-animation-timing-function: ease-out; }
-    .projects__overlay .close.spin {
+    .projects__overlay .close:hover, .projects__overlay .close.spin {
       transition: all 0.5s ease;
       -webkit-transition: all 0.5s ease;
       -moz-transition: all 0.5s ease;

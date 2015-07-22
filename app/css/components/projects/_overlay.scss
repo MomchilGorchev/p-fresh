@@ -39,7 +39,7 @@
     padding: 7px 4px 0 12px;
     @include vendor-transition();
     @include customise-animation(spin-back, 300ms, 0, 1, ease-out);
-    &.spin{
+    &:hover, &.spin{
       @include vendor-transition();
       @include customise-animation(spin, 300ms, 0, 1, ease-out);
     }
