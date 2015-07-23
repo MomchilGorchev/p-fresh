@@ -1436,10 +1436,11 @@ figure.project__thumb p span {
   border-bottom: 2px solid;
   margin-top: 16vh; }
 .overlay__details .project__notes {
-  font-size: 20px;
+  font-size: 1.345em;
   text-align: justify;
   margin-top: 50px;
-  font-weight: 200; }
+  font-weight: 200;
+  line-height: 1.5em; }
 .overlay__details .project__hl {
   list-style-type: hangul-consonant;
   margin-top: 15%;

@@ -131,7 +131,6 @@ function projectOverlay(){
             toggleClass(body, 'overlay-open');
         }, 300);
     });
-
 }
 
 /*
