@@ -667,15 +667,9 @@ td, th {
 
 body {
   color: #ccc;
-  width: 100vw;
   height: 100vh; }
   body.overlay-open {
     overflow: hidden; }
-
-.canvas__bg {
-  background: url(../img/deepspace.jpg);
-  background-size: cover;
-  height: 100vh; }
 
 .hidden {
   display: none !important; }
@@ -880,6 +874,38 @@ p, label, article, aside {
   h2 {
     font-size: 25px; } }
 
+section.hero {
+  background: #1b2735; }
+  section.hero .main__trigger {
+    width: 200px;
+    height: 50px;
+    border: 4px double #0D85A1;
+    background-color: transparent;
+    color: #ccc;
+    font-family: 'Droid Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease; }
+    section.hero .main__trigger:hover {
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      color: #000;
+      background-color: #0D85A1;
+      border: 4px double #000; }
+    section.hero .main__trigger:focus {
+      outline: none; }
+  section.hero .main__title {
+    top: 10%;
+    opacity: 0;
+    z-index: 50; }
+  section.hero .main__scene {
+    overflow: hidden; }
+
 .row.absolute {
   position: absolute;
   top: 70%;
@@ -899,56 +925,23 @@ p, label, article, aside {
     -webkit-transform: scale(1.1, 1.1);
     -ms-transform: scale(1.1, 1.1);
     transform: scale(1.1, 1.1); }
-  .row.absolute svg {
-    width: 150px;
-    -webkit-transform: rotate3d(1, 0, 0, 48deg) rotate3d(0, 1, 0, -7deg) rotate3d(0, 0, 1, -44deg);
-            transform: rotate3d(1, 0, 0, 48deg) rotate3d(0, 1, 0, -7deg) rotate3d(0, 0, 1, -44deg); }
-  .row.absolute img.rocket-fill {
-    opacity: 0;
-    -webkit-transform: rotate3d(1, 0, 0, 48deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
-            transform: rotate3d(1, 0, 0, 48deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
-    width: 136px;
-    position: absolute;
-    top: 7px;
-    left: 7px; }
-  .row.absolute img.rocket-fill2 {
-    -webkit-transform: rotate3d(1, 0, 0, 28deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
-            transform: rotate3d(1, 0, 0, 28deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
-    width: 136px;
-    position: absolute;
-    top: 7px;
-    left: 7px; }
 
-canvas {
-  overflow: hidden; }
-
-.main__trigger {
-  width: 200px;
-  height: 50px;
-  border: 4px double #0D85A1;
-  background-color: transparent;
-  color: #ccc;
-  font-family: 'Droid Sans', sans-serif;
-  text-transform: uppercase;
-  font-weight: 500;
+#scene {
+  background: url(../img/deepspace.jpg) no-repeat center center #1b2735;
+  background-size: cover;
+  height: 100vh;
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease; }
-  .main__trigger:hover {
+  #scene.scaled {
+    -webkit-transform: scale(0.9, 0.9);
+    -ms-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9);
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    color: #000;
-    background-color: #0D85A1;
-    border: 4px double #000; }
-  .main__trigger:focus {
-    outline: none; }
-.main__title {
-  top: 10%;
-  opacity: 0;
-  z-index: 50; }
+    -o-transition: all 0.5s ease; }
 
 .menu__trigger {
   width: 45px;

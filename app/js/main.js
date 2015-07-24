@@ -90,6 +90,9 @@ function launchSite(){
     launch.addEventListener('click', function(e){
         e.preventDefault();
         var target = document.querySelector('#projects');
+        var scene = document.querySelector('#scene');
+        toggleClass(scene, 'scaled');
+
 
         console.log(target);
         TweenMax.to(window, 1,{
@@ -97,7 +100,10 @@ function launchSite(){
             scrollTo: {
                 y: target.offsetTop
             },
-            ease: Power4.easeInOut
+            ease: Power4.easeInOut,
+            onComplete: function(){
+                toggleClass(scene, 'scaled');
+            }
         });
     })
 }
