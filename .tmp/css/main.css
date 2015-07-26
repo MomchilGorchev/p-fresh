@@ -1464,11 +1464,11 @@ figure.project__thumb p span {
   height: 40px;
   width: 100%;
   border-radius: 5px;
-  padding: 4px; }
+  padding: 4px 4px 4px 50px; }
 .contact__form-textarea {
   width: 100%;
   border-radius: 5px;
-  padding: 4px; }
+  padding: 6px 4px 4px 50px; }
 .contact__form-submit {
   width: 100%; }
 .contact__info {
@@ -1487,6 +1487,11 @@ figure.project__thumb p span {
     border-width: 80px 0 0 80px;
     border-color: #2D2D2D transparent transparent transparent;
     margin-top: 63px; }
+.contact__icon {
+  position: relative;
+  float: left;
+  bottom: -35px;
+  left: 10px; }
 
 .footer__section {
   background: #7C7B7B;
