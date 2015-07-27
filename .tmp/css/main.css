@@ -1493,28 +1493,37 @@ figure.project__thumb p span {
   bottom: -35px;
   left: 10px; }
 
-.footer__section {
-  background: #7C7B7B;
-  height: 100px; }
-.footer__social {
-  float: left; }
-  .footer__social-list {
-    list-style-type: none; }
-  .footer__social-item {
-    display: inline-block;
-    margin-left: 15px; }
-    .footer__social-item a {
-      color: #ccc;
-      transition: all 0.2s ease-in;
-      -webkit-transition: all 0.2s ease-in;
-      -moz-transition: all 0.2s ease-in;
-      -o-transition: all 0.2s ease-in; }
-      .footer__social-item a:hover {
+.footer {
+  position: relative; }
+  .footer__canvas {
+    position: absolute;
+    z-index: 5; }
+  .footer__section-content {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    z-index: 10; }
+  .footer__social {
+    float: left; }
+    .footer__social-list {
+      list-style-type: none; }
+    .footer__social-item {
+      display: inline-block;
+      margin-left: 15px; }
+      .footer__social-item a {
+        color: #ccc;
         transition: all 0.2s ease-in;
         -webkit-transition: all 0.2s ease-in;
         -moz-transition: all 0.2s ease-in;
-        -o-transition: all 0.2s ease-in;
-        color: #b3b3b3; }
-.footer__info {
-  float: right;
-  margin-right: 15px; }
+        -o-transition: all 0.2s ease-in; }
+        .footer__social-item a:hover {
+          transition: all 0.2s ease-in;
+          -webkit-transition: all 0.2s ease-in;
+          -moz-transition: all 0.2s ease-in;
+          -o-transition: all 0.2s ease-in;
+          color: #b3b3b3; }
+  .footer__info {
+    float: right;
+    margin-right: 15px; }
+    .footer__info p {
+      color: #ccc; }

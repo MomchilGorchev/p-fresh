@@ -1,9 +1,21 @@
+
 .footer{
+
+  position: relative;
+
+  &__canvas{
+    position: absolute;
+    z-index: 5;
+  }
 
   &__section{
 
-    background: $footer-bg;
-    height:100px;
+    &-content{
+      position: absolute;
+      width: 100%;
+      height: 100px;
+      z-index: 10;
+    }
 
   }
 
@@ -42,6 +54,9 @@
 
     float:right;
     margin-right:15px;
+    p{
+      color:$font-color;
+    }
 
   }
 
