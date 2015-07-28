@@ -698,7 +698,7 @@ nav {
   background-color: silver; }
 
 .section-content {
-  padding: 5% auto; }
+  padding: 5% 0; }
 
 .special__button {
   width: 200px;
@@ -1456,7 +1456,7 @@ figure.project__thumb p span {
       color: #0d0d0d; }
 
 .contact__section {
-  height: 600px;
+  height: auto;
   background: #5C5C5C; }
 .contact__form-holder {
   margin: 20px; }
