@@ -47,7 +47,7 @@ function CanvasScene(sides, animationSpeed, polygons, noAlpha){
         _this.startAngle = startAngle;
         _this.anticlockwise = anticlockwise;
         _this.color = color;
-        _this.alpha = !alpha ? 1 : 0.6 - _this.radius * 0.0009; //Bigger radius means lower opacity
+        _this.alpha = !alpha ? 1 : 0.3 - _this.radius * 0.0002; //Bigger radius means lower opacity
 
         // Draw the polygon
         _this.draw = function(ctx){
