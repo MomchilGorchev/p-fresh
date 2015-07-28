@@ -143,4 +143,4 @@ function CanvasScene(sides, animationSpeed, polygons, noAlpha){
     constructor.init();
 }
 
-var Scene = new CanvasScene(10, 55, 50, true);
+var Scene = new CanvasScene(10, 85, 50, true);
