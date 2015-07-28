@@ -33,7 +33,7 @@ function CanvasScene(sides, animationSpeed, polygons, noAlpha){
         constructor.createShapes(constructor.sides);
         constructor.reDraw();
         for(var k = 0; k < shapes.length; k++){
-            constructor.animateShape(shapes[k], ((k+1) * 0.2) );
+            constructor.animateShape(shapes[k], ((k+1) * 0.2));
         }
     };
 
@@ -47,13 +47,13 @@ function CanvasScene(sides, animationSpeed, polygons, noAlpha){
         _this.startAngle = startAngle;
         _this.anticlockwise = anticlockwise;
         _this.color = color;
-        _this.alpha = 0.3; //Bigger radius means lower opacity
+        _this.alpha = !alpha ? 1 : 0.6 - _this.radius * 0.0009; //Bigger radius means lower opacity
 
         // Draw the polygon
         _this.draw = function(ctx){
             ctx.beginPath();
             ctx.strokeStyle = 'rgba('+ _this.color +', '+ _this.alpha + ')';
-            ctx.lineWidth = 17;
+            ctx.lineWidth = 37;
             if (_this.sides < 3) { return; }
             var a = (Math.PI * 2) / _this.sides;
             a = _this.anticlockwise ? -a : a;
@@ -78,7 +78,7 @@ function CanvasScene(sides, animationSpeed, polygons, noAlpha){
                 ctx,                                    // Canvas context
                 10 ,                             // x value
                 HEIGHT - 10,                             // y value
-                (i+1) * 25,                             // radius
+                (i+1) * 65,                             // radius
                 sides,                                  // sides
                 10,                                     // start angle
                 -Math.PI /2,                            // anticlockwise
@@ -117,17 +117,17 @@ function CanvasScene(sides, animationSpeed, polygons, noAlpha){
         };
 
         TweenMax.to(s, constructor.animationSpeed, {
-            radius: pos.radius * 2,
+            radius: pos.radius * 3,
             x: newPos.x * 3,
             autoAlpha: newPos.alpha,
             delay: delay,
-            ease: Power3.easeInOut,
+            ease: Power0.easeNone,
             onComplete: function(){
                 TweenMax.to(s, constructor.animationSpeed, {
                     radius: pos.radius,
-
+                    delay:delay,
                     autoAlpha: 1,
-                    ease: Power3.easeInOut,
+                    ease: Power0.easeNone,
                     onComplete: function(){
                         setTimeout(function(){
                             //constructor.animateShape(shapes[shapes.indexOf(s) + 1] || 0);
@@ -143,4 +143,4 @@ function CanvasScene(sides, animationSpeed, polygons, noAlpha){
     constructor.init();
 }
 
-var Scene = new CanvasScene(10, 35, 50);
+var Scene = new CanvasScene(10, 55, 50, true);
