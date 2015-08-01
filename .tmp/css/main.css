@@ -703,7 +703,7 @@ nav {
 .special__button {
   width: 200px;
   height: 50px;
-  border: 4px double #0D85A1;
+  border: 4px double #4499a1;
   background-color: transparent;
   color: #ccc;
   font-family: 'Droid Sans', sans-serif;
@@ -719,7 +719,7 @@ nav {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     color: #000;
-    background-color: #0D85A1;
+    background-color: #4499a1;
     border: 4px double #000; }
   .special__button:focus {
     outline: none; }
@@ -879,7 +879,7 @@ section.hero {
   section.hero .main__trigger {
     width: 200px;
     height: 50px;
-    border: 4px double #0D85A1;
+    border: 4px double #4499a1;
     background-color: transparent;
     color: #ccc;
     font-family: 'Droid Sans', sans-serif;
@@ -895,7 +895,7 @@ section.hero {
       -moz-transition: all 0.5s ease;
       -o-transition: all 0.5s ease;
       color: #000;
-      background-color: #0D85A1;
+      background-color: #4499a1;
       border: 4px double #000; }
     section.hero .main__trigger:focus {
       outline: none; }
@@ -946,7 +946,7 @@ section.hero {
 .menu__trigger {
   width: 45px;
   height: 45px;
-  background: #0D85A1;
+  background: #4499a1;
   position: fixed;
   top: 20px;
   right: 20px;
@@ -1022,7 +1022,7 @@ section.hero {
   -webkit-transform: translate3d(2%, 0, 0);
   transform: translate3d(2%, 0, 0);
   visibility: hidden;
-  background-color: #0D85A1;
+  background-color: #4499a1;
   width: 5px;
   max-width: 450px;
   height: 55px;
@@ -1089,7 +1089,7 @@ section.hero {
     margin: 20px 20px 20px 0; }
 .about__text {
   text-align: justify;
-  text-shadow: 1px 1px 1px #074b5a;
+  text-shadow: 1px 1px 1px #2d666b;
   font-size: 1.334em; }
   .about__text-holder {
     width: 67%;
@@ -1156,7 +1156,7 @@ section.hero {
         display: none; }
 
 .grid figure {
-  background: #0D85A1; }
+  background: #4499a1; }
   .grid figure h2 {
     margin: 0;
     word-spacing: -0.15em;
@@ -1239,7 +1239,7 @@ figure.project__thumb p a {
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
-    background: #0D85A1; }
+    background: #4499a1; }
 figure.project__thumb p span {
   opacity: 0;
   width: 50%;
@@ -1259,7 +1259,7 @@ figure.project__thumb p span {
   left: 0;
   position: fixed;
   overflow: scroll;
-  background: #0D85A1;
+  background: #4499a1;
   z-index: 0;
   visibility: hidden;
   opacity: 0;
