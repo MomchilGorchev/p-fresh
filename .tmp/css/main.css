@@ -1457,7 +1457,7 @@ figure.project__thumb p span {
 
 .contact__section {
   height: auto;
-  background: #5C5C5C; }
+  background: #1b2735; }
 .contact__form-holder {
   margin: 20px; }
 .contact__form-input {
@@ -1491,7 +1491,8 @@ figure.project__thumb p span {
   position: relative;
   float: left;
   bottom: -35px;
-  left: 10px; }
+  left: 10px;
+  color: #4499a1; }
 
 .footer {
   position: relative; }
