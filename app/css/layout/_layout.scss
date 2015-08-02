@@ -67,3 +67,49 @@ nav{
     stroke-dasharray: 550;
   }
 }
+
+.underline{
+
+  width: 40%;
+  min-width: 250px;
+  margin: 0 auto;
+  text-align: center;
+  border-top: 1px dotted $font-color;
+
+  & > img{
+    position: relative;
+    top: -15px;
+    padding: 0 15px;
+  }
+
+  &.contact{
+
+    & > img {
+
+      background-color: $contact-bg;
+
+    }
+
+  }
+
+  &.about{
+
+    & > img{
+      top: -20px;
+      background-color: $about-bg;
+
+    }
+
+  }
+
+  &.projects{
+
+    & > img{
+      top: -20px;
+      background-color: $projectgit -bg;
+
+    }
+
+  }
+
+}
