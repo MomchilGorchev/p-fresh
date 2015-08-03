@@ -1517,20 +1517,29 @@ figure.project__thumb p span {
   width: 100%; }
 .contact__info {
   font-size: 1.3rem; }
+  .contact__info__wrapper {
+    position: relative; }
   .contact__info-inner {
-    background: #363636;
+    background: #055F67;
     padding: 20px;
-    border-radius: 5px;
-    margin-top: 20px;
+    border: 7px double #4499A1;
+    margin: 9% auto;
+    width: 100%;
+    max-width: 450px;
     font-weight: 400;
-    height: 200px; }
-  .contact__info-triangle {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 80px 0 0 80px;
-    border-color: #2D2D2D transparent transparent transparent;
-    margin-top: 63px; }
+    height: auto;
+    position: relative;
+    z-index: 10; }
+.contact__triangle {
+  position: absolute;
+  left: 15%;
+  bottom: -75px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 80px 0 0 80px;
+  border-color: #055056 transparent transparent transparent;
+  z-index: 5; }
 .contact__icon {
   position: absolute;
   top: 4px;

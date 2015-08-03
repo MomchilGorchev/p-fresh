@@ -55,26 +55,36 @@
 
   &__info{
 
+    &__wrapper{
+      position:relative;
+    }
     font-size: 1.3rem;
 
     &-inner{
-
-      background: $about-bg;
+      // TEMP
+      background: #055F67;
       padding: 20px;
-      border-radius: 5px;
-      margin-top: 20px;
-      font-weight:400;
-      height:200px; //TEMP
-    }
-    &-triangle{
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 80px 0 0 80px;
-      border-color: #2D2D2D transparent transparent transparent;
-      margin-top: 63px;
+      border: 7px double #4499A1;
+      margin: 9% auto;
+      width:100%;
+      max-width:450px;
+      font-weight: 400;
+      height: auto;
+      position:relative;
+      z-index: 10;
     }
 
+  }
+  &__triangle{
+    position:absolute;
+    left: 15%;
+    bottom: -75px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 80px 0 0 80px;
+    border-color: #055056 transparent transparent transparent;
+    z-index: 5;
   }
 
   &__icon{
