@@ -22,7 +22,33 @@ h2 {
 @for $i from 1 through 6 {
   h#{$i}{
     font-family: $header-font;
+    text-transform: uppercase;
   }
+
+  @if $i == 1{
+    h#{$i}{
+      letter-spacing: 4px;
+    }
+  }
+
+  @if $i == 2{
+    h#{$i}{
+      letter-spacing: 3px;
+    }
+  }
+
+  @if $i == 3{
+    h#{$i}{
+      letter-spacing: 3px;
+    }
+  }
+
+  @if $i == 4{
+    h#{$i}{
+      letter-spacing: 2px;
+    }
+  }
+
 }
 
 p, label, article, aside{
