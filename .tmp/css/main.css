@@ -1076,6 +1076,7 @@ section.hero {
   .menu__content.open {
     opacity: 1;
     visibility: visible;
+    box-shadow: 0 2px 10px -1px #1B2735;
     width: 100%;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
