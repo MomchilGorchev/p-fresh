@@ -37,7 +37,7 @@
     visibility: hidden;
     background-color: $bg-color;
     width: 5px;
-    max-width:450px;
+    max-width:400px;
     height: 55px;
     top: 15px;
     right: 15px;
@@ -58,7 +58,8 @@
   &__list{
     opacity:0;
     text-align: center;
-    margin-top: 0;
+    margin-top: -3px;
+    width: 92%;
     padding-left:0;
     font-size: 1em;
     text-transform: uppercase;
@@ -73,6 +74,9 @@
         text-decoration: none;
         font-family: $content-font;
         color:$font-color;
+        &:hover{
+          text-decoration: line-through;
+        }
       }
     }
     &.open{
