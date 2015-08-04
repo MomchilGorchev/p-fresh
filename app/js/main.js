@@ -125,6 +125,8 @@ function projectOverlay(){
             contentBox.appendChild(content);
             toggleClass(overlay, 'open');
             toggleClass(body, 'overlay-open');
+
+
         });
     }
 
@@ -139,10 +141,42 @@ function projectOverlay(){
     });
 }
 
+function linkTransition(){
+
+    var triggers = document.getElementsByClassName('overlay__trigger__icon');
+
+    for(var i = 0; i < triggers.length; i++){
+
+        var current = triggers[i];
+            console.log(i);
+
+        current.addEventListener('click', function(e){
+            e.preventDefault();
+
+
+            var target = this.getAttribute('data-href');
+            var DOMElement = document.querySelector('.'+ target);
+
+
+
+            TweenMax.to(window, 1,{
+                delay:0.3,
+                scrollTo: {
+                    y: DOMElement.offsetTop
+                },
+                ease: Power4.easeInOut
+            });
+
+        });
+    }
+
+}
+
 /*
     Document ready
  */
 document.addEventListener('DOMContentLoaded', function(){
+    linkTransition();
     launchSite();
     menuHandler();
     menuClick();
