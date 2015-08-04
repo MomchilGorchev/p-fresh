@@ -153,6 +153,12 @@
       margin-top: 15%;
       margin-left: 15%;
 
+      &__master-list{
+
+        list-style-type: none;
+
+      }
+
       a, p{
 
         font-size: 20px;
@@ -166,7 +172,7 @@
         @include vendor-transition();
         &:hover{
           @include vendor-transition();
-          color: darken($font-color, 75%);
+          color: $about-bg;
 
         }
 

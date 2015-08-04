@@ -905,7 +905,7 @@ h6 {
   font-family: 'Medula One', sans-serif;
   text-transform: uppercase; }
 
-p, label, article, aside {
+p, label, article, aside, a, li {
   font-family: Lato, sans-serif; }
 
 @media (max-width: 767px) {
@@ -1482,6 +1482,8 @@ figure.project__thumb p span {
   list-style-type: hangul-consonant;
   margin-top: 15%;
   margin-left: 15%; }
+  .overlay__details .project__hl__master-list {
+    list-style-type: none; }
   .overlay__details .project__hl a, .overlay__details .project__hl p {
     font-size: 20px;
     text-transform: uppercase;
@@ -1497,7 +1499,7 @@ figure.project__thumb p span {
       -webkit-transition: all 0.5s ease;
       -moz-transition: all 0.5s ease;
       -o-transition: all 0.5s ease;
-      color: #0d0d0d; }
+      color: #364250; }
 
 .contact__section {
   height: auto;
