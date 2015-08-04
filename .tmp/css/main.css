@@ -746,10 +746,10 @@ nav {
     background-color: #1B2735; }
   .underline.about > img {
     top: -20px;
-    background-color: #363636; }
+    background-color: #364250; }
   .underline.projects > img {
     top: -20px;
-    background-color: #474747; }
+    background-color: #525E6D; }
 
 @-webkit-keyframes draw {
   0% {
@@ -1119,7 +1119,7 @@ section.hero {
     transform: translate3d(0, 0, 0); }
 
 .about__section {
-  background-color: #363636; }
+  background-color: #364250; }
 .about__photo {
   width: 98%;
   border-radius: 50%;
@@ -1140,7 +1140,7 @@ section.hero {
     float: right; }
 
 .projects__section {
-  background: #474747; }
+  background: #525E6D; }
 .projects__wrapper {
   margin-bottom: 10px; }
 
