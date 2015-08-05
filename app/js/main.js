@@ -143,6 +143,8 @@ function projectOverlay(){
 
 function linkTransition(){
 
+    'use strict';
+
     var triggers = document.getElementsByClassName('overlay__trigger__icon');
 
     for(var i = 0; i < triggers.length; i++){
@@ -151,12 +153,12 @@ function linkTransition(){
             console.log(i);
 
         current.addEventListener('click', function(e){
-            e.preventDefault();
+
+            //e.preventDefault();
 
 
             var target = this.getAttribute('data-href');
             var DOMElement = document.querySelector('.'+ target);
-
 
 
             TweenMax.to(window, 1,{
