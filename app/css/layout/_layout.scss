@@ -82,10 +82,15 @@ nav{
 
   &.contact{
 
-    & > img {
-
+    & > svg{
+      width: 80px;
+      top: -20px;
       background-color: $contact-bg;
-
+      path{
+        -webkit-animation: draw 15s;
+        animation: draw 15s;
+        stroke-dasharray: 1750;
+      }
     }
 
   }

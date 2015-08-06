@@ -737,8 +737,14 @@ nav {
     position: relative;
     top: -15px;
     padding: 0 15px; }
-  .underline.contact > img {
+  .underline.contact > svg {
+    width: 80px;
+    top: -20px;
     background-color: #1B2735; }
+    .underline.contact > svg path {
+      -webkit-animation: draw 15s;
+      animation: draw 15s;
+      stroke-dasharray: 1750; }
   .underline.about > svg {
     width: 80px;
     top: -20px;

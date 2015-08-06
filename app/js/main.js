@@ -110,22 +110,47 @@ function launchSite(){
 
 
 function projectOverlay(){
+    // Cache all necessary elements
     var triggers = document.querySelectorAll('.open-overlay');
     var overlay = document.querySelector('#projects__overlay');
     var contentBox = overlay.querySelector('.projects__overlay-content');
     var closeTrigger = overlay.querySelector('.close');
     var body = document.querySelector('body');
 
+    // Assign handlers to the overlay triggers
     for(var i = 0; i < triggers.length; i ++){
         var current = triggers[i];
-
         current.addEventListener('click', function(e){
             e.preventDefault();
+            // Clone related content to the overlay
             var content = closest(this, 'figure').cloneNode(true).querySelector('.project__modal-details');
             contentBox.appendChild(content);
+            // Show the overlay
             toggleClass(overlay, 'open');
             toggleClass(body, 'overlay-open');
 
+            // Assign dynamically event to the 'Show-more' icon
+            var triggerId = content.getAttribute('data-trigger');
+            document.getElementById(triggerId).addEventListener('click', function(e){
+                e.preventDefault();
+                // Get the target element
+                var target = document.getElementById(triggerId + '-details');
+                console.log(target.offsetTop);
+                // Very important, normal scroll on the window element won't work
+                // because the overlay is fixed to take the whole screen
+                // The solution is to apply scroll on the overlay
+                TweenMax.to(overlay, 1,{
+                    delay:0.3,
+                    scrollTo: {
+                        y: target.offsetTop
+                    },
+                    ease: Power4.easeInOut,
+                    onComplete: function(){
+                        // Implement trigger fade out here
+                        console.log('done');
+                    }
+                });
+            });
 
         });
     }
@@ -145,32 +170,46 @@ function linkTransition(){
 
     'use strict';
 
-    var triggers = document.getElementsByClassName('overlay__trigger__icon');
-
-    for(var i = 0; i < triggers.length; i++){
-
-        var current = triggers[i];
-            console.log(i);
-
-        current.addEventListener('click', function(e){
-
-            //e.preventDefault();
+    //var triggers = document.getElementsByClassName('overlay__show-more');
 
 
-            var target = this.getAttribute('data-href');
-            var DOMElement = document.querySelector('.'+ target);
 
 
-            TweenMax.to(window, 1,{
-                delay:0.3,
-                scrollTo: {
-                    y: DOMElement.offsetTop
-                },
-                ease: Power4.easeInOut
-            });
+    //for(var i = 0; i < triggers.length; i++){
+    //    (function assignHandle(i) {
+    //        console.log(triggers[i]);
+    //
+    //        triggers[i].addEventListener('click', function(e){
+    //
+    //            e.preventDefault();
+    //
+    //            console.log('assigned');
+    //
+    //            var target = this.getAttribute('data-href');
+    //            var DOMElement = document.querySelector('.'+ target);
+    //
+    //
+    //            TweenMax.to(window, 1,{
+    //                delay:0.3,
+    //                scrollTo: {
+    //                    y: DOMElement.offsetTop
+    //                },
+    //                ease: Power4.easeInOut
+    //            });
+    //
+    //        });
+    //
+    //    }(i));
+    //    console.log('i: '+ i);
+    //}
 
-        });
-    }
+
+
+        //triggers[i];
+        //    console.log(current.addEventListener);
+
+
+
 
 }
 
@@ -178,9 +217,9 @@ function linkTransition(){
     Document ready
  */
 document.addEventListener('DOMContentLoaded', function(){
-    linkTransition();
     launchSite();
     menuHandler();
     menuClick();
     projectOverlay();
+    linkTransition();
 });

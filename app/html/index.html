@@ -118,7 +118,7 @@
                                 <a href="#" class="open-overlay"><i class="fa fa-fw fa-info"></i></a>
                                 <span>Custom frontend development on top of Shopify eCommerce platform</span>
                             </p>
-                            <div class="project__modal-details">
+                            <div data-trigger="p1" class="project__modal-details">
                                 <h2 class="overlay__title">Fetish Fashion Boutique</h2>
                                 <div class="overlay__hero">
                                     <div class="overlay__slider">
@@ -130,9 +130,9 @@
                                         </div>
                                     </div>
                                     <div class="overlay__show-more">
-                                        <a href="#" class="overlay__trigger__icon" data-href="p1"><i class="fa fa-angle-double-down fa-3x"></i></a>
+                                        <a id="p1" href="#" class="overlay__trigger__icon"><i class="fa fa-angle-double-down fa-3x"></i></a>
                                     </div>
-                                    <div class="overlay__details p1">
+                                    <div id="p1-details" class="overlay__details p1">
                                         <div class="container">
                                             <h3>Highlights</h3>
                                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -199,7 +199,7 @@
                                 <a href="#" class="open-overlay"><i class="fa fa-fw fa-info"></i></a>
                                 <span>Full-stack, built from scratch dynamic webapp</span>
                             </p>
-                            <div class="project__modal-details">
+                            <div data-trigger="p2" class="project__modal-details">
                                 <h2 class="overlay__title">HCH Heating and Plumbing</h2>
                                 <div class="overlay__hero">
                                     <div class="overlay__slider">
@@ -211,9 +211,9 @@
                                         </div>
                                     </div>
                                     <div class="overlay__show-more">
-                                        <a href="#" class="overlay__trigger__icon" data-href="p2"><i class="fa fa-angle-double-down fa-3x"></i></a>
+                                        <a id="p2" href="#" class="overlay__trigger__icon"><i class="fa fa-angle-double-down fa-3x"></i></a>
                                     </div>
-                                    <div class="overlay__details p2">
+                                    <div id="p2-details" class="overlay__details p2">
                                         <div class="container">
                                             <h3>Highlights</h3>
                                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -279,7 +279,7 @@
                                 <a href="#" class="open-overlay"><i class="fa fa-fw fa-info"></i></a>
                                 <span>Meteor JS app to combine some popular public APIs</span>
                             </p>
-                            <div class="project__modal-details">
+                            <div data-trigger="p3" class="project__modal-details">
                                 <h2 class="overlay__title">Working title: favourite media mixer</h2>
                                 <div class="overlay__hero">
                                     <div class="overlay__slider">
@@ -291,9 +291,9 @@
                                         <!--</div>-->
                                     </div>
                                     <div class="overlay__show-more">
-                                        <a href="#" class="overlay__trigger__icon" data-href="p3"><i class="fa fa-angle-double-down fa-3x"></i></a>
+                                        <a id="p3" href="#" class="overlay__trigger__icon"><i class="fa fa-angle-double-down fa-3x"></i></a>
                                     </div>
-                                    <div class="overlay__details p3">
+                                    <div id="p3-details" class="overlay__details">
                                         <div class="container">
                                             <h3>Highlights</h3>
                                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -366,7 +366,7 @@
                                 <a href="#" class="open-overlay"><i class="fa fa-fw fa-info"></i></a>
                                 <span>Simple showcase page to demonstrate some canvas animations</span>
                             </p>
-                            <div class="project__modal-details">
+                            <div data-trigger="p4" class="project__modal-details">
                                 <h2 class="overlay__title">HTML5 canvas experiments</h2>
                                 <div class="overlay__hero">
                                     <div class="overlay__slider">
@@ -378,9 +378,9 @@
                                         <!--</div>-->
                                     </div>
                                     <div class="overlay__show-more">
-                                        <a href="#" class="overlay__trigger__icon" data-href="p3"><i class="fa fa-angle-double-down fa-3x"></i></a>
+                                        <a id="p4" href="#" class="overlay__trigger__icon"><i class="fa fa-angle-double-down fa-3x"></i></a>
                                     </div>
-                                    <div class="overlay__details p3">
+                                    <div id="p4-details" class="overlay__details p4">
                                         <div class="container">
                                             <h3>Highlights</h3>
                                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -936,7 +936,26 @@
         <div class="section-content container">
             <h2 class="text-center">Contact me</h2>
             <div class="underline contact">
-                <img class="underline__icon" alt="" src="img/icons/contact-title-icon.png" />
+
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="-207 119 64 64" style="enable-background:new -207 119 64 64;" xml:space="preserve">
+                    <g>
+                        <path stroke="#FFFFFF" fill="none" stroke-width="2" class="st0" d="M-195.9,170.7c0.1,0.1,0.3,0.2,0.5,0.2c0.2,0,0.4-0.1,0.5-0.2l14.8-14.6l5.5,5.3c0.1,0.1,0.3,0.2,0.5,0.2
+                            c0.2,0,0.4-0.1,0.5-0.2l9-9.2c0.3-0.3,0.3-0.7,0-1l-4.7-4.6l15.8-15.6c0.3-0.3,0.3-0.7,0-1l-8.9-9c-0.1-0.1-0.3-0.2-0.5-0.2
+                            c-0.2,0-0.4,0.1-0.5,0.2l-16,15.8l-9.3-9.2c-0.1-0.1-0.3-0.2-0.5-0.2c-0.2,0-0.4,0.1-0.5,0.2l-9,9.2c-0.3,0.3-0.3,0.7,0,1l8.6,8.5
+                            l-14.6,14.4c-0.1,0.1-0.2,0.3-0.2,0.5c0,0.2,0.1,0.4,0.2,0.5L-195.9,170.7z"/>
+                        <path stroke="#FFFFFF" fill="none" stroke-width="2" class="st0" d="M-169,158.1c-5.6,6-8.7,13-7.8,17.9c0.1,0.3,0.3,0.5,0.5,0.6c0.1,0,0.1,0,0.2,0c0.2,0,0.4-0.1,0.5-0.2
+                            l11.5-11.8l5,3.8c-0.1,0.3-0.2,0.6-0.2,0.9c0,1.3,1.1,2.3,2.3,2.3s2.3-1.1,2.3-2.3c0-1.3-1.1-2.4-2.3-2.4c-0.3,0-0.5,0.1-0.8,0.1
+                            l-3.8-5.1l11.2-11.4c0.2-0.2,0.3-0.5,0.2-0.7c-0.1-0.3-0.3-0.5-0.6-0.5c-0.6-0.2-1.3-0.2-2.1-0.2
+                            C-157.6,149.1-163.8,152.5-169,158.1z"/>
+                        <path stroke="#FFFFFF" fill="none" stroke-width="2" class="st0" d="M-158.9,175.4c-0.4,0-0.8,0.4-0.8,0.8c0,0.4,0.3,0.8,0.8,0.8c0,0,0,0,0,0c5.7,0,10.3-4.6,10.3-10.3
+                            c0-0.4-0.3-0.7-0.8-0.7c0,0,0,0,0,0c-0.4,0-0.8,0.3-0.8,0.7C-150.1,171.5-154,175.4-158.9,175.4z"/>
+                        <path stroke="#FFFFFF" fill="none" stroke-width="2" class="st0" d="M-157.6,179.4c-0.4,0-0.8,0.4-0.8,0.8c0,0.4,0.3,0.8,0.8,0.8c0,0,0,0,0,0c2.7,0,5.7-1.7,8.3-4.4
+                            c2.5-2.7,3.9-5.9,3.9-8.6c0-0.4-0.3-0.7-0.8-0.8c-0.4,0-0.8,0.3-0.8,0.8c0,2.3-1.3,5.2-3.5,7.5
+                            C-152.6,177.9-155.3,179.4-157.6,179.4z"/>
+                    </g>
+                </svg>
+
             </div>
             <div class="contact__wrapper row">
 
