@@ -1,21 +1,21 @@
+//
+
 @-webkit-keyframes draw {
   0%{
-    stroke-dashoffset: 550;
+    stroke-dashoffset: 1750;
   }
 
   100%{
-    stroke-dashoffset: 50;
+    stroke-dashoffset: 0;
   }
 }
 @keyframes draw{
   0%{
-    stroke-dashoffset: 550;
-    fill:none;
+    stroke-dashoffset: 1750;
   }
 
   100%{
-    stroke-dashoffset: 50;
-    fill: #627582;
+    stroke-dashoffset: 0;
   }
 }
 

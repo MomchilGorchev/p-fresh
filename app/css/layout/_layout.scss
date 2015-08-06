@@ -63,13 +63,8 @@ nav{
     }
 }
 
-#rocket__layer{
-  path{
-    -webkit-animation: draw 5s;
-    animation: draw 5s;
-    stroke-dasharray: 550;
-  }
-}
+
+
 
 .underline{
 
@@ -79,7 +74,7 @@ nav{
   text-align: center;
   border-top: 1px dotted $font-color;
 
-  & > img{
+  & > img, & > svg{
     position: relative;
     top: -15px;
     padding: 0 15px;
@@ -97,20 +92,30 @@ nav{
 
   &.about{
 
-    & > img{
+    & > svg{
+      width: 80px;
       top: -20px;
       background-color: $about-bg;
-
+      path{
+        -webkit-animation: draw 5s;
+        animation: draw 5s;
+        stroke-dasharray: 1750;
+      }
     }
 
   }
 
   &.projects{
 
-    & > img{
+    & > svg{
+      width: 80px;
       top: -20px;
       background-color: $project-bg;
-
+      path{
+        -webkit-animation: draw 25s;
+        animation: draw 25s;
+        stroke-dasharray: 1750;
+      }
     }
 
   }

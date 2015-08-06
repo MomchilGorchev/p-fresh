@@ -727,45 +727,48 @@ nav {
   .special__button:focus {
     outline: none; }
 
-#rocket__layer path {
-  -webkit-animation: draw 5s;
-  animation: draw 5s;
-  stroke-dasharray: 550; }
-
 .underline {
   width: 40%;
   min-width: 250px;
   margin: 0 auto;
   text-align: center;
   border-top: 1px dotted #ccc; }
-  .underline > img {
+  .underline > img, .underline > svg {
     position: relative;
     top: -15px;
     padding: 0 15px; }
   .underline.contact > img {
     background-color: #1B2735; }
-  .underline.about > img {
+  .underline.about > svg {
+    width: 80px;
     top: -20px;
     background-color: #364250; }
-  .underline.projects > img {
+    .underline.about > svg path {
+      -webkit-animation: draw 5s;
+      animation: draw 5s;
+      stroke-dasharray: 1750; }
+  .underline.projects > svg {
+    width: 80px;
     top: -20px;
     background-color: #525E6D; }
+    .underline.projects > svg path {
+      -webkit-animation: draw 25s;
+      animation: draw 25s;
+      stroke-dasharray: 1750; }
 
 @-webkit-keyframes draw {
   0% {
-    stroke-dashoffset: 550; }
+    stroke-dashoffset: 1750; }
 
   100% {
-    stroke-dashoffset: 50; } }
+    stroke-dashoffset: 0; } }
 
 @keyframes draw {
   0% {
-    stroke-dashoffset: 550;
-    fill: none; }
+    stroke-dashoffset: 1750; }
 
   100% {
-    stroke-dashoffset: 50;
-    fill: #627582; } }
+    stroke-dashoffset: 0; } }
 
 @-webkit-keyframes spin {
   from {
