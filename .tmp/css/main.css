@@ -956,6 +956,7 @@ section.hero {
     overflow: hidden; }
 
 .row.absolute {
+  opacity: 0;
   position: absolute;
   top: 70%;
   left: 50%;
