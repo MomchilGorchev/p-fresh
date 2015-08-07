@@ -1411,6 +1411,7 @@ figure.project__thumb p span {
   font-weight: 100;
   color: #B1CBCF; }
 .overlay__hero {
+  position: relative;
   width: 100%;
   height: 500px;
   margin-top: 30px;
@@ -1423,7 +1424,7 @@ figure.project__thumb p span {
   position: relative; }
 .overlay__show-more {
   position: absolute;
-  bottom: 2%;
+  bottom: -20%;
   width: 100%;
   text-align: center;
   font-size: 100%; }
