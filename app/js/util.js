@@ -17,6 +17,16 @@ function toggleClass(el, className){
         el.className = classes.join(' ');
     }
 }
+function addClass(el, className){
+    if (el.classList) {
+        el.classList.add(className);
+    } else {
+        var classes = el.className.split(' ');
+        classes.push(className);
+
+        el.className = classes.join(' ');
+    }
+}
 function closest(elem, selector) {
 
     var matchesSelector = elem.matches || elem.webkitMatchesSelector || elem.mozMatchesSelector || elem.msMatchesSelector;

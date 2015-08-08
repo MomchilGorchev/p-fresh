@@ -737,44 +737,57 @@ nav {
     position: relative;
     top: -15px;
     padding: 0 15px; }
-  .underline.contact > svg {
-    width: 80px;
-    top: -20px;
-    background-color: #1B2735; }
-    .underline.contact > svg path {
-      -webkit-animation: draw 15s;
-      animation: draw 15s;
-      stroke-dasharray: 1750; }
-  .underline.about > svg {
-    width: 80px;
-    top: -20px;
-    background-color: #364250; }
-    .underline.about > svg path {
-      -webkit-animation: draw 5s;
-      animation: draw 5s;
-      stroke-dasharray: 1750; }
   .underline.projects > svg {
     width: 80px;
     top: -20px;
-    background-color: #525E6D; }
-    .underline.projects > svg path {
-      -webkit-animation: draw 25s;
-      animation: draw 25s;
-      stroke-dasharray: 1750; }
+    background-color: #525E6D;
+    stroke-dashoffset: 450;
+    stroke-dasharray: 365; }
+    .underline.projects > svg.active path {
+      stroke-dashoffset: 740;
+      stroke-dasharray: 365;
+      -webkit-animation: draw 4s;
+      animation: draw 4s; }
+  .underline.about > svg {
+    width: 80px;
+    top: -20px;
+    background-color: #364250;
+    stroke-dashoffset: 450;
+    stroke-dasharray: 365; }
+    .underline.about > svg.active path {
+      stroke-dashoffset: 740;
+      stroke-dasharray: 365;
+      -webkit-animation: draw 4s;
+      animation: draw 4s; }
+  .underline.contact > svg {
+    width: 80px;
+    top: -20px;
+    background-color: #1B2735;
+    stroke-dashoffset: 450;
+    stroke-dasharray: 365; }
+    .underline.contact > svg.active path {
+      stroke-dashoffset: 740;
+      stroke-dasharray: 365;
+      -webkit-animation: draw 4s;
+      animation: draw 4s; }
 
 @-webkit-keyframes draw {
   0% {
-    stroke-dashoffset: 1750; }
+    stroke-dashoffset: 450;
+    stroke-dasharray: 365; }
 
   100% {
-    stroke-dashoffset: 0; } }
+    stroke-dashoffset: 740;
+    stroke-dasharray: 365; } }
 
 @keyframes draw {
   0% {
-    stroke-dashoffset: 1750; }
+    stroke-dashoffset: 450;
+    stroke-dasharray: 365; }
 
   100% {
-    stroke-dashoffset: 0; } }
+    stroke-dashoffset: 740;
+    stroke-dasharray: 365; } }
 
 @-webkit-keyframes spin {
   from {

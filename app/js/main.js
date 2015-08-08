@@ -121,6 +121,35 @@ function launchSite(){
 }
 
 /**
+ * Check position and animte SVG
+ */
+(function svgHeaders(){
+
+    var svgs = document.querySelectorAll('.svg-header');
+    // Set to false initialy
+    var scrolling = false;
+    window.onscroll = checkAndAnimate;
+    function checkAndAnimate() {
+        // Animate header SVG if in range
+        for(var i = 0; i < svgs.length; i++){
+            if(window.pageYOffset > svgs[i].offsetTop - window.innerHeight / 1.2){
+                addClass(svgs[i], 'active');
+            }
+        }
+        // Set the flag
+        scrolling = true;
+    }
+    // Only fire 100ms later for better performance
+    setInterval(function() {
+        if(scrolling) {
+            // Reset flag
+            scrolling = false;
+        }
+    }, 100);
+    
+}());
+
+/**
  * Overlay open/close handling
  */
 function projectOverlay(){

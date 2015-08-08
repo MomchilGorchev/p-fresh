@@ -80,19 +80,23 @@ nav{
     padding: 0 15px;
   }
 
-  &.contact{
+  &.projects{
 
     & > svg{
       width: 80px;
       top: -20px;
-      background-color: $contact-bg;
-      path{
-        -webkit-animation: draw 15s;
-        animation: draw 15s;
-        stroke-dasharray: 1750;
+      background-color: $project-bg;
+      stroke-dashoffset: 450;
+      stroke-dasharray: 365;
+      &.active{
+        path{
+          stroke-dashoffset: 740;
+          stroke-dasharray: 365;
+          -webkit-animation: draw 4s;
+          animation: draw 4s;
+        }
       }
     }
-
   }
 
   &.about{
@@ -101,28 +105,35 @@ nav{
       width: 80px;
       top: -20px;
       background-color: $about-bg;
-      path{
-        -webkit-animation: draw 5s;
-        animation: draw 5s;
-        stroke-dasharray: 1750;
+      stroke-dashoffset: 450;
+      stroke-dasharray: 365;
+      &.active{
+        path{
+          stroke-dashoffset: 740;
+          stroke-dasharray: 365;
+          -webkit-animation: draw 4s;
+          animation: draw 4s;
+        }
       }
     }
-
   }
 
-  &.projects{
+  &.contact{
 
     & > svg{
       width: 80px;
       top: -20px;
-      background-color: $project-bg;
-      path{
-        -webkit-animation: draw 25s;
-        animation: draw 25s;
-        stroke-dasharray: 1750;
+      background-color: $contact-bg;
+      stroke-dashoffset: 450;
+      stroke-dasharray: 365;
+      &.active{
+        path{
+          stroke-dashoffset: 740;
+          stroke-dasharray: 365;
+          -webkit-animation: draw 4s;
+          animation: draw 4s;
+        }
       }
     }
-
   }
-
 }
