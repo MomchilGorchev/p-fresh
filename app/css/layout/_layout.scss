@@ -74,66 +74,38 @@ nav{
   text-align: center;
   border-top: 1px dotted $font-color;
 
-  & > img, & > svg{
+  & > svg{
     position: relative;
-    top: -15px;
     padding: 0 15px;
+    width: 80px;
+    top: -20px;
+    stroke-dashoffset: 450;
+    stroke-dasharray: 365;
+    &.active{
+      path{
+        stroke-dashoffset: 740;
+        stroke-dasharray: 365;
+        -webkit-animation: draw 4s;
+        animation: draw 4s;
+      }
+    }
   }
 
   &.projects{
-
-    & > svg{
-      width: 80px;
-      top: -20px;
+    & > svg {
       background-color: $project-bg;
-      stroke-dashoffset: 450;
-      stroke-dasharray: 365;
-      &.active{
-        path{
-          stroke-dashoffset: 740;
-          stroke-dasharray: 365;
-          -webkit-animation: draw 4s;
-          animation: draw 4s;
-        }
-      }
     }
   }
 
   &.about{
-
     & > svg{
-      width: 80px;
-      top: -20px;
       background-color: $about-bg;
-      stroke-dashoffset: 450;
-      stroke-dasharray: 365;
-      &.active{
-        path{
-          stroke-dashoffset: 740;
-          stroke-dasharray: 365;
-          -webkit-animation: draw 4s;
-          animation: draw 4s;
-        }
-      }
     }
   }
 
   &.contact{
-
     & > svg{
-      width: 80px;
-      top: -20px;
       background-color: $contact-bg;
-      stroke-dashoffset: 450;
-      stroke-dasharray: 365;
-      &.active{
-        path{
-          stroke-dashoffset: 740;
-          stroke-dasharray: 365;
-          -webkit-animation: draw 4s;
-          animation: draw 4s;
-        }
-      }
     }
   }
 }

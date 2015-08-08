@@ -733,43 +733,24 @@ nav {
   margin: 0 auto;
   text-align: center;
   border-top: 1px dotted #ccc; }
-  .underline > img, .underline > svg {
+  .underline > svg {
     position: relative;
-    top: -15px;
-    padding: 0 15px; }
+    padding: 0 15px;
+    width: 80px;
+    top: -20px;
+    stroke-dashoffset: 450;
+    stroke-dasharray: 365; }
+    .underline > svg.active path {
+      stroke-dashoffset: 740;
+      stroke-dasharray: 365;
+      -webkit-animation: draw 4s;
+      animation: draw 4s; }
   .underline.projects > svg {
-    width: 80px;
-    top: -20px;
-    background-color: #525E6D;
-    stroke-dashoffset: 450;
-    stroke-dasharray: 365; }
-    .underline.projects > svg.active path {
-      stroke-dashoffset: 740;
-      stroke-dasharray: 365;
-      -webkit-animation: draw 4s;
-      animation: draw 4s; }
+    background-color: #525E6D; }
   .underline.about > svg {
-    width: 80px;
-    top: -20px;
-    background-color: #364250;
-    stroke-dashoffset: 450;
-    stroke-dasharray: 365; }
-    .underline.about > svg.active path {
-      stroke-dashoffset: 740;
-      stroke-dasharray: 365;
-      -webkit-animation: draw 4s;
-      animation: draw 4s; }
+    background-color: #364250; }
   .underline.contact > svg {
-    width: 80px;
-    top: -20px;
-    background-color: #1B2735;
-    stroke-dashoffset: 450;
-    stroke-dasharray: 365; }
-    .underline.contact > svg.active path {
-      stroke-dashoffset: 740;
-      stroke-dasharray: 365;
-      -webkit-animation: draw 4s;
-      animation: draw 4s; }
+    background-color: #1B2735; }
 
 @-webkit-keyframes draw {
   0% {
