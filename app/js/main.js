@@ -126,7 +126,7 @@ function launchSite(){
 (function svgHeaders(){
 
     var svgs = document.querySelectorAll('.svg-header');
-    // Set to false initialy
+    // Set to false initiallyq
     var scrolling = false;
     window.onscroll = checkAndAnimate;
     function checkAndAnimate() {
@@ -214,6 +214,27 @@ function projectOverlay(){
     });
 }
 
+function formHandler(){
+    var form = document.querySelector('#contact__me');
+
+    form.onsubmit = function(e){
+        e.preventDefault();
+
+        var formData = {
+            name: form.querySelector('.name').value,
+            email: form.querySelector('.email').value,
+            message: form.querySelector('.message').value
+        };
+
+        if(validateForm(formData)){
+            console.log('yes!');
+        } else {
+            console.log('no!');
+        }
+    }
+}
+
+
 /*
     Document ready
  */
@@ -222,4 +243,5 @@ document.addEventListener('DOMContentLoaded', function(){
     menuHandler();
     menuClick();
     projectOverlay();
+    formHandler();
 });

@@ -47,3 +47,20 @@ function hasClass(el, className){
     else
         return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
 }
+
+function validateForm(formData){
+
+    if(!formData){
+        return false;
+    } else {
+        return formData.name.length > 1
+            && validateEmail(formData.email)
+            && formData.message.length > 10;
+    }
+
+}
+
+function validateEmail(email) {
+    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    return re.test(email);
+}

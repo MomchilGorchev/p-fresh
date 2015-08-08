@@ -976,18 +976,21 @@
                 <form id="contact__me" class="contact__form col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="contact__form-holder">
                         <span class="fa fa-user fa-2x contact__icon"></span>
-                        <input class="contact__form-input" type="text" name="name"/>
+                        <input class="contact__form-input name" type="text" name="name"/>
                     </div>
                     <div class="contact__form-holder">
                         <span class="fa fa-envelope fa-2x contact__icon"></span>
-                        <input class="contact__form-input" type="email" name="name"/>
+                        <input class="contact__form-input email" type="email" name="name"/>
                     </div>
                     <div class="contact__form-holder">
                         <span class="fa fa-comment fa-2x contact__icon"></span>
-                        <textarea class="contact__form-textarea" rows="5"></textarea>
+                        <textarea class="contact__form-textarea message" rows="5"></textarea>
                     </div>
                     <div class="contact__form-holder">
-                        <button class="contact__form-submit special__button" type="submit">Send</button>
+                        <button class="contact__form-submit special__button" type="submit">
+                            <p>Send</p>
+                            <i class="fa fa-spinner"></i>
+                        </button>
                     </div>
                 </form>
 
