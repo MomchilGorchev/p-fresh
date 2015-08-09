@@ -219,9 +219,21 @@ function projectOverlay(){
  */
 function formHandler(){
     var form = document.querySelector('#contact__me');
+    var btn = form.querySelector('.contact__form-submit');
+    var btnStates = btn.querySelector('.submit__states');
 
     form.onsubmit = function(e){
         e.preventDefault();
+        addClass(btn, 'processing');
+        addClass(btnStates, 'loading');
+
+
+        // TODO implement this in send-mail success/fail
+        setTimeout(function(){
+            addClass(btnStates, 'done');
+        }, 2000);
+
+
         // Get user input
         var formData = {
             name: form.querySelector('.name').value,
@@ -234,6 +246,7 @@ function formHandler(){
         // Send form
         if(validateObj.valid){
             console.log('yes!');
+
         // Display error messages
         } else {
             // Each field failed to validate will be returned in an array

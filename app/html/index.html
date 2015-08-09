@@ -982,15 +982,20 @@
                     <div class="contact__form-holder">
                         <span class="fa fa-envelope fa-2x contact__icon"></span>
                         <input class="contact__form-input email" type="email" name="name"/>
+                        <div class="contact__form-error"><i class="fa fa-warning fa-2x"></i></div>
                     </div>
                     <div class="contact__form-holder">
                         <span class="fa fa-comment fa-2x contact__icon"></span>
                         <textarea class="contact__form-textarea message" rows="5"></textarea>
+                        <div class="contact__form-error"><i class="fa fa-warning fa-2x"></i></div>
                     </div>
                     <div class="contact__form-holder">
                         <button class="contact__form-submit special__button" type="submit">
-                            <p>Send</p>
-                            <i class="fa fa-spinner"></i>
+                            <span class="submit__states">
+                                <span>Send</span>
+                                <span><i class="fa fa-spinner fa-spin"></i></span>
+                                <span><i class="fa fa-check"></i></span>
+                            </span>
                         </button>
                     </div>
                 </form>

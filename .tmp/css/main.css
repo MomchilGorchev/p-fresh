@@ -1576,6 +1576,35 @@ figure.project__thumb p span {
     -o-transition: border 0.3s ease-out; }
 .contact__form-submit {
   width: 100%; }
+  .contact__form-submit.processing {
+    color: #000;
+    background-color: #4499a1;
+    border: 4px double #000; }
+  .contact__form-submit .submit__states {
+    display: block;
+    position: relative;
+    top: 0;
+    transition: top 0.35s ease-in-out;
+    -webkit-transition: top 0.35s ease-in-out;
+    -moz-transition: top 0.35s ease-in-out;
+    -o-transition: top 0.35s ease-in-out; }
+    .contact__form-submit .submit__states span {
+      margin: 10px auto;
+      display: block;
+      text-align: center;
+      height: 23px; }
+    .contact__form-submit .submit__states.loading {
+      top: -34px;
+      transition: top 0.35s ease-in-out;
+      -webkit-transition: top 0.35s ease-in-out;
+      -moz-transition: top 0.35s ease-in-out;
+      -o-transition: top 0.35s ease-in-out; }
+    .contact__form-submit .submit__states.done {
+      top: -68px;
+      transition: top 0.35s ease-in-out;
+      -webkit-transition: top 0.35s ease-in-out;
+      -moz-transition: top 0.35s ease-in-out;
+      -o-transition: top 0.35s ease-in-out; }
 .contact__info {
   font-size: 1.3rem; }
   .contact__info__wrapper {
