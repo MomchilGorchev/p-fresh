@@ -256,10 +256,15 @@ function formHandler(){
                 // And display the error message
                 var errMsg = el.parentNode.querySelector('.contact__form-error');
                 addClass(errMsg, 'active');
-                setTimeout(function(){
-                    toggleClass(errMsg, 'active');
-                }, 2000);
             }
+
+            setTimeout(function(){
+                var errs = document.querySelectorAll('.contact__form-error');
+                for(var j = 0; j < errs.length; j++){
+
+                    toggleClass(errs[j], 'active');
+                }
+            }, 2000);
 
             console.log('no!');
         }

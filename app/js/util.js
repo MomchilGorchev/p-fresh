@@ -58,7 +58,13 @@ function validateForm(formData){
         if(formData.name.length < 1){
             notValidFields.push('name');
         }
-        // TODO implement the other fields
+        if(!validateEmail(formData.email)){
+            notValidFields.push('email');
+        }
+        if(formData.message.length < 10){
+            notValidFields.push('message');
+        }
+
         return {
             valid: formData.name.length > 1
                 && validateEmail(formData.email)
