@@ -240,8 +240,12 @@ function formHandler(){
             for(var i = 0; i < validateObj.fields.length; i++){
                 // Select right element
                 var el = form.querySelector('.'+ validateObj.fields[i]);
-                // And displaay the error message
-                addClass(el.parentNode.querySelector('.contact__form-error'), 'active');
+                // And display the error message
+                var errMsg = el.parentNode.querySelector('.contact__form-error');
+                addClass(errMsg, 'active');
+                setTimeout(function(){
+                    toggleClass(errMsg, 'active');
+                }, 2000);
             }
 
             console.log('no!');

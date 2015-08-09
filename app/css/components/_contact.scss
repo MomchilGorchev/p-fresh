@@ -26,7 +26,7 @@
       transform: rotate(45deg);
       top:-20px;
       right: -100px;
-      @include vendor-transition();
+      @include vendor-transition(all, 200ms, ease-in);
 
       i{
         transform: rotate(-45deg);
@@ -38,7 +38,7 @@
       &.active{
 
         right: -15px;
-        @include vendor-transition();
+        @include vendor-transition(all, 200ms, ease-out);
 
       }
 

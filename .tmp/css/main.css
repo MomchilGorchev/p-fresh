@@ -1524,10 +1524,10 @@ figure.project__thumb p span {
           transform: rotate(45deg);
   top: -20px;
   right: -100px;
-  transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease; }
+  transition: all 200ms ease-in;
+  -webkit-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in; }
   .contact__form-error i {
     -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
@@ -1537,10 +1537,10 @@ figure.project__thumb p span {
     left: 21px; }
   .contact__form-error.active {
     right: -15px;
-    transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease; }
+    transition: all 200ms ease-out;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out; }
 .contact__form-input {
   height: 40px;
   width: 100%;
