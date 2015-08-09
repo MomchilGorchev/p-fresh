@@ -42,6 +42,23 @@
 
       }
 
+      &.message{
+
+        top:14px;
+
+        i{
+          top: 41px;
+          left: 7px;
+        }
+
+      }
+
+      &.message.active{
+
+        right: -50px;
+
+      }
+
     }
 
     &-input{
@@ -63,6 +80,7 @@
 
     &-textarea{
       width: 100%;
+      height:140px;
       padding: 6px 4px 4px 50px;
       background-color: #364250;
       border: none;
