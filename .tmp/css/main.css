@@ -1511,7 +1511,36 @@ figure.project__thumb p span {
   background: #1B2735; }
 .contact__form-holder {
   margin: 30px 20px;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
+.contact__form-error {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  background: #4499a1;
+  border: 7px double #364250;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: -20px;
+  right: -100px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease; }
+  .contact__form-error i {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    position: absolute;
+    top: 14px;
+    left: 21px; }
+  .contact__form-error.active {
+    right: -15px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease; }
 .contact__form-input {
   height: 40px;
   width: 100%;

@@ -53,9 +53,18 @@ function validateForm(formData){
     if(!formData){
         return false;
     } else {
-        return formData.name.length > 1
-            && validateEmail(formData.email)
-            && formData.message.length > 10;
+
+        var notValidFields = [];
+        if(formData.name.length < 1){
+            notValidFields.push('name');
+        }
+        // TODO implement the other fields
+        return {
+            valid: formData.name.length > 1
+                && validateEmail(formData.email)
+                && formData.message.length > 10,
+            fields: notValidFields
+        };
     }
 
 }

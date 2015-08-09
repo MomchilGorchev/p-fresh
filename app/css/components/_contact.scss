@@ -12,6 +12,36 @@
     &-holder{
       margin:30px 20px;
       position: relative;
+      overflow: hidden;
+
+    }
+
+    &-error{
+
+      width:80px;
+      height: 80px;
+      position:absolute;
+      background: $bg-color;
+      border: 7px double #364250;
+      transform: rotate(45deg);
+      top:-20px;
+      right: -100px;
+      @include vendor-transition();
+
+      i{
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 14px;
+        left: 21px;
+      }
+
+      &.active{
+
+        right: -15px;
+        @include vendor-transition();
+
+      }
+
     }
 
     &-input{

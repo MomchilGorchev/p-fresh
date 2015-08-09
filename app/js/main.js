@@ -214,21 +214,36 @@ function projectOverlay(){
     });
 }
 
+/**
+ * Validates form and display error messages
+ */
 function formHandler(){
     var form = document.querySelector('#contact__me');
 
     form.onsubmit = function(e){
         e.preventDefault();
-
+        // Get user input
         var formData = {
             name: form.querySelector('.name').value,
             email: form.querySelector('.email').value,
             message: form.querySelector('.message').value
         };
-
-        if(validateForm(formData)){
+        // Validate user input
+        var validateObj = validateForm(formData);
+        console.log(validateObj);
+        // Send form
+        if(validateObj.valid){
             console.log('yes!');
+        // Display error messages
         } else {
+            // Each field failed to validate will be returned in an array
+            for(var i = 0; i < validateObj.fields.length; i++){
+                // Select right element
+                var el = form.querySelector('.'+ validateObj.fields[i]);
+                // And displaay the error message
+                addClass(el.parentNode.querySelector('.contact__form-error'), 'active');
+            }
+
             console.log('no!');
         }
     }
