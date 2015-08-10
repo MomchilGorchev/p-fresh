@@ -1689,24 +1689,57 @@ figure.project__thumb p span {
   .footer__social {
     float: left; }
     .footer__social-list {
-      list-style-type: none; }
+      list-style-type: none;
+      padding-left: 0; }
     .footer__social-item {
       display: inline-block;
       margin-left: 15px; }
       .footer__social-item a {
         color: #ccc;
+        text-decoration: none;
         transition: all 0.2s ease-in;
         -webkit-transition: all 0.2s ease-in;
         -moz-transition: all 0.2s ease-in;
         -o-transition: all 0.2s ease-in; }
         .footer__social-item a:hover {
+          color: #999999;
+          text-decoration: line-through;
           transition: all 0.2s ease-in;
           -webkit-transition: all 0.2s ease-in;
           -moz-transition: all 0.2s ease-in;
-          -o-transition: all 0.2s ease-in;
-          color: #b3b3b3; }
+          -o-transition: all 0.2s ease-in; }
   .footer__info {
     float: right;
     margin-right: 15px; }
     .footer__info p {
-      color: #ccc; }
+      color: #ccc;
+      text-align: right; }
+      .footer__info p a {
+        color: #ccc;
+        text-decoration: none;
+        transition: all 0.2s ease-in;
+        -webkit-transition: all 0.2s ease-in;
+        -moz-transition: all 0.2s ease-in;
+        -o-transition: all 0.2s ease-in; }
+        .footer__info p a:hover {
+          color: #999999;
+          text-decoration: line-through;
+          transition: all 0.2s ease-in;
+          -webkit-transition: all 0.2s ease-in;
+          -moz-transition: all 0.2s ease-in;
+          -o-transition: all 0.2s ease-in; }
+  .footer__report {
+    color: #ccc;
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    margin-left: 15px; }
+    .footer__report:hover {
+      color: #999999;
+      text-decoration: line-through;
+      transition: all 0.2s ease-in;
+      -webkit-transition: all 0.2s ease-in;
+      -moz-transition: all 0.2s ease-in;
+      -o-transition: all 0.2s ease-in; }

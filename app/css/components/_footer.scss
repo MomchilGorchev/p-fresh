@@ -38,6 +38,7 @@
     &-list{
 
       list-style-type: none;
+      padding-left:0;
 
     }
 
@@ -48,7 +49,6 @@
       a{
 
        @include link();
-
 
       }
 
@@ -62,7 +62,17 @@
     margin-right:15px;
     p{
       color:$font-color;
+      text-align: right;
+      a{
+        @include link();
+      }
     }
+
+  }
+
+  &__report{
+    @include link();
+    margin-left: 15px;
 
   }
 
