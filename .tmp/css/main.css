@@ -1542,7 +1542,10 @@ figure.project__thumb p span {
     -moz-transition: all 200ms ease-out;
     -o-transition: all 200ms ease-out; }
   .contact__form-error.message {
-    top: 14px; }
+    width: 100px;
+    height: 100px;
+    top: 14px;
+    right: -120px; }
     .contact__form-error.message i {
       top: 41px;
       left: 7px; }
