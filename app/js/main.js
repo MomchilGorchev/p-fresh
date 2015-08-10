@@ -224,6 +224,7 @@ function formHandler(){
 
     form.onsubmit = function(e){
         e.preventDefault();
+        btn.setAttribute('disabled', 'disabled');
         addClass(btn, 'processing');
         addClass(btnStates, 'loading');
 

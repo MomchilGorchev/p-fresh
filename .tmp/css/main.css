@@ -1594,28 +1594,50 @@ figure.project__thumb p span {
   .contact__form-submit .submit__states {
     display: block;
     position: relative;
-    top: 0;
+    top: -9px;
     transition: top 0.35s ease-in-out;
     -webkit-transition: top 0.35s ease-in-out;
     -moz-transition: top 0.35s ease-in-out;
     -o-transition: top 0.35s ease-in-out; }
     .contact__form-submit .submit__states span {
-      margin: 10px auto;
+      margin: 15px auto;
       display: block;
       text-align: center;
-      height: 23px; }
+      height: 23px;
+      font-size: 1.3445em;
+      opacity: 1;
+      transition: opacity 0.15s ease-in-out;
+      -webkit-transition: opacity 0.15s ease-in-out;
+      -moz-transition: opacity 0.15s ease-in-out;
+      -o-transition: opacity 0.15s ease-in-out; }
     .contact__form-submit .submit__states.loading {
-      top: -34px;
+      top: -47px;
       transition: top 0.35s ease-in-out;
       -webkit-transition: top 0.35s ease-in-out;
       -moz-transition: top 0.35s ease-in-out;
       -o-transition: top 0.35s ease-in-out; }
+      .contact__form-submit .submit__states.loading span {
+        opacity: 1;
+        transition: opacity 0.15s ease-in-out;
+        -webkit-transition: opacity 0.15s ease-in-out;
+        -moz-transition: opacity 0.15s ease-in-out;
+        -o-transition: opacity 0.15s ease-in-out; }
+        .contact__form-submit .submit__states.loading span:not(.loading) {
+          opacity: 0; }
     .contact__form-submit .submit__states.done {
-      top: -68px;
+      top: -85px;
       transition: top 0.35s ease-in-out;
       -webkit-transition: top 0.35s ease-in-out;
       -moz-transition: top 0.35s ease-in-out;
       -o-transition: top 0.35s ease-in-out; }
+      .contact__form-submit .submit__states.done span.done, .contact__form-submit .submit__states.done span.initial {
+        opacity: 1;
+        transition: opacity 0.15s ease-in-out;
+        -webkit-transition: opacity 0.15s ease-in-out;
+        -moz-transition: opacity 0.15s ease-in-out;
+        -o-transition: opacity 0.15s ease-in-out; }
+      .contact__form-submit .submit__states.done span.loading {
+        opacity: 0; }
 .contact__info {
   font-size: 1.3rem; }
   .contact__info__wrapper {
