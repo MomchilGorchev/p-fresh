@@ -1,7 +1,7 @@
 /**
  * Main title and CTA button
  */
-(function Scene(){
+function Scene(){
     var self = this;
 
     self.init = function(){
@@ -24,7 +24,9 @@
     };
 
     self.init();
-}());
+}
+
+var sceneLoaded = new Scene();
 
 
 /**
@@ -283,3 +285,13 @@ document.addEventListener('DOMContentLoaded', function(){
     projectOverlay();
     formHandler();
 });
+
+document.body.onload = function(){
+    var preloader = document.querySelector('#preloader');
+    addClass(preloader, 'done');
+
+    setTimeout(function(){
+        sceneLoaded.init();
+        preloader.parentNode.removeChild(preloader);
+    }, 500);
+};
