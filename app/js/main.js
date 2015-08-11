@@ -234,6 +234,12 @@ function formHandler(){
         // TODO implement this in send-mail success/fail
         setTimeout(function(){
             addClass(btnStates, 'done');
+            setTimeout(function(){
+                toggleClass(btnStates, 'loading');
+                toggleClass(btnStates, 'done');
+                toggleClass(btn, 'processing');
+                btn.removeAttribute('disabled');
+            }, 2000);
         }, 2000);
 
 
