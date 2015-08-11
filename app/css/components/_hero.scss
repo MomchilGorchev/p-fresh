@@ -48,6 +48,71 @@ section.hero{
     @include vendor-transition(all, 0.35s, ease-in-out);
     @include scale-element(1.10, 1.10);
   }
+
+  button{
+    overflow: hidden;
+
+    &.processing{
+
+      color: #000;
+      background-color: $bg-color;
+      border: 4px double $black;
+
+    }
+  }
+  .submit__states{
+    display: block;
+    position: relative;
+    top: -9px;
+    @include vendor-transition(top, 0.35s, ease-in-out);
+
+
+    span{
+
+      margin: 15px auto;
+      display:block;
+      text-align: center;
+      height: 23px;
+      font-size: 1.3445em;
+      opacity: 1;
+      @include vendor-transition(opacity, 0.15s, ease-in-out);
+
+
+    }
+
+    &.loading{
+
+      top: -47px;
+      @include vendor-transition(top, 0.35s, ease-in-out);
+      span{
+        opacity:1;
+        @include vendor-transition(opacity, 0.15s, ease-in-out);
+
+        &:not(.loading){
+          opacity:0
+        }
+      }
+
+
+    }
+
+    //&.done{
+    //
+    //  top: -85px;
+    //  @include vendor-transition(top, 0.35s, ease-in-out);
+    //
+    //  span.done, span.initial{
+    //    opacity:1;
+    //    @include vendor-transition(opacity, 0.15s, ease-in-out);
+    //
+    //  }
+    //  span.loading{
+    //    opacity:0
+    //  }
+    //
+    //}
+
+  }
 }
 
 #scene{

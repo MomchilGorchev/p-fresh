@@ -100,6 +100,7 @@ function menuClick(){
  */
 function launchSite(){
     var launch = document.querySelector('.main__trigger');
+    var btnStates = launch.querySelector('.submit__states');
     // Attach event
     launch.addEventListener('click', function(e){
         e.preventDefault();
@@ -107,6 +108,8 @@ function launchSite(){
         var scene = document.querySelector('#scene');
         // Scale down the canvas for slicker animation
         toggleClass(scene, 'scaled');
+        toggleClass(launch, 'processing');
+        toggleClass(btnStates, 'loading');
         // Scroll the window el to the target location
         TweenMax.to(window, 1,{
             delay:0.6,
@@ -117,6 +120,8 @@ function launchSite(){
             onComplete: function(){
                 // On complete scale back the canvas
                 toggleClass(scene, 'scaled');
+                toggleClass(launch, 'processing');
+                toggleClass(btnStates, 'loading');
             }
         });
     })

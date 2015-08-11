@@ -31,18 +31,6 @@
     </div>
     <section class="container-fluid hero">
 
-        <!-- Example header -->
-        <header class="floating main__title ">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <h1 class="text-center">Momchil Gorchev</h1>
-                        <h2 class="text-center">Frontend Engineer</h2>
-                    </div>
-                </div>
-            </div>
-        </header>
-
         <div class="menu">
             <div id="menu__trigger" class="menu__trigger">
                 <a class="menu__trigger-icon" href="#about"><img src="img/icons/menu-rocket-white.png" /></a>
@@ -57,9 +45,28 @@
             </div>
         </div>
 
+        <!-- Example header -->
+        <header class="floating main__title ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1 class="text-center">Momchil Gorchev</h1>
+                        <h2 class="text-center">Frontend Engineer</h2>
+                    </div>
+                </div>
+            </div>
+        </header>
+
         <div class="row absolute" id="main-cta">
             <div class="text-center">
-                <button class="main__trigger slow-launch" type="button">See examples</button>
+                <button class="main__trigger slow-launch" type="button">
+                    <span class="submit__states">
+                        <span class="initial">See examples</span>
+                        <span class="loading">
+                            <i class="fa fa-space-shuttle fa-rotate-270"></i>
+                        </span>
+                    </span>
+                </button>
             </div>
         </div>
 

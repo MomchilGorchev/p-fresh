@@ -997,6 +997,45 @@ section.hero {
     -webkit-transform: scale(1.1, 1.1);
     -ms-transform: scale(1.1, 1.1);
     transform: scale(1.1, 1.1); }
+  .row.absolute button {
+    overflow: hidden; }
+    .row.absolute button.processing {
+      color: #000;
+      background-color: #4499a1;
+      border: 4px double #000; }
+  .row.absolute .submit__states {
+    display: block;
+    position: relative;
+    top: -9px;
+    transition: top 0.35s ease-in-out;
+    -webkit-transition: top 0.35s ease-in-out;
+    -moz-transition: top 0.35s ease-in-out;
+    -o-transition: top 0.35s ease-in-out; }
+    .row.absolute .submit__states span {
+      margin: 15px auto;
+      display: block;
+      text-align: center;
+      height: 23px;
+      font-size: 1.3445em;
+      opacity: 1;
+      transition: opacity 0.15s ease-in-out;
+      -webkit-transition: opacity 0.15s ease-in-out;
+      -moz-transition: opacity 0.15s ease-in-out;
+      -o-transition: opacity 0.15s ease-in-out; }
+    .row.absolute .submit__states.loading {
+      top: -47px;
+      transition: top 0.35s ease-in-out;
+      -webkit-transition: top 0.35s ease-in-out;
+      -moz-transition: top 0.35s ease-in-out;
+      -o-transition: top 0.35s ease-in-out; }
+      .row.absolute .submit__states.loading span {
+        opacity: 1;
+        transition: opacity 0.15s ease-in-out;
+        -webkit-transition: opacity 0.15s ease-in-out;
+        -moz-transition: opacity 0.15s ease-in-out;
+        -o-transition: opacity 0.15s ease-in-out; }
+        .row.absolute .submit__states.loading span:not(.loading) {
+          opacity: 0; }
 
 #scene {
   background: url(../img/deepspace.jpg) no-repeat center center #1b2735;
