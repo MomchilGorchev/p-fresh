@@ -87,7 +87,15 @@
     a{
       @include vendor-transition();
       @include customise-animation(pulse, 2s, 0, infinite, ease-out);
+      opacity:1;
       color: white;
+
+      .hidden{
+        @include vendor-transition();
+        opacity:0
+
+      }
+
       &:hover{
 
       }

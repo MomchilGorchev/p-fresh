@@ -1519,7 +1519,14 @@ figure.project__thumb p span {
     -o-animation-delay: 0;
     -o-animation-iteration-count: infinite;
     -o-animation-timing-function: ease-out;
+    opacity: 1;
     color: white; }
+    .overlay__show-more a .hidden {
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      opacity: 0; }
 
 .slider__desktop {
   position: absolute;

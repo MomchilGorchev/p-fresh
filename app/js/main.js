@@ -193,7 +193,7 @@ function projectOverlay(){
                 TweenMax.to(overlay, 1,{
                     delay:0.2,
                     scrollTo: {
-                        y: target.offsetTop
+                        y: target.offsetTop + 100
                     },
                     ease: Power4.easeInOut,
                     onComplete: function(){
