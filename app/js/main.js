@@ -281,6 +281,21 @@ function formHandler(){
         if(validateObj.valid){
             console.log('yes!');
 
+            var request = new XMLHttpRequest();
+            request.open('POST', 'http://46.101.43.24/mail.php', true);
+            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+
+            request.onload = function(res){
+                console.log(res);
+            };
+            request.onerror = function(err) {
+                console.log(err);
+            };
+
+            request.send(JSON.stringify(formData));
+
+
+
         // Display error messages
         } else {
             // Each field failed to validate will be returned in an array
