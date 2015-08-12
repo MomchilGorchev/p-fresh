@@ -84,17 +84,26 @@
     width: 100%;
     text-align: center;
     font-size:100%;
-    a{
-      @include vendor-transition();
-      @include customise-animation(pulse, 2s, 0, infinite, ease-out);
+    .overlay__trigger__icon{
       opacity:1;
       color: white;
 
-      .hidden{
-        @include vendor-transition();
-        opacity:0
+      i{
+        @include vendor-transition(all, 0.25s, ease-in-out);
+        transform: rotate(0deg);
 
       }
+
+      &.go-back{
+
+        i{
+          @include vendor-transition(all, 0.25s, ease-in-out);
+          transform: rotate(180deg);
+
+        }
+
+      }
+
 
       &:hover{
 

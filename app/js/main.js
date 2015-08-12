@@ -182,7 +182,8 @@ function projectOverlay(){
 
             // Assign dynamically event-handlers to the 'Show-more' icon
             var triggerId = content.getAttribute('data-trigger');
-            document.getElementById(triggerId).addEventListener('click', function(e){
+            var trigger = document.getElementById(triggerId);
+            trigger.addEventListener('click', function(e){
                 e.preventDefault();
                 // Get the target element
                 var target = document.getElementById(triggerId + '-details');
@@ -190,17 +191,32 @@ function projectOverlay(){
                 // Important, normal scroll on the window element won't work
                 // because the overlay is fixed to take the whole screen
                 // The solution is to apply scroll on the overlay
-                TweenMax.to(overlay, 1,{
-                    delay:0.2,
-                    scrollTo: {
-                        y: target.offsetTop + 100
-                    },
-                    ease: Power4.easeInOut,
-                    onComplete: function(){
-                        // Implement trigger fade out here
-                        console.log('done');
-                    }
-                });
+
+                if(hasClass(trigger, 'go-back')){
+                    TweenMax.to(overlay, 1, {
+                        delay: 0.2,
+                        scrollTo: {
+                            y: overlay.offsetTop
+                        },
+                        ease: Power4.easeInOut,
+                        onComplete: function(){
+                            toggleClass(trigger, 'go-back');
+                            //toggleClass(trigger.querySelector('.fa'), 'fa-rotate-180');
+                        }
+                    });
+                } else {
+                    TweenMax.to(overlay, 1,{
+                        delay:0.2,
+                        scrollTo: {
+                            y: target.offsetTop + 100
+                        },
+                        ease: Power4.easeInOut,
+                        onComplete: function(){
+                            toggleClass(trigger, 'go-back');
+                            //toggleClass(trigger.querySelector('.fa'), 'fa-rotate-180');
+                        }
+                    });
+                }
             });
 
         });
