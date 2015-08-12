@@ -192,7 +192,10 @@ function projectOverlay(){
                 // because the overlay is fixed to take the whole screen
                 // The solution is to apply scroll on the overlay
 
+                // When assigning the event listener check if the element
+                // has the class to decide which way to scroll
                 if(hasClass(trigger, 'go-back')){
+                    // Scroll to the top
                     TweenMax.to(overlay, 1, {
                         delay: 0.2,
                         scrollTo: {
@@ -200,20 +203,21 @@ function projectOverlay(){
                         },
                         ease: Power4.easeInOut,
                         onComplete: function(){
+                            // Switch off the clas
                             toggleClass(trigger, 'go-back');
-                            //toggleClass(trigger.querySelector('.fa'), 'fa-rotate-180');
                         }
                     });
                 } else {
                     TweenMax.to(overlay, 1,{
+                        // Scroll to the content
                         delay:0.2,
                         scrollTo: {
                             y: target.offsetTop + 100
                         },
                         ease: Power4.easeInOut,
                         onComplete: function(){
+                            // Switch on the class
                             toggleClass(trigger, 'go-back');
-                            //toggleClass(trigger.querySelector('.fa'), 'fa-rotate-180');
                         }
                     });
                 }

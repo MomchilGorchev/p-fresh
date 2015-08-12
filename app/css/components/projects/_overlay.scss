@@ -104,9 +104,9 @@
 
       }
 
-
       &:hover{
-
+        color: darken($font-color, 15%);
+        text-decoration: line-through;
       }
     }
 
