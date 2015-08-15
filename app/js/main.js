@@ -272,6 +272,7 @@ function formHandler(){
         var formData = {
             name: form.querySelector('.name').value,
             email: form.querySelector('.email').value,
+            subject: 'New email',
             message: form.querySelector('.message').value
         };
         // Validate user input
@@ -282,8 +283,8 @@ function formHandler(){
             console.log('yes!');
 
             var request = new XMLHttpRequest();
-            request.open('POST', 'http://46.101.43.24/mail.php', true);
-            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+            request.open('POST', 'http://localhost:3000/mail', true);
+            request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
 
             request.onload = function(res){
                 console.log(res);
