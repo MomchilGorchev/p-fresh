@@ -360,11 +360,13 @@
 
 @mixin link(){
   color: $font-color;
+  background-color: #055F67;
   text-decoration: none;
+  padding: 2px;
   @include vendor-transition(all, 0.2s, ease-in);
   &:hover{
     color: darken($font-color, 20%);
-    text-decoration: line-through;
+    text-decoration: underline;
     @include vendor-transition(all, 0.2s, ease-in);
   }
 }

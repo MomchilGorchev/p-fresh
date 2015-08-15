@@ -47,8 +47,13 @@
       display: inline-block;
       margin-left:15px;
       a{
+        color: $font-color;
+        @include vendor-transition(all, 0.2s, ease-in);
+        &:hover{
+          color: #055F67;
+          @include vendor-transition(all, 0.2s, ease-in);
 
-       @include link();
+        }
 
       }
 
@@ -71,8 +76,10 @@
   }
 
   &__report{
-    @include link();
+
     margin-left: 15px;
+    font-weight: 300;
+    @include link();
 
   }
 
