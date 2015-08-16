@@ -11,7 +11,7 @@ function Scene(){
         // Animate the header
         TweenMax.to(header, 0.6, {
             opacity: 1,
-            ease: Power4.easeIn,
+            ease: Power0.easeNone,
             onComplete: function(){
                 // And the button a bit later
                 TweenMax.to(ctaBtn, 0.3, {
@@ -331,14 +331,14 @@ document.addEventListener('DOMContentLoaded', function(){
     menuClick();
     projectOverlay();
     formHandler();
-});
-
-document.body.onload = function(){
-    var preloader = document.querySelector('#preloader');
-    addClass(preloader, 'done');
 
     setTimeout(function(){
+        var preloader = document.querySelector('#preloader');
+        addClass(preloader, 'done');
         sceneLoaded.init();
         preloader.parentNode.removeChild(preloader);
     }, 500);
-};
+});
+
+
+
