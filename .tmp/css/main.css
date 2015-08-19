@@ -1731,7 +1731,8 @@ figure.project__thumb p span {
   position: relative; }
   .footer__canvas {
     position: absolute;
-    z-index: 5; }
+    z-index: 5;
+    width: 100%; }
   .footer__section-bg {
     position: absolute;
     width: 100%;
