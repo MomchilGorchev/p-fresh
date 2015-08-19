@@ -38,6 +38,13 @@
 
 .row {
   @include make-row;
+  @include breakpoint(sm){
+
+    margin-left:0;
+    margin-right: 0;
+
+  }
+
 }
 
 

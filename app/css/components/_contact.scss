@@ -9,6 +9,11 @@
 
   &__form{
 
+    @include breakpoint(st){
+        margin-top: 40px;
+    }
+
+
     &-holder{
       margin:30px 20px;
       position: relative;
@@ -198,6 +203,10 @@
     border-width: 80px 0 0 80px;
     border-color: #055056 transparent transparent transparent;
     z-index: 5;
+    @include breakpoint(st){
+        left:25%;
+    }
+
   }
 
   &__icon{

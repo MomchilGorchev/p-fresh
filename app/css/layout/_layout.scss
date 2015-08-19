@@ -23,6 +23,15 @@ p, button, span{
   font-weight:300;
 }
 
+
+.section-content{
+  h2{
+    @include breakpoint(sm){
+      margin-bottom:40px;
+    }
+  }
+}
+
 #welcome{
   width: 100%;
   height: 100vh;
