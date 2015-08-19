@@ -155,6 +155,7 @@ figure.project__thumb:hover{
 
 
 figure.project__thumb {
+
     h2 {
         margin-top: 1em;
         -webkit-transition: transform 0.35s;
@@ -194,6 +195,10 @@ figure.project__thumb {
             -webkit-transform: translate3d(0, 200%, 0);
             transform: translate3d(0, 200%, 0);
         }
+    }
+
+    @include breakpoint(681px){
+        @include center-box(48%, 30px);
     }
 }
 

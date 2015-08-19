@@ -390,6 +390,6 @@
     @media (max-width: $screen-xs) { @content; }
   }
   @else {
-    @warn "Breakpoint mixin supports: up, down, st, sm, xs";
+    @media (max-width: $class) { @content; }
   }
 }

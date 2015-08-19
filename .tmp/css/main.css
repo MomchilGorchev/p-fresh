@@ -1395,6 +1395,11 @@ figure.project__thumb p span {
   transition: opacity 0.15s, transform 0.35s;
   -webkit-transform: translate3d(0, 200%, 0);
   transform: translate3d(0, 200%, 0); }
+@media (max-width: 681px) {
+  figure.project__thumb {
+    float: none;
+    width: 48%;
+    margin: 30px auto; } }
 
 .projects__overlay {
   width: 100%;
