@@ -1218,15 +1218,26 @@ section.hero {
   .about__photo-holder {
     float: left;
     width: 30%;
-    max-width: 250px;
     margin: 20px 20px 20px 0; }
+    @media (max-width: 768px) {
+      .about__photo-holder {
+        float: none;
+        width: 100%;
+        margin: 20px auto;
+        max-width: 270px; } }
 .about__text {
   text-align: justify;
   text-shadow: 1px 1px 1px #2d666b;
   font-size: 1.334em; }
   .about__text-holder {
     width: 67%;
-    float: right; }
+    float: left;
+    padding-left: 15px; }
+    @media (max-width: 768px) {
+      .about__text-holder {
+        float: none;
+        width: 90%;
+        margin: 20px auto; } }
 
 .projects__section {
   background: #525E6D; }

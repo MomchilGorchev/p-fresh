@@ -15,11 +15,15 @@
     border: 2px double $font-color;
     padding:3px;
     margin:10px;
+
     &-holder{
       float:left;
       width: 30%;
-      max-width:250px;
       margin: 20px 20px 20px 0;
+      @include breakpoint(sm){
+          @include center-box(100%, 20px);
+          max-width: 270px;
+      }
     }
   }
 
@@ -29,7 +33,11 @@
     font-size:1.334em;
     &-holder{
       width:67%;
-      float:right;
+      float:left;
+      padding-left:15px;
+      @include breakpoint(sm){
+          @include center-box(90%, 20px);
+      }
     }
   }
 
