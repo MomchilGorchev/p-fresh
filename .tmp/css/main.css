@@ -1152,6 +1152,10 @@ section.hero {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease; }
+  @media (max-width: 480px) {
+    .menu__content {
+      height: auto;
+      max-width: 95%; } }
   .menu__content.open {
     opacity: 1;
     visibility: visible;
@@ -1179,9 +1183,15 @@ section.hero {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease; }
+  @media (max-width: 480px) {
+    .menu__list {
+      width: 100%; } }
   .menu__list-item {
     display: inline-block;
     margin: 20px 10px 20px 5px; }
+    @media (max-width: 480px) {
+      .menu__list-item {
+        display: block; } }
     .menu__list-item a {
       text-decoration: none;
       font-family: Lato, sans-serif;

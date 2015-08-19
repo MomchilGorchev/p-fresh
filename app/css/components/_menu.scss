@@ -43,6 +43,10 @@
     right: 15px;
     border-radius: 30px;
     @include vendor-transition();
+    @include breakpoint(xs){
+        height:auto;
+        max-width:95%;
+    }
 
     &.open {
       opacity: 1;
@@ -68,9 +72,15 @@
     -webkit-transform: translate3d(4%, 0, 0);
     transform: translate3d(4%, 0, 0);
     @include vendor-transition();
+    @include breakpoint(xs){
+      width:100%;
+    }
     &-item{
       display: inline-block;
       margin: 20px 10px 20px 5px;
+      @include breakpoint(xs){
+        display:block;
+      }
       a{
         text-decoration: none;
         font-family: $content-font;
