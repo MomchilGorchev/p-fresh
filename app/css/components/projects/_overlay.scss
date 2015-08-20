@@ -123,6 +123,15 @@
     left: 20px;
     width:630px;
     height:auto;
+    @include breakpoint(630px){
+        width:93%;
+        margin: 0 auto;
+        bottom:5px;
+        top: auto;
+    }
+    @include breakpoint(xs){
+        display:none;
+    }
     img{
       max-height:100%;
       width: 100%;
@@ -137,6 +146,12 @@
     bottom: 5px;
     width: 140px;
     height:auto;
+    @include breakpoint(xs){
+      position: static;
+      width: 240px;
+      margin: 0 auto;
+      padding-top: 15px;
+    }
     img{
       max-width:100%;
       width:100%;
@@ -170,10 +185,30 @@
       list-style-type: hangul-consonant;
       margin-top: 15%;
       margin-left: 15%;
+      @include breakpoint(st) {
+        margin: 0 0 50px 0;
+      }
 
       &__master-list{
 
         list-style-type: none;
+        @include breakpoint(st){
+            width:220px;
+            margin: 0 auto;
+            padding-left:0;
+            text-align:center;
+        }
+
+        li{
+
+          ul{
+
+            text-align: left;
+            margin-left: 30px;
+
+          }
+
+        }
 
       }
 

@@ -1561,6 +1561,15 @@ figure.project__thumb p span {
   left: 20px;
   width: 630px;
   height: auto; }
+  @media (max-width: 630px) {
+    .slider__desktop {
+      width: 93%;
+      margin: 0 auto;
+      bottom: 5px;
+      top: auto; } }
+  @media (max-width: 480px) {
+    .slider__desktop {
+      display: none; } }
   .slider__desktop img {
     max-height: 100%;
     width: 100%; }
@@ -1570,6 +1579,12 @@ figure.project__thumb p span {
   bottom: 5px;
   width: 140px;
   height: auto; }
+  @media (max-width: 480px) {
+    .slider__phone {
+      position: static;
+      width: 240px;
+      margin: 0 auto;
+      padding-top: 15px; } }
   .slider__phone img {
     max-width: 100%;
     width: 100%; }
@@ -1588,8 +1603,20 @@ figure.project__thumb p span {
   list-style-type: hangul-consonant;
   margin-top: 15%;
   margin-left: 15%; }
+  @media (max-width: 992px) {
+    .overlay__details .project__hl {
+      margin: 0 0 50px 0; } }
   .overlay__details .project__hl__master-list {
     list-style-type: none; }
+    @media (max-width: 992px) {
+      .overlay__details .project__hl__master-list {
+        width: 220px;
+        margin: 0 auto;
+        padding-left: 0;
+        text-align: center; } }
+    .overlay__details .project__hl__master-list li ul {
+      text-align: left;
+      margin-left: 30px; }
   .overlay__details .project__hl a, .overlay__details .project__hl p {
     font-size: 20px;
     text-transform: uppercase;
