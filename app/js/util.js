@@ -27,6 +27,18 @@ function addClass(el, className){
         el.className = classes.join(' ');
     }
 }
+
+function removeClass(el, className){
+    if (el.classList){
+
+        el.classList.remove(className);
+    } else {
+
+        el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+    }
+}
+
+
 function closest(elem, selector) {
 
     var matchesSelector = elem.matches || elem.webkitMatchesSelector || elem.mozMatchesSelector || elem.msMatchesSelector;
