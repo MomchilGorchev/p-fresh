@@ -208,7 +208,6 @@ function projectOverlay(){
                 e.preventDefault();
                 // Get the target element
                 var target = document.getElementById(triggerId + '-details');
-                console.log(target.offsetTop);
                 // Important, normal scroll on the window element won't work
                 // because the overlay is fixed to take the whole screen
                 // The solution is to apply scroll on the overlay
