@@ -1822,6 +1822,9 @@ figure.project__thumb p span {
   left: 10px;
   color: #4499a1; }
 
+footer {
+  height: 100px; }
+
 .footer {
   position: relative; }
   .footer__canvas {

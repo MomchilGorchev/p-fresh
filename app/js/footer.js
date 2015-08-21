@@ -5,6 +5,8 @@
 var canvas = document.querySelector('#footer__canvas'),
     ctx    = canvas.getContext('2d'),
 
+    footerContainer = document.querySelector('footer'),
+
     WIDTH  = canvas.width = window.innerWidth,
     HEIGHT = canvas.height = 100,
 
@@ -15,6 +17,8 @@ ctx.fillStyle = 'black';
 ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
 ctx.globalAlpha = 0.15;
+
+console.log(footerContainer);
 
 
 // Constructor function
