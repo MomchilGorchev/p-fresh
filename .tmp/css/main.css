@@ -1644,6 +1644,25 @@ figure.project__thumb p span {
   margin: 30px 20px;
   position: relative;
   overflow: hidden; }
+.contact__form__request-fail {
+  background-color: #055F67;
+  position: absolute;
+  bottom: -50px;
+  width: 100%;
+  text-align: center;
+  padding: 7px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out; }
+  .contact__form__request-fail.shown {
+    bottom: 4px;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out; }
 .contact__form-error {
   width: 80px;
   height: 80px;

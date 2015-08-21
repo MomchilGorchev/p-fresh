@@ -278,24 +278,29 @@ function formHandler(){
         addClass(btnStates, 'loading');
 
 
-        // TODO implement this in send-mail success/fail
-        setTimeout(function(){
-            addClass(btnStates, 'done');
-            setTimeout(function(){
-                toggleClass(btnStates, 'loading');
-                toggleClass(btnStates, 'done');
-                toggleClass(btn, 'processing');
-                btn.removeAttribute('disabled');
-            }, 2000);
-        }, 2000);
+        //// TODO implement this in send-mail success/fail
+        //setTimeout(function(){
+        //    addClass(btnStates, 'done');
+        //    setTimeout(function(){
+        //        toggleClass(btnStates, 'loading');
+        //        toggleClass(btnStates, 'done');
+        //        toggleClass(btn, 'processing');
+        //        btn.removeAttribute('disabled');
+        //    }, 2000);
+        //}, 2000);
 
+        var inputs = {
+            name: form.querySelector('.name'),
+            email: form.querySelector('.email'),
+            message: form.querySelector('.message')
+        };
 
         // Get user input
         var formData = {
-            name: form.querySelector('.name').value,
-            email: form.querySelector('.email').value,
+            name: inputs.name.value,
+            email: inputs.email.value,
             subject: 'New email',
-            message: form.querySelector('.message').value
+            message: inputs.message.value
         };
         // Validate user input
         var validateObj = validateForm(formData);
@@ -305,14 +310,37 @@ function formHandler(){
             console.log('yes!');
 
             var request = new XMLHttpRequest();
-            request.open('POST', 'http://178.62.25.62/mail', true);
+            request.open('POST', 'http://1782345.62/mail', true);
             request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
 
+            // We have a positive response
             request.onload = function(res){
                 console.log(res);
+                // Animate button and reset form
+                addClass(btnStates, 'done');
+                for (var key in inputs) {
+                    if (inputs.hasOwnProperty(key)) {
+                        inputs[key].value = '';
+                    }
+                }
+                // Switch to initial state
+                removeClass(btnStates, 'done');
+                removeClass(btnStates, 'loading');
+                toggleClass(btn, 'processing');
+                btn.removeAttribute('disabled');
             };
+            // Something is wrong
             request.onerror = function(err) {
                 console.log(err);
+                var responseError = document.querySelector('.contact__form__request-fail');
+                //TODO abstract to function
+                addClass(responseError, 'shown');
+                removeClass(btnStates, 'loading');
+                toggleClass(btn, 'processing');
+                btn.removeAttribute('disabled');
+                setTimeout(function(){
+                    removeClass(responseError, 'shown');
+                }, 5000);
             };
 
             request.send(JSON.stringify(formData));

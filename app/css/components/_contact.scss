@@ -21,6 +21,26 @@
 
     }
 
+    &__request-fail{
+        background-color: #055F67;
+        position: absolute;
+        bottom: -50px;
+        width: 100%;
+        text-align: center;
+        padding: 7px;
+        opacity: 0;
+        @include vendor-transition(all, 0.2s, ease-in-out);
+
+      &.shown{
+
+          bottom:4px;
+          opacity:1;
+          @include vendor-transition(all, 0.2s, ease-in-out);
+
+        }
+
+    }
+
     &-error{
 
       width:80px;
