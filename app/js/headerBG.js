@@ -1,3 +1,6 @@
+
+//TODO improve this
+// Improve the initali animation sequence
 window.requestAnimationFrame = window.requestAnimationFrame
     || window.mozRequestAnimationFrame
     || window.webkitRequestAnimationFrame
