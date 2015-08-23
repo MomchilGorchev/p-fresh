@@ -750,12 +750,22 @@ nav {
   -o-transition: opacity 0.3s ease-in; }
   .preloader__spinner {
     position: absolute;
-    width: 42px;
-    height: 42px;
+    border-top: 2px solid #4499a1;
+    border-radius: 50%;
+    -webkit-animation: spin 0.8s linear infinite;
+    animation: spin 0.8s linear infinite;
+    width: 82px;
+    height: 82px;
     top: 50%;
-    margin-top: -21px;
+    margin-top: -41px;
     left: 50%;
-    margin-left: -21px; }
+    margin-left: -41px; }
+  .preloader__text {
+    position: absolute;
+    top: 65%;
+    margin-top: -41px;
+    text-align: center;
+    width: 100%; }
   .preloader.done {
     opacity: 0;
     transition: opacity 0.3s ease-in;
