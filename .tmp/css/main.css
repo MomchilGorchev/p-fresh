@@ -1072,6 +1072,9 @@ section.hero {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease; }
 
+#welcome {
+  opacity: 0; }
+
 .menu__trigger {
   width: 45px;
   height: 45px;

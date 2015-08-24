@@ -8,32 +8,40 @@ function Scene(){
 
         var header = document.querySelector('header');
         var ctaBtn = document.querySelector('#main-cta');
-        // Animate the header
+        var canvas = document.querySelector('#welcome');
+        var preloader = document.querySelector('#preloader');
 
         setTimeout(function(){
-            var preloader = document.querySelector('#preloader');
+            console.log(preloader);
             addClass(preloader, 'done');
-            sceneLoaded.init();
             preloader.parentNode.removeChild(preloader);
-            TweenMax.to(header, 0.3, {
-                y: -10,
+            TweenMax.to(header, 0.2, {
+                y: -5,
                 opacity: 1,
                 ease: Power0.easeNone,
                 onComplete: function(){
                     // And the button a bit later
-                    TweenMax.to(ctaBtn, 0.3, {
-                        y: -10,
+                    TweenMax.to(ctaBtn, 0.2, {
+                        y: -5,
                         opacity: 1,
                         ease: Power4.easeInOut,
                         onComplete: function(){
-                            setTimeout(function(){
-                                var space = new Space();
-                            }, 500);
+                            TweenMax.to(canvas, 1, {
+                                    delay: 1,
+                                    opacity:0.7,
+                                    ease: Power0.easeNone,
+                                    onComplete: function(){
+                                        setTimeout(function(){
+                                            var space = new Space();
+                                        }, 500);
+                                    }
+                                }
+                            );
                         }
                     });
                 }
             });
-        }, 500);
+        }, 1500);
 
     };
 
