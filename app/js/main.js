@@ -9,18 +9,32 @@ function Scene(){
         var header = document.querySelector('header');
         var ctaBtn = document.querySelector('#main-cta');
         // Animate the header
-        TweenMax.to(header, 0.6, {
-            opacity: 1,
-            ease: Power0.easeNone,
-            onComplete: function(){
-                // And the button a bit later
-                TweenMax.to(ctaBtn, 0.3, {
-                    y: -10,
-                    opacity: 1,
-                    ease: Power4.easeInOut
-                });
-            }
-        });
+
+        setTimeout(function(){
+            var preloader = document.querySelector('#preloader');
+            addClass(preloader, 'done');
+            sceneLoaded.init();
+            preloader.parentNode.removeChild(preloader);
+            TweenMax.to(header, 0.3, {
+                y: -10,
+                opacity: 1,
+                ease: Power0.easeNone,
+                onComplete: function(){
+                    // And the button a bit later
+                    TweenMax.to(ctaBtn, 0.3, {
+                        y: -10,
+                        opacity: 1,
+                        ease: Power4.easeInOut,
+                        onComplete: function(){
+                            setTimeout(function(){
+                                var space = new Space();
+                            }, 500);
+                        }
+                    });
+                }
+            });
+        }, 500);
+
     };
 
     self.init();
@@ -381,13 +395,6 @@ document.addEventListener('DOMContentLoaded', function(){
     menuClick();
     projectOverlay();
     formHandler();
-
-    setTimeout(function(){
-        var preloader = document.querySelector('#preloader');
-        addClass(preloader, 'done');
-        sceneLoaded.init();
-        preloader.parentNode.removeChild(preloader);
-    }, 500);
 });
 
 

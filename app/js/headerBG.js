@@ -90,4 +90,3 @@ function Space(){
     initSpace();
 }
 
-var space = new Space();
