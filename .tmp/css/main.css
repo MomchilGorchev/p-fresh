@@ -723,12 +723,20 @@ nav {
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease; }
+  -o-transition: all 0.5s ease;
+  transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s; }
   .special__button:hover {
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
+    transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
     color: #000;
     background-color: #4499a1;
     border: 4px double #000; }
@@ -747,7 +755,11 @@ nav {
   transition: opacity 0.6s ease-in;
   -webkit-transition: opacity 0.6s ease-in;
   -moz-transition: opacity 0.6s ease-in;
-  -o-transition: opacity 0.6s ease-in; }
+  -o-transition: opacity 0.6s ease-in;
+  transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s; }
   .preloader__spinner {
     position: absolute;
     border-top: 2px solid #4499a1;
@@ -771,7 +783,11 @@ nav {
     transition: opacity 0.6s ease-in;
     -webkit-transition: opacity 0.6s ease-in;
     -moz-transition: opacity 0.6s ease-in;
-    -o-transition: opacity 0.6s ease-in; }
+    -o-transition: opacity 0.6s ease-in;
+    transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s; }
 
 .underline {
   width: 40%;
@@ -977,12 +993,20 @@ section.hero {
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease; }
+    -o-transition: all 0.5s ease;
+    transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s; }
     section.hero .main__trigger:hover {
       transition: all 0.5s ease;
       -webkit-transition: all 0.5s ease;
       -moz-transition: all 0.5s ease;
       -o-transition: all 0.5s ease;
+      transition-delay: 0s;
+      -webkit-transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      -o-transition-delay: 0s;
       color: #000;
       background-color: #4499a1;
       border: 4px double #000; }
@@ -1006,12 +1030,20 @@ section.hero {
   transition: all 0.35s ease-in-out;
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out; }
+  -o-transition: all 0.35s ease-in-out;
+  transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s; }
   .row.absolute:hover {
     transition: all 0.35s ease-in-out;
     -webkit-transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
     -o-transition: all 0.35s ease-in-out;
+    transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
     -webkit-transform: scale(1.1, 1.1);
     -ms-transform: scale(1.1, 1.1);
     transform: scale(1.1, 1.1); }
@@ -1028,7 +1060,11 @@ section.hero {
     transition: top 0.35s ease-in-out;
     -webkit-transition: top 0.35s ease-in-out;
     -moz-transition: top 0.35s ease-in-out;
-    -o-transition: top 0.35s ease-in-out; }
+    -o-transition: top 0.35s ease-in-out;
+    transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s; }
     .row.absolute .submit__states span {
       margin: 15px auto;
       display: block;
@@ -1039,19 +1075,31 @@ section.hero {
       transition: opacity 0.15s ease-in-out;
       -webkit-transition: opacity 0.15s ease-in-out;
       -moz-transition: opacity 0.15s ease-in-out;
-      -o-transition: opacity 0.15s ease-in-out; }
+      -o-transition: opacity 0.15s ease-in-out;
+      transition-delay: 0s;
+      -webkit-transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      -o-transition-delay: 0s; }
     .row.absolute .submit__states.loading {
       top: -47px;
       transition: top 0.35s ease-in-out;
       -webkit-transition: top 0.35s ease-in-out;
       -moz-transition: top 0.35s ease-in-out;
-      -o-transition: top 0.35s ease-in-out; }
+      -o-transition: top 0.35s ease-in-out;
+      transition-delay: 0s;
+      -webkit-transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      -o-transition-delay: 0s; }
       .row.absolute .submit__states.loading span {
         opacity: 1;
         transition: opacity 0.15s ease-in-out;
         -webkit-transition: opacity 0.15s ease-in-out;
         -moz-transition: opacity 0.15s ease-in-out;
-        -o-transition: opacity 0.15s ease-in-out; }
+        -o-transition: opacity 0.15s ease-in-out;
+        transition-delay: 0s;
+        -webkit-transition-delay: 0s;
+        -moz-transition-delay: 0s;
+        -o-transition-delay: 0s; }
         .row.absolute .submit__states.loading span:not(.loading) {
           opacity: 0; }
 
@@ -1062,7 +1110,11 @@ section.hero {
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease; }
+  -o-transition: all 0.5s ease;
+  transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s; }
   #scene.scaled {
     -webkit-transform: scale(0.9, 0.9);
     -ms-transform: scale(0.9, 0.9);
@@ -1070,7 +1122,11 @@ section.hero {
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease; }
+    -o-transition: all 0.5s ease;
+    transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s; }
 
 #welcome {
   opacity: 0.7; }
@@ -1090,6 +1146,10 @@ section.hero {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
+  transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s;
   -webkit-animation-name: spin-back;
           animation-name: spin-back;
   -webkit-animation-duration: 300ms;
@@ -1120,6 +1180,10 @@ section.hero {
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
+    transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
     -webkit-animation-name: spin;
             animation-name: spin;
     -webkit-animation-duration: 300ms;
@@ -1164,7 +1228,11 @@ section.hero {
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease; }
+  -o-transition: all 0.5s ease;
+  transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s; }
   @media (max-width: 480px) {
     .menu__content {
       height: auto;
@@ -1180,7 +1248,11 @@ section.hero {
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease; }
+    -o-transition: all 0.5s ease;
+    transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s; }
 .menu__list {
   opacity: 0;
   text-align: center;
@@ -1195,7 +1267,11 @@ section.hero {
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease; }
+  -o-transition: all 0.5s ease;
+  transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s; }
   @media (max-width: 480px) {
     .menu__list {
       width: 100%; } }
@@ -1217,6 +1293,10 @@ section.hero {
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
+    transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
 
@@ -1396,12 +1476,20 @@ figure.project__thumb p a {
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease; }
+  -o-transition: all 0.5s ease;
+  transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s; }
   figure.project__thumb p a:hover {
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
+    transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
     background: #4499a1; }
 figure.project__thumb p span {
   opacity: 0;
@@ -1467,6 +1555,10 @@ figure.project__thumb p span {
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
+    transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
     -webkit-animation-name: spin-back;
             animation-name: spin-back;
     -webkit-animation-duration: 300ms;
@@ -1497,6 +1589,10 @@ figure.project__thumb p span {
       -webkit-transition: all 0.5s ease;
       -moz-transition: all 0.5s ease;
       -o-transition: all 0.5s ease;
+      transition-delay: 0s;
+      -webkit-transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      -o-transition-delay: 0s;
       -webkit-animation-name: spin;
               animation-name: spin;
       -webkit-animation-duration: 300ms;
@@ -1553,6 +1649,10 @@ figure.project__thumb p span {
       -webkit-transition: all 0.25s ease-in-out;
       -moz-transition: all 0.25s ease-in-out;
       -o-transition: all 0.25s ease-in-out;
+      transition-delay: 0.2s;
+      -webkit-transition-delay: 0.2s;
+      -moz-transition-delay: 0.2s;
+      -o-transition-delay: 0.2s;
       -webkit-transform: rotate(0deg);
           -ms-transform: rotate(0deg);
               transform: rotate(0deg); }
@@ -1561,6 +1661,10 @@ figure.project__thumb p span {
       -webkit-transition: all 0.25s ease-in-out;
       -moz-transition: all 0.25s ease-in-out;
       -o-transition: all 0.25s ease-in-out;
+      transition-delay: 0.2s;
+      -webkit-transition-delay: 0.2s;
+      -moz-transition-delay: 0.2s;
+      -o-transition-delay: 0.2s;
       -webkit-transform: rotate(180deg);
           -ms-transform: rotate(180deg);
               transform: rotate(180deg); }
@@ -1639,12 +1743,20 @@ figure.project__thumb p span {
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease; }
+    -o-transition: all 0.5s ease;
+    transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s; }
     .overlay__details .project__hl a:hover {
       transition: all 0.5s ease;
       -webkit-transition: all 0.5s ease;
       -moz-transition: all 0.5s ease;
       -o-transition: all 0.5s ease;
+      transition-delay: 0s;
+      -webkit-transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      -o-transition-delay: 0s;
       color: #364250; }
 
 .contact__section {
@@ -1668,14 +1780,22 @@ figure.project__thumb p span {
   transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out; }
+  -o-transition: all 0.2s ease-in-out;
+  transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s; }
   .contact__form__request-fail.shown {
     bottom: 4px;
     opacity: 1;
     transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out; }
+    -o-transition: all 0.2s ease-in-out;
+    transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s; }
 .contact__form-error {
   width: 80px;
   height: 80px;
@@ -1690,7 +1810,11 @@ figure.project__thumb p span {
   transition: all 200ms ease-in;
   -webkit-transition: all 200ms ease-in;
   -moz-transition: all 200ms ease-in;
-  -o-transition: all 200ms ease-in; }
+  -o-transition: all 200ms ease-in;
+  transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s; }
   .contact__form-error i {
     -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
@@ -1703,7 +1827,11 @@ figure.project__thumb p span {
     transition: all 200ms ease-out;
     -webkit-transition: all 200ms ease-out;
     -moz-transition: all 200ms ease-out;
-    -o-transition: all 200ms ease-out; }
+    -o-transition: all 200ms ease-out;
+    transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s; }
   .contact__form-error.message {
     width: 100px;
     height: 100px;
@@ -1723,14 +1851,22 @@ figure.project__thumb p span {
   transition: border 0.3s ease-out;
   -webkit-transition: border 0.3s ease-out;
   -moz-transition: border 0.3s ease-out;
-  -o-transition: border 0.3s ease-out; }
+  -o-transition: border 0.3s ease-out;
+  transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s; }
   .contact__form-input:focus {
     outline: none;
     border-bottom: 1px solid #4499a1;
     transition: border 0.3s ease-out;
     -webkit-transition: border 0.3s ease-out;
     -moz-transition: border 0.3s ease-out;
-    -o-transition: border 0.3s ease-out; }
+    -o-transition: border 0.3s ease-out;
+    transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s; }
 .contact__form-textarea {
   width: 100%;
   height: 140px;
@@ -1740,14 +1876,22 @@ figure.project__thumb p span {
   transition: border 0.3s ease-out;
   -webkit-transition: border 0.3s ease-out;
   -moz-transition: border 0.3s ease-out;
-  -o-transition: border 0.3s ease-out; }
+  -o-transition: border 0.3s ease-out;
+  transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s; }
   .contact__form-textarea:focus {
     outline: none;
     border-bottom: 1px solid #4499a1;
     transition: border 0.3s ease-out;
     -webkit-transition: border 0.3s ease-out;
     -moz-transition: border 0.3s ease-out;
-    -o-transition: border 0.3s ease-out; }
+    -o-transition: border 0.3s ease-out;
+    transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s; }
 .contact__form-submit {
   width: 100%; }
   .contact__form-submit.processing {
@@ -1761,7 +1905,11 @@ figure.project__thumb p span {
     transition: top 0.35s ease-in-out;
     -webkit-transition: top 0.35s ease-in-out;
     -moz-transition: top 0.35s ease-in-out;
-    -o-transition: top 0.35s ease-in-out; }
+    -o-transition: top 0.35s ease-in-out;
+    transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s; }
     .contact__form-submit .submit__states span {
       margin: 15px auto;
       display: block;
@@ -1772,19 +1920,31 @@ figure.project__thumb p span {
       transition: opacity 0.15s ease-in-out;
       -webkit-transition: opacity 0.15s ease-in-out;
       -moz-transition: opacity 0.15s ease-in-out;
-      -o-transition: opacity 0.15s ease-in-out; }
+      -o-transition: opacity 0.15s ease-in-out;
+      transition-delay: 0s;
+      -webkit-transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      -o-transition-delay: 0s; }
     .contact__form-submit .submit__states.loading {
       top: -47px;
       transition: top 0.35s ease-in-out;
       -webkit-transition: top 0.35s ease-in-out;
       -moz-transition: top 0.35s ease-in-out;
-      -o-transition: top 0.35s ease-in-out; }
+      -o-transition: top 0.35s ease-in-out;
+      transition-delay: 0s;
+      -webkit-transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      -o-transition-delay: 0s; }
       .contact__form-submit .submit__states.loading span {
         opacity: 1;
         transition: opacity 0.15s ease-in-out;
         -webkit-transition: opacity 0.15s ease-in-out;
         -moz-transition: opacity 0.15s ease-in-out;
-        -o-transition: opacity 0.15s ease-in-out; }
+        -o-transition: opacity 0.15s ease-in-out;
+        transition-delay: 0s;
+        -webkit-transition-delay: 0s;
+        -moz-transition-delay: 0s;
+        -o-transition-delay: 0s; }
         .contact__form-submit .submit__states.loading span:not(.loading) {
           opacity: 0; }
     .contact__form-submit .submit__states.done {
@@ -1792,13 +1952,21 @@ figure.project__thumb p span {
       transition: top 0.35s ease-in-out;
       -webkit-transition: top 0.35s ease-in-out;
       -moz-transition: top 0.35s ease-in-out;
-      -o-transition: top 0.35s ease-in-out; }
+      -o-transition: top 0.35s ease-in-out;
+      transition-delay: 0s;
+      -webkit-transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      -o-transition-delay: 0s; }
       .contact__form-submit .submit__states.done span.done, .contact__form-submit .submit__states.done span.initial {
         opacity: 1;
         transition: opacity 0.15s ease-in-out;
         -webkit-transition: opacity 0.15s ease-in-out;
         -moz-transition: opacity 0.15s ease-in-out;
-        -o-transition: opacity 0.15s ease-in-out; }
+        -o-transition: opacity 0.15s ease-in-out;
+        transition-delay: 0s;
+        -webkit-transition-delay: 0s;
+        -moz-transition-delay: 0s;
+        -o-transition-delay: 0s; }
       .contact__form-submit .submit__states.done span.loading {
         opacity: 0; }
 .contact__info {
@@ -1869,13 +2037,21 @@ footer {
         transition: all 0.2s ease-in;
         -webkit-transition: all 0.2s ease-in;
         -moz-transition: all 0.2s ease-in;
-        -o-transition: all 0.2s ease-in; }
+        -o-transition: all 0.2s ease-in;
+        transition-delay: 0s;
+        -webkit-transition-delay: 0s;
+        -moz-transition-delay: 0s;
+        -o-transition-delay: 0s; }
         .footer__social-item a:hover {
           color: #055F67;
           transition: all 0.2s ease-in;
           -webkit-transition: all 0.2s ease-in;
           -moz-transition: all 0.2s ease-in;
-          -o-transition: all 0.2s ease-in; }
+          -o-transition: all 0.2s ease-in;
+          transition-delay: 0s;
+          -webkit-transition-delay: 0s;
+          -moz-transition-delay: 0s;
+          -o-transition-delay: 0s; }
   .footer__info {
     float: right;
     margin-right: 15px; }
@@ -1890,14 +2066,22 @@ footer {
         transition: all 0.2s ease-in;
         -webkit-transition: all 0.2s ease-in;
         -moz-transition: all 0.2s ease-in;
-        -o-transition: all 0.2s ease-in; }
+        -o-transition: all 0.2s ease-in;
+        transition-delay: 0s;
+        -webkit-transition-delay: 0s;
+        -moz-transition-delay: 0s;
+        -o-transition-delay: 0s; }
         .footer__info p a:hover {
           color: #999999;
           text-decoration: underline;
           transition: all 0.2s ease-in;
           -webkit-transition: all 0.2s ease-in;
           -moz-transition: all 0.2s ease-in;
-          -o-transition: all 0.2s ease-in; }
+          -o-transition: all 0.2s ease-in;
+          transition-delay: 0s;
+          -webkit-transition-delay: 0s;
+          -moz-transition-delay: 0s;
+          -o-transition-delay: 0s; }
   .footer__report {
     margin-left: 15px;
     font-weight: 300;
@@ -1908,11 +2092,19 @@ footer {
     transition: all 0.2s ease-in;
     -webkit-transition: all 0.2s ease-in;
     -moz-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in; }
+    -o-transition: all 0.2s ease-in;
+    transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s; }
     .footer__report:hover {
       color: #999999;
       text-decoration: underline;
       transition: all 0.2s ease-in;
       -webkit-transition: all 0.2s ease-in;
       -moz-transition: all 0.2s ease-in;
-      -o-transition: all 0.2s ease-in; }
+      -o-transition: all 0.2s ease-in;
+      transition-delay: 0s;
+      -webkit-transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      -o-transition-delay: 0s; }

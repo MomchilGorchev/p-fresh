@@ -239,12 +239,17 @@
 
 
 /* Vendor prefixes for transition */
-@mixin vendor-transition($property: all, $duration: 0.5s, $effect: ease){
+@mixin vendor-transition($property: all, $duration: 0.5s, $effect: ease, $delay: 0s){
 
   transition: $property $duration $effect;
   -webkit-transition: $property $duration $effect;
   -moz-transition: $property $duration $effect;
   -o-transition: $property $duration $effect;
+
+  transition-delay: $delay;
+  -webkit-transition-delay: $delay;
+  -moz-transition-delay: $delay;
+  -o-transition-delay: $delay;
 
 }
 
