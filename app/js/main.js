@@ -14,20 +14,25 @@ function Scene(){
         setTimeout(function(){
             console.log(preloader);
             addClass(preloader, 'done');
-            preloader.parentNode.removeChild(preloader);
+            setTimeout(function(){
+                preloader.parentNode.removeChild(preloader);
+            }, 800);
             TweenMax.to(header, 0.2, {
                 y: -5,
                 opacity: 1,
+                delay: 0.2,
                 ease: Power0.easeNone,
                 onComplete: function(){
                     // And the button a bit later
                     TweenMax.to(ctaBtn, 0.2, {
                         y: -5,
                         opacity: 1,
-                        delay: 0.5,
                         ease: Power4.easeInOut,
                         onComplete: function(){
-                            var space = new Space();
+                            setTimeout(function(){
+                                var space = new Space();
+
+                            }, 300);
                         }
                     });
                 }
@@ -286,21 +291,6 @@ function formHandler(){
 
     form.onsubmit = function(e){
         e.preventDefault();
-        btn.setAttribute('disabled', 'disabled');
-        addClass(btn, 'processing');
-        addClass(btnStates, 'loading');
-
-
-        //// TODO implement this in send-mail success/fail
-        //setTimeout(function(){
-        //    addClass(btnStates, 'done');
-        //    setTimeout(function(){
-        //        toggleClass(btnStates, 'loading');
-        //        toggleClass(btnStates, 'done');
-        //        toggleClass(btn, 'processing');
-        //        btn.removeAttribute('disabled');
-        //    }, 2000);
-        //}, 2000);
 
         var inputs = {
             name: form.querySelector('.name'),
@@ -320,7 +310,9 @@ function formHandler(){
         console.log(validateObj);
         // Send form
         if(validateObj.valid){
-            console.log('yes!');
+            btn.setAttribute('disabled', 'disabled');
+            addClass(btn, 'processing');
+            addClass(btnStates, 'loading');
 
             var request = new XMLHttpRequest();
             request.open('POST', 'http://1782345.62/mail', true);

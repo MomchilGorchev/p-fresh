@@ -21,7 +21,9 @@ function Space(){
         Z = 0.12,
         M = Math,
         Rnd = M.random;
-    ctx.globalAlpha = 0.5;
+    ctx.globalAlpha = 0.5; var alpha = 0;
+    var cx = (centerX - WIDTH / 2) + (WIDTH / 2),
+        cy = (centerY - HEIGHT / 2) + (HEIGHT / 2);
 
     //setInterval(function(){
     //    if(units < 300){
@@ -59,9 +61,6 @@ function Space(){
     function loop(){
         ctx.fillStyle = 'rgba(0, 0, 0, 0.66)';
         ctx.fillRect(0, 0, WIDTH, HEIGHT);
-        //// mouse position to head towards
-        var cx = (centerX - WIDTH / 2) + (WIDTH / 2),
-            cy = (centerY - HEIGHT / 2) + (HEIGHT / 2);
 
         // update all stars
         for (var i = 0; i < units; i++){
@@ -70,7 +69,9 @@ function Space(){
                 yy = n.y / n.z,
                 radius = 1.0 / n.z * 1.5 + 1;      // size i.e. z
 
-            ctx.fillStyle = 'rgb(' + randomIndex(colors) + ')';
+                alpha = i < 100 ? i * 0.001 : 100;
+
+            ctx.fillStyle = 'rgba(' + randomIndex(colors) + ', '+ alpha +')';
             if (n.px != 0){
                 ctx.beginPath();
                 ctx.arc(xx + cx, yy + cy, radius, 0, Math.PI * 2, true);
