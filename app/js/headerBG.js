@@ -16,19 +16,19 @@ function Space(){
 
         centerX = WIDTH/2, centerY = HEIGHT/ 2,
         warpZ = 7,
-        units = 50,
+        units = 300,
         stars = [],
         Z = 0.12,
         M = Math,
         Rnd = M.random;
     ctx.globalAlpha = 0.5;
 
-    setInterval(function(){
-        if(units < 300){
-            units += 50;
-        }
-        generate();
-    }, 5000);
+    //setInterval(function(){
+    //    if(units < 300){
+    //        units += 50;
+    //    }
+    //    generate();
+    //}, 5000);
 
     function randomIndex(array){
         return array[Math.floor(Math.random() * array.length)];

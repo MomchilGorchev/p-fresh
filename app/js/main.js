@@ -24,19 +24,20 @@ function Scene(){
                     TweenMax.to(ctaBtn, 0.2, {
                         y: -5,
                         opacity: 1,
+                        delay: 0.5,
                         ease: Power4.easeInOut,
                         onComplete: function(){
-                            TweenMax.to(canvas, 1, {
-                                    delay: 1,
-                                    opacity:0.7,
-                                    ease: Power0.easeNone,
-                                    onComplete: function(){
-                                        setTimeout(function(){
+                            //TweenMax.to(canvas, 1, {
+                            //        delay: 1,
+                            //        opacity:0.7,
+                            //        ease: Power0.easeNone,
+                            //        onComplete: function(){
+                            //            setTimeout(function(){
                                             var space = new Space();
-                                        }, 500);
-                                    }
-                                }
-                            );
+                            //            }, 500);
+                            //        }
+                            //    }
+                            //);
                         }
                     });
                 }
