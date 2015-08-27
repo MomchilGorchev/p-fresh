@@ -1,8 +1,16 @@
+////////////////////////
+//
+// Footer styles module
+//
+///////////////////////
 
-footer{
-  height:100px;
-}
+// Vars
+$footerHeight: 100px;
+$switchSize: 680px;
+$fullWidth: 100%;
+$gutterSize: 15px;
 
+// Rules
 .footer{
 
   position: relative;
@@ -10,55 +18,53 @@ footer{
   &__canvas{
     position: absolute;
     z-index: 5;
-    width: 100%;
-    @include breakpoint(680px){
+    width: $fullWidth;
+    @include breakpoint($switchSize){
       display:none;
     }
   }
 
   &__content{
 
-    @include breakpoint(680px){
+    @include breakpoint($switchSize){
         padding:40px;
         text-align:center;
         background: black;
     }
-
   }
 
   &__section{
 
+    height: $footerHeight;
 
     &-bg{
       position: absolute;
-      width: 100%;
-      height: 100px;
+      width: $fullWidth;
+      height: $footerHeight;
       z-index: 10;
       background: url(../img/deepspace.jpg) no-repeat center center #1b2735;
       background-size: cover;
       opacity:0.35;
-      @include breakpoint(680px){
+      @include breakpoint($switchSize){
         display:none;
       }
     }
-
   }
 
   &__wrapper{
 
-    height: 100px;
-    z-index: 100;
+    height: $footerHeight;
     position: relative;
-    @include breakpoint(680px){
+    z-index: 100;
+    @include breakpoint($switchSize){
       height:auto;
     }
-
   }
 
   &__social{
 
     float:left;
-    @include breakpoint(680px){
+    @include breakpoint($switchSize){
         float:none;
     }
 
@@ -72,7 +78,7 @@ footer{
     &-item{
 
       display: inline-block;
-      margin-left:15px;
+      margin-left: $gutterSize;
       a{
         color: $font-color;
         @include vendor-transition(all, 0.2s, ease-in);
@@ -81,24 +87,21 @@ footer{
           @include vendor-transition(all, 0.2s, ease-in);
 
         }
-
       }
-
     }
-
   }
 
   &__info{
 
     float:right;
-    margin-right:15px;
-    @include breakpoint(680px){
+    margin-right: $gutterSize;
+    @include breakpoint($switchSize){
       float:none
     }
     p{
       color:$font-color;
       text-align: right;
-      @include breakpoint(680px){
+      @include breakpoint($switchSize){
           text-align:center;
       }
 
@@ -106,16 +109,13 @@ footer{
         @include link();
       }
     }
-
   }
 
   &__report{
 
-    margin-left: 15px;
+    margin-left: $gutterSize;
     font-weight: 300;
     @include link();
 
   }
-
-
 }
