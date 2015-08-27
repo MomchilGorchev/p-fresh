@@ -1,12 +1,32 @@
+////////////////////////
+//
+// Hero styles module
+//
+///////////////////////
+
+// Vars
+$doubleBorder: 4px double $bg-color;
+$heroTriggerWidth: 200px;
+$heroTriggerHeight: 50px;
+$z50: 50;
+
+
+
+// Rules
+
+
+#welcome{
+  opacity:0.7;
+}
 
 section.hero{
   background: $ac-dark;
   .main{
     &__trigger{
-      width: 200px;
-      height: 50px;
-      border: 4px double $bg-color;
       background-color: transparent;
+      width: $heroTriggerWidth;
+      height: $heroTriggerHeight;
+      border: $doubleBorder;
       color:$font-color;
       font-family: $content-font;
       @include cta-text();
@@ -15,7 +35,7 @@ section.hero{
         @include vendor-transition();
         color: #000;
         background-color: $bg-color;
-        border: 4px double $black;
+        border: $doubleBorder;
       }
       &:focus{
         outline: none;
@@ -25,7 +45,7 @@ section.hero{
     &__title{
       top:10%;
       opacity:0;
-      z-index: 50;
+      z-index: $z50;
     }
 
     &__scene{
@@ -42,7 +62,7 @@ section.hero{
   left: 50%;
   margin-top: -157px;
   margin-left: -100px;
-  z-index: 50;
+  z-index: $z50;
   @include vendor-transition(all, 0.35s, ease-in-out);
   &:hover{
     @include vendor-transition(all, 0.35s, ease-in-out);
@@ -56,7 +76,7 @@ section.hero{
 
       color: #000;
       background-color: $bg-color;
-      border: 4px double $black;
+      border: $doubleBorder;
 
     }
   }
@@ -92,26 +112,7 @@ section.hero{
           opacity:0
         }
       }
-
-
     }
-
-    //&.done{
-    //
-    //  top: -85px;
-    //  @include vendor-transition(top, 0.35s, ease-in-out);
-    //
-    //  span.done, span.initial{
-    //    opacity:1;
-    //    @include vendor-transition(opacity, 0.15s, ease-in-out);
-    //
-    //  }
-    //  span.loading{
-    //    opacity:0
-    //  }
-    //
-    //}
-
   }
 }
 
@@ -126,7 +127,3 @@ section.hero{
   }
 }
 
-
-#welcome{
-  opacity:0.7;
-}

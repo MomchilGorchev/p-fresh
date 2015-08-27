@@ -979,13 +979,16 @@ p, label, article, aside, a, li {
   h2 {
     font-size: 25px; } }
 
+#welcome {
+  opacity: 0.7; }
+
 section.hero {
   background: #1b2735; }
   section.hero .main__trigger {
+    background-color: transparent;
     width: 200px;
     height: 50px;
     border: 4px double #4499a1;
-    background-color: transparent;
     color: #ccc;
     font-family: Lato, sans-serif;
     text-transform: uppercase;
@@ -1009,7 +1012,7 @@ section.hero {
       -o-transition-delay: 0s;
       color: #000;
       background-color: #4499a1;
-      border: 4px double #000; }
+      border: 4px double #4499a1; }
     section.hero .main__trigger:focus {
       outline: none; }
   section.hero .main__title {
@@ -1052,7 +1055,7 @@ section.hero {
     .row.absolute button.processing {
       color: #000;
       background-color: #4499a1;
-      border: 4px double #000; }
+      border: 4px double #4499a1; }
   .row.absolute .submit__states {
     display: block;
     position: relative;
@@ -1127,9 +1130,6 @@ section.hero {
     -webkit-transition-delay: 0s;
     -moz-transition-delay: 0s;
     -o-transition-delay: 0s; }
-
-#welcome {
-  opacity: 0.7; }
 
 .menu__trigger {
   width: 45px;
