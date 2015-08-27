@@ -11,6 +11,19 @@ footer{
     position: absolute;
     z-index: 5;
     width: 100%;
+    @include breakpoint(680px){
+      display:none;
+    }
+  }
+
+  &__content{
+
+    @include breakpoint(680px){
+        padding:40px;
+        text-align:center;
+        background: black;
+    }
+
   }
 
   &__section{
@@ -24,6 +37,9 @@ footer{
       background: url(../img/deepspace.jpg) no-repeat center center #1b2735;
       background-size: cover;
       opacity:0.35;
+      @include breakpoint(680px){
+        display:none;
+      }
     }
 
   }
@@ -33,12 +49,18 @@ footer{
     height: 100px;
     z-index: 100;
     position: relative;
+    @include breakpoint(680px){
+      height:auto;
+    }
 
   }
 
   &__social{
 
     float:left;
+    @include breakpoint(680px){
+        float:none;
+    }
 
     &-list{
 
@@ -70,9 +92,16 @@ footer{
 
     float:right;
     margin-right:15px;
+    @include breakpoint(680px){
+      float:none
+    }
     p{
       color:$font-color;
       text-align: right;
+      @include breakpoint(680px){
+          text-align:center;
+      }
+
       a{
         @include link();
       }

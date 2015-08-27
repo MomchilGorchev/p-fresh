@@ -2012,6 +2012,14 @@ footer {
     position: absolute;
     z-index: 5;
     width: 100%; }
+    @media (max-width: 680px) {
+      .footer__canvas {
+        display: none; } }
+  @media (max-width: 680px) {
+    .footer__content {
+      padding: 40px;
+      text-align: center;
+      background: black; } }
   .footer__section-bg {
     position: absolute;
     width: 100%;
@@ -2020,12 +2028,21 @@ footer {
     background: url(../img/deepspace.jpg) no-repeat center center #1b2735;
     background-size: cover;
     opacity: 0.35; }
+    @media (max-width: 680px) {
+      .footer__section-bg {
+        display: none; } }
   .footer__wrapper {
     height: 100px;
     z-index: 100;
     position: relative; }
+    @media (max-width: 680px) {
+      .footer__wrapper {
+        height: auto; } }
   .footer__social {
     float: left; }
+    @media (max-width: 680px) {
+      .footer__social {
+        float: none; } }
     .footer__social-list {
       list-style-type: none;
       padding-left: 0; }
@@ -2055,9 +2072,15 @@ footer {
   .footer__info {
     float: right;
     margin-right: 15px; }
+    @media (max-width: 680px) {
+      .footer__info {
+        float: none; } }
     .footer__info p {
       color: #ccc;
       text-align: right; }
+      @media (max-width: 680px) {
+        .footer__info p {
+          text-align: center; } }
       .footer__info p a {
         color: #ccc;
         background-color: #055F67;

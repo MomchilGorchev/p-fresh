@@ -147,4 +147,8 @@ function CanvasScene(sides, animationSpeed, polygons, noAlpha){
     constructor.init();
 }
 
-var Scene = new CanvasScene(10, 85, 50, true);
+if (WIDTH > 680 && WIDTH < 1600){
+
+    var Scene = new CanvasScene(10, 85, 50, true);
+
+}
