@@ -1219,8 +1219,8 @@ section.hero {
   transform: translate3d(2%, 0, 0);
   visibility: hidden;
   background-color: #4499a1;
-  width: 5px;
   max-width: 400px;
+  width: 5px;
   height: 55px;
   top: 15px;
   right: 15px;
