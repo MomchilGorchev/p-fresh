@@ -1833,8 +1833,8 @@ figure.project__thumb p span {
     -moz-transition-delay: 0s;
     -o-transition-delay: 0s; }
   .contact__form-error.message {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     top: 14px;
     right: -120px; }
     .contact__form-error.message i {
@@ -1976,7 +1976,7 @@ figure.project__thumb p span {
   .contact__info-inner {
     background: #055F67;
     padding: 20px;
-    border: 7px double #4499A1;
+    border: 7px double #4499a1;
     margin: 9% auto;
     width: 100%;
     max-width: 450px;
@@ -1992,7 +1992,7 @@ figure.project__thumb p span {
   height: 0;
   border-style: solid;
   border-width: 80px 0 0 80px;
-  border-color: #055056 transparent transparent transparent;
+  border-color: #04494f transparent transparent transparent;
   z-index: 5; }
   @media (max-width: 992px) {
     .contact__triangle {
