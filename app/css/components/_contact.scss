@@ -16,6 +16,7 @@ $darkDoubleBorder: 7px double $clr-accentDark;
 $lightDoubleBorder: 7px double $bg-color;
 $spanFontSize: 1.3445em;
 $inputPadding:4px 4px 4px 50px;
+$contactDoubleBorder:7px double $clr-accentDark;
 
 // Rules
 .contact{
@@ -95,15 +96,15 @@ $inputPadding:4px 4px 4px 50px;
         right: -120px;
 
         i{
-          top: 41px;
-          left: 7px;
+          top: 28px;
+          left: 3px;
         }
 
       }
 
       &.message.active{
 
-        right: -50px;
+        right: -40px;
 
       }
 
