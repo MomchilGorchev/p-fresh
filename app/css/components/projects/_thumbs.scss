@@ -174,7 +174,7 @@ figure.project__thumb {
         a{
             border: 1px solid;
             padding: 10px;
-            border-radius: 50%;
+            border-radius: $borderRadius-circle;
             color: #fff;
             font-size: 140%;
             opacity: 0;

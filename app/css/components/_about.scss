@@ -1,18 +1,23 @@
+// --------------------
+//
+// Contact styles module
+//
+// --------------------
+
+// Vars
+$photoBorder: 2px double $font-color;
+
+// Rules
 .about{
 
   &__section{
     background-color: $about-bg;
-    &-inner{
-
-
-    }
-
   }
 
   &__photo{
     width:98%;
-    border-radius: 50%;
-    border: 2px double $font-color;
+    border-radius: $borderRadius-circle;
+    border: $photoBorder;
     padding:3px;
     margin:10px;
 

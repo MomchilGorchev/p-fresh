@@ -89,7 +89,7 @@ nav{
 
     position: absolute;
     border-top: 2px solid $bg-color;
-    border-radius: 50%;
+    border-radius: $borderRadius-circle;
     -webkit-animation: spin 0.8s linear infinite;
     -o-animation: spin 0.8s linear infinite;
     animation: spin 0.8s linear infinite;
