@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <title>Momchil Gorchev</title>
+    <meta name="description" content="Momchil Gorchev - Frontend Web Developer specializing on Meteor Aplication develpment and Web animations... all kinds of animations">
+    <meta name="author" content="Momchil Gorchev">
+    <title>Momchil Gorchev - Frontend Developer</title>
 
     <link href='//fonts.googleapis.com/css?family=Medula+One|Lato:300,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -19,7 +20,9 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body id="page-top">
+
     <div id="preloader" class="preloader">
         <div class="preloader__spinner">
         </div>
@@ -29,7 +32,12 @@
         <a class="close" href="#"><i class="fa fa-close fa-2x"></i></a>
         <div class="projects__overlay-content"></div>
     </div>
+
     <section class="container-fluid hero">
+
+        <div id="scene" class="canvas__bg">
+            <canvas id="welcome" class="main__scene"></canvas>
+        </div>
 
         <div class="menu">
             <div id="menu__trigger" class="menu__trigger">
@@ -70,10 +78,6 @@
             </div>
         </div>
 
-        <div id="scene" class="canvas__bg">
-            <canvas id="welcome" class="main__scene"></canvas>
-        </div>
-
     </section>
 
     <!-- TODO
@@ -83,6 +87,7 @@
         - Projects:
             * PowaDMT - mobile image
             * Weather app
+            * Double DPI images
 
         - Contacts
         - Footer
