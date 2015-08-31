@@ -1,58 +1,12 @@
 /**
  * Main title and CTA button
  */
-function Scene(){
-    var self = this;
-
-    self.init = function(){
-
-        var header = document.querySelector('header');
-        var ctaBtn = document.querySelector('#main-cta');
-        var canvas = document.querySelector('#welcome');
-        var preloader = document.querySelector('#preloader');
-
-        setTimeout(function(){
-            console.log(preloader);
-            util.addClass(preloader, 'done');
-            setTimeout(function(){
-                preloader.parentNode.removeChild(preloader);
-            }, 800);
-            TweenMax.to(header, 0.2, {
-                y: -5,
-                opacity: 1,
-                delay: 0.2,
-                ease: Power0.easeNone,
-                onComplete: function(){
-                    // And the button a bit later
-                    TweenMax.to(ctaBtn, 0.2, {
-                        y: -5,
-                        opacity: 1,
-                        ease: Power4.easeInOut,
-                        onComplete: function(){
-                            setTimeout(function(){
-                                var space = new Space();
-
-                            }, 300);
-                        }
-                    });
-                }
-            });
-        }, 1500);
-
-    };
-
-    self.init();
-}
-
-var sceneLoaded = new Scene();
-
-
 /**
  * Util function for proper animation sequence every time
  * Uses CSS3 transitions
  * @param menuTrigger - trigger
  */
-function clickHandle(menuTrigger){
+function menuToggleAnim(menuTrigger){
     // Cache elements
     var container = menuTrigger.parentNode,
         menuContent = container.querySelector('.menu__content'),
@@ -77,18 +31,16 @@ function clickHandle(menuTrigger){
 /**
  * Navigation panel open/close
  */
-function menuHandler(){
-    var menuTrigger = document.getElementById('menu__trigger');
-    menuTrigger.addEventListener('click', function(e){
+function menuToggle(){
+    document.getElementById('menu__trigger').addEventListener('click', function(e){
         e.preventDefault();
-        clickHandle(this);
+        menuToggleAnim(this);
     });
 }
-
 /**
  * Main nav handler
  */
-function menuClick(){
+function menuItemClick(){
     var menuItems = document.querySelectorAll('.menu__list-item');
     var menuTrigger = document.getElementById('menu__trigger');
     // Assign event-handlers to all links
@@ -100,7 +52,7 @@ function menuClick(){
             var href = this.querySelector('a').getAttribute('href');
             var DOMElement = document.querySelector(href);
             // Call util function to handle open/close animation sequence
-            clickHandle(menuTrigger);
+            menuToggleAnim(menuTrigger);
             // Scroll the window to the target
             TweenMax.to(window, 1,{
                 delay:0.6,
@@ -126,9 +78,11 @@ function launchSite(){
         var scene = document.querySelector('#scene');
         // Scale down the canvas for slicker animation
         util.toggleClass(scene, 'scaled');
+        // Add Class to the btn
         util.toggleClass(launch, 'processing');
+        // And disable it
         util.toggleClass(btnStates, 'loading');
-        // Scroll the window el to the target location
+        // Scroll the window to the target location
         TweenMax.to(window, 1,{
             delay:0.6,
             scrollTo: {
@@ -138,6 +92,7 @@ function launchSite(){
             onComplete: function(){
                 // On complete scale back the canvas
                 util.toggleClass(scene, 'scaled');
+                // And reset the button state
                 util.toggleClass(launch, 'processing');
                 util.toggleClass(btnStates, 'loading');
             }
@@ -148,8 +103,7 @@ function launchSite(){
 /**
  * Check position and animte SVG
  */
-(function svgHeaders(){
-
+function svgHeaders(){
     var svgs = document.querySelectorAll('.svg-header');
     // Set to false initiallyq
     var scrolling = false;
@@ -171,13 +125,12 @@ function launchSite(){
             scrolling = false;
         }
     }, 100);
-
-}());
+}
 
 /**
  * Overlay open/close handling
  */
-function projectOverlay(){
+function overlayToggle(){
     // Cache all necessary elements
     var triggers = document.querySelectorAll('.open-overlay');
     var overlay = document.querySelector('#projects__overlay');
@@ -261,7 +214,6 @@ function projectOverlay(){
                     });
                 }
             });
-
         });
     }
 
@@ -284,20 +236,18 @@ function projectOverlay(){
 /**
  * Validates form and display error messages
  */
-function formHandler(){
+function formSubmitHandler(){
     var form = document.querySelector('#contact__me');
     var btn = form.querySelector('.contact__form-submit');
     var btnStates = btn.querySelector('.submit__states');
 
     form.onsubmit = function(e){
         e.preventDefault();
-
         var inputs = {
             name: form.querySelector('.name'),
             email: form.querySelector('.email'),
             message: form.querySelector('.message')
         };
-
         // Get user input
         var formData = {
             name: inputs.name.value,
@@ -310,15 +260,16 @@ function formHandler(){
         console.log(validateObj);
         // Send form
         if(validateObj.valid){
+            // Start processing
+            // Disable btn
             btn.setAttribute('disabled', 'disabled');
             util.addClass(btn, 'processing');
             util.addClass(btnStates, 'loading');
-
+            // Init request
             var request = new XMLHttpRequest();
             request.open('POST', 'http://1782345.62/mail', true);
             request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-
-            // We have a positive response
+            // Define success handler
             request.onload = function(res){
                 console.log(res);
                 // Animate button and reset form
@@ -334,7 +285,7 @@ function formHandler(){
                 util.toggleClass(btn, 'processing');
                 btn.removeAttribute('disabled');
             };
-            // Something is wrong
+            // Define error handler
             request.onerror = function(err) {
                 console.log(err);
                 var responseError = document.querySelector('.contact__form__request-fail');
@@ -347,10 +298,8 @@ function formHandler(){
                     util.removeClass(responseError, 'shown');
                 }, 5000);
             };
-
+            // Send
             request.send(JSON.stringify(formData));
-
-
 
         // Display error messages
         } else {
@@ -366,27 +315,70 @@ function formHandler(){
             setTimeout(function(){
                 var errs = document.querySelectorAll('.contact__form-error');
                 for(var j = 0; j < errs.length; j++){
-
                     util.toggleClass(errs[j], 'active');
                 }
             }, 2000);
-
             console.log('no!');
         }
     }
 }
 
-
-/*
-    Document ready
+/**
+ * Init the website
+ * @constructor
  */
-document.addEventListener('DOMContentLoaded', function(){
-    launchSite();
-    menuHandler();
-    menuClick();
-    projectOverlay();
-    formHandler();
-});
+function Scene(){
+    var self = this;
+
+    self.init = function(){
+        // Cache elements
+        var header = document.querySelector('header');
+        var ctaBtn = document.querySelector('#main-cta');
+        var preloader = document.querySelector('#preloader');
+        // Chain animation
+        // First timeout to remove the preloader
+        setTimeout(function(){
+            util.addClass(preloader, 'done');
+            setTimeout(function(){
+                preloader.parentNode.removeChild(preloader);
+            }, 800);
+            // Animate the title TODO - needs refactoring
+            TweenMax.to(header, 0.2, {
+                y: -5,
+                opacity: 1,
+                delay: 0.2,
+                ease: Power0.easeNone,
+                onComplete: function(){
+                    // And the button a bit later
+                    TweenMax.to(ctaBtn, 0.2, {
+                        y: -5,
+                        opacity: 1,
+                        ease: Power4.easeInOut,
+                        onComplete: function(){
+                            // Init the canvas animation around 1000-1100ms after we hide the preloader
+                            setTimeout(function(){
+                                var space = new Space();
+                            }, 300);
+                        }
+                    });
+                }
+            });
+        }, 1500);
+
+        // Init the rest of the functionality
+        svgHeaders();
+        launchSite();
+        menuToggle();
+        menuItemClick();
+        overlayToggle();
+        formSubmitHandler();
+    };
+
+    self.init();
+}
+// Start
+var sceneLoaded = new Scene();
+
 
 
 

@@ -1,10 +1,8 @@
 /**
  * Created by momchillgorchev on 18/07/15.
- * Util project namespace
+ * Project's utility namespace
  * Includes all reusable functionality
  */
-
-
 
 function Util(){
 
