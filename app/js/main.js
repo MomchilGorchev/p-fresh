@@ -6,7 +6,11 @@
  * Uses CSS3 transitions
  * @param menuTrigger - trigger
  */
+
+var util = util || {};
+var TweenMax = TweenMax || {};
 function menuToggleAnim(menuTrigger){
+    'use strict';
     // Cache elements
     var container = menuTrigger.parentNode,
         menuContent = container.querySelector('.menu__content'),
@@ -32,6 +36,7 @@ function menuToggleAnim(menuTrigger){
  * Navigation panel open/close
  */
 function menuToggle(){
+    'use strict';
     document.getElementById('menu__trigger').addEventListener('click', function(e){
         e.preventDefault();
         menuToggleAnim(this);
@@ -41,6 +46,7 @@ function menuToggle(){
  * Main nav handler
  */
 function menuItemClick(){
+    'use strict';
     var menuItems = document.querySelectorAll('.menu__list-item');
     var menuTrigger = document.getElementById('menu__trigger');
     // Assign event-handlers to all links
@@ -69,6 +75,7 @@ function menuItemClick(){
  * Main CTA btn handler
  */
 function launchSite(){
+    'use strict';
     var launch = document.querySelector('.main__trigger');
     var btnStates = launch.querySelector('.submit__states');
     // Attach event
@@ -97,13 +104,14 @@ function launchSite(){
                 util.toggleClass(btnStates, 'loading');
             }
         });
-    })
+    });
 }
 
 /**
  * Check position and animte SVG
  */
 function svgHeaders(){
+    'use strict';
     var svgs = document.querySelectorAll('.svg-header');
     // Set to false initiallyq
     var scrolling = false;
@@ -131,6 +139,7 @@ function svgHeaders(){
  * Overlay open/close handling
  */
 function overlayToggle(){
+    'use strict';
     // Cache all necessary elements
     var triggers = document.querySelectorAll('.open-overlay');
     var overlay = document.querySelector('#projects__overlay');
@@ -171,7 +180,7 @@ function overlayToggle(){
 
             // Check on scroll
             overlay.addEventListener('scroll', function(e){
-                getOverlayPosition()
+                getOverlayPosition();
             });
 
             // Scroll to the target and rotate the icon as well
@@ -237,6 +246,7 @@ function overlayToggle(){
  * Validates form and display error messages
  */
 function formSubmitHandler(){
+    'use strict';
     var form = document.querySelector('#contact__me');
     var btn = form.querySelector('.contact__form-submit');
     var btnStates = btn.querySelector('.submit__states');
@@ -320,7 +330,7 @@ function formSubmitHandler(){
             }, 2000);
             console.log('no!');
         }
-    }
+    };
 }
 
 /**
@@ -328,8 +338,8 @@ function formSubmitHandler(){
  * @constructor
  */
 function Scene(){
+    'use strict';
     var self = this;
-
     self.init = function(){
         // Cache elements
         var header = document.querySelector('header');

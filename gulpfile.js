@@ -154,7 +154,7 @@ gulp.task('serve:dist', ['default'], function () {
     browserSync({
         notify: false,
         logPrefix: 'SDK',
-        https: true,
+        //https: true,
         server: 'dist'
     });
 });

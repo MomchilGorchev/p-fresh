@@ -8,6 +8,7 @@ window.requestAnimationFrame = window.requestAnimationFrame
 
 function Space(){
     // Initial
+    'use strict';
     var canvas = document.getElementById('welcome'),
         ctx = canvas.getContext('2d'),
         WIDTH = canvas.width = window.innerWidth,
@@ -47,7 +48,7 @@ function Space(){
         a.y = (Rnd() * HEIGHT - (HEIGHT * 0.5)) * warpZ;
         a.z = warpZ;
         a.px = 0;
-        a.py = 0
+        a.py = 0;
     }
 
     function generate(){
@@ -72,7 +73,7 @@ function Space(){
                 alpha = i < 100 ? i * 0.001 : 100;
 
             ctx.fillStyle = 'rgba(' + randomIndex(colors) + ', '+ alpha +')';
-            if (n.px != 0){
+            if (n.px !== 0){
                 ctx.beginPath();
                 ctx.arc(xx + cx, yy + cy, radius, 0, Math.PI * 2, true);
                 ctx.arc(n.px + cx, n.py + cy, radius, 0, Math.PI * 2, true);

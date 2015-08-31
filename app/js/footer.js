@@ -24,6 +24,7 @@ console.log(footerContainer);
 // Constructor function
 function CanvasScene(sides, animationSpeed, polygons, noAlpha){
     // Cache the initiator object and check params
+    'use strict';
     var constructor = this;
     constructor.sides = sides || 6;
     constructor.animationSpeed = animationSpeed || 2;

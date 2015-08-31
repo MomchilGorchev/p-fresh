@@ -5,7 +5,7 @@
  */
 
 function Util(){
-
+    'use strict';
     var _this = this;
     _this.version = '0.0.1';
 
@@ -18,10 +18,12 @@ function Util(){
             var classes = el.className.split(' ');
             var existingIndex = classes.indexOf(className);
 
-            if (existingIndex >= 0)
+            if (existingIndex >= 0){
                 classes.splice(existingIndex, 1);
-            else
+            }
+            else{
                 classes.push(className);
+            }
 
             el.className = classes.join(' ');
         }
@@ -49,10 +51,12 @@ function Util(){
     };
     // check
     _this.hasClass = function(el, className){
-        if (el.classList)
+        if (el.classList){
             return el.classList.contains(className);
-        else
+        }
+        else{
             return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
+        }
     };
 
     // DOM manipulation
