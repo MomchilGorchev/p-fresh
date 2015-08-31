@@ -14,7 +14,6 @@ $clr-accentDarker: #055F67;
 $triangleBorderWidth: 80px 0 0 80px;
 $darkDoubleBorder: 7px double $clr-accentDark;
 $lightDoubleBorder: 7px double $bg-color;
-$spanFontSize: 1.3445em;
 $inputPadding:4px 4px 4px 50px;
 $contactDoubleBorder:7px double $clr-accentDark;
 
@@ -226,6 +225,7 @@ $contactDoubleBorder:7px double $clr-accentDark;
       width:100%;
       max-width:450px;
       font-weight: 400;
+      text-align: justify;
       height: auto;
       position:relative;
       z-index: 10;

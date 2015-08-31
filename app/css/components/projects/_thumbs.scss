@@ -1,4 +1,13 @@
+// --------------------
+//
+// Contact styles module
+//
+// --------------------
 
+// Vars
+
+
+// Rules
 .projects{
 
     &__section{
@@ -86,14 +95,13 @@
             font-weight: 300;
             .project__logo{
                 width: 180px;
-                margin:10% auto;
+                margin: 10% auto;
                 opacity: 1;
                 @include breakpoint(st){
                     margin-top: -30px;
                 }
                 @include breakpoint(sm){
                     margin-top: -50px;
-
                 }
             }
             span{

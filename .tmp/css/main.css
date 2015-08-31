@@ -1321,7 +1321,7 @@ section.hero {
 .about__text {
   text-align: justify;
   text-shadow: 1px 1px 1px #2d666b;
-  font-size: 1.334em; }
+  font-size: 1.3445em; }
   .about__text-holder {
     width: 67%;
     float: left;
@@ -1981,6 +1981,7 @@ figure.project__thumb p span {
     width: 100%;
     max-width: 450px;
     font-weight: 400;
+    text-align: justify;
     height: auto;
     position: relative;
     z-index: 10; }

@@ -13,7 +13,7 @@ function Scene(){
 
         setTimeout(function(){
             console.log(preloader);
-            addClass(preloader, 'done');
+            util.addClass(preloader, 'done');
             setTimeout(function(){
                 preloader.parentNode.removeChild(preloader);
             }, 800);
@@ -59,18 +59,18 @@ function clickHandle(menuTrigger){
         menuList = menuContent.querySelector('.menu__list'),
         openClassName = 'open', animClassName = 'spin';
     // If nav is closed
-    if(!hasClass(menuContent, openClassName)){
-        toggleClass(menuTrigger, animClassName);
-        toggleClass(menuContent, openClassName);
+    if(!util.hasClass(menuContent, openClassName)){
+        util.toggleClass(menuTrigger, animClassName);
+        util.toggleClass(menuContent, openClassName);
         setTimeout(function(){
-            toggleClass(menuList, openClassName);
+            util.toggleClass(menuList, openClassName);
         }, 500);
     // Else its open
     } else {
-        toggleClass(menuTrigger, animClassName);
-        toggleClass(menuList, openClassName);
+        util.toggleClass(menuTrigger, animClassName);
+        util.toggleClass(menuList, openClassName);
         setTimeout(function(){
-            toggleClass(menuContent, openClassName);
+            util.toggleClass(menuContent, openClassName);
         }, 300);
     }
 }
@@ -125,9 +125,9 @@ function launchSite(){
         var target = document.querySelector('#projects');
         var scene = document.querySelector('#scene');
         // Scale down the canvas for slicker animation
-        toggleClass(scene, 'scaled');
-        toggleClass(launch, 'processing');
-        toggleClass(btnStates, 'loading');
+        util.toggleClass(scene, 'scaled');
+        util.toggleClass(launch, 'processing');
+        util.toggleClass(btnStates, 'loading');
         // Scroll the window el to the target location
         TweenMax.to(window, 1,{
             delay:0.6,
@@ -137,9 +137,9 @@ function launchSite(){
             ease: Power4.easeInOut,
             onComplete: function(){
                 // On complete scale back the canvas
-                toggleClass(scene, 'scaled');
-                toggleClass(launch, 'processing');
-                toggleClass(btnStates, 'loading');
+                util.toggleClass(scene, 'scaled');
+                util.toggleClass(launch, 'processing');
+                util.toggleClass(btnStates, 'loading');
             }
         });
     })
@@ -158,7 +158,7 @@ function launchSite(){
         // Animate header SVG if in range
         for(var i = 0; i < svgs.length; i++){
             if(window.pageYOffset > svgs[i].offsetTop - window.innerHeight / 1.2){
-                addClass(svgs[i], 'active');
+                util.addClass(svgs[i], 'active');
             }
         }
         // Set the flag
@@ -191,7 +191,7 @@ function projectOverlay(){
         current.addEventListener('click', function(e){
             e.preventDefault();
             // Clone related content to the overlay
-            var content = closest(this, 'figure')
+            var content = util.closest(this, 'figure')
                 .cloneNode(true).querySelector('.project__modal-details');
             contentBox.appendChild(content);
 
@@ -199,8 +199,8 @@ function projectOverlay(){
             var triggerId = content.getAttribute('data-trigger');
             var trigger = document.getElementById(triggerId);
             // Show the overlay
-            toggleClass(overlay, 'open');
-            toggleClass(body, 'overlay-open');
+            util.toggleClass(overlay, 'open');
+            util.toggleClass(body, 'overlay-open');
 
             // Utility fn to determine the scrolled position
             function getOverlayPosition(){
@@ -208,10 +208,10 @@ function projectOverlay(){
                 var viewport = window.innerHeight;
                 // If under the half of the window height
                 if(elPosY > viewport / 2){
-                    addClass(trigger, 'go-back');
+                    util.addClass(trigger, 'go-back');
                     return 'below';
                 } else {
-                    removeClass(trigger, 'go-back');
+                    util.removeClass(trigger, 'go-back');
                     return 'above';
                 }
             }
@@ -243,7 +243,7 @@ function projectOverlay(){
                         ease: Power4.easeInOut,
                         onComplete: function(){
                             // Switch off the class
-                            removeClass(trigger, 'go-back');
+                            util.removeClass(trigger, 'go-back');
                         }
                     });
                 } else {
@@ -256,7 +256,7 @@ function projectOverlay(){
                         ease: Power4.easeInOut,
                         onComplete: function(){
                             // Switch on the class
-                            addClass(trigger, 'go-back');
+                            util.addClass(trigger, 'go-back');
                         }
                     });
                 }
@@ -274,8 +274,8 @@ function projectOverlay(){
             var content = contentBox.querySelector('.project__modal-details');
             content.parentNode.removeChild(content);
             // And close the overlay
-            toggleClass(overlay, 'open');
-            toggleClass(body, 'overlay-open');
+            util.toggleClass(overlay, 'open');
+            util.toggleClass(body, 'overlay-open');
         }, 300);
     });
 
@@ -306,13 +306,13 @@ function formHandler(){
             message: inputs.message.value
         };
         // Validate user input
-        var validateObj = validateForm(formData);
+        var validateObj = util.validateForm(formData);
         console.log(validateObj);
         // Send form
         if(validateObj.valid){
             btn.setAttribute('disabled', 'disabled');
-            addClass(btn, 'processing');
-            addClass(btnStates, 'loading');
+            util.addClass(btn, 'processing');
+            util.addClass(btnStates, 'loading');
 
             var request = new XMLHttpRequest();
             request.open('POST', 'http://1782345.62/mail', true);
@@ -322,16 +322,16 @@ function formHandler(){
             request.onload = function(res){
                 console.log(res);
                 // Animate button and reset form
-                addClass(btnStates, 'done');
+                util.addClass(btnStates, 'done');
                 for (var key in inputs) {
                     if (inputs.hasOwnProperty(key)) {
                         inputs[key].value = '';
                     }
                 }
                 // Switch to initial state
-                removeClass(btnStates, 'done');
-                removeClass(btnStates, 'loading');
-                toggleClass(btn, 'processing');
+                util.removeClass(btnStates, 'done');
+                util.removeClass(btnStates, 'loading');
+                util.toggleClass(btn, 'processing');
                 btn.removeAttribute('disabled');
             };
             // Something is wrong
@@ -339,12 +339,12 @@ function formHandler(){
                 console.log(err);
                 var responseError = document.querySelector('.contact__form__request-fail');
                 //TODO abstract to function
-                addClass(responseError, 'shown');
-                removeClass(btnStates, 'loading');
-                toggleClass(btn, 'processing');
+                util.addClass(responseError, 'shown');
+                util.removeClass(btnStates, 'loading');
+                util.toggleClass(btn, 'processing');
                 btn.removeAttribute('disabled');
                 setTimeout(function(){
-                    removeClass(responseError, 'shown');
+                    util.removeClass(responseError, 'shown');
                 }, 5000);
             };
 
@@ -360,14 +360,14 @@ function formHandler(){
                 var el = form.querySelector('.'+ validateObj.fields[i]);
                 // And display the error message
                 var errMsg = el.parentNode.querySelector('.contact__form-error');
-                addClass(errMsg, 'active');
+                util.addClass(errMsg, 'active');
             }
 
             setTimeout(function(){
                 var errs = document.querySelectorAll('.contact__form-error');
                 for(var j = 0; j < errs.length; j++){
 
-                    toggleClass(errs[j], 'active');
+                    util.toggleClass(errs[j], 'active');
                 }
             }, 2000);
 
