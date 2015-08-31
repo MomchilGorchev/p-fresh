@@ -1550,7 +1550,7 @@ figure.project__thumb p span {
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    padding: 7px 4px 0 12px;
+    padding: 8px 0 0 10px;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
