@@ -353,14 +353,14 @@ function Scene(){
                 preloader.parentNode.removeChild(preloader);
             }, 800);
             // Animate the title TODO - needs refactoring
-            TweenMax.to(header, 0.2, {
+            TweenMax.to(header, 0.3, {
                 y: -5,
                 opacity: 1,
-                delay: 0.2,
+                delay: 0.7,
                 ease: Power0.easeNone,
                 onComplete: function(){
                     // And the button a bit later
-                    TweenMax.to(ctaBtn, 0.2, {
+                    TweenMax.to(ctaBtn, 0.3, {
                         y: -5,
                         opacity: 1,
                         ease: Power4.easeInOut,

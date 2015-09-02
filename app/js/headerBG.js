@@ -23,7 +23,7 @@ function Space(){
         Z = 0.12,
         M = Math,
         Rnd = M.random;
-    ctx.globalAlpha = 0.5; var alpha = 0.05;
+    ctx.globalAlpha = 0.66; var alpha = 0.05;
     var cx = (centerX - WIDTH / 2) + (WIDTH / 2),
         cy = (centerY - HEIGHT / 2) + (HEIGHT / 2);
 
