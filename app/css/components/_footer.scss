@@ -42,7 +42,7 @@ $gutterSize: 15px;
       width: $fullWidth;
       height: $footerHeight;
       z-index: 10;
-      background: url(../img/deepspace.jpg) no-repeat center center #1b2735;
+      background: url(../img/footer-bg.jpg) no-repeat center center #1b2735;
       background-size: cover;
       opacity:0.35;
       @include breakpoint($switchSize){
