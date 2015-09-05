@@ -4,7 +4,7 @@
   top:0;
   left:0;
   position: fixed;
-  overflow: scroll;
+  overflow: auto;
   background: $bg-color;
   z-index:0;
   visibility: hidden;
@@ -84,6 +84,10 @@
     width: 100%;
     text-align: center;
     font-size:100%;
+    @include breakpoint(780px, height){
+      display: none;
+    }
+
     .overlay__trigger__icon{
       opacity:1;
       color: white;
@@ -162,6 +166,7 @@
 
 
 .overlay__details{
+    margin-bottom:100px;
 
     h3{
 
