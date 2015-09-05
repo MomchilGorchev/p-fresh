@@ -73,43 +73,6 @@ function menuItemClick(){
 }
 
 /**
- * Main CTA btn handler
- */
-function launchSite(){
-    'use strict';
-    var launch = document.querySelector('.main__trigger');
-    var btnStates = launch.querySelector('.submit__states');
-    // Attach event
-    launch.addEventListener('click', function(e){
-        e.preventDefault();
-        var target = document.querySelector('#projects');
-        var scene = document.querySelector('#scene');
-        // Scale down the canvas for slicker animation
-        util.toggleClass(scene, 'scaled');
-        // Add Class to the btn
-        util.toggleClass(launch, 'processing');
-        // And disable it
-        util.toggleClass(btnStates, 'loading');
-        // Scroll the window to the target location
-        TweenMax.to(window, 1,{
-            delay:0.6,
-            scrollTo: {
-                y: target.offsetTop
-            },
-            ease: Power4.easeInOut,
-            onComplete: function(){
-
-                // On complete scale back the canvas
-                util.toggleClass(scene, 'scaled');
-                // And reset the button state
-                util.toggleClass(launch, 'processing');
-                util.toggleClass(btnStates, 'loading');
-            }
-        });
-    });
-}
-
-/**
  * Check position and animte SVG
  */
 function svgHeaders(){
