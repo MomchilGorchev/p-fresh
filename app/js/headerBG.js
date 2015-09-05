@@ -9,6 +9,9 @@ window.requestAnimationFrame = window.requestAnimationFrame
 function Space(){
     // Initial
     'use strict';
+
+    var _this = this;
+    _this.warpZ = 5;
     var canvas = document.getElementById('welcome'),
         ctx = canvas.getContext('2d'),
 
@@ -17,10 +20,10 @@ function Space(){
 
         colors = ['204, 196, 123', '0, 214, 255', '179, 243, 255', '7, 108, 127', '143, 194, 204'],
         centerX = WIDTH/2, centerY = HEIGHT/ 2,
-        warpZ = 7,
+        //warpZ = 5,
         units = 300,
         stars = [],
-        Z = 0.12,
+        Z = 0.09,
         M = Math,
         Rnd = M.random;
     ctx.globalAlpha = 0.66; var alpha = 0.05;
@@ -49,9 +52,9 @@ function Space(){
 
     // Calculate position
     function resetBubble(a){
-        a.x = (Rnd() * WIDTH - (WIDTH * 0.5)) * warpZ;
-        a.y = (Rnd() * HEIGHT - (HEIGHT * 0.5)) * warpZ;
-        a.z = warpZ;
+        a.x = (Rnd() * WIDTH - (WIDTH * 0.5)) * _this.warpZ;
+        a.y = (Rnd() * HEIGHT - (HEIGHT * 0.5)) * _this.warpZ;
+        a.z = _this.warpZ;
         a.px = 0;
         a.py = 0;
     }
@@ -83,6 +86,9 @@ function Space(){
                 ctx.beginPath();
                 ctx.arc(xx + cx, yy + cy, radius, 0, Math.PI * 2, true);
                 ctx.arc(n.px + cx, n.py + cy, radius, 0, Math.PI * 2, true);
+                // Add more arc with descending xand y positions to make longer star trace.
+                // Need optimisations as if enabled lower down the FPS slightly
+                //ctx.arc(n.px / 2 + cx, n.py / 2 + cy, radius, 0, Math.PI * 2, true);
                 ctx.closePath();
                 ctx.fill();
             }

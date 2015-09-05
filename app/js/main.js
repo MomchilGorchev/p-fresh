@@ -9,6 +9,7 @@
 
 var util = util || {};
 var TweenMax = TweenMax || {};
+var space;
 function menuToggleAnim(menuTrigger){
     'use strict';
     // Cache elements
@@ -97,6 +98,7 @@ function launchSite(){
             },
             ease: Power4.easeInOut,
             onComplete: function(){
+
                 // On complete scale back the canvas
                 util.toggleClass(scene, 'scaled');
                 // And reset the button state
@@ -334,6 +336,49 @@ function formSubmitHandler(){
 }
 
 /**
+ * Main CTA btn handler
+ */
+function launchSite(){
+    'use strict';
+    var launch = document.querySelector('.main__trigger');
+    var btnStates = launch.querySelector('.submit__states');
+    // Attach event
+    launch.addEventListener('click', function(e){
+        space.warpZ = 2;
+        e.preventDefault();
+        var target = document.querySelector('#projects');
+        var scene = document.querySelector('#scene');
+        setTimeout(function(){
+            // Scale down the canvas for slicker animation
+            util.toggleClass(scene, 'scaled');
+            // Add Class to the btn
+            util.toggleClass(launch, 'processing');
+            // And disable it
+            util.toggleClass(btnStates, 'loading');
+            // Scroll the window to the target location
+            TweenMax.to(window, 1,{
+                delay:0.6,
+                scrollTo: {
+                    y: target.offsetTop
+                },
+                ease: Power4.easeInOut,
+                onComplete: function(){
+
+                    // On complete scale back the canvas
+                    util.toggleClass(scene, 'scaled');
+                    // And reset the button state
+                    util.toggleClass(launch, 'processing');
+                    util.toggleClass(btnStates, 'loading');
+                    space.warpZ = 5;
+
+                }
+            });
+        }, 1000);
+
+    });
+}
+
+/**
  * Init the website
  * @constructor
  */
@@ -367,7 +412,9 @@ function Scene(){
                         onComplete: function(){
                             // Init the canvas animation around 1000-1100ms after we hide the preloader
                             setTimeout(function(){
-                                var space = new Space();
+                                space = new Space();
+
+
                             }, 300);
                         }
                     });
