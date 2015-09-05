@@ -378,7 +378,7 @@
 
 
 //use: @include breakpoint(up) { ... };
-@mixin breakpoint($class, $dimension: width) {
+@mixin breakpoint($class, $dimension: null) {
   @if $dimension == height{
     @media (min-height:  $class){ @content; }
   }
