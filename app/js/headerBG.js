@@ -11,7 +11,7 @@ function Space(){
     'use strict';
 
     var _this = this;
-    _this.warpZ = 5;
+    _this.warpZ = 8;
     var canvas = document.getElementById('welcome'),
         ctx = canvas.getContext('2d'),
 
@@ -27,8 +27,8 @@ function Space(){
         M = Math,
         Rnd = M.random;
     ctx.globalAlpha = 0.66; var alpha = 0.05;
-    var cx = (centerX - WIDTH / 2) + (WIDTH / 2),
-        cy = (centerY - HEIGHT / 2) + (HEIGHT / 2);
+    var cx = centerX,
+        cy = centerY;
 
     // Increase the alpha every 700 ms for smooth animation
     var alphaIncrease = setInterval(function(){
@@ -75,7 +75,7 @@ function Space(){
 
         // update all stars
         for (var i = 0; i < units; i++){
-            var n = stars[i],            // the star
+            var n = stars[i],
                 xx = n.x / n.z,          // star position
                 yy = n.y / n.z,
                 radius = 1.0 / n.z * 1.5 + 1;      // size i.e. z
@@ -84,8 +84,23 @@ function Space(){
             //console.log(ctx.fillStyle);
             if (n.px !== 0){
                 ctx.beginPath();
+                for(var j = 0; j < 2; j++){
+                    ctx.arc(xx + cx + j * (radius / n.z), yy + cy + (j * radius / n.z), radius, 0, Math.PI * 2, true);
+                }
                 ctx.arc(xx + cx, yy + cy, radius, 0, Math.PI * 2, true);
                 ctx.arc(n.px + cx, n.py + cy, radius, 0, Math.PI * 2, true);
+
+                // Sick animation looking like the black hole in Interstelar movie!
+                //for(var j = 0; j < 10; j++){
+                //    ctx.arc(xx * j + cx, yy + cy, radius, 0, Math.PI * 2, true);
+                //    ctx.arc(n.px * j + cx, n.py + cy, radius, 0, Math.PI * 2, true);
+                //}
+                // Crazy stuff
+                //ctx.arc(x0 + cx * (radius / n.z), y0 + cy + (j * radius / n.z), radius, 0, Math.PI * 2, true);
+
+
+
+
                 // Add more arc with descending xand y positions to make longer star trace.
                 // Need optimisations as if enabled lower down the FPS slightly
                 //ctx.arc(n.px / 2 + cx, n.py / 2 + cy, radius, 0, Math.PI * 2, true);
