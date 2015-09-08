@@ -15,11 +15,13 @@ $photoBorder: 2px double $font-color;
   }
 
   &__photo{
-    width:98%;
-    border-radius: $borderRadius-circle;
+    width: 98%;
+    max-width: 200px;
+    border-radius: 50%;
     border: $photoBorder;
-    padding:3px;
-    margin:10px;
+    padding: 3px;
+    margin: 12% auto;
+    display: block;
 
     &-holder{
       float:left;

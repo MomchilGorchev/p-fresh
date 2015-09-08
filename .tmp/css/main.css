@@ -1301,10 +1301,12 @@ section.hero {
   background-color: #364250; }
 .about__photo {
   width: 98%;
+  max-width: 200px;
   border-radius: 50%;
   border: 2px double #ccc;
   padding: 3px;
-  margin: 10px; }
+  margin: 12% auto;
+  display: block; }
   .about__photo-holder {
     float: left;
     width: 30%;
