@@ -73,7 +73,7 @@ function menuItemClick(){
 }
 
 /**
- * Check position and animte SVG
+ * Check position and animate SVG
  */
 function svgHeaders(){
     'use strict';
@@ -98,6 +98,17 @@ function svgHeaders(){
             scrolling = false;
         }
     }, 100);
+}
+
+function handleHighDPI(){
+    if ( (window.devicePixelRatio) && (window.devicePixelRatio >= 2) ){
+        var images = document.querySelectorAll('.handle-high-dpi');
+        for(var i = 0; i < images.length; i++){
+            var current = images[i];
+            var highDpiSrc = current.getAttribute('data-ddpi');
+            current.setAttribute('src', highDpiSrc);
+        }
+    }
 }
 
 /**
@@ -390,6 +401,7 @@ function Scene(){
         launchSite();
         menuToggle();
         menuItemClick();
+        handleHighDPI();
         overlayToggle();
         formSubmitHandler();
     };
