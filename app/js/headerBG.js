@@ -90,7 +90,7 @@ function Space(){
                 ctx.arc(xx + cx, yy + cy, radius, 0, Math.PI * 2, true);
                 ctx.arc(n.px + cx, n.py + cy, radius, 0, Math.PI * 2, true);
 
-                // Sick animation looking like the black hole in Interstelar movie!
+                // Sick animation looking like the black hole in Interstellar movie!
                 //for(var j = 0; j < 10; j++){
                 //    ctx.arc(xx * j + cx, yy + cy, radius, 0, Math.PI * 2, true);
                 //    ctx.arc(n.px * j + cx, n.py + cy, radius, 0, Math.PI * 2, true);

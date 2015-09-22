@@ -94,9 +94,10 @@
             word-spacing: -0.15em;
             font-weight: 300;
             .project__logo{
-                width: 180px;
+                width: 280px;
                 margin: 10% auto;
                 opacity: 1;
+                @include vendor-transition(all, 0.2s, ease-out);
                 @include breakpoint(st){
                     margin-top: -30px;
                 }
@@ -152,6 +153,8 @@ figure.project__thumb:hover{
         opacity: 0.8;
         &.project__logo{
             opacity:1;
+            width: 180px;
+            @include vendor-transition(all, 0.2s, ease-out);
         }
     }
     p.project__content{
@@ -174,10 +177,6 @@ figure.project__thumb {
 
     h2 {
         margin-top: 1em;
-        -webkit-transition: transform 0.35s;
-        transition: transform 0.35s;
-        -webkit-transform: translate3d(0,40px,0);
-        transform: translate3d(0,40px,0);
     }
     p{
         a{
