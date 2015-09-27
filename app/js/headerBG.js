@@ -101,7 +101,7 @@ function Space(){
 
 
 
-                // Add more arc with descending xand y positions to make longer star trace.
+                // Add more arc with descending x and y positions to make longer star trace.
                 // Need optimisations as if enabled lower down the FPS slightly
                 //ctx.arc(n.px / 2 + cx, n.py / 2 + cy, radius, 0, Math.PI * 2, true);
                 ctx.closePath();
