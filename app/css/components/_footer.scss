@@ -10,6 +10,7 @@ $switchSize: 680px;
 $fullWidth: 100%;
 $fullHeight: 100%;
 $gutterSize: 15px;
+$comingSoonColor: #C6CA5F;
 
 // Rules
 .footer{
@@ -111,6 +112,13 @@ $gutterSize: 15px;
       a{
         @include link();
       }
+      span{
+        margin: 0 3px;
+      }
+    }
+    &__label{
+      color: $comingSoonColor;
+      margin-right: $gutterSize;
     }
   }
 

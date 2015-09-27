@@ -2125,6 +2125,11 @@ figure.project__thumb p span {
           -webkit-transition-delay: 0s;
           -moz-transition-delay: 0s;
           -o-transition-delay: 0s; }
+      .footer__info p span {
+        margin: 0 3px; }
+    .footer__info__label {
+      color: #C6CA5F;
+      margin-right: 15px; }
   .footer__report {
     margin-left: 15px;
     font-weight: 300;
