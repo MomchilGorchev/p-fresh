@@ -318,7 +318,7 @@ function launchSite(){
     var btnStates = launch.querySelector('.submit__states');
     // Attach event
     launch.addEventListener('click', function(e){
-        space.warpZ = 2;
+        //space.warpZ = 2;
         e.preventDefault();
         var target = document.querySelector('#projects');
         var scene = document.querySelector('#scene');
@@ -343,7 +343,7 @@ function launchSite(){
                     // And reset the button state
                     util.toggleClass(launch, 'processing');
                     util.toggleClass(btnStates, 'loading');
-                    space.warpZ = 5;
+                    //space.warpZ = 5;
 
                 }
             });
