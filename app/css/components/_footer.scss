@@ -8,6 +8,7 @@
 $footerHeight: 100px;
 $switchSize: 680px;
 $fullWidth: 100%;
+$fullHeight: 100%;
 $gutterSize: 15px;
 
 // Rules
@@ -19,6 +20,7 @@ $gutterSize: 15px;
     position: absolute;
     z-index: 5;
     width: $fullWidth;
+    height: $fullHeight;
     @include breakpoint($switchSize){
       display:none;
     }
@@ -36,6 +38,7 @@ $gutterSize: 15px;
   &__section{
 
     height: $footerHeight;
+    position:relative;
 
     &-bg{
       position: absolute;
