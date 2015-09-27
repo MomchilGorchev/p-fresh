@@ -101,6 +101,7 @@ function svgHeaders(){
 }
 
 function handleHighDPI(){
+    'use strict';
     if ( (window.devicePixelRatio) && (window.devicePixelRatio >= 2) ){
         var images = document.querySelectorAll('.handle-high-dpi');
         for(var i = 0; i < images.length; i++){
