@@ -826,6 +826,58 @@ nav {
     stroke-dashoffset: 740;
     stroke-dasharray: 365; } }
 
+@keyframes elasticScaleOut {
+  20% {
+    -webkit-transform: scale(1.2, 1.2);
+    -ms-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2); }
+
+  40% {
+    -webkit-transform: scale(0.8, 0.8);
+    -ms-transform: scale(0.8, 0.8);
+    transform: scale(0.8, 0.8); }
+
+  60% {
+    -webkit-transform: scale(0.4, 0.4);
+    -ms-transform: scale(0.4, 0.4);
+    transform: scale(0.4, 0.4); }
+
+  80% {
+    -webkit-transform: scale(0.1, 0.1);
+    -ms-transform: scale(0.1, 0.1);
+    transform: scale(0.1, 0.1); }
+
+  100% {
+    -webkit-transform: scale(0.001, 0.001);
+    -ms-transform: scale(0.001, 0.001);
+    transform: scale(0.001, 0.001); } }
+
+@-webkit-keyframes elasticScaleOut {
+  20% {
+    -webkit-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1); }
+
+  40% {
+    -webkit-transform: scale(0.8, 0.8);
+    -ms-transform: scale(0.8, 0.8);
+    transform: scale(0.8, 0.8); }
+
+  60% {
+    -webkit-transform: scale(0.4, 0.4);
+    -ms-transform: scale(0.4, 0.4);
+    transform: scale(0.4, 0.4); }
+
+  80% {
+    -webkit-transform: scale(0.1, 0.1);
+    -ms-transform: scale(0.1, 0.1);
+    transform: scale(0.1, 0.1); }
+
+  100% {
+    -webkit-transform: scale(0.001, 0.001);
+    -ms-transform: scale(0.001, 0.001);
+    transform: scale(0.001, 0.001); } }
+
 @-webkit-keyframes spin {
   from {
     -webkit-transform: rotate(0deg); }
@@ -1563,73 +1615,29 @@ figure.project__thumb p span {
     width: 50px;
     height: 50px;
     padding: 8px 0 0 10px;
-    transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
+    transition: all 200ms ease-out;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
     transition-delay: 0s;
     -webkit-transition-delay: 0s;
     -moz-transition-delay: 0s;
-    -o-transition-delay: 0s;
-    -webkit-animation-name: spin-back;
-            animation-name: spin-back;
-    -webkit-animation-duration: 300ms;
-            animation-duration: 300ms;
-    -webkit-animation-delay: 0;
-            animation-delay: 0;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-    -webkit-animation-name: spin-back;
-    -webkit-animation-duration: 300ms;
-    -webkit-animation-delay: 0;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease-out;
-    -moz-animation-name: spin-back;
-    -moz-animation-duration: 300ms;
-    -moz-animation-delay: 0;
-    -moz-animation-iteration-count: 1;
-    -moz-animation-timing-function: ease-out;
-    -o-animation-name: spin-back;
-    -o-animation-duration: 300ms;
-    -o-animation-delay: 0;
-    -o-animation-iteration-count: 1;
-    -o-animation-timing-function: ease-out; }
+    -o-transition-delay: 0s; }
     .projects__overlay .close:hover, .projects__overlay .close.spin {
-      transition: all 0.5s ease;
-      -webkit-transition: all 0.5s ease;
-      -moz-transition: all 0.5s ease;
-      -o-transition: all 0.5s ease;
+      transition: all 200ms ease-out;
+      -webkit-transition: all 200ms ease-out;
+      -moz-transition: all 200ms ease-out;
+      -o-transition: all 200ms ease-out;
       transition-delay: 0s;
       -webkit-transition-delay: 0s;
       -moz-transition-delay: 0s;
       -o-transition-delay: 0s;
-      -webkit-animation-name: spin;
-              animation-name: spin;
-      -webkit-animation-duration: 300ms;
-              animation-duration: 300ms;
-      -webkit-animation-delay: 0;
-              animation-delay: 0;
-      -webkit-animation-iteration-count: 1;
-              animation-iteration-count: 1;
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-      -webkit-animation-name: spin;
-      -webkit-animation-duration: 300ms;
-      -webkit-animation-delay: 0;
-      -webkit-animation-iteration-count: 1;
-      -webkit-animation-timing-function: ease-out;
-      -moz-animation-name: spin;
-      -moz-animation-duration: 300ms;
-      -moz-animation-delay: 0;
-      -moz-animation-iteration-count: 1;
-      -moz-animation-timing-function: ease-out;
-      -o-animation-name: spin;
-      -o-animation-duration: 300ms;
-      -o-animation-delay: 0;
-      -o-animation-iteration-count: 1;
-      -o-animation-timing-function: ease-out; }
+      -webkit-transform: scale(1.1, 1.1);
+      -ms-transform: scale(1.1, 1.1);
+      transform: scale(1.1, 1.1); }
+    .projects__overlay .close.closing {
+      -webkit-animation: elasticScaleOut 0.4s ease-out 1;
+      animation: elasticScaleOut 0.4s ease-out 1; }
 
 .overlay__title {
   margin: 20px 40px;

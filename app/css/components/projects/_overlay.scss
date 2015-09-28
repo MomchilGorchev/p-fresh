@@ -37,11 +37,17 @@
     width: 50px;
     height: 50px;
     padding: 8px 0 0 10px;
-    @include vendor-transition();
-    @include customise-animation(spin-back, 300ms, 0, 1, ease-out);
+    @include vendor-transition(all, 200ms, ease-out);
     &:hover, &.spin{
-      @include vendor-transition();
-      @include customise-animation(spin, 300ms, 0, 1, ease-out);
+      @include vendor-transition(all, 200ms, ease-out);
+      @include scale-element(1.1, 1.1);
+    }
+
+    &.closing{
+      -webkit-animation: elasticScaleOut 0.4s ease-out 1;
+      -o-animation: elasticScaleOut 0.4s ease-out 1;
+      animation: elasticScaleOut 0.4s ease-out 1;
+      //@include scale-element(0.1, 0.1);
     }
   }
 

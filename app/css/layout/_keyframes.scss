@@ -23,6 +23,55 @@
   }
 }
 
+//--------------------------------
+// Need to extend mixins
+
+@keyframes elasticScaleOut{
+  20%{
+    @include scale-element(1.2, 1.2);
+    //@include rotateElement(30deg);
+  }
+  40%{
+    @include scale-element(0.8, 0.8);
+    //@include rotateElement(-15deg);
+
+  }
+  60%{
+    @include scale-element(0.4, 0.4);
+    //@include rotateElement(-15deg);
+
+  }
+  80%{
+    @include scale-element(0.1, 0.1);
+  }
+
+  100%{
+    @include scale-element(0.001, 0.001);
+  }
+}
+
+@-webkit-keyframes elasticScaleOut{
+  20%{
+    @include scale-element(1.1, 1.1);
+  }
+
+  40%{
+    @include scale-element(0.8, 0.8);
+  }
+
+  60%{
+    @include scale-element(0.4, 0.4);
+  }
+
+  80%{
+    @include scale-element(0.1, 0.1);
+  }
+
+  100%{
+    @include scale-element(0.001, 0.001);
+  }
+}
+
 @-webkit-keyframes spin {
   from { -webkit-transform: rotate(0deg); }
   to { -webkit-transform: rotate(360deg); }
