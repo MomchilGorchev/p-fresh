@@ -47,6 +47,7 @@
 
   100%{
     @include scale-element(0.001, 0.001);
+    opacity:0;
   }
 }
 
@@ -69,6 +70,7 @@
 
   100%{
     @include scale-element(0.001, 0.001);
+    opacity:0;
   }
 }
 

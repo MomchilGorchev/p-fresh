@@ -866,7 +866,8 @@ nav {
   100% {
     -webkit-transform: scale(0.001, 0.001);
     -ms-transform: scale(0.001, 0.001);
-    transform: scale(0.001, 0.001); } }
+    transform: scale(0.001, 0.001);
+    opacity: 0; } }
 
 @-webkit-keyframes elasticScaleOut {
   20% {
@@ -892,7 +893,8 @@ nav {
   100% {
     -webkit-transform: scale(0.001, 0.001);
     -ms-transform: scale(0.001, 0.001);
-    transform: scale(0.001, 0.001); } }
+    transform: scale(0.001, 0.001);
+    opacity: 0; } }
 
 @-webkit-keyframes spin {
   from {
