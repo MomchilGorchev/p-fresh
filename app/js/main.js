@@ -206,6 +206,8 @@ function overlayToggle(){
     // Close btn logic
     closeTrigger.addEventListener('click', function(e){
         e.preventDefault();
+        util.addClass(closeTrigger, 'closing');
+
         // Little delay
         setTimeout(function(){
             // Remove content
@@ -214,6 +216,7 @@ function overlayToggle(){
             // And close the overlay
             util.toggleClass(overlay, 'open');
             util.toggleClass(body, 'overlay-open');
+            util.removeClass(closeTrigger, 'closing');
         }, 300);
     });
 
