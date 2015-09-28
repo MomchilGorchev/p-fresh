@@ -140,11 +140,25 @@ table {
 td, th {
   padding: 0; }
 
+/* Custom mixins */
+/* 1. Animations */
+/* 2. Transformations */
+/* 3. Layout */
+/* 1. Animations */
 /* Vendor prefixes for transition */
 /* Customise animation appearance - works perfectly with Animate.css for example */
-/* Easely center an element */
+/* 2. Transformations */
 /* Cross browser scale */
 /* Apply filter to an element. Filters are one of the following: */
+/* Enable GPU acceleration */
+/* Rotate element */
+/* 3. Layout */
+/* Easely center an element */
+/* Consistent box shadow */
+/* Consistent border radius */
+/* Apply background-size property */
+/* Consistent <a/> tags look and feel */
+/* Create media query rules inside every element */
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -2123,7 +2137,6 @@ figure.project__thumb p span {
         -moz-transition-delay: 0s;
         -o-transition-delay: 0s; }
         .footer__info p a:hover {
-          color: #999999;
           text-decoration: underline;
           transition: all 0.2s ease-in;
           -webkit-transition: all 0.2s ease-in;
@@ -2154,7 +2167,6 @@ figure.project__thumb p span {
     -moz-transition-delay: 0s;
     -o-transition-delay: 0s; }
     .footer__report:hover {
-      color: #999999;
       text-decoration: underline;
       transition: all 0.2s ease-in;
       -webkit-transition: all 0.2s ease-in;

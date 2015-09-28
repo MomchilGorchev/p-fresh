@@ -237,7 +237,12 @@
 }
 
 
+/* Custom mixins */
+/* 1. Animations */
+/* 2. Transformations */
+/* 3. Layout */
 
+/* 1. Animations */
 /* Vendor prefixes for transition */
 @mixin vendor-transition($property: all, $duration: 0.5s, $effect: ease, $delay: 0s){
 
@@ -252,10 +257,8 @@
   -o-transition-delay: $delay;
 
 }
-
 /* Customise animation appearance - works perfectly with Animate.css for example */
 @mixin customise-animation($name: spin, $duration: 2s, $delay: 1.5s, $iterations: infinite, $easing: ease-out) {
-
   animation-name: $name;
   animation-duration: $duration;
   animation-delay: $delay;
@@ -279,29 +282,17 @@
   -o-animation-delay: $delay;
   -o-animation-iteration-count: $iterations;
   -o-animation-timing-function: $easing;
-
 }
 
-/* Easely center an element */
-@mixin center-box($width: 80%, $margin-up-down: 0){
-
-  float: none;
-  width: $width;
-  margin: $margin-up-down auto;
-
-}
-
+/* 2. Transformations */
 /* Cross browser scale */
 @mixin scale-element($valueX: 1.2, $valueY: 1.2){
-
   -webkit-transform: scale($valueX, $valueY);
   -moz-transform: scale($valueX, $valueY);
   -ms-transform: scale($valueX, $valueY);
   -o-transform: scale($valueX, $valueY);
   transform: scale($valueX, $valueY);
-
 }
-
 /* Apply filter to an element. Filters are one of the following: */
 // Greyscale
 // Blur
@@ -321,7 +312,31 @@
   -ms-filter: #{$filter}(#{$amount});
   filter: #{$filter}(#{$amount});
 }
+/* Enable GPU acceleration */
+@mixin enableGPU{
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+/* Rotate element */
+@mixin rotateElement($amount){
+  -webkit-transform: rotate($amount);
+  -moz-transform: rotate($amount);
+  -ms-transform: rotate($amount);
+  -o-transform: rotate($amount);
+  transform: rotate($amount);
+}
 
+/* 3. Layout */
+/* Easely center an element */
+@mixin center-box($width: 80%, $margin-up-down: 0){
+  float: none;
+  width: $width;
+  margin: $margin-up-down auto;
+}
+/* Consistent box shadow */
 @mixin box-shadow{
   -webkit-box-shadow: 0 5px 0 0 $bg-color;
   -moz-box-shadow: 0 5px 0 0 $bg-color;
@@ -332,37 +347,21 @@
     box-shadow: 0 5px 0 0 $bg-color;
   }
 }
-
+/* Consistent border radius */
 @mixin border-radius($amount){
   border-radius: $amount;
   -moz-border-radius: $amount;
   -webkit-border-radius: $amount;
   -o-border-radius: $amount;
 }
-
+/* Apply background-size property */
 @mixin bgSize($size){
   -webkit-background-size: $size;
   -moz-background-size: $size;
   -o-background-size: $size;
   background-size: $size;
 }
-
-@mixin enableGPU{
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
-}
-
-@mixin rotateElement($amount){
-  -webkit-transform: rotate($amount);
-  -moz-transform: rotate($amount);
-  -ms-transform: rotate($amount);
-  -o-transform: rotate($amount);
-  transform: rotate($amount);
-}
-
+/* Consistent <a/> tags look and feel */
 @mixin link(){
   color: $font-color;
   background-color: #055F67;
@@ -370,13 +369,12 @@
   padding: 2px;
   @include vendor-transition(all, 0.2s, ease-in);
   &:hover{
-    color: darken($font-color, 20%);
+    //color: darken($font-color, 20%);
     text-decoration: underline;
     @include vendor-transition(all, 0.2s, ease-in);
   }
 }
-
-
+/* Create media query rules inside every element */
 //use: @include breakpoint(up) { ... };
 @mixin breakpoint($class, $dimension: null) {
   @if $dimension == height{
