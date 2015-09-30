@@ -33,6 +33,34 @@ function menuToggleAnim(menuTrigger){
         }, 300);
     }
 }
+
+
+function getConnection(){
+
+    var ro = {
+        "_rt": Math.random().toString(18).slice(2),
+        "_do": window.location.origin
+    };
+
+    // Init request
+    var request = new XMLHttpRequest();
+    request.open('POST', 'http://localhost:4000/auth', true);
+    request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+    // Define success handler
+    request.onload = function(res){
+        console.log(res);
+
+    };
+    // Define error handler
+    request.onerror = function(err) {
+        console.log(err);
+
+    };
+    // Send
+    request.send(JSON.stringify(ro));
+
+}
+
 /**
  * Navigation panel open/close
  */
@@ -257,7 +285,7 @@ function formSubmitHandler(){
             util.addClass(btnStates, 'loading');
             // Init request
             var request = new XMLHttpRequest();
-            request.open('POST', 'http://1782345.62/mail', true);
+            request.open('POST', 'http://belgormedia.com/mail', true);
             request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
             // Define success handler
             request.onload = function(res){
@@ -391,7 +419,6 @@ function Scene(){
                             // Init the canvas animation around 1000-1100ms after we hide the preloader
                             setTimeout(function(){
                                 space = new Space();
-
 
                             }, 300);
                         }
