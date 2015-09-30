@@ -1276,6 +1276,11 @@ section.hero {
     -o-animation-delay: 0;
     -o-animation-iteration-count: 1;
     -o-animation-timing-function: ease-out; }
+  .menu__trigger.roll-out {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+    right: -60px; }
   .menu__trigger-icon img {
     width: 30px;
     margin: 5px; }

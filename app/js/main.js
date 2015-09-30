@@ -151,83 +151,92 @@ function overlayToggle(){
     var contentBox = overlay.querySelector('.projects__overlay-content');
     var closeTrigger = overlay.querySelector('.close');
     var body = document.querySelector('body');
+    var menuTrigger = document.querySelector('#menu__trigger');
 
     // Assign event-handlers to the overlay triggers
     for(var i = 0; i < triggers.length; i ++){
         var current = triggers[i];
         current.addEventListener('click', function(e){
             e.preventDefault();
-            // Clone related content to the overlay
-            var content = util.closest(this, 'figure')
-                .cloneNode(true).querySelector('.project__modal-details');
-            contentBox.appendChild(content);
 
-            // Assign dynamically event-handlers to the 'Show-more' icon
-            var triggerId = content.getAttribute('data-trigger');
-            var trigger = document.getElementById(triggerId);
-            // Show the overlay
-            util.toggleClass(overlay, 'open');
-            util.toggleClass(body, 'overlay-open');
+            var _this = this;
 
-            // Utility fn to determine the scrolled position
-            function getOverlayPosition(){
-                var elPosY = overlay.scrollTop;
-                var viewport = window.innerHeight;
-                // If under the half of the window height
-                if(elPosY > viewport / 2){
-                    util.addClass(trigger, 'go-back');
-                    return 'below';
-                } else {
-                    util.removeClass(trigger, 'go-back');
-                    return 'above';
+            util.addClass(menuTrigger, 'roll-out');
+
+            setTimeout(function(){
+                // Clone related content to the overlay
+                var content = util.closest(_this, 'figure')
+                    .cloneNode(true).querySelector('.project__modal-details');
+                contentBox.appendChild(content);
+
+                // Assign dynamically event-handlers to the 'Show-more' icon
+                var triggerId = content.getAttribute('data-trigger');
+                var trigger = document.getElementById(triggerId);
+                // Show the overlay
+                util.toggleClass(overlay, 'open');
+                util.toggleClass(body, 'overlay-open');
+
+                // Utility fn to determine the scrolled position
+                function getOverlayPosition(){
+                    var elPosY = overlay.scrollTop;
+                    var viewport = window.innerHeight;
+                    // If under the half of the window height
+                    if(elPosY > viewport / 2){
+                        util.addClass(trigger, 'go-back');
+                        return 'below';
+                    } else {
+                        util.removeClass(trigger, 'go-back');
+                        return 'above';
+                    }
                 }
-            }
 
-            // Check on scroll
-            overlay.addEventListener('scroll', function(e){
-                getOverlayPosition();
-            });
+                // Check on scroll
+                overlay.addEventListener('scroll', function(e){
+                    getOverlayPosition();
+                });
 
-            // Scroll to the target and rotate the icon as well
-            trigger.addEventListener('click', function(e){
-                e.preventDefault();
-                // Get the target element
-                var target = document.getElementById(triggerId + '-details');
-                // Important, normal scroll on the window element won't work
-                // because the overlay is fixed to take the whole screen
-                // The solution is to apply scroll on the overlay
+                // Scroll to the target and rotate the icon as well
+                trigger.addEventListener('click', function(e){
+                    e.preventDefault();
+                    // Get the target element
+                    var target = document.getElementById(triggerId + '-details');
+                    // Important, normal scroll on the window element won't work
+                    // because the overlay is fixed to take the whole screen
+                    // The solution is to apply scroll on the overlay
 
-                // When assigning the event listener check
-                // to decide which way to scroll
-                var overlayPosition = getOverlayPosition();
-                if(overlayPosition === 'below'){
-                    // Scroll to the top
-                    TweenMax.to(overlay, 1, {
-                        delay: 0.2,
-                        scrollTo: {
-                            y: overlay.offsetTop
-                        },
-                        ease: Power4.easeInOut,
-                        onComplete: function(){
-                            // Switch off the class
-                            util.removeClass(trigger, 'go-back');
-                        }
-                    });
-                } else {
-                    TweenMax.to(overlay, 1,{
-                        // Scroll to the content
-                        delay:0.2,
-                        scrollTo: {
-                            y: target.offsetTop + 100
-                        },
-                        ease: Power4.easeInOut,
-                        onComplete: function(){
-                            // Switch on the class
-                            util.addClass(trigger, 'go-back');
-                        }
-                    });
-                }
-            });
+                    // When assigning the event listener check
+                    // to decide which way to scroll
+                    var overlayPosition = getOverlayPosition();
+                    if(overlayPosition === 'below'){
+                        // Scroll to the top
+                        TweenMax.to(overlay, 1, {
+                            delay: 0.2,
+                            scrollTo: {
+                                y: overlay.offsetTop
+                            },
+                            ease: Power4.easeInOut,
+                            onComplete: function(){
+                                // Switch off the class
+                                util.removeClass(trigger, 'go-back');
+                            }
+                        });
+                    } else {
+                        TweenMax.to(overlay, 1,{
+                            // Scroll to the content
+                            delay:0.2,
+                            scrollTo: {
+                                y: target.offsetTop + 100
+                            },
+                            ease: Power4.easeInOut,
+                            onComplete: function(){
+                                // Switch on the class
+                                util.addClass(trigger, 'go-back');
+                            }
+                        });
+                    }
+                });
+            }, 300);
+
         });
     }
 
@@ -244,7 +253,14 @@ function overlayToggle(){
             // And close the overlay
             util.toggleClass(overlay, 'open');
             util.toggleClass(body, 'overlay-open');
-            util.removeClass(closeTrigger, 'closing');
+
+            setTimeout(function(){
+
+                util.removeClass(menuTrigger, 'roll-out');
+                util.removeClass(closeTrigger, 'closing');
+
+            }, 300);
+
         }, 300);
     });
 
