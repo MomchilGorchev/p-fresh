@@ -42,9 +42,11 @@ function getConnection(){
         "_do": window.location.origin
     };
 
+    console.log(JSON.stringify(ro));
+
     // Init request
     var request = new XMLHttpRequest();
-    request.open('POST', 'http://localhost:4000/auth', true);
+    request.open('POST', 'http://localhost:3000/auth', true);
     request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
     // Define success handler
     request.onload = function(res){
