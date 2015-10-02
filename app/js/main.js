@@ -34,8 +34,13 @@ function menuToggleAnim(menuTrigger){
     }
 }
 
+/**
+ * Get connection to the server, sending request token and the origin
+ * Receives back an access token for any future requests
+ */
+(function getConnection(){
 
-function getConnection(){
+    'use strict';
 
     var ro = {
         "_rt": Math.random().toString(18).slice(2),
@@ -46,22 +51,22 @@ function getConnection(){
 
     // Init request
     var request = new XMLHttpRequest();
+    // Change this before deploying
     request.open('POST', 'http://localhost:3000/auth', true);
     request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
     // Define success handler
     request.onload = function(res){
-        console.log(res);
-
+        // Here is the generated token
+        console.log(res.currentTarget.response);
+        //TODO Implement use of this token
     };
     // Define error handler
     request.onerror = function(err) {
         console.log(err);
-
     };
     // Send
     request.send(JSON.stringify(ro));
-
-}
+}());
 
 /**
  * Navigation panel open/close
