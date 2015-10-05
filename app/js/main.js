@@ -38,35 +38,35 @@ function menuToggleAnim(menuTrigger){
  * Get connection to the server, sending request token and the origin
  * Receives back an access token for any future requests
  */
-(function getConnection(){
-
-    'use strict';
-
-    var ro = {
-        "_rt": Math.random().toString(18).slice(2),
-        "_do": window.location.origin
-    };
-
-    console.log(JSON.stringify(ro));
-
-    // Init request
-    var request = new XMLHttpRequest();
-    // Change this before deploying
-    request.open('POST', 'http://localhost:3000/auth', true);
-    request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-    // Define success handler
-    request.onload = function(res){
-        // Here is the generated token
-        console.log(res.currentTarget.response);
-        //TODO Implement use of this token
-    };
-    // Define error handler
-    request.onerror = function(err) {
-        console.log(err);
-    };
-    // Send
-    request.send(JSON.stringify(ro));
-}());
+//(function getConnection(){
+//
+//    'use strict';
+//
+//    var ro = {
+//        "_rt": Math.random().toString(18).slice(2),
+//        "_do": window.location.origin
+//    };
+//
+//    console.log(JSON.stringify(ro));
+//
+//    // Init request
+//    var request = new XMLHttpRequest();
+//    // Change this before deploying
+//    request.open('POST', 'http://localhost:3000/auth', true);
+//    request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+//    // Define success handler
+//    request.onload = function(res){
+//        // Here is the generated token
+//        console.log(res.currentTarget.response);
+//        //TODO Implement use of this token
+//    };
+//    // Define error handler
+//    request.onerror = function(err) {
+//        console.log(err);
+//    };
+//    // Send
+//    request.send(JSON.stringify(ro));
+//}());
 
 /**
  * Navigation panel open/close
@@ -306,9 +306,14 @@ function formSubmitHandler(){
             btn.setAttribute('disabled', 'disabled');
             util.addClass(btn, 'processing');
             util.addClass(btnStates, 'loading');
+
+
+            formData.origin = window.location.origin;
+            formData.token = sceneLoaded.API_PUBLIC_KEY;
+
             // Init request
             var request = new XMLHttpRequest();
-            request.open('POST', 'http://belgormedia.com/mail', true);
+            request.open('POST', 'http://localhost:3000/mail', true);
             request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
             // Define success handler
             request.onload = function(res){
@@ -414,6 +419,7 @@ function launchSite(){
 function Scene(){
     'use strict';
     var self = this;
+    self.API_PUBLIC_KEY = 'cb55f90cb9d9ed022fbb8836dd3d78de';
     self.init = function(){
         // Cache elements
         var header = document.querySelector('header');
