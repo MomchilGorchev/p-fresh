@@ -283,7 +283,14 @@ function formSubmitHandler(){
     var btnStates = btn.querySelector('.submit__states');
 
     form.onsubmit = function(e){
+
         e.preventDefault();
+        // Start processing
+        // Disable btn
+        btn.setAttribute('disabled', 'disabled');
+        util.addClass(btn, 'processing');
+        util.addClass(btnStates, 'loading');
+
         var inputs = {
             name: form.querySelector('.name'),
             email: form.querySelector('.email'),
@@ -301,12 +308,6 @@ function formSubmitHandler(){
         console.log(validateObj);
         // Send form
         if(validateObj.valid){
-            // Start processing
-            // Disable btn
-            btn.setAttribute('disabled', 'disabled');
-            util.addClass(btn, 'processing');
-            util.addClass(btnStates, 'loading');
-
 
             formData.origin = window.location.origin;
             formData.token = sceneLoaded.API_PUBLIC_KEY;
@@ -317,19 +318,40 @@ function formSubmitHandler(){
             request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
             // Define success handler
             request.onload = function(res){
-                console.log(res);
-                // Animate button and reset form
-                util.addClass(btnStates, 'done');
-                for (var key in inputs) {
-                    if (inputs.hasOwnProperty(key)) {
-                        inputs[key].value = '';
+
+
+                var result = JSON.parse(res.currentTarget.response);
+                //console.log(result);
+
+                if(result.status === 'failed' || result.statusCode === '403'){
+                    // [DEBUG]
+                    //console.log('403');
+                    var responseError = document.querySelector('.contact__form__request-fail');
+                    //TODO abstract to function
+                    util.addClass(responseError, 'shown');
+                    util.removeClass(btnStates, 'loading');
+                    util.toggleClass(btn, 'processing');
+                    btn.removeAttribute('disabled');
+                    setTimeout(function(){
+                        util.removeClass(responseError, 'shown');
+                    }, 5000);
+                } else {
+                    // Animate button and reset form
+                    util.addClass(btnStates, 'done');
+                    for (var key in inputs) {
+                        if (inputs.hasOwnProperty(key)) {
+                            inputs[key].value = '';
+                        }
                     }
+                    // Switch to initial state after 800ms
+                    setTimeout(function(){
+                        util.removeClass(btnStates, 'done');
+                        util.removeClass(btnStates, 'loading');
+                        util.toggleClass(btn, 'processing');
+                        btn.removeAttribute('disabled');
+                    }, 800);
                 }
-                // Switch to initial state
-                util.removeClass(btnStates, 'done');
-                util.removeClass(btnStates, 'loading');
-                util.toggleClass(btn, 'processing');
-                btn.removeAttribute('disabled');
+
             };
             // Define error handler
             request.onerror = function(err) {
