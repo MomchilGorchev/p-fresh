@@ -132,6 +132,7 @@ nav{
         stroke-dashoffset: 740;
         stroke-dasharray: 365;
         -webkit-animation: draw 4s;
+        -moz-animation: draw 4s;
         animation: draw 4s;
       }
     }

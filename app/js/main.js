@@ -112,14 +112,19 @@ function menuItemClick(){
  */
 function svgHeaders(){
     'use strict';
-    var svgs = document.querySelectorAll('.svg-header');
+    var svgs = document.getElementsByClassName('svg-header');
     // Set to false initiallyq
     var scrolling = false;
     window.onscroll = checkAndAnimate;
     function checkAndAnimate() {
         // Animate header SVG if in range
         for(var i = 0; i < svgs.length; i++){
-            if(window.pageYOffset > svgs[i].offsetTop - window.innerHeight / 1.2){
+            //var current = document.querySelector(svgs[i]);
+                console.log(svgs[i].offsetTop);
+            //console.log(window.pageYOffset);
+            //console.log(svgs[i].offsetTop - (window.innerHeight / 1.2));
+
+            if(window.pageYOffset > svgs[i].offsetTop - (window.innerHeight / 1.2)){
                 util.addClass(svgs[i], 'active');
             }
         }
@@ -482,7 +487,6 @@ function Scene(){
         }, 1500);
 
         // Init the rest of the functionality
-        svgHeaders();
         launchSite();
         menuToggle();
         menuItemClick();
@@ -498,4 +502,4 @@ var sceneLoaded = new Scene();
 
 
 
-
+window.onload = svgHeaders;

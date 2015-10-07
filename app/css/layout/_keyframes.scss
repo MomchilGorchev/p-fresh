@@ -23,6 +23,18 @@
   }
 }
 
+@-moz-keyframes draw{
+  0%{
+    stroke-dashoffset: 450;
+    stroke-dasharray: 365;
+  }
+
+  100%{
+    stroke-dashoffset: 740;
+    stroke-dasharray: 365;
+  }
+}
+
 //--------------------------------
 // Need to extend mixins
 
