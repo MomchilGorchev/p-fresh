@@ -159,6 +159,7 @@ function overlayToggle(){
     var closeTrigger = overlay.querySelector('.close');
     var body = document.querySelector('body');
     var menuTrigger = document.querySelector('#menu__trigger');
+    var menuLinks = document.querySelector('#menu__content');
 
     // Assign event-handlers to the overlay triggers
     for(var i = 0; i < triggers.length; i ++){
@@ -169,6 +170,7 @@ function overlayToggle(){
             var _this = this;
 
             util.addClass(menuTrigger, 'roll-out');
+            util.addClass(menuLinks, 'fade-out');
 
             setTimeout(function(){
                 // Clone related content to the overlay
@@ -263,8 +265,9 @@ function overlayToggle(){
 
             setTimeout(function(){
 
-                util.removeClass(menuTrigger, 'roll-out');
                 util.removeClass(closeTrigger, 'closing');
+                util.removeClass(menuTrigger, 'roll-out');
+                util.removeClass(menuLinks, 'fade-out');
 
             }, 300);
 

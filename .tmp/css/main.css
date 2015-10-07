@@ -1287,8 +1287,8 @@ section.hero {
 .menu__content {
   position: fixed;
   opacity: 0;
-  -webkit-transform: translate3d(2%, 0, 0);
-  transform: translate3d(2%, 0, 0);
+  -webkit-transform: translate3d(5%, 0, 0);
+  transform: translate3d(5%, 0, 0);
   visibility: hidden;
   background-color: #4499a1;
   max-width: 400px;
@@ -1297,10 +1297,10 @@ section.hero {
   top: 15px;
   right: 15px;
   border-radius: 30px;
-  transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
   transition-delay: 0s;
   -webkit-transition-delay: 0s;
   -moz-transition-delay: 0s;
@@ -1325,6 +1325,8 @@ section.hero {
     -webkit-transition-delay: 0s;
     -moz-transition-delay: 0s;
     -o-transition-delay: 0s; }
+  .menu__content.fade-out {
+    opacity: 0; }
 .menu__list {
   opacity: 0;
   text-align: center;
@@ -1944,7 +1946,8 @@ figure.project__thumb p span {
     -moz-transition-delay: 0s;
     -o-transition-delay: 0s; }
 .contact__form-submit {
-  width: 100%; }
+  width: 100%;
+  overflow: hidden; }
   .contact__form-submit.processing {
     color: #000;
     background-color: #4499a1;
