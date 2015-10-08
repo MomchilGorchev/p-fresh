@@ -1,15 +1,16 @@
 /**
  * Main title and CTA button
  */
+
+var util = util || {};
+var TweenMax = TweenMax || {};
+var space;
+
 /**
  * Util function for proper animation sequence every time
  * Uses CSS3 transitions
  * @param menuTrigger - trigger
  */
-
-var util = util || {};
-var TweenMax = TweenMax || {};
-var space;
 function menuToggleAnim(menuTrigger){
     'use strict';
     // Cache elements
@@ -33,40 +34,6 @@ function menuToggleAnim(menuTrigger){
         }, 300);
     }
 }
-
-/**
- * Get connection to the server, sending request token and the origin
- * Receives back an access token for any future requests
- */
-//(function getConnection(){
-//
-//    'use strict';
-//
-//    var ro = {
-//        "_rt": Math.random().toString(18).slice(2),
-//        "_do": window.location.origin
-//    };
-//
-//    console.log(JSON.stringify(ro));
-//
-//    // Init request
-//    var request = new XMLHttpRequest();
-//    // Change this before deploying
-//    request.open('POST', 'http://localhost:3000/auth', true);
-//    request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-//    // Define success handler
-//    request.onload = function(res){
-//        // Here is the generated token
-//        console.log(res.currentTarget.response);
-//        //TODO Implement use of this token
-//    };
-//    // Define error handler
-//    request.onerror = function(err) {
-//        console.log(err);
-//    };
-//    // Send
-//    request.send(JSON.stringify(ro));
-//}());
 
 /**
  * Navigation panel open/close
@@ -293,12 +260,8 @@ function formSubmitHandler(){
     form.onsubmit = function(e){
 
         e.preventDefault();
-        // Start processing
-        // Disable btn
-        btn.setAttribute('disabled', 'disabled');
-        util.addClass(btn, 'processing');
-        util.addClass(btnStates, 'loading');
 
+        // Get the fields
         var inputs = {
             name: form.querySelector('.name'),
             email: form.querySelector('.email'),
@@ -316,6 +279,12 @@ function formSubmitHandler(){
         console.log(validateObj);
         // Send form
         if(validateObj.valid){
+
+            // Start processing
+            // Disable btn
+            btn.setAttribute('disabled', 'disabled');
+            util.addClass(btn, 'processing');
+            util.addClass(btnStates, 'loading');
 
             formData.origin = window.location.origin;
             formData.token = sceneLoaded.API_PUBLIC_KEY;
@@ -391,7 +360,7 @@ function formSubmitHandler(){
             setTimeout(function(){
                 var errs = document.querySelectorAll('.contact__form-error');
                 for(var j = 0; j < errs.length; j++){
-                    util.toggleClass(errs[j], 'active');
+                    util.removeClass(errs[j], 'active');
                 }
             }, 2000);
             console.log('no!');
