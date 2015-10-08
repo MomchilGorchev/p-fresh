@@ -86,15 +86,23 @@ function svgHeaders(){
     function checkAndAnimate() {
         // Animate header SVG if in range
         for(var i = 0; i < svgs.length; i++){
-            if(i === 0){
+            var current = svgs[i];
+            var rect = current.getBoundingClientRect();
 
-                console.log('window offset - >'+ window.pageYOffset);
-                console.log('SVG offset - >'+ svgs[i].getBoundingClientRect().top);
-                console.log('window height / 2 - >'+ window.innerHeight / 1.6);
-            }
+            var pos = {
+                top: rect.top + document.body.scrollTop,
+                left: rect.left + document.body.scrollLeft
+            };
 
-            if(svgs[i].getBoundingClientRect().top < window.pageYOffset + window.innerHeight - 100){
-                util.addClass(svgs[i], 'active');
+            // [DEBUG]
+            //if(i === 0){
+            //    console.log('window offset - >'+ window.pageYOffset);
+            //    console.log('SVG offset - >'+ pos.top);
+            //    console.log('window height / 2 - >'+ window.innerHeight / 1.6);
+            //}
+
+            if(pos.top < window.pageYOffset + window.innerHeight / 1.5){
+                util.addClass(current, 'active');
             }
         }
         // Set the flag
