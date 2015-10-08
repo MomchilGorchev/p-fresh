@@ -326,7 +326,7 @@ function formSubmitHandler(){
                         //console.log('403');
                         resetBtnStatus();
                     } else {
-                        // Animate button and reset form
+                        // Animate button and reset form inputs
                         util.addClass(btnStates, 'done');
                         for (var key in inputs) {
                             if (inputs.hasOwnProperty(key)) {
@@ -338,8 +338,8 @@ function formSubmitHandler(){
                             util.removeClass(btnStates, 'done');
                             resetBtnStatus();
                         }, 800);
-                    }                }
-
+                    }
+                }
             };
             // Define error handler
             request.onerror = function(err) {

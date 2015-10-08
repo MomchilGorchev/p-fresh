@@ -7,6 +7,8 @@
 // Vars
 $errorWidth: 80px;
 $errorHeight: $errorWidth;
+$errorHeightMessage: 140px;
+$errorWidthMessage: $errorHeightMessage;
 $errorMsgWidth: 100px;
 $errorMesHeight: $errorMsgWidth;
 $clr-accentDark: #364250;
@@ -89,24 +91,23 @@ $contactDoubleBorder:7px double $clr-accentDark;
 
       &.message{
 
-        width: $errorWidth;
-        height: $errorHeight;
-        top:14px;
-        right: -120px;
+        width: $errorWidthMessage;
+        height: $errorHeightMessage;
+        top: 0;
+        right: -170px;
 
         i{
-          top: 28px;
-          left: 3px;
+          top: 60px;
+          left: 30px;
+        }
+
+        &.active{
+
+          right: -60px;
+
         }
 
       }
-
-      &.message.active{
-
-        right: -40px;
-
-      }
-
     }
 
     &-input{

@@ -1886,15 +1886,15 @@ figure.project__thumb p span {
     -moz-transition-delay: 0s;
     -o-transition-delay: 0s; }
   .contact__form-error.message {
-    width: 80px;
-    height: 80px;
-    top: 14px;
-    right: -120px; }
+    width: 140px;
+    height: 140px;
+    top: 0;
+    right: -170px; }
     .contact__form-error.message i {
-      top: 28px;
-      left: 3px; }
-  .contact__form-error.message.active {
-    right: -40px; }
+      top: 60px;
+      left: 30px; }
+    .contact__form-error.message.active {
+      right: -60px; }
 .contact__form-input {
   height: 40px;
   width: 100%;
