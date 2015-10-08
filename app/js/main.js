@@ -256,6 +256,8 @@ function formSubmitHandler(){
     var form = document.querySelector('#contact__me');
     var btn = form.querySelector('.contact__form-submit');
     var btnStates = btn.querySelector('.submit__states');
+    var responseError = document.querySelector('.contact__form__request-fail');
+
 
     form.onsubmit = function(e){
 
@@ -291,19 +293,47 @@ function formSubmitHandler(){
 
             // Init request
             var request = new XMLHttpRequest();
+            console.log(request);
             request.open('POST', 'http://localhost:3000/mail', true);
             request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
             // Define success handler
             request.onload = function(res){
+                console.log(res);
+                var result = null;
 
+                // FIXME improve the process of error handling
+                if(res.currentTarget.status !== 404){
+                    console.log('yes!');
+                    result =  JSON.parse(res.currentTarget.response);
 
-                var result = JSON.parse(res.currentTarget.response);
-                //console.log(result);
-
-                if(result.status === 'failed' || result.statusCode === '403'){
-                    // [DEBUG]
-                    //console.log('403');
-                    var responseError = document.querySelector('.contact__form__request-fail');
+                    if(result.status === 'failed' || result.statusCode === '403'){
+                        // [DEBUG]
+                        //console.log('403');
+                        //TODO abstract to function
+                        util.addClass(responseError, 'shown');
+                        util.removeClass(btnStates, 'loading');
+                        util.toggleClass(btn, 'processing');
+                        btn.removeAttribute('disabled');
+                        setTimeout(function(){
+                            util.removeClass(responseError, 'shown');
+                        }, 5000);
+                    } else {
+                        // Animate button and reset form
+                        util.addClass(btnStates, 'done');
+                        for (var key in inputs) {
+                            if (inputs.hasOwnProperty(key)) {
+                                inputs[key].value = '';
+                            }
+                        }
+                        // Switch to initial state after 800ms
+                        setTimeout(function(){
+                            util.removeClass(btnStates, 'done');
+                            util.removeClass(btnStates, 'loading');
+                            util.toggleClass(btn, 'processing');
+                            btn.removeAttribute('disabled');
+                        }, 800);
+                    }
+                } else {
                     //TODO abstract to function
                     util.addClass(responseError, 'shown');
                     util.removeClass(btnStates, 'loading');
@@ -312,28 +342,12 @@ function formSubmitHandler(){
                     setTimeout(function(){
                         util.removeClass(responseError, 'shown');
                     }, 5000);
-                } else {
-                    // Animate button and reset form
-                    util.addClass(btnStates, 'done');
-                    for (var key in inputs) {
-                        if (inputs.hasOwnProperty(key)) {
-                            inputs[key].value = '';
-                        }
-                    }
-                    // Switch to initial state after 800ms
-                    setTimeout(function(){
-                        util.removeClass(btnStates, 'done');
-                        util.removeClass(btnStates, 'loading');
-                        util.toggleClass(btn, 'processing');
-                        btn.removeAttribute('disabled');
-                    }, 800);
                 }
 
             };
             // Define error handler
             request.onerror = function(err) {
-                console.log(err);
-                var responseError = document.querySelector('.contact__form__request-fail');
+                console.log(JSON.parse(err));
                 //TODO abstract to function
                 util.addClass(responseError, 'shown');
                 util.removeClass(btnStates, 'loading');
