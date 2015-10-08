@@ -258,11 +258,25 @@ function formSubmitHandler(){
     var btnStates = btn.querySelector('.submit__states');
     var responseError = document.querySelector('.contact__form__request-fail');
 
+    /**
+     * Util function to reset submit button loading status
+     */
+    function resetBtnStatus(){
 
+        'use strict';
+        util.addClass(responseError, 'shown');
+        util.removeClass(btnStates, 'loading');
+        util.toggleClass(btn, 'processing');
+        btn.removeAttribute('disabled');
+        setTimeout(function(){
+            util.removeClass(responseError, 'shown');
+        }, 5000);
+    }
+
+    // Main submit handler
     form.onsubmit = function(e){
 
         e.preventDefault();
-
         // Get the fields
         var inputs = {
             name: form.querySelector('.name'),
@@ -287,10 +301,10 @@ function formSubmitHandler(){
             btn.setAttribute('disabled', 'disabled');
             util.addClass(btn, 'processing');
             util.addClass(btnStates, 'loading');
-
+            // Auth information for the request
+            // Add additional fields if necessary
             formData.origin = window.location.origin;
             formData.token = sceneLoaded.API_PUBLIC_KEY;
-
             // Init request
             var request = new XMLHttpRequest();
             console.log(request);
@@ -301,22 +315,16 @@ function formSubmitHandler(){
                 console.log(res);
                 var result = null;
 
-                // FIXME improve the process of error handling
-                if(res.currentTarget.status !== 404){
-                    console.log('yes!');
+                // Check the request status before parsing any data
+                if(res.currentTarget.status === 404){
+                    resetBtnStatus();
+                } else {
                     result =  JSON.parse(res.currentTarget.response);
-
+                    // If authentication failed
                     if(result.status === 'failed' || result.statusCode === '403'){
                         // [DEBUG]
                         //console.log('403');
-                        //TODO abstract to function
-                        util.addClass(responseError, 'shown');
-                        util.removeClass(btnStates, 'loading');
-                        util.toggleClass(btn, 'processing');
-                        btn.removeAttribute('disabled');
-                        setTimeout(function(){
-                            util.removeClass(responseError, 'shown');
-                        }, 5000);
+                        resetBtnStatus();
                     } else {
                         // Animate button and reset form
                         util.addClass(btnStates, 'done');
@@ -328,34 +336,16 @@ function formSubmitHandler(){
                         // Switch to initial state after 800ms
                         setTimeout(function(){
                             util.removeClass(btnStates, 'done');
-                            util.removeClass(btnStates, 'loading');
-                            util.toggleClass(btn, 'processing');
-                            btn.removeAttribute('disabled');
+                            resetBtnStatus();
                         }, 800);
-                    }
-                } else {
-                    //TODO abstract to function
-                    util.addClass(responseError, 'shown');
-                    util.removeClass(btnStates, 'loading');
-                    util.toggleClass(btn, 'processing');
-                    btn.removeAttribute('disabled');
-                    setTimeout(function(){
-                        util.removeClass(responseError, 'shown');
-                    }, 5000);
-                }
+                    }                }
 
             };
             // Define error handler
             request.onerror = function(err) {
-                console.log(JSON.parse(err));
-                //TODO abstract to function
-                util.addClass(responseError, 'shown');
-                util.removeClass(btnStates, 'loading');
-                util.toggleClass(btn, 'processing');
-                btn.removeAttribute('disabled');
-                setTimeout(function(){
-                    util.removeClass(responseError, 'shown');
-                }, 5000);
+                // [DEBUG]
+                // console.log(err);
+                resetBtnStatus();
             };
             // Send
             request.send(JSON.stringify(formData));
