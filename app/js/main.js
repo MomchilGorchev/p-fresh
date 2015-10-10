@@ -437,18 +437,23 @@ function Scene(){
         var header = document.querySelector('header');
         var ctaBtn = document.querySelector('#main-cta');
         var preloader = document.querySelector('#preloader');
+        var text = preloader.querySelector('.preloader__text');
+        var spinner = preloader.querySelector('.preloader__spinner');
         // Chain animation
         // First timeout to remove the preloader
         setTimeout(function(){
+            text.innerText = 'Done!';
+            util.addClass(text, 'loaded');
+            util.addClass(spinner, 'loaded');
             util.addClass(preloader, 'done');
             setTimeout(function(){
                 preloader.parentNode.removeChild(preloader);
-            }, 800);
+            }, 1800);
             // Animate the title TODO - needs refactoring
             TweenMax.to(header, 0.3, {
                 y: -5,
                 opacity: 1,
-                delay: 0.7,
+                delay: 1.7,
                 ease: Power0.easeNone,
                 onComplete: function(){
                     // And the button a bit later
@@ -466,7 +471,7 @@ function Scene(){
                     });
                 }
             });
-        }, 1500);
+        }, 1800);
 
         // Init the rest of the functionality
         svgHeaders();

@@ -772,7 +772,8 @@ nav {
   -o-transition-delay: 0s; }
   .preloader__spinner {
     position: absolute;
-    border-top: 2px solid #4499a1;
+    border: 2px solid transparent;
+    border-bottom-color: #4499a1;
     border-radius: 50%;
     -webkit-animation: spin 0.8s linear infinite;
     animation: spin 0.8s linear infinite;
@@ -782,22 +783,51 @@ nav {
     margin-top: -41px;
     left: 50%;
     margin-left: -41px; }
+    .preloader__spinner.loaded {
+      border-color: #4499a1;
+      transition: all 0.8s ease-in-out;
+      -webkit-transition: all 0.8s ease-in-out;
+      -moz-transition: all 0.8s ease-in-out;
+      -o-transition: all 0.8s ease-in-out;
+      transition-delay: 0s;
+      -webkit-transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      -o-transition-delay: 0s; }
   .preloader__text {
     position: absolute;
     top: 65%;
     margin-top: -41px;
     text-align: center;
-    width: 100%; }
-  .preloader.done {
-    opacity: 0;
-    transition: opacity 0.6s ease-in;
-    -webkit-transition: opacity 0.6s ease-in;
-    -moz-transition: opacity 0.6s ease-in;
-    -o-transition: opacity 0.6s ease-in;
+    width: 100%;
+    transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
     transition-delay: 0s;
     -webkit-transition-delay: 0s;
     -moz-transition-delay: 0s;
     -o-transition-delay: 0s; }
+    .preloader__text.loaded {
+      -webkit-transform: translate3d(0, -70px, 0);
+      transform: translate3d(0, -70px, 0);
+      transition: all 0.5s ease-out;
+      -webkit-transition: all 0.5s ease-out;
+      -moz-transition: all 0.5s ease-out;
+      -o-transition: all 0.5s ease-out;
+      transition-delay: 0s;
+      -webkit-transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      -o-transition-delay: 0s; }
+  .preloader.done {
+    opacity: 0;
+    transition: all 0.6s ease-out;
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    transition-delay: 1.5s;
+    -webkit-transition-delay: 1.5s;
+    -moz-transition-delay: 1.5s;
+    -o-transition-delay: 1.5s; }
 
 .underline {
   width: 40%;
