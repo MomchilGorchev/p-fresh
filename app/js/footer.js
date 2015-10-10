@@ -1,7 +1,7 @@
 /**
  * Created by momchillgorchev on 27/07/15.
  */
-
+var TweenMax = TweenMax || {};
 var canvas = document.querySelector('#footer__canvas'),
     ctx    = canvas.getContext('2d'),
 

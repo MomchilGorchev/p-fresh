@@ -150,7 +150,7 @@ gulp.task('serve', ['css'], function () {
 });
 
 // Build and serve the output from the dist build
-gulp.task('serve:dist', ['default'], function () {
+gulp.task('serve:dist', ['build'], function () {
     browserSync({
         notify: false,
         logPrefix: 'SDK',
@@ -160,6 +160,7 @@ gulp.task('serve:dist', ['default'], function () {
 });
 
 // Build for production (default)
-gulp.task('default', ['clean'], function (cb) {
+gulp.task('build', ['clean'], function (cb) {
+    //console.log(cb);
     runSequence('css', ['jshint', 'html', 'img', 'fonts', 'copy'], cb);
 });
