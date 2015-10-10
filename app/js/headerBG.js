@@ -21,12 +21,14 @@ function Space(){
         colors = ['204, 196, 123', '0, 214, 255', '179, 243, 255', '7, 108, 127', '143, 194, 204'],
         centerX = WIDTH/2, centerY = HEIGHT/ 2,
         //warpZ = 5,
-        units = 300,
+        units = 200,
         stars = [],
         Z = 0.09,
         M = Math,
         Rnd = M.random;
-    ctx.globalAlpha = 0.66; var alpha = 0.05;
+    ctx.globalAlpha = 0.66;
+
+    var alpha = 0.05;
     var cx = centerX,
         cy = centerY;
 
@@ -37,7 +39,7 @@ function Space(){
         } else {
             clearInterval(alphaIncrease);
         }
-    }, 700);
+    }, 400);
 
     // Returns random array index
     function randomIndex(array){
@@ -97,8 +99,6 @@ function Space(){
                 //}
                 // Crazy stuff
                 //ctx.arc(x0 + cx * (radius / n.z), y0 + cy + (j * radius / n.z), radius, 0, Math.PI * 2, true);
-
-
 
 
                 // Add more arc with descending x and y positions to make longer star trace.
