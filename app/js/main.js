@@ -94,6 +94,7 @@ function svgHeaders(){
                 left: rect.left + document.body.scrollLeft
             };
 
+
             // [DEBUG]
             //if(i === 0){
             //    console.log('window offset - >'+ window.pageYOffset);
@@ -272,8 +273,6 @@ function formSubmitHandler(){
      * Util function to reset submit button loading status
      */
     function resetBtnStatus(){
-
-        'use strict';
         util.addClass(responseError, 'shown');
         util.removeClass(btnStates, 'loading');
         util.toggleClass(btn, 'processing');
