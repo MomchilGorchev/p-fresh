@@ -444,7 +444,7 @@ function Scene(){
         setTimeout(function(){
             util.addClass(text, 'loaded');
             setTimeout(function(){
-                text.innerText = '100%';
+                text.innerHTML = '100%';
                 util.removeClass(text, 'loaded');
                 util.addClass(spinner, 'loaded');
                 util.addClass(preloader, 'done');
