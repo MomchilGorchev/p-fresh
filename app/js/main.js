@@ -442,35 +442,38 @@ function Scene(){
         // Chain animation
         // First timeout to remove the preloader
         setTimeout(function(){
-            text.innerText = 'Done!';
             util.addClass(text, 'loaded');
-            util.addClass(spinner, 'loaded');
-            util.addClass(preloader, 'done');
             setTimeout(function(){
-                preloader.parentNode.removeChild(preloader);
-            }, 1800);
-            // Animate the title TODO - needs refactoring
-            TweenMax.to(header, 0.3, {
-                y: -5,
-                opacity: 1,
-                delay: 1.7,
-                ease: Power0.easeNone,
-                onComplete: function(){
-                    // And the button a bit later
-                    TweenMax.to(ctaBtn, 0.3, {
-                        y: -5,
-                        opacity: 1,
-                        ease: Power4.easeInOut,
-                        onComplete: function(){
-                            // Init the canvas animation around 1000-1100ms after we hide the preloader
-                            setTimeout(function(){
-                                space = new Space();
+                text.innerText = '100%';
+                util.removeClass(text, 'loaded');
+                util.addClass(spinner, 'loaded');
+                util.addClass(preloader, 'done');
+                setTimeout(function(){
+                    preloader.parentNode.removeChild(preloader);
+                }, 1800);
+                // Animate the title TODO - needs refactoring
+                TweenMax.to(header, 0.3, {
+                    y: -5,
+                    opacity: 1,
+                    delay: 1.7,
+                    ease: Power0.easeNone,
+                    onComplete: function(){
+                        // And the button a bit later
+                        TweenMax.to(ctaBtn, 0.3, {
+                            y: -5,
+                            opacity: 1,
+                            ease: Power4.easeInOut,
+                            onComplete: function(){
+                                // Init the canvas animation around 1000-1100ms after we hide the preloader
+                                setTimeout(function(){
+                                    space = new Space();
 
-                            }, 300);
-                        }
-                    });
-                }
-            });
+                                }, 300);
+                            }
+                        });
+                    }
+                });
+            }, 500);
         }, 1800);
 
         // Init the rest of the functionality

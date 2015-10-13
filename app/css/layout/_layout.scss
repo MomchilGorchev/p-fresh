@@ -86,17 +86,17 @@ nav{
     -webkit-animation: spin 0.8s linear infinite;
     -o-animation: spin 0.8s linear infinite;
     animation: spin 0.8s linear infinite;
-    width: 82px;
-    height: 82px;
+    width: 100px;
+    height: 100px;
     top:50%;
-    margin-top: -41px;
+    margin-top: -50px;
     left: 50%;
-    margin-left: -41px;
+    margin-left: -50px;
 
     &.loaded{
 
       border-color: $bg-color;
-      @include vendor-transition(all, 0.8s, ease-in-out);
+      @include vendor-transition(all, 0.6s, ease-in-out);
     }
 
   }
@@ -104,16 +104,16 @@ nav{
   &__text{
 
     position: absolute;
-    top:65%;
-    margin-top: -41px;
+    top:54%;
+    margin-top: -40px;
     text-align: center;
     width: 100%;
-    @include vendor-transition(all, 0.5s, ease-out);
+    opacity:0.6;
+    @include vendor-transition(all, 0.25s, ease-out);
 
     &.loaded{
-      -webkit-transform: translate3d(0, -70px, 0);
-      transform: translate3d(0, -70px, 0);
-      @include vendor-transition(all, 0.5s, ease-out);
+      opacity:0;
+      @include vendor-transition(all, 0.25s, ease-out);
     }
 
 
