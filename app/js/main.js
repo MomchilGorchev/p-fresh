@@ -273,13 +273,9 @@ function formSubmitHandler(){
      * Util function to reset submit button loading status
      */
     function resetBtnStatus(){
-        util.addClass(responseError, 'shown');
         util.removeClass(btnStates, 'loading');
         util.toggleClass(btn, 'processing');
         btn.removeAttribute('disabled');
-        setTimeout(function(){
-            util.removeClass(responseError, 'shown');
-        }, 5000);
     }
 
     // Main submit handler
@@ -317,7 +313,7 @@ function formSubmitHandler(){
             // Init request
             var request = new XMLHttpRequest();
             console.log(request);
-            request.open('POST', 'http://localhost:3000/mail', true);
+            request.open('POST', 'http://belgormedia.com/mail', true);
             request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
             // Define success handler
             request.onload = function(res){
@@ -325,15 +321,26 @@ function formSubmitHandler(){
                 var result = null;
 
                 // Check the request status before parsing any data
+                // If we have an 404 error
                 if(res.currentTarget.status === 404){
+                    // Reset loading button and show message
                     resetBtnStatus();
+                    util.addClass(responseError, 'shown');
+                    setTimeout(function(){
+                        util.removeClass(responseError, 'shown');
+                    }, 5000);
                 } else {
                     result =  JSON.parse(res.currentTarget.response);
                     // If authentication failed
                     if(result.status === 'failed' || result.statusCode === '403'){
                         // [DEBUG]
                         //console.log('403');
+                        // Reset loading button and show message
                         resetBtnStatus();
+                        util.addClass(responseError, 'shown');
+                        setTimeout(function(){
+                            util.removeClass(responseError, 'shown');
+                        }, 5000);
                     } else {
                         // Animate button and reset form inputs
                         util.addClass(btnStates, 'done');
@@ -355,6 +362,10 @@ function formSubmitHandler(){
                 // [DEBUG]
                 // console.log(err);
                 resetBtnStatus();
+                util.addClass(responseError, 'shown');
+                setTimeout(function(){
+                    util.removeClass(responseError, 'shown');
+                }, 5000);
             };
             // Send
             request.send(JSON.stringify(formData));
@@ -431,7 +442,7 @@ function launchSite(){
 function Scene(){
     'use strict';
     var self = this;
-    self.API_PUBLIC_KEY = 'cb55f90cb9d9ed022fbb8836dd3d78de';
+    self.API_PUBLIC_KEY = '8def3b098dafa537ea298e5e28d7969c';
     self.init = function(){
         // Cache elements
         var header = document.querySelector('header');
