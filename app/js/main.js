@@ -443,6 +443,8 @@ function Scene(){
         // First timeout to remove the preloader
         setTimeout(function(){
             util.addClass(text, 'loaded');
+            // Second timeout to change the text on the preloaded
+            // And chain everything after
             setTimeout(function(){
                 text.innerHTML = '100%';
                 util.removeClass(text, 'loaded');
@@ -465,6 +467,7 @@ function Scene(){
                             ease: Power4.easeInOut,
                             onComplete: function(){
                                 // Init the canvas animation around 1000-1100ms after we hide the preloader
+                                // This is improving load time
                                 setTimeout(function(){
                                     space = new Space();
 
