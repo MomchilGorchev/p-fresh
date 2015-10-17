@@ -1,36 +1,36 @@
-
-//TODO improve this
-// Improve the initali animation sequence
+/**
+ * Hero's canvas and initial animation sequence scripts
+ */
 window.requestAnimationFrame = window.requestAnimationFrame
     || window.mozRequestAnimationFrame
     || window.webkitRequestAnimationFrame
     || window.msRequestAnimationFrame;
 
+/**
+ * Main canvas scene
+ * @constructor
+ */
 function Space(){
     // Initial
     'use strict';
-
     var _this = this;
-    _this.warpZ = 8;
     var canvas = document.getElementById('welcome'),
         ctx = canvas.getContext('2d'),
-
         WIDTH = canvas.width = window.innerWidth,
         HEIGHT = canvas.height = window.innerHeight,
-
-        colors = ['204, 196, 123', '0, 214, 255', '179, 243, 255', '7, 108, 127', '143, 194, 204'],
         centerX = WIDTH/2, centerY = HEIGHT/ 2,
-        //warpZ = 5,
-        units = 200,
+        cx = centerX,
+        cy = centerY,
+        units = 150,
         stars = [],
         Z = 0.09,
         M = Math,
-        Rnd = M.random;
-    ctx.globalAlpha = 0.66;
+        Rnd = M.random,
+        alpha = 0.05,
+        colors = ['204, 196, 123', '0, 214, 255', '179, 243, 255', '7, 108, 127', '143, 194, 204'];
 
-    var alpha = 0.05;
-    var cx = centerX,
-        cy = centerY;
+    ctx.globalAlpha = 0.66;
+    _this.warpZ = 8;
 
     // Increase the alpha every 700 ms for smooth animation
     var alphaIncrease = setInterval(function(){
@@ -86,26 +86,32 @@ function Space(){
             //console.log(ctx.fillStyle);
             if (n.px !== 0){
                 ctx.beginPath();
-                for(var j = 0; j < 2; j++){
-                    ctx.arc(xx + cx + j * (radius / n.z), yy + cy + (j * radius / n.z), radius, 0, Math.PI * 2, true);
-                }
+                // Longer star trace - disabled for performance
+                //for(var j = 0; j < 5; j++){
+                //    ctx.arc(xx + cx + j * (radius / n.z), yy + cy + (j * radius / n.z), radius, 0, Math.PI * 2, true);
+                //}
                 ctx.arc(xx + cx, yy + cy, radius, 0, Math.PI * 2, true);
                 ctx.arc(n.px + cx, n.py + cy, radius, 0, Math.PI * 2, true);
+                ctx.closePath();
+                ctx.fill();
 
                 // Sick animation looking like the black hole in Interstellar movie!
-                //for(var j = 0; j < 10; j++){
-                //    ctx.arc(xx * j + cx, yy + cy, radius, 0, Math.PI * 2, true);
-                //    ctx.arc(n.px * j + cx, n.py + cy, radius, 0, Math.PI * 2, true);
+                //for(var k = 0; k < 10; k++){
+                //    ctx.arc(xx * k + cx, yy + cy, radius, 0, Math.PI * 2, true);
+                //    ctx.arc(n.px * k + cx, n.py + cy, radius, 0, Math.PI * 2, true);
+                //    ctx.closePath();
+                //    ctx.fill();
                 //}
                 // Crazy stuff
                 //ctx.arc(x0 + cx * (radius / n.z), y0 + cy + (j * radius / n.z), radius, 0, Math.PI * 2, true);
-
+                //
 
                 // Add more arc with descending x and y positions to make longer star trace.
                 // Need optimisations as if enabled lower down the FPS slightly
+                //ctx.beginPath();
                 //ctx.arc(n.px / 2 + cx, n.py / 2 + cy, radius, 0, Math.PI * 2, true);
-                ctx.closePath();
-                ctx.fill();
+                //ctx.closePath();
+                //ctx.fill();
             }
 
             // update star position values with new settings
