@@ -1075,7 +1075,7 @@ p, label, article, aside, a, li {
 
 #welcome {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   opacity: 0.66;
   background: rgba(0, 0, 0, 0.66); }
 

@@ -6,6 +6,8 @@ window.requestAnimationFrame = window.requestAnimationFrame
     || window.webkitRequestAnimationFrame
     || window.msRequestAnimationFrame;
 
+console.log(util.mobileDevice());
+
 /**
  * Main canvas scene
  * @constructor
