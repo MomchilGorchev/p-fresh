@@ -101,11 +101,23 @@ nav{
 
   }
 
+  &__wrapper__text{
+
+    position:absolute;
+    width:100px;
+    height:100px;
+    top:50%;
+    margin-top: -50px;
+    left: 50%;
+    margin-left: -50px;
+
+  }
+
   &__text{
 
     position: absolute;
-    top:54%;
-    margin-top: -40px;
+    top:50%;
+    margin-top: -10px;
     text-align: center;
     width: 100%;
     opacity:0.6;

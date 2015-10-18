@@ -793,10 +793,18 @@ nav {
       -webkit-transition-delay: 0s;
       -moz-transition-delay: 0s;
       -o-transition-delay: 0s; }
+  .preloader__wrapper__text {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    margin-top: -50px;
+    left: 50%;
+    margin-left: -50px; }
   .preloader__text {
     position: absolute;
-    top: 54%;
-    margin-top: -40px;
+    top: 50%;
+    margin-top: -10px;
     text-align: center;
     width: 100%;
     opacity: 0.6;
