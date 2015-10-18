@@ -18,7 +18,8 @@ ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
 ctx.globalAlpha = 0.15;
 
-console.log(footerContainer);
+// [DEBUG]
+//console.log(footerContainer);
 
 
 // Constructor function
