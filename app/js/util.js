@@ -7,7 +7,7 @@
 function Util(){
     'use strict';
     var _this = this;
-    _this.version = '0.0.1';
+    _this.version = '1.0.3';
 
     // Element class attribute manipulation
     // toggle
