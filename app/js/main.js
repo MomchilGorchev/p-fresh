@@ -444,6 +444,12 @@ function Scene(){
     var self = this;
     self.API_PUBLIC_KEY = '8def3b098dafa537ea298e5e28d7969c';
     self.init = function(){
+
+        if(util.isSafari || util.isIe){
+            console.log('YES');
+            util.disableSVG();
+        }
+
         // Cache elements
         var header = document.querySelector('header');
         var ctaBtn = document.querySelector('#main-cta');
