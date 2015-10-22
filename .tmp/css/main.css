@@ -1037,6 +1037,9 @@ h1 {
   letter-spacing: 4px;
   font-size: 60px;
   font-weight: 100; }
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 40px; } }
 
 h2 {
   font-family: 'Advent Pro', sans-serif;
@@ -1047,6 +1050,9 @@ h2 {
   font-size: 40px;
   color: white;
   font-weight: 200; }
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 35px; } }
 
 h3 {
   font-family: 'Advent Pro', sans-serif;
@@ -1073,12 +1079,6 @@ h6 {
 
 p, label, article, aside, a, li {
   font-family: Lato, sans-serif; }
-
-@media (max-width: 767px) {
-  h1 {
-    font-size: 40px; }
-  h2 {
-    font-size: 35px; } }
 
 #welcome {
   width: 100%;
