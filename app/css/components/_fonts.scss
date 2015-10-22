@@ -1,20 +1,8 @@
 // --------------------------------
 // - FONTS
 // --------------------------------
-// Example of a component SASS file
 
-// Random header size
-h1 {
-  font-size: 60px;
-}
 
-// Random sub-header size
-h2 {
-  font-size: 40px;
-  color: lighten($font-color, 25%);
-}
-
-// Random class to center text
 .text-center {
   text-align: center;
 }
@@ -28,18 +16,24 @@ h2 {
   @if $i == 1{
     h#{$i}{
       letter-spacing: 4px;
+      font-size: 60px;
+      font-weight: $font-thin;
     }
   }
 
   @if $i == 2{
     h#{$i}{
       letter-spacing: 3px;
+      font-size: 40px;
+      color: lighten($font-color, 25%);
+      font-weight: $font-light;
     }
   }
 
   @if $i == 3{
     h#{$i}{
       letter-spacing: 3px;
+      font-weight: $font-light;
     }
   }
 
