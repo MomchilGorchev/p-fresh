@@ -707,6 +707,18 @@ body {
   box-sizing: border-box;
   /* Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any */ }
 
+.pulse {
+  -webkit-animation-name: pulse;
+          animation-name: pulse; }
+
+.fadeInUp {
+  -webkit-animation: fadeInTop;
+          animation: fadeInTop;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
 .container-fluid {
   padding-left: 0;
   padding-right: 0; }
@@ -1013,18 +1025,6 @@ nav {
   100% {
     -webkit-transform: scale3d(1, 1, 1);
             transform: scale3d(1, 1, 1); } }
-
-.pulse {
-  -webkit-animation-name: pulse;
-          animation-name: pulse; }
-
-.fadeInUp {
-  -webkit-animation: fadeInTop;
-          animation: fadeInTop;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both; }
 
 h1 {
   font-family: 'Advent Pro', sans-serif;

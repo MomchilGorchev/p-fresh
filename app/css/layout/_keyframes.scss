@@ -1,91 +1,60 @@
-//
+// --------------------------------
+// - ANIMATIONS
+// --------------------------------
 
+// SVG draw
 @-webkit-keyframes draw {
-  0%{
-    stroke-dashoffset: 450;
-    stroke-dasharray: 365;
-  }
+  0%{ stroke-dashoffset: 450;
+      stroke-dasharray: 365;  }
 
-  100%{
-    stroke-dashoffset: 740;
-    stroke-dasharray: 365;
-  }
+  100%{ stroke-dashoffset: 740;
+        stroke-dasharray: 365;  }
 }
 @keyframes draw{
-  0%{
-    stroke-dashoffset: 450;
-    stroke-dasharray: 365;
-  }
+  0%{ stroke-dashoffset: 450;
+      stroke-dasharray: 365;  }
 
-  100%{
-    stroke-dashoffset: 740;
-    stroke-dasharray: 365;
-  }
+  100%{ stroke-dashoffset: 740;
+        stroke-dasharray: 365;  }
 }
-
 @-moz-keyframes draw{
-  0%{
-    stroke-dashoffset: 450;
-    stroke-dasharray: 365;
-  }
+  0%{ stroke-dashoffset: 450;
+      stroke-dasharray: 365; }
 
-  100%{
-    stroke-dashoffset: 740;
-    stroke-dasharray: 365;
-  }
+  100%{ stroke-dashoffset: 740;
+        stroke-dasharray: 365; }
 }
 
-//--------------------------------
-// Need to extend mixins
-
+// Overlay close button: on close animation sequence
 @keyframes elasticScaleOut{
-  20%{
-    @include scale-element(1.2, 1.2);
+  20%{ @include scale-element(1.2, 1.2);
     //@include rotate-element(30deg);
   }
-  40%{
-    @include scale-element(0.8, 0.8);
+  40%{ @include scale-element(0.8, 0.8);
     //@include rotate-element(-15deg);
-
   }
-  60%{
-    @include scale-element(0.4, 0.4);
+  60%{ @include scale-element(0.4, 0.4);
     //@include rotate-element(-15deg);
+  }
+  80%{ @include scale-element(0.1, 0.1); }
 
-  }
-  80%{
-    @include scale-element(0.1, 0.1);
-  }
-
-  100%{
-    @include scale-element(0.001, 0.001);
-    opacity:0;
-  }
+  100%{ @include scale-element(0.001, 0.001);
+        opacity:0;  }
 }
-
 @-webkit-keyframes elasticScaleOut{
-  20%{
-    @include scale-element(1.1, 1.1);
-  }
+  20%{ @include scale-element(1.1, 1.1); }
 
-  40%{
-    @include scale-element(0.8, 0.8);
-  }
+  40%{ @include scale-element(0.8, 0.8); }
 
-  60%{
-    @include scale-element(0.4, 0.4);
-  }
+  60%{ @include scale-element(0.4, 0.4); }
 
-  80%{
-    @include scale-element(0.1, 0.1);
-  }
+  80%{ @include scale-element(0.1, 0.1); }
 
-  100%{
-    @include scale-element(0.001, 0.001);
-    opacity:0;
-  }
+  100%{ @include scale-element(0.001, 0.001);
+        opacity:0;  }
 }
 
+// Spinner
 @-webkit-keyframes spin {
   from { -webkit-transform: rotate(0deg); }
   to { -webkit-transform: rotate(360deg); }
@@ -103,49 +72,25 @@
   to { transform:rotate(-360deg); }
 }
 
+// Main header fade-in-up
 @keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
+  0% { opacity: 0;
+    transform: translate3d(0, 100%, 0); }
 
-  100% {
-    opacity: 1;
-    transform: none;
-  }
+  100% { opacity: 1;
+    transform: none; }
 }
 @-webkit-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
+  0% { opacity: 0;
+    transform: translate3d(0, 100%, 0); }
 
-  100% {
-    opacity: 1;
-    transform: none;
-  }
+  100% { opacity: 1;
+    transform: none; }
 }
 @keyframes pulse {
-  0% {
-    transform: scale3d(1, 1, 1);
-  }
+  0% { transform: scale3d(1, 1, 1); }
 
-  50% {
-    transform: scale3d(1.25, 1.25, 1.25);
-  }
+  50% { transform: scale3d(1.25, 1.25, 1.25); }
 
-  100% {
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-.pulse{
-  animation-name: pulse;
-}
-
-.fadeInUp{
-  animation: fadeInTop;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-
+  100% { transform: scale3d(1, 1, 1); }
 }
