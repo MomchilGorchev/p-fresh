@@ -2,17 +2,15 @@
 // - FONTS
 // --------------------------------
 
-
-.text-center {
-  text-align: center;
-}
-
+// Loop to set rules for all h* tags
 @for $i from 1 through 6 {
+  // Global
   h#{$i}{
     font-family: $header-font;
     text-transform: uppercase;
   }
 
+  // H1
   @if $i == 1{
     h#{$i}{
       letter-spacing: 4px;
@@ -25,6 +23,7 @@
     }
   }
 
+  // H2
   @if $i == 2{
     h#{$i}{
       letter-spacing: 3px;
@@ -38,6 +37,7 @@
     }
   }
 
+  // H3
   @if $i == 3{
     h#{$i}{
       letter-spacing: 3px;
@@ -45,14 +45,17 @@
     }
   }
 
+  // H4
   @if $i == 4{
     h#{$i}{
       letter-spacing: 2px;
     }
   }
-
 }
 
 p, label, article, aside, a, li{
   font-family: $content-font;
+}
+p, button, span{
+  font-weight:300;
 }
