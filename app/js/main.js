@@ -447,7 +447,7 @@ function Scene(){
 
         // Transition on the SVG dasharray is not supported in some browsers
         if(util.isSafari || util.isIe){
-            console.log('YES');
+            //console.log('YES');
             util.disableSVG();
         }
 
@@ -462,9 +462,7 @@ function Scene(){
         var bgImage = new Image();
         // That way we can detect when its loaded
         bgImage.onload = function(){
-
-            console.log("loaded");
-
+            //console.log('loaded');
             util.addClass(text, 'loaded');
             // Second timeout to change the text on the preloaded
             // And chain everything after

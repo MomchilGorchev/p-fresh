@@ -1049,7 +1049,7 @@ h2 {
   font-weight: 200; }
   @media (max-width: 768px) {
     h2 {
-      font-size: 35px; } }
+      font-size: 30px; } }
 
 h3 {
   font-family: 'Advent Pro', sans-serif;
@@ -1142,6 +1142,10 @@ section.hero {
   -webkit-transition-delay: 0s;
   -moz-transition-delay: 0s;
   -o-transition-delay: 0s; }
+  @media (max-width: 480px) {
+    .row.absolute {
+      top: auto;
+      bottom: 25%; } }
   .row.absolute:hover {
     transition: all 0.35s ease-in-out;
     -webkit-transition: all 0.35s ease-in-out;
