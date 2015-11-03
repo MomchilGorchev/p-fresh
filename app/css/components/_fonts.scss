@@ -31,7 +31,7 @@
       color: lighten($font-color, 25%);
       font-weight: $font-light;
       @include breakpoint(sm){
-        font-size: 35px;
+        font-size: 30px;
 
       }
     }

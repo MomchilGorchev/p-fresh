@@ -66,6 +66,12 @@ section.hero{
   margin-top: -157px;
   margin-left: -100px;
   z-index: $z50;
+
+  @include breakpoint(xs){
+    top: auto;
+    bottom: 25%;
+  }
+
   @include vendor-transition(all, 0.35s, ease-in-out);
   &:hover{
     @include vendor-transition(all, 0.35s, ease-in-out);

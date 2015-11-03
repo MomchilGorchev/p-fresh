@@ -446,7 +446,7 @@ function Scene(){
     self.init = function(){
 
         if(util.isSafari || util.isIe){
-            console.log('YES');
+            //console.log('YES');
             util.disableSVG();
         }
 
@@ -459,6 +459,7 @@ function Scene(){
         // Chain animation
         // First timeout to remove the preloader
         setTimeout(function(){
+
             util.addClass(text, 'loaded');
             // Second timeout to change the text on the preloaded
             // And chain everything after
