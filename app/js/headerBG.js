@@ -24,18 +24,18 @@ function Space(){
         centerX = WIDTH/2, centerY = HEIGHT/ 2,
         cx = centerX,
         cy = centerY,
-        units = 150,
+        units = 100,
         stars = [],
         Z = 0.09,
         M = Math,
         Rnd = M.random,
         alpha = 0.05,
-        colors = ['204, 196, 123', '0, 214, 255', '179, 243, 255', '7, 108, 127', '143, 194, 204'];
+        color = '143, 194, 204';
 
     ctx.globalAlpha = 0.66;
     _this.warpZ = 8;
 
-    // Increase the alpha every 700 ms for smooth animation
+    // Increase the alpha every 400 ms for smooth animation
     var alphaIncrease = setInterval(function(){
         if(alpha < 1) {
             alpha += 0.05;
@@ -85,36 +85,16 @@ function Space(){
                 yy = n.y / n.z,
                 radius = 1.0 / n.z * 1.5 + 1;      // size i.e. z
 
-            ctx.fillStyle = 'rgba(' + randomIndex(colors) + ', '+ alpha +')';
+            ctx.fillStyle = 'rgba('+ color +', '+ alpha +')';
             //console.log(ctx.fillStyle);
             if (n.px !== 0){
                 ctx.beginPath();
-                // Longer star trace - disabled for performance
-                //for(var j = 0; j < 5; j++){
-                //    ctx.arc(xx + cx + j * (radius / n.z), yy + cy + (j * radius / n.z), radius, 0, Math.PI * 2, true);
-                //}
+                // Star
                 ctx.arc(xx + cx, yy + cy, radius, 0, Math.PI * 2, true);
+                // Star trace
                 ctx.arc(n.px + cx, n.py + cy, radius, 0, Math.PI * 2, true);
                 ctx.closePath();
                 ctx.fill();
-
-                // Sick animation looking like the black hole in Interstellar movie!
-                //for(var k = 0; k < 10; k++){
-                //    ctx.arc(xx * k + cx, yy + cy, radius, 0, Math.PI * 2, true);
-                //    ctx.arc(n.px * k + cx, n.py + cy, radius, 0, Math.PI * 2, true);
-                //    ctx.closePath();
-                //    ctx.fill();
-                //}
-                // Crazy stuff
-                //ctx.arc(x0 + cx * (radius / n.z), y0 + cy + (j * radius / n.z), radius, 0, Math.PI * 2, true);
-                //
-
-                // Add more arc with descending x and y positions to make longer star trace.
-                // Need optimisations as if enabled lower down the FPS slightly
-                //ctx.beginPath();
-                //ctx.arc(n.px / 2 + cx, n.py / 2 + cy, radius, 0, Math.PI * 2, true);
-                //ctx.closePath();
-                //ctx.fill();
             }
 
             // update star position values with new settings

@@ -1757,7 +1757,6 @@ figure.project__thumb p span {
           -ms-transform: rotate(180deg);
               transform: rotate(180deg); }
     .overlay__show-more .overlay__trigger__icon:hover {
-      color: #a6a6a6;
       text-decoration: line-through; }
 
 .slider__desktop {
