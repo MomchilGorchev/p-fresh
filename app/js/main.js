@@ -445,6 +445,7 @@ function Scene(){
     self.API_PUBLIC_KEY = '8def3b098dafa537ea298e5e28d7969c';
     self.init = function(){
 
+        // Transition on the SVG dasharray is not supported in some browsers
         if(util.isSafari || util.isIe){
             console.log('YES');
             util.disableSVG();
@@ -456,9 +457,14 @@ function Scene(){
         var preloader = document.querySelector('#preloader');
         var text = preloader.querySelector('.preloader__text');
         var spinner = preloader.querySelector('.preloader__spinner');
-        // Chain animation
-        // First timeout to remove the preloader
-        setTimeout(function(){
+
+        // Create image element to obtain the src of the hero image
+        var bgImage = new Image();
+        // That way we can detect when its loaded
+        bgImage.onload = function(){
+
+            console.log("loaded");
+
             util.addClass(text, 'loaded');
             // Second timeout to change the text on the preloaded
             // And chain everything after
@@ -494,7 +500,12 @@ function Scene(){
                     }
                 });
             }, 500);
-        }, 1800);
+        };
+
+        // Grab the src (url) of the image. Works only if is defined inline
+        var src = document.querySelector('#scene').style.backgroundImage;
+        // Slice the 'url(' bit
+        bgImage.src = src.slice(4, src.length - 1);
 
         // Init the rest of the functionality
         svgHeaders();

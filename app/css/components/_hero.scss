@@ -120,7 +120,7 @@ section.hero{
 }
 
 #scene{
-  background: url(../img/deepspace.jpg) no-repeat center center #1b2735;
+  background: no-repeat center center #1b2735;
   background-size: cover;
   height: 100vh;
   @include vendor-transition();
