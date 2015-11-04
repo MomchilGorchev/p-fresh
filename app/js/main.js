@@ -148,7 +148,7 @@ function overlayToggle(){
     for(var i = 0; i < triggers.length; i ++){
         var current = triggers[i];
         current.addEventListener('click', function(e){
-            e.preventDefault();
+            //e.preventDefault();
 
             var _this = this;
 
@@ -229,6 +229,7 @@ function overlayToggle(){
                 });
             }, 300);
 
+            return false;
         });
     }
 
@@ -256,7 +257,29 @@ function overlayToggle(){
 
         }, 300);
     });
+    return false;
+}
 
+function catchAllClicks(){
+
+    var thumbs = document.querySelectorAll('.project__thumb');
+
+
+    for(var i = 0, count = thumbs.length; i < count; i++){
+        var current = thumbs[i];
+
+        current.onclick =  function(e){
+            //e.preventBubble();
+            var actualTrigger = this.querySelector('.open-overlay');
+            //console.log(this);
+            var event = new Event('click');
+
+            actualTrigger.dispatchEvent(event);
+
+            return false;
+        }
+    }
+    return false;
 }
 
 /**
@@ -512,6 +535,7 @@ function Scene(){
         menuItemClick();
         handleHighDPI();
         overlayToggle();
+        catchAllClicks();
         formSubmitHandler();
     };
 
