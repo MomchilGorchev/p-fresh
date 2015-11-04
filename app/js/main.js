@@ -496,11 +496,6 @@ function Scene(){
             }, 500);
         }, 1600);
 
-        // Grab the src (url) of the image. Works only if is defined inline
-        var src = document.querySelector('#scene').style.backgroundImage;
-        // Slice the 'url(' bit
-        bgImage.src = src.slice(4, src.length - 1);
-
         // Init the rest of the functionality
         svgHeaders();
         launchSite();
