@@ -94,7 +94,6 @@ function svgHeaders(){
                 left: rect.left + document.body.scrollLeft
             };
 
-
             // [DEBUG]
             //if(i === 0){
             //    console.log('window offset - >'+ window.pageYOffset);
@@ -136,7 +135,7 @@ function handleHighDPI(){
 function overlayToggle(){
     'use strict';
     // Cache all necessary elements
-    var triggers = document.querySelectorAll('.open-overlay');
+    var figures = document.querySelectorAll('.project__thumb');
     var overlay = document.querySelector('#projects__overlay');
     var contentBox = overlay.querySelector('.projects__overlay-content');
     var closeTrigger = overlay.querySelector('.close');
@@ -145,8 +144,8 @@ function overlayToggle(){
     var menuLinks = document.querySelector('#menu__content');
 
     // Assign event-handlers to the overlay triggers
-    for(var i = 0; i < triggers.length; i ++){
-        var current = triggers[i];
+    for(var i = 0, count = figures.length; i < count; i ++){
+        var current = figures[i];
         current.addEventListener('click', function(e){
             //e.preventDefault();
 
@@ -157,8 +156,7 @@ function overlayToggle(){
 
             setTimeout(function(){
                 // Clone related content to the overlay
-                var content = util.closest(_this, 'figure')
-                    .cloneNode(true).querySelector('.project__modal-details');
+                var content = _this.cloneNode(true).querySelector('.project__modal-details');
                 contentBox.appendChild(content);
 
                 // Assign dynamically event-handlers to the 'Show-more' icon
@@ -257,28 +255,6 @@ function overlayToggle(){
 
         }, 300);
     });
-    return false;
-}
-
-function catchAllClicks(){
-
-    var thumbs = document.querySelectorAll('.project__thumb');
-
-
-    for(var i = 0, count = thumbs.length; i < count; i++){
-        var current = thumbs[i];
-
-        current.onclick =  function(e){
-            //e.preventBubble();
-            var actualTrigger = this.querySelector('.open-overlay');
-            //console.log(this);
-            var event = new Event('click');
-
-            actualTrigger.dispatchEvent(event);
-
-            return false;
-        }
-    }
     return false;
 }
 
@@ -535,7 +511,6 @@ function Scene(){
         menuItemClick();
         handleHighDPI();
         overlayToggle();
-        catchAllClicks();
         formSubmitHandler();
     };
 
