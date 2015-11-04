@@ -457,11 +457,8 @@ function Scene(){
         var text = preloader.querySelector('.preloader__text');
         var spinner = preloader.querySelector('.preloader__spinner');
 
-        // Create image element to obtain the src of the hero image
-        var bgImage = new Image();
-        // That way we can detect when its loaded
-        bgImage.onload = function(){
-            //console.log('loaded');
+        // Initial load time of 1600ms
+        setTimeout(function(){
             util.addClass(text, 'loaded');
             // Second timeout to change the text on the preloaded
             // And chain everything after
@@ -497,7 +494,7 @@ function Scene(){
                     }
                 });
             }, 500);
-        };
+        }, 1600);
 
         // Grab the src (url) of the image. Works only if is defined inline
         var src = document.querySelector('#scene').style.backgroundImage;
