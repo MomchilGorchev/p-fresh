@@ -16,13 +16,14 @@
 
     <!-- IE conditionals (Included ones are for HTML5 backwards compatibility)-->
     <!--[if IE 8]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 
 <body id="page-top">
 
+    <!-- Preloader section -->
     <div id="preloader" class="preloader">
         <div class="preloader__spinner spinner">
         </div>
@@ -31,17 +32,20 @@
         </div>
     </div>
 
+    <!-- Project overlay -->
     <div id="projects__overlay" class="projects__overlay">
         <a class="close" href="#"><i class="fa fa-times-circle fa-2x"></i></a>
         <div class="projects__overlay-content"></div>
     </div>
 
+    <!-- 1. Hero secrtion-->
     <section class="container-fluid hero">
 
+        <!-- Canvas -->
         <div id="scene" class="canvas__bg" style="background-image: url(../img/deepspace.jpg)">
             <canvas id="welcome" class="main__scene"></canvas>
         </div>
-
+        <!-- Menu -->
         <div class="menu">
             <div id="menu__trigger" class="menu__trigger">
                 <a class="menu__trigger-icon" href="#about"><img src="img/icons/menu-rocket-white.png" /></a>
@@ -56,7 +60,7 @@
             </div>
         </div>
 
-        <!-- Example header -->
+        <!-- Header -->
         <header class="floating main__title ">
             <div class="container">
                 <div class="row">
@@ -68,6 +72,7 @@
             </div>
         </header>
 
+        <!-- Main CTA button-->
         <div class="row absolute" id="main-cta">
             <div class="text-center">
                 <button class="main__trigger slow-launch" type="button">
@@ -83,6 +88,7 @@
 
     </section>
 
+    <!-- 2. Project section-->
     <section id="projects" class="container-fluid projects__section">
         <div class="section-content container">
             <h2 class="text-center">Projects</h2>
@@ -111,7 +117,6 @@
             </div>
 
             <div class="projects__wrapper row">
-
                 <div class="grid">
 
                     <!-- FMM-->
@@ -440,6 +445,7 @@
                             </div>
                         </figcaption>
                     </figure>
+
                     <!-- HCH-->
                     <figure class="project__thumb">
                         <img class="project__thumb__bg" data-ddpi="img/projects/hch-bg-x2.jpg" src="img/projects/hch-bg.jpg" alt="img03"/>
@@ -529,6 +535,7 @@
 
     </section>
 
+    <!-- 3. About section-->
     <section id="about" class="container-fluid about__section">
         <div class="section-content container about__section-inner">
             <h2 class="text-center">About</h2>
@@ -579,6 +586,7 @@
 
     </section>
 
+    <!-- 4. Contact section-->
     <section id="contact" class="container-fluid contact__section">
         <div class="section-content container">
             <h2 class="text-center">Get in touch</h2>
@@ -653,7 +661,7 @@
 
     </section>
 
-    <!-- Example footer -->
+    <!-- Footer -->
     <footer class="container-fluid footer__section">
         <div class="footer__content">
             <!-- Canvas layer-->
