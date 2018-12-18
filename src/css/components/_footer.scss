@@ -1,0 +1,132 @@
+// --------------------
+//
+// Footer styles module
+//
+// --------------------
+
+// Vars
+$footerHeight: 100px;
+$switchSize: 900px;
+$fullWidth: 100%;
+$fullHeight: 100%;
+$gutterSize: 15px;
+$comingSoonColor: #C6CA5F;
+
+// Rules
+.footer{
+
+  position: relative;
+
+  &__canvas{
+    position: absolute;
+    z-index: 5;
+    width: $fullWidth;
+    height: $fullHeight;
+    @include breakpoint($switchSize){
+      display:none;
+    }
+  }
+
+  &__content{
+
+    @include breakpoint($switchSize){
+        padding:40px;
+        text-align:center;
+        background: black;
+    }
+  }
+
+  &__section{
+
+    height: $footerHeight;
+    position:relative;
+
+    &-bg{
+      position: absolute;
+      width: $fullWidth;
+      height: $footerHeight;
+      z-index: 10;
+      background: url(../img/footer-bg.jpg) no-repeat center center #1b2735;
+      background-size: cover;
+      opacity:0.35;
+      @include breakpoint($switchSize){
+        display:none;
+      }
+    }
+  }
+
+  &__wrapper{
+
+    height: $footerHeight;
+    position: relative;
+    z-index: 100;
+    @include breakpoint($switchSize){
+      height:auto;
+    }
+  }
+
+  &__social{
+
+    float:left;
+    @include breakpoint($switchSize){
+        float:none;
+    }
+
+    &-list{
+
+      list-style-type: none;
+      padding-left:0;
+
+    }
+
+    &-item{
+
+      display: inline-block;
+      margin-left: $gutterSize;
+      a{
+        color: $font-color;
+        @include vendor-transition(all, 0.2s, ease-in);
+        &:hover{
+          color: #055F67;
+          @include vendor-transition(all, 0.2s, ease-in);
+
+        }
+      }
+    }
+  }
+
+  &__info{
+
+    float:right;
+    margin-right: $gutterSize;
+    @include breakpoint($switchSize){
+      float:none
+    }
+    p{
+      color:$font-color;
+      text-align: right;
+      @include breakpoint($switchSize){
+          text-align:center;
+      }
+
+      a{
+        @include link();
+      }
+      span{
+        margin: 0 3px;
+      }
+    }
+    &__label{
+      color: $comingSoonColor;
+      margin-right: $gutterSize;
+    }
+  }
+
+  &__report{
+
+    margin-left: $gutterSize;
+    font-weight: 300;
+    @include link();
+
+  }
+}

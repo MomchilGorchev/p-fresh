@@ -1,0 +1,50 @@
+// --------------------
+//
+// Contact styles module
+//
+// --------------------
+
+// Vars
+$photoBorder: 2px double $font-color;
+
+// Rules
+.about{
+
+  &__section{
+    background-color: $about-bg;
+  }
+
+  &__photo{
+    width: 98%;
+    max-width: 200px;
+    border-radius: 50%;
+    border: $photoBorder;
+    padding: 3px;
+    margin: 12% auto;
+    display: block;
+
+    &-holder{
+      float:left;
+      width: 30%;
+      margin: 20px 20px 20px 0;
+      @include breakpoint(sm){
+          @include center-box(100%, 20px);
+          max-width: 270px;
+      }
+    }
+  }
+
+  &__text{
+    text-align: justify;
+    text-shadow: 1px 1px 1px darken($bg-color, 15%);
+    font-size: $spanFontSize;
+    &-holder{
+      width:67%;
+      float:left;
+      padding-left:15px;
+      @include breakpoint(sm){
+          @include center-box(90%, 20px);
+      }
+    }
+  }
+}

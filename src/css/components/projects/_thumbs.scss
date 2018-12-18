@@ -1,0 +1,222 @@
+// --------------------
+//
+// Contact styles module
+//
+// --------------------
+
+// Vars
+
+
+// Rules
+.projects{
+
+    &__section{
+
+        background: $contact-bg;
+
+    }
+
+    &__wrapper{
+
+        margin-bottom: 10px;
+
+    }
+
+}
+
+.grid {
+    position: relative;
+    clear: both;
+    margin: 0 auto;
+    padding: 1em 0 4em;
+    max-width: 1000px;
+    list-style: none;
+    text-align: center;
+    figure {
+        position: relative;
+        float: left;
+        overflow: hidden;
+        margin: 10px 1%;
+        min-width: 320px;
+        max-width: 480px;
+        max-height: 360px;
+        width: 48%;
+        height: auto;
+        background: #3085a3;
+        text-align: center;
+        cursor: pointer;
+        img {
+            position: relative;
+            display: block;
+            max-width: 100%;
+            opacity: 0.8;
+
+        }
+        figcaption {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 2em;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 1.25em;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            &:before, &:after{
+                pointer-events: none;
+            }
+            & > a {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1000;
+                text-indent: 200%;
+                white-space: nowrap;
+                font-size: 0;
+                opacity: 0;
+            }
+            .project__modal-details{
+                display:none;
+            }
+        }
+    }
+}
+
+.grid{
+    figure{
+        background: $bg-color;
+        h2{
+            margin:0;
+            word-spacing: -0.15em;
+            font-weight: 300;
+            .project__logo{
+                width: 280px;
+                margin: 10% auto;
+                opacity: 1;
+                @include vendor-transition(all, 0.2s, ease-out);
+                @include breakpoint(st){
+                    margin-top: -30px;
+                }
+                @include breakpoint(sm){
+                    margin-top: -50px;
+                }
+            }
+            span{
+                font-weight:800;
+            }
+        }
+        p{
+            margin: 0;
+            letter-spacing: 1px;
+            font-size: 68.5%;
+        }
+        img{
+            opacity: 0.85;
+            -webkit-transition: opacity 0.35s;
+            transition: opacity 0.35s;
+        }
+        figcaption:before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(../img/polygon.svg) no-repeat center center;
+            background-size: 100% 100%;
+            content: '';
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+            transition: opacity 0.35s, transform 0.35s;
+            -webkit-transform: scale3d(5,5,1);
+            transform: scale3d(5,5,1);
+            -webkit-transform-origin: 50% 40%;
+            transform-origin: 50% 40%;
+        }
+    }
+}
+
+figure.project__thumb:hover{
+    h2{
+        opacity:1;
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+    figcaption:before{
+        opacity: 0.6;
+        -webkit-transform: scale3d(1.25, 1.25, 1);
+        transform: scale3d(1.25, 1.25, 1);
+    }
+    img {
+        opacity: 0.8;
+        &.project__logo{
+            opacity:1;
+            width: 180px;
+            @include vendor-transition(all, 0.2s, ease-out);
+        }
+    }
+    p.project__content{
+        a{
+            opacity: 1;
+            -webkit-transform: translate3d(0,-25px,0);
+            transform: translate3d(0,-25px,0);
+        }
+        span{
+            opacity: 1;
+            -webkit-transform: translate3d(0,30px,0);
+            transform: translate3d(0,30px,0);
+            text-shadow: 1px 1px 1px $ac-dark;
+        }
+    }
+}
+
+
+figure.project__thumb {
+
+    h2 {
+        margin-top: 1em;
+    }
+    p{
+        a{
+            border: 1px solid;
+            padding: 10px;
+            border-radius: $borderRadius-circle;
+            color: #fff;
+            font-size: 140%;
+            opacity: 0;
+            position: relative;
+            display: inline-block;
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+            transition: opacity 0.35s, transform 0.35s;
+            -webkit-transform: translate3d(0,60px,0);
+            transform: translate3d(0,60px,0);
+            @include vendor-transition();
+            &:hover{
+              @include vendor-transition();
+              background: $bg-color;
+            }
+        }
+        span{
+            opacity: 0;
+            width: 50%;
+            left: 50%;
+            margin-left: -25%;
+            position: absolute;
+            display: inline-block;
+            -webkit-transition: opacity 0.15s, -webkit-transform 0.35s;
+            transition: opacity 0.15s, transform 0.35s;
+            -webkit-transform: translate3d(0, 200%, 0);
+            transform: translate3d(0, 200%, 0);
+            @include breakpoint(sm){
+                font-size:12px;
+            }
+        }
+    }
+
+    @include breakpoint(681px){
+        @include center-box(48%, 30px);
+    }
+}
+

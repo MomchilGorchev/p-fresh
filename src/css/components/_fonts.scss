@@ -1,0 +1,61 @@
+// --------------------------------
+// - FONTS
+// --------------------------------
+
+// Loop to set rules for all h* tags
+@for $i from 1 through 6 {
+  // Global
+  h#{$i}{
+    font-family: $header-font;
+    text-transform: uppercase;
+  }
+
+  // H1
+  @if $i == 1{
+    h#{$i}{
+      letter-spacing: 4px;
+      font-size: 60px;
+      font-weight: $font-thin;
+      @include breakpoint(sm){
+        font-size: 40px;
+
+      }
+    }
+  }
+
+  // H2
+  @if $i == 2{
+    h#{$i}{
+      letter-spacing: 3px;
+      font-size: 40px;
+      color: lighten($font-color, 25%);
+      font-weight: $font-light;
+      @include breakpoint(sm){
+        font-size: 30px;
+
+      }
+    }
+  }
+
+  // H3
+  @if $i == 3{
+    h#{$i}{
+      letter-spacing: 3px;
+      font-weight: $font-light;
+    }
+  }
+
+  // H4
+  @if $i == 4{
+    h#{$i}{
+      letter-spacing: 2px;
+    }
+  }
+}
+
+p, label, article, aside, a, li{
+  font-family: $content-font;
+}
+p, button, span{
+  font-weight:300;
+}

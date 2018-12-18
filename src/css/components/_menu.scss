@@ -1,0 +1,124 @@
+// --------------------
+//
+// Menu styles module
+//
+// --------------------
+
+// Vars
+$triggerWidth: 45px;
+$triggerHeight: $triggerWidth;
+$contentHeight: 55px;
+$contentMaxWidth: 400px;
+$menuBoxShadow: 0 2px 10px -1px #1B2735;
+
+// Rules
+.menu{
+
+  &__trigger{
+    width: $triggerWidth;
+    height: $triggerHeight;
+    background: $bg-color;
+    position: fixed;
+    top: 20px;
+    right:20px;
+    border-radius: $borderRadius-circle;
+    border: 2px double white;
+    cursor: pointer;
+    z-index:105;
+    @include vendor-transition();
+    @include customise-animation(spin-back, 300ms, 0, 1, ease-out);
+
+    &.spin{
+      @include vendor-transition();
+      @include customise-animation(spin, 300ms, 0, 1, ease-out);
+    }
+
+    &.roll-out{
+      transform: rotate(180deg);
+      right: -60px;
+    }
+
+    &-icon{
+      img{
+        width:30px;
+        margin: 5px;
+      }
+    
+    }
+
+  }
+
+  &__content{
+    position: fixed;
+    opacity: 0;
+    -webkit-transform: translate3d(5%, 0, 0);
+    transform: translate3d(5%, 0, 0);
+    visibility: hidden;
+    background-color: $bg-color;
+    max-width:$contentMaxWidth;
+    width: 5px;
+    height: $contentHeight;
+    top: 15px;
+    right: 15px;
+    border-radius: 30px;
+    @include vendor-transition(all, 0.3s, ease-out);
+    @include breakpoint(xs){
+        height:auto;
+        max-width:95%;
+    }
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+      box-shadow: $menuBoxShadow;
+      width:100%;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      z-index: 100;
+      @include vendor-transition();
+    }
+
+    &.fade-out{
+      opacity:0
+    }
+  }
+
+  &__list{
+    opacity:0;
+    text-align: center;
+    margin-top: -3px;
+    width: 92%;
+    padding-left:0;
+    font-size: 1em;
+    text-transform: uppercase;
+    list-style-type: none;
+    -webkit-transform: translate3d(4%, 0, 0);
+    transform: translate3d(4%, 0, 0);
+    @include vendor-transition();
+    @include breakpoint(xs){
+      width:100%;
+    }
+    &-item{
+      display: inline-block;
+      margin: 20px 10px 20px 5px;
+      @include breakpoint(xs){
+        display:block;
+      }
+      a{
+        text-decoration: none;
+        font-family: $content-font;
+        color:$font-color;
+        &:hover{
+          text-decoration: line-through;
+        }
+      }
+    }
+    &.open{
+      opacity:1;
+      @include vendor-transition();
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+

@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Momchil Gorchev - Frontend Web Developer specializing on MeteorJS Application development and Web animations... all kinds of animations">
+    <meta name="author" content="Momchil Gorchev">
+    <title>Momchil Gorchev - Frontend Developer</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link href='//fonts.googleapis.com/css?family=Advent+Pro:400,200,100|Lato:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- /Stylesheets -->
+
+    <!-- IE conditionals (Included ones are for HTML5 backwards compatibility)-->
+    <!--[if IE 8]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="page-top">
+
+    <!-- Preloader section -->
+    <div id="preloader" class="preloader">
+        <div class="preloader__spinner spinner">
+        </div>
+        <div class="preloader__wrapper__text">
+            <p class="preloader__text text">Initialising</p>
+        </div>
+    </div>
+
+    <!-- Project overlay -->
+    <div id="projects__overlay" class="projects__overlay">
+        <a class="close" href="#"><i class="fa fa-times-circle fa-2x"></i></a>
+        <div class="projects__overlay-content"></div>
+    </div>
+
+    <!-- 1. Hero secrtion-->
+    <section class="container-fluid hero">
+
+        <!-- Canvas -->
+        <div id="scene" class="canvas__bg" style="background-image: url(../img/deepspace.jpg)">
+            <canvas id="welcome" class="main__scene"></canvas>
+        </div>
+        <!-- Menu -->
+        <div class="menu">
+            <div id="menu__trigger" class="menu__trigger">
+                <a class="menu__trigger-icon" href="#about"><img src="img/icons/menu-rocket-white.png" /></a>
+            </div>
+            <div id="menu__content" class="menu__content">
+                <ul class="menu__list">
+                    <li class="menu__list-item"><a href="#page-top">Home</a></li>
+                    <li class="menu__list-item"><a href="#projects">Projects</a></li>
+                    <li class="menu__list-item"><a href="#about">About</a></li>
+                    <li class="menu__list-item"><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header class="floating main__title ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1 class="text-center">Momchil Gorchev</h1>
+                        <h2 class="text-center">Frontend Developer</h2>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main CTA button-->
+        <div class="row absolute" id="main-cta">
+            <div class="text-center">
+                <button class="main__trigger slow-launch" type="button">
+                    <span class="submit__states">
+                        <span class="initial">See examples</span>
+                        <span class="loading">
+                            <i class="fa fa-space-shuttle fa-rotate-270"></i>
+                        </span>
+                    </span>
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- 2. Project section-->
+    <section id="projects" class="container-fluid projects__section">
+        <div class="section-content container">
+            <h2 class="text-center">Projects</h2>
+            <div class="underline projects">
+
+                <svg class="svg-header" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px" y="0px" viewBox="-207 119 64 64" style="enable-background:new -207 119 64 64;" xml:space="preserve">
+                    <g>
+                        <path stroke="#FFFFFF" fill="none" stroke-width="2" class="st0" d="M-183.9,139.6c2.4,0,4.3-1.9,4.3-4.3c0-2.4-1.9-4.3-4.3-4.3c-2.4,0-4.3,1.9-4.3,4.3
+                            C-188.3,137.6-186.3,139.6-183.9,139.6z" />
+                        <path stroke="#FFFFFF" fill="none" stroke-width="2" class="st0" d="M-144.7,135.8c-0.3,0.1-4.4,1.4-10.5-2.4c-6.2-3.9-10-4.8-11.8-4.9c-0.2-0.3-0.6-0.7-1.3-0.7
+                            c-1,0-1.7,0.8-1.7,1.8l0,0v10.1c-0.1,0-0.2,0.1-0.3,0.2c0,0,0,0,0,0h-17.1c-0.2,0-0.3,0.1-0.4,0.2l-7.1,10.1
+                            c-0.1,0.2-0.4,0.8-0.4,1.2c0,1.2,1.1,2.2,2.3,2.2c0.4,0,1-0.1,1.5-0.7l0.3-0.3l3.4-4.9v4.5v1.3v14c0,0,0,0.7,0,0.8
+                            c0,0.2,0,0.3,0.1,0.4c0.1,0.3,0.1,0.7,0.3,0.9c-11.3,2.1-18.2,7-18.2,12.9c0,0.3,0.2,0.5,0.5,0.5l0,0h59.7l0,0c0,0,0,0,0,0
+                            c0.3,0,0.5-0.2,0.5-0.5c0-0.1,0-0.1,0-0.1c-0.1-6.1-8.7-11.5-20.9-13.2v-25.3c0.2,0,0.4,0,0.6,0c2.6,0,5.2,0.7,7.5,2
+                            c6.4,4.4,10.4,5,12.2,5l0,0c1,0,1.5-0.2,1.5-0.2c0.2-0.1,0.3-0.3,0.3-0.5c0.3-13.9,0-14.1-0.2-14.3
+                            C-144.2,135.8-144.5,135.7-144.7,135.8z M-159.3,138.4c-0.1-0.1-0.1-0.2,0-0.3c0.1-0.1,0.2-0.1,0.3-0.1l2.6,0.2l1.6-2
+                            c0.1-0.1,0.2-0.1,0.3-0.1c0.1,0,0.2,0.1,0.2,0.2l0.6,2.5l2.4,0.9c0.1,0,0.2,0.1,0.2,0.2c0,0.1,0,0.2-0.1,0.3l-2.2,1.3l-0.1,2.6
+                            c0,0.1-0.1,0.2-0.2,0.2c0,0-0.1,0-0.1,0c-0.1,0-0.1,0-0.2-0.1l-1.9-1.7l-2.5,0.6c-0.1,0-0.2,0-0.3-0.1c-0.1-0.1-0.1-0.2,0-0.3
+                            l1-2.4L-159.3,138.4z M-170.6,168.8c-1.6-0.1-3.2-0.3-4.8-0.3c-2.6,0-5.2,0.1-7.8,0.4c0.1-0.4,0.1-0.9,0.1-1.5c0-0.1,0-0.2,0-0.4
+                            l0-13h0.4l4.2,12.1c0,0,0,0.1,0,0.1c0.5,1.1,1.8,1.8,3,1.5c0.7-0.2,1.2-0.6,1.5-1.1c0.3-0.5,0.3-1.2,0.2-1.8
+                            c-0.1-0.2-0.2-0.5-0.3-0.6l-5-11.9V144h9v24.8L-170.6,168.8z" />
+                    </g>
+                </svg>
+
+            </div>
+
+            <div class="projects__wrapper row">
+                <div class="grid">
+
+                    <!-- Service Health Check-->
+                    <figure class="project__thumb">
+                        <img class="project__thumb__bg" data-ddpi="img/projects/shc-bg-x2.jpg" src="img/projects/shc-bg.jpg"
+                            alt="Service Health Check Background image" />
+                        <figcaption>
+                            <h2>
+                                <img src="img/projects/meteor-logo.png" class="project__logo" alt="Service Health Check">
+                            </h2>
+                            <p class="project__content">
+                                <span>MeteorJS app to monitor server endpoints</span>
+                            </p>
+                            <div data-trigger="p6" class="project__modal-details">
+                                <h2 class="overlay__title">Working title: Service Health Check</h2>
+                                <div class="overlay__hero">
+                                    <div class="overlay__slider">
+                                        <div class="slider__desktop slider__desktop--no-mobile">
+                                            <img class="desktop__image" src="img/projects/shc-desktop.png" alt="Service Health Check display on desktop device">
+                                        </div>
+                                    </div>
+                                    <div class="overlay__show-more">
+                                        <a id="p6" href="#" class="overlay__trigger__icon"><i class="fa fa-angle-double-down fa-3x"></i></a>
+                                    </div>
+                                    <div id="p6-details" class="overlay__details">
+                                        <div class="container">
+                                            <h3>Highlights</h3>
+                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                                <p class="project__notes">
+
+                                                    This is application is meant to be used mainly by developers that
+                                                    are implementing APIs/API calls or any work that is related to
+                                                    Service Oriented Architecture.<br />
+                                                    The Meteor's server layer provides the ability to call all
+                                                    endpoints without worring about the Cross-Origin policy. It is also
+                                                    initiating the external calls into
+                                                    a asynchronous manner, so the UI doesn't get frozen while the
+                                                    backend is waiting for the services response.<br /><br />
+                                                    Features:
+                                                    <ul>
+                                                        <li class="project__notes__feature-list">Simple UI using the
+                                                            Material Design pattern - materialize.css@0.97.2</li>
+                                                        <li class="project__notes__feature-list">Full CRUD
+                                                            possibilities on the DB entries from the UI</li>
+                                                        <li class="project__notes__feature-list">Upload a JSON file or
+                                                            create endpoints one by one</li>
+                                                        <li class="project__notes__feature-list">Auto calling of the
+                                                            services every minute</li>
+                                                        <li class="project__notes__feature-list">Ability to quickly
+                                                            filter the service list</li>
+                                                        <li class="project__notes__feature-list">Ability to manually
+                                                            set status, e.g - "In maintenance" or similar</li>
+                                                        <li class="project__notes__feature-list">Mobile device
+                                                            optimised</li>
+                                                        <li class="project__notes__feature-list">Password protected</li>
+                                                    </ul>
+                                                </p>
+
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                                                <div class="project__hl">
+                                                    <ul class="project__hl__master-list">
+                                                        <li>
+                                                            <p><i class="fa fa-code"></i> Technologies </p>
+                                                            <ul>
+                                                                <li>MeteorJS</li>
+                                                                <li>HTML5</li>
+                                                                <li>CSS3 with SASS</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <i class="fa fa-external-link"></i>
+                                                                <a href="https://github.com/MomchilGorchev/meteor-service-health"
+                                                                    target="_blank"> Visit website</a>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <i class="fa fa-github"></i>
+                                                                <a href="https://github.com/MomchilGorchev/meteor-service-health"
+                                                                    target="_blank"> GitHub repo</a>
+                                                            </p>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <!-- FMM-->
+                    <figure class="project__thumb">
+                        <img class="project__thumb__bg" data-ddpi="img/projects/fmm-bg-x2.jpg" src="img/projects/fmm-bg.jpg"
+                            alt="Favourite Media Mixer Background image" />
+                        <figcaption>
+                            <h2>
+                                <img src="img/projects/meteor-logo.png" class="project__logo" alt="Favourite Media Mixer">
+                            </h2>
+                            <p class="project__content">
+                                <span>MeteorJS app to combine popular public APIs</span>
+                            </p>
+                            <div data-trigger="p3" class="project__modal-details">
+                                <h2 class="overlay__title">Working title: favourite media mixer</h2>
+                                <div class="overlay__hero">
+                                    <div class="overlay__slider">
+                                        <div class="slider__desktop">
+                                            <img class="desktop__image" src="img/projects/fmm-desktop.png" alt="Favourite Media Mixer display on desktop device">
+                                        </div>
+                                        <div class="slider__phone">
+                                            <img class="desktop__phone" src="img/projects/fmm-phone.png" alt="Favourite Media Mixer display on mobile device">
+                                        </div>
+                                    </div>
+                                    <div class="overlay__show-more">
+                                        <a id="p3" href="#" class="overlay__trigger__icon"><i class="fa fa-angle-double-down fa-3x"></i></a>
+                                    </div>
+                                    <div id="p3-details" class="overlay__details">
+                                        <div class="container">
+                                            <h3>Highlights</h3>
+                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                                <p class="project__notes">
+
+                                                    The initial idea was to create a simple application that provides
+                                                    access to
+                                                    some of the most used public services on the Web under single UI.<br />
+                                                    For the first draft i decided to
+                                                    go with YouTube, Twitter, GitHub and the BBC's news feed. Of
+                                                    course, I wanted to try and build a full-stack JavaScript app, so
+                                                    MeteorJS lend itself to this.
+                                                    The power of Meteor made the large part of the complex
+                                                    functionality less challenging to implement. Having a server layer
+                                                    to communicate with the
+                                                    APIs and real-time updated client was a great benefit.<br />
+                                                    One of the important features I wanted to achieve is to have the
+                                                    YouTube player 'global'
+                                                    across the app, allowing the user to listen to music and browse the
+                                                    news for
+                                                    example. <br />
+                                                    This is an open-source project and can be found on GitHub. Large
+                                                    chunks of the codebase can be improved
+                                                    as everything is a moving part. Further to this the UI can be
+                                                    optimised and most of the functionality could be
+                                                    achieved using a different approach (if you so wish).
+
+                                                </p>
+
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                                                <div class="project__hl">
+                                                    <ul class="project__hl__master-list">
+                                                        <li>
+                                                            <p><i class="fa fa-code"></i> Technologies </p>
+                                                            <ul>
+                                                                <li>MeteorJS</li>
+                                                                <li>HTML5</li>
+                                                                <li>CSS3 with SASS</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <p><i class="fa fa-exchange"></i> Integrations </p>
+                                                            <ul>
+                                                                <li>YouTube</li>
+                                                                <li>Twitter</li>
+                                                                <li>GitHub</li>
+                                                                <li>BBC News</li>
+                                                                <li>Login with Google or GitHub</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <i class="fa fa-external-link"></i>
+                                                                <a href="http://favmediamixer.herokuapp.com" target="_blank">
+                                                                    Visit website</a>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <i class="fa fa-github"></i>
+                                                                <a href="https://github.com/MomchilGorchev/FavMediaMixer"
+                                                                    target="_blank"> GitHub repo</a>
+                                                            </p>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <!-- Canvas-->
+                    <figure class="project__thumb">
+                        <img class="handle-high-dpi" data-ddpi="img/projects/canvas-bg-x2.jpg" src="img/projects/canvas-bg.jpg"
+                            alt="img03" />
+                        <figcaption>
+                            <h2><img data-ddpi="img/projects/canvas-logo-x2.png" src="img/projects/canvas-logo.png"
+                                    class="project__logo handle-high-dpi"></h2>
+                            <p class="project__content">
+                                <span>Simple showcase page to demonstrate some canvas animations</span>
+                            </p>
+                            <div data-trigger="p4" class="project__modal-details">
+                                <h2 class="overlay__title">HTML5 canvas experiments</h2>
+                                <div class="overlay__hero">
+                                    <div class="overlay__slider">
+                                        <div class="slider__desktop slider__desktop--no-mobile">
+                                            <img class="desktop__image" src="img/projects/canvas-desktop.png">
+                                        </div>
+                                    </div>
+                                    <div class="overlay__show-more">
+                                        <a id="p4" href="#" class="overlay__trigger__icon"><i class="fa fa-angle-double-down fa-3x"></i></a>
+                                    </div>
+                                    <div id="p4-details" class="overlay__details p4">
+                                        <div class="container">
+                                            <h3>Highlights</h3>
+                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                                <p class="project__notes">
+
+                                                    I've always been fascinated by what you can achieve with JavaScript
+                                                    and the canvas API. These days there are more and more
+                                                    really cool examples around the Web and I wanted to learn canvas to
+                                                    create animations using JavaScript.
+                                                    This personal project is a first step into the canvas animation
+                                                    world.
+                                                    <br /><br />
+                                                    I follow a number of tutorials to grasp the concept of how things
+                                                    are being displayed and animated in general.
+                                                    I have also adapted some example code in the process of learning -
+                                                    cool people are doing crazy stuff on Codepen and GitHub.
+                                                    <br />
+                                                    This page also includes examples utilising the Web Audio API -
+                                                    another mind-blowing feature. Being able to load any sound and
+                                                    draw animation based on its frequency bits and domain is just
+                                                    ridiculously cool.
+
+                                                </p>
+
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                                                <div class="project__hl">
+                                                    <ul class="project__hl__master-list">
+                                                        <li>
+                                                            <p><i class="fa fa-code"></i> Technologies </p>
+                                                            <ul>
+                                                                <li>HTML5</li>
+                                                                <li>CSS3 with SASS</li>
+                                                                <li>JavaScript</li>
+                                                                <li>TweenMax by GSAP</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <i class="fa fa-external-link"></i>
+                                                                <a href="http://momchilgorchev.github.io/ctx-showcase/"
+                                                                    target="_blank"> Visit website</a>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <i class="fa fa-github"></i>
+                                                                <a href="https://github.com/MomchilGorchev/ctx-showcase"
+                                                                    target="_blank"> GitHub repo</a>
+                                                            </p>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <!-- DMT-->
+                    <figure class="project__thumb">
+                        <img class="project__thumb__bg" data-ddpi="img/projects/meteor-bg-x2.jpg" src="img/projects/meteor-bg.jpg"
+                            alt="img03" />
+                        <figcaption>
+                            <h2><img src="img/projects/meteor-logo.png" class="project__logo"></h2>
+                            <p class="project__content">
+                                <span>MeteorJS app to manage test devices</span>
+                            </p>
+                            <div data-trigger="p5" class="project__modal-details">
+                                <h2 class="overlay__title">Device management tool</h2>
+                                <div class="overlay__hero">
+                                    <div class="overlay__slider">
+                                        <div class="slider__desktop slider__desktop--no-mobile">
+                                            <img class="desktop__image" src="img/projects/dmt-desktop.png">
+                                        </div>
+                                    </div>
+                                    <div class="overlay__show-more">
+                                        <a id="p5" href="#" class="overlay__trigger__icon"><i class="fa fa-angle-double-down fa-3x"></i></a>
+                                    </div>
+                                    <div id="p5-details" class="overlay__details">
+                                        <div class="container">
+                                            <h3>Highlights</h3>
+                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                                <p class="project__notes">
+
+                                                    This application aims to solve the problem of keeping up-to-date
+                                                    list of all test devices (phones and tablets) assigned to people in
+                                                    a company.
+                                                    Usually this is done by couple of people that have access to a
+                                                    specific spreadsheet. The problem is
+                                                    that inside a company of couple hundred people +, the spreadsheet
+                                                    is going to grow fast and be hard to maintain<br />
+                                                    This is where the Device Management Tool (DMT) comes into play. It
+                                                    was designed to have a simple UI giving you the ability to see all
+                                                    devices assigned to a person, all available devices,
+                                                    as well as perform the normal CRUD operations (Create, Read,
+                                                    Update, Delete) with the devices from the list - all depending on
+                                                    your level of access.
+                                                    It also has a notifications module that is watching when the device
+                                                    is meant to be returned and sends an email to the person
+                                                    responsible for its return.
+                                                    As an additional features the application provides UI for leaving
+                                                    feedback, changing your personal settings and set-up an alert.<br />
+                                                    One of the things that would be really nice to have is JIRA and
+                                                    company email integration.
+                                                    That would give the IT administrators great control over the users
+                                                    asking for a device and would assign the devices straight to
+                                                    company accounts.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                                                <div class="project__hl">
+                                                    <ul class="project__hl__master-list">
+                                                        <li>
+                                                            <p><i class="fa fa-code"></i> Technologies </p>
+                                                            <ul>
+                                                                <li>MeteorJS</li>
+                                                                <li>HTML5</li>
+                                                                <li>CSS3 with SASS</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <p><i class="fa fa-exchange"></i> Integrations </p>
+                                                            <ul>
+                                                                <li>JIRA</li>
+                                                                <li>Confluense</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <i class="fa fa-external-link"></i>
+                                                                <a href="http://powadmt.herokuapp.com" target="_blank">
+                                                                    Visit website</a>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <i class="fa fa-github"></i>
+                                                                <a href="https://github.com/FD0000/dmt" target="_blank">
+                                                                    GitHub repo</a>
+                                                            </p>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <!-- Fetish fashion-->
+                    <figure class="project__thumb">
+                        <img class="project__thumb__bg" data-ddpi="img/projects/ffb-bg-x2.jpg" src="img/projects/ffb-bg.jpg"
+                            alt="img03" />
+                        <figcaption>
+                            <h2><img src="img/projects/ffb-logo.png" class="project__logo"></h2>
+                            <p class="project__content">
+                                <span>Custom frontend development on top of Shopify eCommerce platform</span>
+                            </p>
+                            <div data-trigger="p1" class="project__modal-details">
+                                <h2 class="overlay__title">Fetish Fashion Boutique</h2>
+                                <div class="overlay__hero">
+                                    <div class="overlay__slider">
+                                        <div class="slider__desktop">
+                                            <img class="desktop__image" src="img/projects/ffb-desktop.png">
+                                        </div>
+                                        <div class="slider__phone">
+                                            <img class="desktop__phone" src="img/projects/ffb-phone.png">
+                                        </div>
+                                    </div>
+                                    <div class="overlay__show-more">
+                                        <a id="p1" href="#" class="overlay__trigger__icon"><i class="fa fa-angle-double-down fa-3x"></i></a>
+                                    </div>
+                                    <div id="p1-details" class="overlay__details p1">
+                                        <div class="container">
+                                            <h3>Highlights</h3>
+                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                                <p class="project__notes">
+                                                    This project was something that I've never done before.<br />
+                                                    I got started with the great build-in theme Minimal from Shopify.
+                                                    It had quite a bit of CSS already, and I wanted to overwrite as
+                                                    little as possible and amend the other half. So I decided to have a
+                                                    play with the original SASS files.<br />
+                                                    Of course, later on I realised that it will be very time-consuming
+                                                    to change more than just the core, layout related elements, without
+                                                    having to rewrite all of the styles once again.
+                                                    So I ended up with a custom.scss.liquid file :)<br /><br />
+
+                                                    Understanding the Liquid templating language logic and expressions
+                                                    was the other interesting challenge. Luckily Liquid provides great
+                                                    control over the data
+                                                    coming from the Backend, and creating custom pages and widgets was
+                                                    easier than I thought.
+
+
+                                                </p>
+
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                                                <div class="project__hl">
+                                                    <ul class="project__hl__master-list">
+                                                        <li>
+                                                            <p><i class="fa fa-code"></i> Technologies </p>
+                                                            <ul>
+                                                                <li>HTML5</li>
+                                                                <li>CSS3 with SASS</li>
+                                                                <li>JavaScript</li>
+                                                                <li>Full responsive</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <p><i class="fa fa-exchange"></i> Integrations </p>
+                                                            <ul>
+                                                                <li>Facebook</li>
+                                                                <li>Mailchimp</li>
+                                                                <li>Trustpilot</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <i class="fa fa-external-link"></i>
+                                                                <a href="http://fetishfashionboutique.co.uk" target="_blank">
+                                                                    Visit website</a>
+                                                            </p>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <!-- HCH-->
+                    <figure class="project__thumb">
+                        <img class="project__thumb__bg" data-ddpi="img/projects/hch-bg-x2.jpg" src="img/projects/hch-bg.jpg"
+                            alt="img03" />
+                        <figcaption>
+                            <h2><img src="img/projects/hch-logo.png" class="project__logo"></h2>
+                            <p class="project__content">
+                                <span>Full-stack, built from scratch dynamic Webapp</span>
+                            </p>
+                            <div data-trigger="p2" class="project__modal-details">
+                                <h2 class="overlay__title">HCH Heating and Plumbing</h2>
+                                <div class="overlay__hero">
+                                    <div class="overlay__slider">
+                                        <div class="slider__desktop">
+                                            <img class="desktop__image" src="img/projects/hch-desktop.png">
+                                        </div>
+                                        <div class="slider__phone">
+                                            <img class="desktop__phone" src="img/projects/hch-phone.png">
+                                        </div>
+                                    </div>
+                                    <div class="overlay__show-more">
+                                        <a id="p2" href="#" class="overlay__trigger__icon"><i class="fa fa-angle-double-down fa-3x"></i></a>
+                                    </div>
+                                    <div id="p2-details" class="overlay__details p2">
+                                        <div class="container">
+                                            <h3>Highlights</h3>
+                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                                <p class="project__notes">
+
+                                                    For this interesting project, the customer needed a simple, yet
+                                                    dynamic website synced with an existing Wordpress blog.
+                                                    With that in mind I decided to build a standard PHP MVC solution
+                                                    which allows dynamically
+                                                    rendered pages and easy control of the data flow. This pattern also
+                                                    gives the chance for easy extension in the future.<br />
+                                                    I've also built a minimalistic control panel from where the site
+                                                    admins are able to sync the data (images and project's overviews)
+                                                    between the website and the blog. The development of an
+                                                    automatically-synchronised system was out of scope for the initial
+                                                    build.<br />
+                                                    I have used GULP to automate the development process and to ensure
+                                                    that all of the assets will be minified and optimised as well as
+                                                    all PHP controllers files will be tracked and copied over on
+                                                    production code build.
+
+                                                </p>
+
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                                                <div class="project__hl">
+                                                    <ul class="project__hl__master-list">
+                                                        <li>
+                                                            <p><i class="fa fa-code"></i> Technologies </p>
+                                                            <ul>
+                                                                <li>HTML5</li>
+                                                                <li>CSS3 with SASS</li>
+                                                                <li>JavaScript</li>
+                                                                <li>Full responsive</li>
+                                                                <li>PHP</li>
+                                                                <li>MySQL</li>
+                                                                <li>WordPress</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <p><i class="fa fa-exchange"></i> Integrations </p>
+                                                            <ul>
+                                                                <li>Facebook</li>
+                                                                <li>Instagram</li>
+                                                                <li>Twitter</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <i class="fa fa-external-link"></i>
+                                                                <a href="http://hch-heating.com/" target="_blank">
+                                                                    Visit website</a>
+                                                            </p>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- 3. About section-->
+    <section id="about" class="container-fluid about__section">
+        <div class="section-content container about__section-inner">
+            <h2 class="text-center">About</h2>
+            <div class="underline about">
+                <svg class="svg-header" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                    y="0px" viewBox="71.3 -224.6 61.8 62.7" style="enable-background:new 71.3 -224.6 61.8 62.7;"
+                    xml:space="preserve">
+                    <g>
+                        <path stroke="#FFFFFF" fill="none" stroke-width="2" d="M111.8-162.4h0.6H132c0.2,0,0.3-0.1,0.5-0.2c0.1-0.1,0.2-0.3,0.1-0.5l-3.6-16.1c-1-5.2-5.6-6.8-7.3-7.2
+                            c0.4-2.3,0.2-3.9-0.5-4.8c-0.4-0.5-0.8-0.7-1.2-0.8v-3.1l2.2-3c0.1-0.1,0.1-0.2,0.1-0.3v-10.2c0-0.2-0.1-0.3-0.2-0.5l-2.5-2
+                            c-3.7-12.1-13.1-13-15.8-13c-0.5,0-0.7,0-0.7,0h-1.6c0,0-12.1-1.3-16.5,13l-2.4,2c-0.1,0.1-0.2,0.3-0.2,0.4v10.2
+                            c0,0.1,0,0.2,0.1,0.3l2.2,3v3.1c-0.4,0.1-0.9,0.3-1.3,0.8c-0.8,0.9-1,2.6-0.6,4.8c-1.7,0.4-6.3,2-7.3,7.2l-3.8,16.2
+                            c0,0.2,0,0.4,0.1,0.5c0.1,0.1,0.3,0.2,0.5,0.2h19.4h0.6c0.3,0,0.6-0.3,0.6-0.6v-12.2h8.2h2.3h8.3v12.2V-162.4L111.8-162.4z
+                             M89.4-197.3v-12.2c0-0.1,0.1-0.3,0.2-0.4c4.4-4.5,11.6-4.7,13-4.7h0.2h1.1c1.3,0,7.9,0.2,12.4,4.7c0.1,0.1,0.2,0.3,0.2,0.4v5.6
+                            c-0.4,0.4-0.7,0.8-1.2,1.2c-0.4,0.4-0.8,0.7-1.3,1c-2.1,1.4-4.6,2.2-7.2,2.3c-0.4-1.6-1.8-2.8-3.5-2.8c-2,0-3.6,1.6-3.6,3.6
+                            s1.6,3.6,3.6,3.6c1.4,0,2.6-0.8,3.2-2c3.2,0,6.2-0.9,8.7-2.6c0,0,0,0,0,0c0.4-0.3,0.8-0.5,1.1-0.8v3.3c0,0,0,0.1,0,0.1
+                            c-0.1,0.3-1.1,3.4-11.7,3.4h-1.4c-10.6,0-13.7-3-13.8-3.1C89.5-197,89.4-197.2,89.4-197.3z" />
+                        <path stroke="#FFFFFF" fill="none" stroke-width="2" d="M97.5-212.9c-0.2,0-0.4,0-0.6,0c-4.4,1.4-5.9,3-6,3.1c-0.1,0.1-0.2,0.2-0.2,0.4c0,0.1-0.1,0.3-0.1,0.4v4.6
+                            c0,0.6,0.5,1.2,1.2,1.2c0.7,0,1.2-0.5,1.2-1.2v-4.1c0.6-0.4,2-1.3,4.7-2.2c0.6-0.2,1-0.9,0.8-1.5C98.3-212.5,97.9-212.8,97.5-212.9
+                            z" />
+                    </g>
+                </svg>
+
+            </div>
+
+            <div class="row">
+                <div class="about__photo-holder">
+                    <img class="about__photo" src="../img/profile.jpg" />
+                </div>
+                <div class="about__text-holder">
+                    <p class="about__text">Hi there! <br /> My name is Momchil, I am a Bulgarian web
+                        developer living in London, UK. I'm passionate about JavaScript development.
+                        <br /><br />
+                        I work for a technology company; some of the interesting things that I do are
+                        developing JavaScript solutions
+                        to consume JSON API's and to extend platform functionality, building single page applications
+                        from pixel-perfect PSD files,
+                        using Vanilla JavaScript or frameworks like MeteorJS and AngularJS, to support the
+                        multi-platform products.
+                        <br />I also integrate cutting-edge technologies into any suitable project, either internal or
+                        external.
+                        <br /><br />
+                        Always aiming to write quality, abstracted and reusable code, I get inspired by others who
+                        share the same passion.
+                        I am big fan of Meteor JS, Open-Source and all sorts of web animations.
+                        <br /><br />
+                        In the meantime I am changing nappies...
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- 4. Contact section-->
+    <section id="contact" class="container-fluid contact__section">
+        <div class="section-content container">
+            <h2 class="text-center">Get in touch</h2>
+            <div class="underline contact">
+                <svg class="svg-header" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                    y="0px" viewBox="-204.7 119.4 64.2 62.7" style="enable-background:new -204.7 119.4 64.2 62.7;"
+                    xml:space="preserve">
+                    <g>
+                        <path stroke="#FFFFFF" fill="none" stroke-width="2" class="st0" d="M-194.7,171c0.1,0.1,0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2l15.7-15l5.8,5.4c0.1,0.1,0.3,0.2,0.5,0.2
+                            c0.2,0,0.4-0.1,0.5-0.2l9.6-9.4c0.3-0.3,0.3-0.7,0-1l-5-4.7l16.8-16c0.3-0.3,0.3-0.7,0-1l-9.5-9.2c-0.1-0.1-0.3-0.2-0.5-0.2
+                            c-0.2,0-0.4,0.1-0.5,0.2l-17,16.2l-9.9-9.4c-0.1-0.1-0.3-0.2-0.5-0.2s-0.4,0.1-0.5,0.2l-9.6,9.4c-0.3,0.3-0.3,0.7,0,1l9.1,8.7
+                            l-15.5,14.8c-0.1,0.1-0.2,0.3-0.2,0.5c0,0.2,0.1,0.4,0.2,0.5L-194.7,171z" />
+                        <path stroke="#FFFFFF" fill="none" stroke-width="2" class="st0" d="M-166.1,158.1c-6,6.1-9.2,13.3-8.3,18.3c0.1,0.3,0.3,0.5,0.5,0.6c0.1,0,0.1,0,0.2,0c0.2,0,0.4-0.1,0.5-0.2
+                            l12.2-12.1l5.3,3.9c-0.1,0.3-0.2,0.6-0.2,0.9c0,1.3,1.2,2.4,2.4,2.4c1.3,0,2.4-1.1,2.4-2.4c0-1.3-1.2-2.5-2.4-2.5
+                            c-0.3,0-0.5,0.1-0.9,0.1l-4-5.2l11.9-11.7c0.2-0.2,0.3-0.5,0.2-0.7c-0.1-0.3-0.3-0.5-0.6-0.5c-0.6-0.2-1.4-0.2-2.2-0.2
+                            C-154,148.9-160.6,152.4-166.1,158.1z" />
+                        <path stroke="#FFFFFF" fill="none" stroke-width="2" class="st0" d="M-155.4,175.9c-0.4,0-0.9,0.4-0.9,0.8c0,0.4,0.3,0.8,0.9,0.8l0,0c6.1,0,10.9-4.7,10.9-10.6
+                            c0-0.4-0.3-0.7-0.9-0.7l0,0c-0.4,0-0.9,0.3-0.9,0.7C-146,171.9-150.1,175.9-155.4,175.9z" />
+                        <path stroke="#FFFFFF" fill="none" stroke-width="2" class="st0" d="M-154,180c-0.4,0-0.9,0.4-0.9,0.8c0,0.4,0.3,0.8,0.9,0.8l0,0c2.9,0,6.1-1.7,8.8-4.5c2.7-2.8,4.1-6,4.1-8.8
+                            c0-0.4-0.3-0.7-0.9-0.8c-0.4,0-0.9,0.3-0.9,0.8c0,2.4-1.4,5.3-3.7,7.7C-148.7,178.4-151.5,180-154,180z" />
+                    </g>
+                </svg>
+
+
+            </div>
+
+            <div class="contact__wrapper row">
+
+                <div class="contact__info col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="contact__info__wrapper">
+                        <div class="contact__info-inner">
+                            <p>You really like my work? You really dislike it?
+                                <br /><br />
+                                Either way, your feedback is greatly appreciated.
+                                If you would like to work with me on a open-source project or anything else,
+                                just send me an email and we can discuss it!
+                            </p>
+                        </div>
+                        <div class="contact__triangle"></div>
+                    </div>
+                </div>
+
+                <form id="contact__me" class="contact__form col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="contact__form-holder">
+                        <span class="fa fa-user fa-2x contact__icon"></span>
+                        <input class="contact__form-input name" type="text" name="name" />
+                        <div class="contact__form-error"><i class="fa fa-warning fa-2x"></i></div>
+                    </div>
+                    <div class="contact__form-holder">
+                        <span class="fa fa-envelope fa-2x contact__icon"></span>
+                        <input class="contact__form-input email" type="email" name="name" />
+                        <div class="contact__form-error"><i class="fa fa-warning fa-2x"></i></div>
+                    </div>
+                    <div class="contact__form-holder">
+                        <span class="fa fa-comment fa-2x contact__icon"></span>
+                        <textarea class="contact__form-textarea message"></textarea>
+                        <div class="contact__form-error message"><i class="fa fa-warning fa-2x"></i></div>
+                        <div class="contact__form__request-fail"><span>Oopss... The server return something unexpected.<br />
+                                Please try again.</span></div>
+                    </div>
+                    <div class="contact__form-holder">
+                        <button class="contact__form-submit special__button" type="submit">
+                            <span class="submit__states">
+                                <span class="initial">Send</span>
+                                <span class="loading"><i class="fa fa-spinner fa-spin"></i></span>
+                                <span class="done"><i class="fa fa-check"></i></span>
+                            </span>
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="container-fluid footer__section">
+        <div class="footer__content">
+            <!-- Canvas layer-->
+            <canvas id="footer__canvas" class="footer__canvas"></canvas>
+            <!-- BG layer-->
+            <div class="footer__section-bg"></div>
+            <div class="footer__wrapper">
+                <div class="footer__social">
+                    <ul class="footer__social-list">
+                        <li class="footer__social-item github">
+                            <a href="https://github.com/MomchilGorchev"><i class="fa fa-github fa-2x"></i></a>
+                        </li>
+                        <li class="footer__social-item twitter">
+                            <a href="https://twitter.com/MGorchev"><i class="fa fa-twitter fa-2x"></i></a>
+                        </li>
+                        <li class="footer__social-item linkedin">
+                            <a href="https://www.linkedin.com/in/momchil-gorchev-08545779"><i class="fa fa-linkedin fa-2x"></i></a>
+                        </li>
+                        <li class="footer__social-item email">
+                            <a href="#"><i class="fa fa-envelope fa-2x"></i></a>
+                        </li>
+                    </ul>
+                    <a class="footer__report" href="mailto:momchil@gorchev.pro"><i class="fa fa-flag"></i> Report a bug</a>
+                </div>
+                <div class="footer__info">
+                    <p><span class="footer__info__label"><span class="fa fa-info-circle"></span> Coming soon: </span>
+                        <a href="#" onclick="return false;">List of inspirational articles and tutorials helped me to
+                            build this.</a><br /><br />
+                        Any of the content provided with an Open-Source repository is licenced under the
+                        <a href="http://opensource.org/licenses/MIT">MIT License</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-68896906-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- JS Libraries -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/ScrollToPlugin.min.js"></script>
+
+    <!-- Your local scripts should follow the following pattern to be linted and minified -->
+    <!-- build:js /js/main.min.js -->
+    <script src="js/util.js"></script>
+    <script src="js/headerBG.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/footer.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

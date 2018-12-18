@@ -1,0 +1,25 @@
+// --------------------------------
+// - MAIN
+// --------------------------------
+// File where you should import all your SASS files / modules
+
+@import "layout/normalize";
+@import "layout/variables";
+@import "layout/mixins";
+@import "layout/grid";
+@import "layout/layout";
+@import "layout/keyframes";
+
+
+@import "components/fonts";
+@import "components/hero";
+@import "components/menu";
+@import "components/about";
+@import "components/projects/thumbs";
+@import "components/projects/overlay";
+@import "components/contact";
+@import "components/footer";
+
+
+
+

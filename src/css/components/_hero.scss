@@ -1,0 +1,138 @@
+// --------------------
+//
+// Hero styles module
+//
+// --------------------
+
+// Vars
+$doubleBorder: 4px double $bg-color;
+$heroTriggerWidth: 200px;
+$heroTriggerHeight: 50px;
+$z50: 50;
+
+
+
+// Rules
+
+
+#welcome{
+  width: 100%;
+  height: 100%;
+  opacity:0.66;
+  background: rgba(0, 0, 0, 0.66);
+}
+
+section.hero{
+  background: $ac-dark;
+  .main{
+    &__trigger{
+      background-color: transparent;
+      width: $heroTriggerWidth;
+      height: $heroTriggerHeight;
+      border: $doubleBorder;
+      color:$font-color;
+      font-family: $content-font;
+      @include cta-text();
+      @include vendor-transition();
+      &:hover{
+        @include vendor-transition();
+        color: #000;
+        background-color: $bg-color;
+        border: $doubleBorder;
+      }
+      &:focus{
+        outline: none;
+      }
+    }
+
+    &__title{
+      top:10%;
+      opacity:0;
+      z-index: $z50;
+    }
+
+    &__scene{
+      overflow: hidden;
+    }
+
+  }
+}
+
+.row.absolute{
+  opacity:0;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  margin-top: -157px;
+  margin-left: -100px;
+  z-index: $z50;
+
+  @include breakpoint(xs){
+    top: auto;
+    bottom: 25%;
+  }
+
+  @include vendor-transition(all, 0.35s, ease-in-out);
+  &:hover{
+    @include vendor-transition(all, 0.35s, ease-in-out);
+    @include scale-element(1.10, 1.10);
+  }
+
+  button{
+    overflow: hidden;
+
+    &.processing{
+
+      color: #000;
+      background-color: $bg-color;
+      border: $doubleBorder;
+
+    }
+  }
+  .submit__states{
+    display: block;
+    position: relative;
+    top: -9px;
+    @include vendor-transition(top, 0.35s, ease-in-out);
+
+
+    span{
+
+      margin: 15px auto;
+      display:block;
+      text-align: center;
+      height: 23px;
+      font-size: 1.3445em;
+      opacity: 1;
+      @include vendor-transition(opacity, 0.15s, ease-in-out);
+
+
+    }
+
+    &.loading{
+
+      top: -47px;
+      @include vendor-transition(top, 0.35s, ease-in-out);
+      span{
+        opacity:1;
+        @include vendor-transition(opacity, 0.15s, ease-in-out);
+
+        &:not(.loading){
+          opacity:0
+        }
+      }
+    }
+  }
+}
+
+#scene{
+  background: no-repeat center center #1b2735;
+  background-size: cover;
+  height: 100vh;
+  @include vendor-transition();
+  &.scaled{
+    @include scale-element(0.9, 0.9);
+    @include vendor-transition();
+  }
+}
+
